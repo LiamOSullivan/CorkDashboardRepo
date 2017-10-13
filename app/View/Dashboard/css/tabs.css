@@ -1,0 +1,9 @@
+                                .menu { padding: 0; }
+.menu li { display: inline; }
+.menu li a { background: #C0C0C0; padding: 8px; float:left;  font-family:'"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif'; font-size:14; border-right: 1px solid #474747; border-bottom: none; text-decoration: none; color: #FFFFFF; font-weight: bold;}
+.menu li.active a { background: #0E3C60 ; }
+.content {  clear: both; border: 0px solid #FFFFFF; border-top: none; border-left: none; background: #FFFFFF; padding: 0px 0px 0px; }
+
+
+        
+                            
