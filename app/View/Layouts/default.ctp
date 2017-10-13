@@ -56,8 +56,6 @@
         
                 </style>-->
         <!--Responsive styles-->     
-
- <!--<title>The Cork Dashboard</title>-->
         <title>The Cork Dashboard | <?= $this->fetch('title') ?></title>
 
     </head>
@@ -65,23 +63,8 @@
 
         <!-- Header -->
         <div id="header-wrapper">
-            <!--            <header id="header" class="container">-->
-            <!--<div class="row">-->
-            <!--                    <div class="12u">-->
-            <!-- Banner -->
             <?php echo $this->element('dbBanner'); ?>
-
             <?php echo $this->element('dbNavMenu'); ?>
-            <!--</div>-->
-            <!--</header>-->
-
-            <!--            <div id="band">
-                            <section>
-                                <div class="row">
-                            
-                                                </div>
-                                            </section>
-                        </div>-->
         </div>
 
         <!--Responsive content-->

@@ -1,3 +1,5 @@
+<?php $this->assign('title', 'Home'); ?>
+
 <div class="middle">
     <div style="border-bottom:2px solid #e5e5e5">
         <header>

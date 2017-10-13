@@ -1,32 +1,29 @@
-
+<?php $this->assign('title', "Data Trends"); ?>
 <div class="onlyContent">
     <!--//<div style="overflow:auto">-->
-        <div style="border-bottom:2px solid #e5e5e5">
-            <header>
-                <h1>Cork Data Trends</h1>
-                <br>
-            </header>
-        </div>
-
-        <div style="width:33%; float:left" >
-            <h2>Indicators </h2>
-            <a href="corkIndicators" class="bordered-feature-image"><img src="/img/Dashboard/Cork_Doing3.png" alt="" /></a>
-            <!--<a href="cork_indicators.ctp"></a>-->
+    <div style="border-bottom:2px solid #e5e5e5">
+        <header>
+            <h1>Cork Data Trends</h1>
             <br>
-        </div>
-        <div style="width:33%; float:left" >
-            <h2>Spending</h2>
-            <a href="CorkSpending" class="bordered-feature-image"><img src="/img/Dashboard/Cork_county_spending.png"  alt="" /></a>
+        </header>
+    </div>
 
-            <br>
-        </div>
-        <div style="width:33%; float:left" >
-            <h2>Cost of Living</h2>
-            <a href="https://www.numbeo.com/cost-of-living/in/Cork" target="_blank" class="bordered-feature-image"><img src="/img/Dashboard/cost_of_living_cork.png" alt=""  /></a>
-
-            <br>
-        </div>
-    <!--//</div>-->
+    <div style="width:33%; float:left" >
+        <h2>Indicators </h2>
+        <a href="corkIndicators" class="bordered-feature-image"><img src="/img/Dashboard/Cork_Doing3.png" alt="" /></a>
+        <!--<a href="cork_indicators.ctp"></a>-->
+        <br>
+    </div>
+    <div style="width:33%; float:left" >
+        <h2>Spending</h2>
+        <a href="CorkSpending" class="bordered-feature-image"><img src="/img/Dashboard/Cork_county_spending.png"  alt="" /></a>
+        <br>
+    </div>
+    <div style="width:33%; float:left" >
+        <h2>Cost of Living</h2>
+        <a href="https://www.numbeo.com/cost-of-living/in/Cork" target="_blank" class="bordered-feature-image"><img src="/img/Dashboard/cost_of_living_cork.png" alt=""  /></a>
+        <br>
+    </div>
 </div>
 
 
