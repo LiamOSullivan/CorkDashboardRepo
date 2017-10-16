@@ -519,7 +519,7 @@ TODO: enable subresource integrity
         $.ajax({
             async: false,
             type: 'GET',
-            url: '/CarParks/corkWaterLevels/1',
+            url: '/cork/waterLevels/1',
             success: function (point) {
                 previousWaterLevels = JSON.parse(point);
 
@@ -528,8 +528,8 @@ TODO: enable subresource integrity
 
 
         //Cork Water Levels Current
-//        $.get("/CarParks/corkWaterLevels/0", function (point) {
-        $.get("/cork/WaterLevels/0", function (point) {
+        $.get("/CarParks/corkWaterLevels/0", function (point) {
+//        $.get("/cork/WaterLevels/0", function (point) {
             obj = JSON.parse(point);
             ///get the other file and then compare
 
