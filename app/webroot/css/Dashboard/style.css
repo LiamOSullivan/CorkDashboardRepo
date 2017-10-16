@@ -21,8 +21,9 @@
 /*Responsive Layout*/
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /*padding and border are included in the total width and height of the elements*/
 }
+
 .menu {
     float:left;
     width:20%;

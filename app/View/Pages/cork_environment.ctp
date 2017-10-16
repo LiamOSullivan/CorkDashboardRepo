@@ -1,10 +1,3 @@
-<!-- <script src="https://dl.dropboxusercontent.com/u/37626989/leaflet-src.js"></script> -->
-<!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> -->
-<!-- <script src="/js/leaflet.js"></script> -->
-<!--<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> -->
-<!--<script src="/js/carparks.js"></script>-->
-<!--<script src="/js/R1D1.js"></script>-->
-
 <?php $this->assign('title', "Real Time Environment"); ?>
 <!--
 TODO: enable subresource integrity 
@@ -19,17 +12,7 @@ TODO: enable subresource integrity
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
 <script src="/js/TileLayer.Grayscale.js"></script>
-<!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
- <script src="/js/leaflet_numbered_markers.js"></script> 
-<script src="/js/TileLayer.Grayscale.js"></script>-->
-<!-- <script src="/js/leaflet-list-markers.js"></script> -->
-<!-- Content -->
-<!--<div id="content-wrapper">
-    <div id="content">
-        <div class="10u" >-->
-<!-- Main Content -->
-<!--<section>-->
+
 <div class="onlyContent">
     <div style="border-bottom:2px solid #e5e5e5; width:90%">
         <header>
