@@ -491,7 +491,7 @@ else{
             weatherSites.clearLayers();
             $row = 1;
             
-    /*        //hydro levels
+            //hydro levels
              $.get("/CarParks/hydroLevels", function(point){
                 obj = JSON.parse(point);
                 for(i = 0; i< 30; i=i+7){  
@@ -562,7 +562,7 @@ else{
                 }
       
         });
-  */
+  
   
   //weather 
    /* for(var j = 1; j<7;j++){ //all the stations that we have
@@ -717,7 +717,6 @@ else{
                //  {"geometry": {"type": "Point", "coordinates": [-9.0763879999999997, 53.387031999999998]}, "type": "Feature", "id": 1640, "properties": {"url": "/0000030083/0001/", "csv_file": "/data/month/30083_0001.csv", "station.name": "Annaghdown Pier", "value": 0.615, "datetime": "2017-06-10 08:15:00+00:00", "sensor.ref": "0001", "station.ref": "0000030083", "station.region_id": 11, "err_code": 99}}      
                
                  var numOfWaterStations = obj.features.length;
-                var previousNumOfWaterStations = obj.features.length;
                  
               for(var i=0;i<numOfWaterStations;i++){
            
@@ -729,31 +728,18 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
               
                   
                   var stationName = obj.features[i]["properties"]["station.name"];
-                  var stationRef = obj.features[i]["properties"]["sensor.ref"];
                   var date = obj.features[i]["properties"]["datetime"];
                   var lon = obj.features[i]["geometry"]["coordinates"][0];
                   var lat = obj.features[i]["geometry"]["coordinates"][1];
                   var waterLevel =  obj.features[i]["properties"]["value"];
                   var id =  obj.features[i]["properties"]["value"];
-                
-                //need to loop through to find matching references
-                for(var j=0;j<previousNumOfWaterStations;j++){
+                      
+                 var previousWaterLevel =  previousWaterLevels.features[i]["properties"]["value"];
+                 var previousDate = previousWaterLevels.features[i]["properties"]["datetime"];
+                 
                     
-                    var previousStationName = previousWaterLevels.features[j]["properties"]["station.name"];
-                    var previousStationRef = previousWaterLevels.features[j]["properties"]["sensor.ref"];
-                    if(stationName == previousStationName  && stationRef == previousStationRef){
-                     //alert("match");
-                        var previousWaterLevel =  previousWaterLevels.features[j]["properties"]["value"];
-                        var previousDate = previousWaterLevels.features[j]["properties"]["datetime"];
-                        var previousStationName = previousWaterLevels.features[j]["properties"]["station.name"];
-                       break;
-                    }
-                    
-                    
-                  
-                }
                     //add to map
-                var text = "<table style=\"width:300px\"><tr><td><b><font color=\"#0000ff\">"+date+": </font> The Water Level at "+stationName+" is "+ waterLevel+" </b></td></tr><tr><td><b><font color=\"#0000ff\">"+previousDate+": </font>The Water Level at "+previousStationName+" was "+ +previousWaterLevel+" </b></td></tr></table>";     
+                var text = "<table style=\"width:300px\"><tr><td><b><font color=\"#0000ff\">"+date+": </font> The Water Level at "+stationName+" is "+ waterLevel+" </b></td></tr><tr><td><b><font color=\"#0000ff\">"+previousDate+": </font>The Water Level at "+stationName+" was "+ +previousWaterLevel+" </b></td></tr></table>";     
     
                 var waterLevelSite = {
         "type": "Feature",
@@ -938,7 +924,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound4", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                 var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];
@@ -982,7 +968,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound5", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                  var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];
@@ -1027,7 +1013,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound6", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                 var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];
@@ -1071,7 +1057,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound7", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                 var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];
@@ -1115,7 +1101,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound8", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                 var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];
@@ -1159,7 +1145,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound9", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                 var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];
@@ -1203,7 +1189,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound10", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                  var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];
@@ -1246,7 +1232,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound11", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                  var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];
@@ -1289,7 +1275,7 @@ if(obj.features[i]["properties"]["station.ref"]< 41000){
             //
              $.get("/CarParks/ambientSound12", function(point){
                 obj = JSON.parse(point);
-                var count = Number(obj.entries);
+                var count = Number(obj.entries)
                 var lastEntry = count-1;
                  var previousValue = obj.aleq[lastEntry-12];
                 var previousTime = obj.times[lastEntry-12];

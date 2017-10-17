@@ -31,18 +31,18 @@
     <div class="row">
         <div class="col-4" >
             <h2>Benchmarks</h2>
-            <a href="CorkBenchMarks" target="_blank" class="bordered-feature-image">
+            <a href="CorkBenchMarks" class="bordered-feature-image">
             <img src="/img/Dashboard/bm_european_monitor.png" alt="" /></a>
             <br>
         </div>
         <div class="col-4" >
-            <h2>Cork Economic Monitor</h2>
+            <h2>Economic Bulletin</h2>
             <a href="CorkEconomicMonitor" class="bordered-feature-image">
                 <img src="/img/Dashboard/cork_economic_monitor.png" alt="" /></a>
             <br>
         </div>
         <div class="col-4" >
-            <h2>Cork versus Other Regions</h2>
+            <h2>Compare Cork </h2>
             <a href="https://public.tableausoftware.com/views/GHDI_Indicators_DublinDash/IndexScoresTotal?:embed=y&:display_count=no&:showVizHome=no" target = "_blank" class="bordered-feature-image">
                 <img src="/img/Dashboard/airo_indicators_nw.png" alt=""  target="_blank"/></a>
 

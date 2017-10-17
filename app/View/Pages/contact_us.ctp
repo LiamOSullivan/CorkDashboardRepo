@@ -15,13 +15,6 @@
             fosters evidence-informed analysis.
 
         </p>
-        <!--<div class= "video-container" align ="center">-->
-            <!--<iframe src="//player.vimeo.com/video/106426369" width="70%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>--> 
-        <!--            <video width="70%" height="auto" controls>
-                        <source src="https://player.vimeo.com/video/106426369"  >
-                        Your browser does not support the video tag.
-                    </video>-->
-
         <div align="center">
             <p>
                 <iframe src="https://player.vimeo.com/video/106426369" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -29,7 +22,7 @@
         </div>
         <!--</div>-->
         <p>
-            (<a href="http://vimeo.com/106479850">lower resolution version</a>)</p>
+            (<a href="http://vimeo.com/106479850" target="blank">External link- lower resolution version</a>)</p>
         <p>			
             The Cork Dashboard pulls together data from major data sources -- 
             The Cork Dashboard pulls data from a range of sources including Cork City and County Councils, 
