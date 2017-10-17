@@ -10,15 +10,16 @@
         <div class="col-6" >
             <h2>Cork City Spending</h2>
             <a href="http://localauthorityfinances.com/spending/4/" target="_blank" class="bordered-feature-image">
-                <img src="/dublindashboard/img/Dashboard/Cork_city_spending.png" alt="" /></a>
+                <img src="/img/Dashboard/Cork_city_spending.png" alt="" /></a>
             <br>
         </div>
         <div class="col-6" >
             <h2>Cork County Spending</h2>
             <a href="http://localauthorityfinances.com/spending/5/" target="_blank" class="bordered-feature-image">
-                <img src="/dublindashboard/img/Dashboard/Cork_county_spending.png" alt=""  /></a>
+                <img src="/img/Dashboard/Cork_county_spending.png" alt=""  /></a>
             <br>
         </div>
     </div>
+</div>
 
 
