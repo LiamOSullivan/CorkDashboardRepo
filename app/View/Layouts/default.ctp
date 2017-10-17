@@ -14,7 +14,7 @@
         <!--<script src="js/dashboard_init.js" type="text/javascript"></script>-->
         <!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
         <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
-        
+
 
         <noscript>
         <link href="/css/style.css" rel="stylesheet" type="text/css"/> <!--
@@ -69,9 +69,24 @@
 
         <!--Responsive content-->
         <div style="overflow:auto">
-        <?php echo $this->element('sidebar') ?>
-        <?php echo $this->fetch('content') ?>
+            <?php echo $this->element('sidebar') ?>
+            <?php echo $this->fetch('content') ?>
         </div>
+        
+        <div id="footer-wrapper">
+            <footer id="footer" class="container">
+                <div class="row">
+                    <?php echo $this->element('dbFooter'); ?>
+                </div>
+            </footer>
+        </div>
+        <?php echo $this->element('googleAnalytics'); ?>
+        <!-- Copyright -->
+        <div id="copyright">
+            <?php echo $this->element('copyright'); ?>
+            
+        </div>
+
 
     </body>
 </html>

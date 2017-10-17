@@ -24,8 +24,8 @@
 
         <div align="center">
             <p>
-            <iframe src="https://player.vimeo.com/video/106426369" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </p>
+                <iframe src="https://player.vimeo.com/video/106426369" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </p>
         </div>
         <!--</div>-->
         <p>
@@ -40,9 +40,7 @@
         </p>
     </div>
     <div class="row">
-        <header>
-            <h2>About Us</h2>
-        </header>
+        <h2>About Us</h2>
         <p>The Cork Dashboard has been developed by 
             <a href="http://dashboards.maynoothuniversity.ie/">The Building City Dashboards project</a> and the 
             <a href="http://airo.maynoothuniversity.ie/">All Island Research Observatory</a> (AIRO) at 
@@ -57,7 +55,7 @@
                 <a href="https://www.maynoothuniversity.ie/people/rob-kitchin/">Professor Rob Kitchin</a><br>
                 <a href="https://www.maynoothuniversity.ie/people/chris-brunsdon/">Professor Chris Brunsdonn </a><br>
                 <a href="https://www.maynoothuniversity.ie/people/martin-charlton/">Martin Charlton </a><br>
-                <a href="https://www.maynoothuniversity.ie/people/jeneen-naji/">Dr Jeneen Naji</a><br>
+                <a href="https://www.maynoothuniversity.ie/people/jeneen-naji/">Dr Jeneen Naji</a>
             </p>
         </div>
         <div class="col-4">
@@ -65,7 +63,7 @@
             <p>
                 <a href="https://www.maynoothuniversity.ie/people/liam-o-sullivan/">Liam O'Sullivan</a><br>
                 <a href="https://www.maynoothuniversity.ie/people/stephanie-keogh/">Dr Stephanie Keogh</a><br>
-                <a href="http://www.maynoothuniversity.ie/progcity/contributors/gavin-mcardle/">Dr Gavin McArdle </a><br>
+                <a href="http://www.maynoothuniversity.ie/progcity/contributors/gavin-mcardle/">Dr Gavin McArdle </a>
             </p>
         </div>
         <div class="col-4">
