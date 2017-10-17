@@ -188,11 +188,9 @@
 
         <div id="corkarts" class="col-3" align="center"> 
             <h2>Cork Arts Theatre</h2> 
-
             <img width="90%" src="/img/Dashboard/cork_icons/Cork_Arts_Theatre.png" alt="db">
             <a href="https://play.google.com/store/apps/details?id=com.my_theatre.cork"  target="_blank">
                 <img width="66%" src="/img/Dashboard/icons/google_play_logo.png"></a>
-
             <a href="https://appsto.re/ie/ZOIg-.i"  target="_blank">
                 <img width="66%" src="/img/Dashboard/icons/apple-store-logo.png"></a>
         </div>
@@ -220,9 +218,9 @@
 
             <img width="90%" src="/img/Dashboard/cork_icons/Cork_County_Planning_Enquiry_System.png" alt="db">
             <a href="https://play.google.com/store/apps/details?id=ie.corkcoco.pl.mobile.planningviewer"  target="_blank">
-                <img width="90%" src="/img/Dashboard/icons/google_play_logo.png"></a>
+                <img width="66%" src="/img/Dashboard/icons/google_play_logo.png"></a>
             <a href="https://appsto.re/ie/Q68r4.i"  target="_blank">
-                <img width="90%" src="/img/Dashboard/icons/apple-store-logo.png"></a>                   
+                <img width="66%" src="/img/Dashboard/icons/apple-store-logo.png"></a>                   
         </div>
 
         <div id="CorkCityLibraries" class="col-3" align="center"> 
@@ -231,9 +229,9 @@
             <img width="90%" src="/img/Dashboard/cork_icons/CorkCity_Libraries.png" alt="db">
 
             <a href="https://play.google.com/store/apps/details?id=uk.co.solus.corkcity"  target="_blank">
-                <img width="90%" src="/img/Dashboard/icons/google_play_logo.png"></a>
+                <img width="66%" src="/img/Dashboard/icons/google_play_logo.png"></a>
             <a href="https://appsto.re/ie/F10K1.i"  target="_blank">
-                <img width="90%" src="/img/Dashboard/icons/apple-store-logo.png"></a>
+                <img width="66%" src="/img/Dashboard/icons/apple-store-logo.png"></a>
         </div>  
 
         <div id="mapAlerterText" class="col-3" align="center"> 
@@ -251,7 +249,7 @@
             <h2>Fix Your Street </h2> 
             <img width="90%" src="/img/Dashboard/icons/app_fix_your_street.png" alt="db">
             <a href="https://play.google.com/store/apps/details?id=ie.sdcc.mobile.fms"  target="_blank">
-                <img width="90%" src="/img/Dashboard/icons/google_play_logo.png"></a>
+                <img width="66%" src="/img/Dashboard/icons/google_play_logo.png"></a>
         </div>
 
         <div id="Corkuniversityhospital" class="col-3" align="center"> 

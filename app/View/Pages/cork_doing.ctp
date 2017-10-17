@@ -8,18 +8,20 @@
         </header>
     </div>
     <div class="row">
-         <div class="col-4" >
+        <div class="col-4" >
             <h2>Indicators </h2>
-            <a href="corkIndicators" class="bordered-feature-image"><img src="/img/Dashboard/Cork_Doing3.png" alt="" /></a>
+            <a href="corkIndicators" class="bordered-feature-image">
+                <img src="/img/Dashboard/Cork_Doing3.png" alt="" /></a>
             <!--<a href="cork_indicators.ctp"></a>-->
             <br>
         </div>
-         <div class="col-4" >
+        <div class="col-4" >
             <h2>Spending</h2>
-            <a href="CorkSpending" class="bordered-feature-image"><img src="/img/Dashboard/Cork_county_spending.png"  alt="" /></a>
+            <a href="CorkSpending" class="bordered-feature-image">
+                <img src="/img/Dashboard/Cork_county_spending.png"  alt="" /></a>
             <br>
         </div>
-         <div class="col-4" >
+        <div class="col-4" >
             <h2>Cost of Living</h2>
             <a href="https://www.numbeo.com/cost-of-living/in/Cork" target="_blank" class="bordered-feature-image">
                 <img src="/img/Dashboard/cost_of_living_cork.png" alt=""  /></a>
@@ -27,22 +29,23 @@
         </div>
     </div>
     <div class="row">
-         <div class="col-4" >
-            <h2>Cost of Living</h2>
-            <a href="https://www.numbeo.com/cost-of-living/in/Cork" target="_blank" class="bordered-feature-image">
-                <img src="/img/Dashboard/cost_of_living_cork.png" alt=""  /></a>
-            <br>
-        </div>
-         <div class="col-4" >
-            <h2>Cost of Living</h2>
-            <a href="https://www.numbeo.com/cost-of-living/in/Cork" target="_blank" class="bordered-feature-image">
-                <img src="/img/Dashboard/cost_of_living_cork.png" alt=""  /></a>
+        <div class="col-4" >
+            <h2>Benchmarks</h2>
+            <a href="CorkBenchMarks" target="_blank" class="bordered-feature-image">
+            <img src="/img/Dashboard/bm_european_monitor.png" alt="" /></a>
             <br>
         </div>
         <div class="col-4" >
-            <h2>Cost of Living</h2>
-            <a href="https://www.numbeo.com/cost-of-living/in/Cork" target="_blank" class="bordered-feature-image">
-                <img src="/img/Dashboard/cost_of_living_cork.png" alt=""  /></a>
+            <h2>Cork Economic Monitor</h2>
+            <a href="CorkEconomicMonitor" class="bordered-feature-image">
+                <img src="/img/Dashboard/cork_economic_monitor.png" alt="" /></a>
+            <br>
+        </div>
+        <div class="col-4" >
+            <h2>Cork versus Other Regions</h2>
+            <a href="https://public.tableausoftware.com/views/GHDI_Indicators_DublinDash/IndexScoresTotal?:embed=y&:display_count=no&:showVizHome=no" target = "_blank" class="bordered-feature-image">
+                <img src="/img/Dashboard/airo_indicators_nw.png" alt=""  target="_blank"/></a>
+
             <br>
         </div>
     </div>
@@ -92,11 +95,6 @@
     }
 </script>
 
-
-
-<!-- Content -->
-<!--<div id="content-wrapper">
-    <div id="content">-->
 
 
 

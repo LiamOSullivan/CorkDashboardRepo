@@ -155,15 +155,22 @@ h3 {
     font-size: 1.25em;
 }
 
-ul, ol, p, dl
+ul, ol, dl
 {
     margin: 0 0 2em 0;
-    font-size:1.45em
+    font-size:1.45em;
+}
+
+p {
+    text-align: justify;
+    margin: 0 0 2em 0;
+    font-size:1.45em;
 }
 
 a:link {
     color: rgba(181, 31, 36, 0.5);
     text-decoration: none;
+    
 }
 
 /* visited link */
