@@ -356,16 +356,16 @@ TODO: enable subresource integrity
 
                         }
                         //add to map
-                        let text = 
-                                "<table style=\"width:300px\"><tr><td><b><font color=\"#0000ff\">" 
-                                + date + ": </font> The Water Level at " 
-                                + stationName + " is " 
-                                + waterLevel + " </b></td></tr><tr><td><b><font color=\"#0000ff\">" 
-                                + previousDate + ": </font>The Water Level at " 
-                                + previousStationName + " was " 
+                        let text =
+                                "<table style=\"width:300px\"><tr><td><b><font color=\"#0000ff\">"
+                                + date + ": </font> The Water Level at "
+                                + stationName + " is "
+                                + waterLevel + " </b></td></tr><tr><td><b><font color=\"#0000ff\">"
+                                + previousDate + ": </font>The Water Level at "
+                                + previousStationName + " was "
                                 + previousWaterLevel + " </b></td></tr></table>";
                         console.log(text);
-                        
+
                         let waterLevelSite = {
                             "type": "Feature",
                             "properties": {
@@ -394,6 +394,7 @@ TODO: enable subresource integrity
                     }
                 }
             }
+            waterSites.addTo(map);
         }); //End of GET for current water levels
 
 
@@ -1183,7 +1184,7 @@ TODO: enable subresource integrity
 //                onEachFeature: onEachFeature, pointToLayer: function (feature, latlng) {
 //                    return L.circleMarker(latlng, airQualitySiteOptions);
 //                }}));
-//            if (initial == 1 || map.hasLayer(groupAir)) {
+//            if (initial === 1 || map.hasLayer(groupAir)) {
 //                groupAir.addTo(map);
 //                soundSites.addTo(map);
 //                waterSites.addTo(map);
@@ -1193,7 +1194,43 @@ TODO: enable subresource integrity
 //
 //
 //
-//        });
+//        }); //end ambient sound 14
+    
+
+    function onEachFeature(feature, layer) {
+        layer.on({
+            mouseover: highlightFeature,
+            mouseout: resetHighlight
+        });
+    }
+
+    function resetHighlight(e) {
+        let layer = e.target;
+        layer.setStyle({// highlight the feature
+            weight: 1,
+            color: '#666',
+            dashArray: ''
+        });
+    }
+
+
+    function highlightFeature(e) {
+        let layer = e.target;
+        layer.setStyle({// highlight the feature
+            weight: 5,
+            color: '#666',
+            dashArray: ''
+        });
+        if (!L.Browser.ie && !L.Browser.opera) {
+            layer.bringToFront();
+        }
+        popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
+    }
+
+
+
+    //CARPARKS
+    $.get("/CarParks/nowParking", function (point) {
         function onEachFeature(feature, layer) {
             layer.on({
                 mouseover: highlightFeature,
@@ -1207,9 +1244,9 @@ TODO: enable subresource integrity
                 weight: 1,
                 color: '#666',
                 dashArray: ''
+                //fillOpacity: setMarkerIntensity(
             });
         }
-
 
         function highlightFeature(e) {
             let layer = e.target;
@@ -1217,66 +1254,32 @@ TODO: enable subresource integrity
                 weight: 5,
                 color: '#666',
                 dashArray: ''
+                //fillOpacity: 0.6
             });
             if (!L.Browser.ie && !L.Browser.opera) {
                 layer.bringToFront();
             }
+
             popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
         }
 
 
-
-        //CARPARKS
-        $.get("/CarParks/nowParking", function (point) {
-            function onEachFeature(feature, layer) {
-                layer.on({
-                    mouseover: highlightFeature,
-                    mouseout: resetHighlight,
-                });
+        function highlightRoadFeature(e) {
+            let layer = e.target;
+            layer.setStyle({// highlight the feature
+                weight: 10,
+                color: '#FF0000',
+                dashArray: ''
+                //fillOpacity: 0.6
+            });
+            if (!L.Browser.ie && !L.Browser.opera) {
+                layer.bringToFront();
             }
 
-            function resetHighlight(e) {
-                let layer = e.target;
-                layer.setStyle({// highlight the feature
-                    weight: 1,
-                    color: '#666',
-                    dashArray: '',
-                    //fillOpacity: setMarkerIntensity(
-                });
-            }
+            layer.bindPopup(layer.feature.properties.popupContent); //essential
+        }
+    });
 
-            function highlightFeature(e) {
-                let layer = e.target;
-                layer.setStyle({// highlight the feature
-                    weight: 5,
-                    color: '#666',
-                    dashArray: '',
-                    //fillOpacity: 0.6
-                });
-                if (!L.Browser.ie && !L.Browser.opera) {
-                    layer.bringToFront();
-                }
-
-                popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
-            }
-
-
-            function highlightRoadFeature(e) {
-                let layer = e.target;
-                layer.setStyle({// highlight the feature
-                    weight: 10,
-                    color: '#FF0000',
-                    dashArray: '',
-                    //fillOpacity: 0.6
-                });
-                if (!L.Browser.ie && !L.Browser.opera) {
-                    layer.bringToFront();
-                }
-
-                layer.bindPopup(layer.feature.properties.popupContent); //essential
-            }
-        });
-    }
 //
 //    function setWaterGuageColour(currentVal, previousVal) {
 //        if (currentVal < previousVal) { //falling
@@ -1329,16 +1332,16 @@ TODO: enable subresource integrity
 //                '#00FF00';
 //    }
 //
+
+} //End myFunction()
     function onMapClick(e) {
+//        console.log("Click");
 
     }
 
 
 </script>
-<!--            </section>-->
-<!--        </div>
-    </div>
-</div>-->
+
 
 
 
