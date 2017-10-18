@@ -9,6 +9,8 @@
 </div>
 <div class="row">
     <center>
-    <a href="/pages/disclaimer">Disclaimer</a> | Contact us by email <a href="mailto:dashboards@nuim.ie" >dashboards *at* nuim *dot* ie </a></p>
+    
+        <a href="/pages/disclaimer">Disclaimer</a> | Contact us by email <a href="mailto:dashboards@nuim.ie" >dashboards *at* nuim *dot* ie </a>
+   
     </center>
 </div>

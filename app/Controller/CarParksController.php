@@ -4,9 +4,14 @@ App::import('Vendor', 'HighchartsPHP/Highchart');
 
 class CarParksController extends AppController {
     /* Make the new component available */
+    
 
     public $components = array('BuildGraph', 'Session', 'RequestHandler');
 
+    public function test(){
+//        echo("Carparks Controller Test Called");
+    }
+    
     public function index() {
 
         //$this->set('title_for_graph', "Employment");
@@ -15,9 +20,9 @@ class CarParksController extends AppController {
     }
 
     public function updateParking() {
-        $this->layout = 'dublin_live_1';
+//        $this->layout = 'dublin_live_1';
         //$this->set('Graph3', "M50_north");
-        $this->set('dublin_header', "real_time_new_long_skyline_1800.png");
+//        $this->set('dublin_header', "real_time_new_long_skyline_1800.png");
         /*
           //example of reading a csv file
           $CSV = file_get_contents('http://www.dohc.ie/statistics/tw/Tallaght_Hospital.csv');
@@ -46,7 +51,8 @@ class CarParksController extends AppController {
     }
 
     public function corkWaterLevels($previousOrCurrent) {
-         console.log("Scanning cork/waterlevels");
+//        alert("Scanning cork/waterlevels");
+        
         $files = scandir('./cork/waterLevels', 1);
         $file = $files[$previousOrCurrent];
         $json = file_get_contents('./cork/waterLevels/' . $file);
@@ -58,8 +64,8 @@ class CarParksController extends AppController {
         );
         $cxContext = stream_context_create($aContext);
 
-        $this->set('test', $json);
-        $this->render('/Elements/corkWaterLevelsReturn'); // This View is declared at /Elements/ajaxreturn.ctp
+       $this->set('test', $json);
+       $this->render('/Elements/corkWaterLevelsReturn'); // This View is declared at /Elements/ajaxreturn.ctp
     }
 
     public function corkBikes() {
@@ -109,95 +115,6 @@ class CarParksController extends AppController {
 
         $this->set('test', $json);
         $this->render('/Elements/traveltimereturn'); // This View is declared at /Elements/ajaxreturn.ctp
-    }
-
-    public function M50SouthService($fileNumber) {
-        $this->layout = '';
-        $files = scandir('./m50', 1);
-        if ($fileNumber == 1) {
-            $newest_file = $files[$fileNumber];
-            $json = file_get_contents('./m50/' . $newest_file);
-            $json_array = json_decode($json, true);
-            $m50s = @$json_array ['M50_southBound']['data'][11]['current_travel_time'];
-            $fileCount = 2;
-            while ($m50s == null) { //so that a value is always returned, if its null it finds most rect value for traveltime
-                $newest_file = $files[$fileCount];
-                $json = file_get_contents('./m50/' . $newest_file);
-                $json_array = json_decode($json, true);
-                $m50s = @$json_array ['M50_southBound']['data'][11]['current_travel_time'];
-                $fileCount++;
-            }
-            $out[] = [$m50s];
-
-
-            $this->set(array(
-                'out' => $out, //<-- Set the post in the view
-                '_serialize' => 'out', //<-- Tell cake to use that post
-                '_jsonp' => true              // <-- And wrap it in the callback function
-            ));
-        } else {
-            for ($i = 0; $i < $fileNumber; $i++) {
-                $newest_file = $files[$i];
-                $json = file_get_contents('./m50/' . $newest_file);
-                $json_array = json_decode($json, true);
-                $m50s = @$json_array ['M50_southBound']['data'][11]['current_travel_time'];
-                $out[$i] = $m50s;
-            }
-            $reversed = array_reverse($out); //so the data is right order with newest last
-            $this->set(array(
-                'out' => $reversed, //<-- Set the post in the view
-                '_serialize' => 'out', //<-- Tell cake to use that post
-                '_jsonp' => true                // <-- And wrap it in the callback function
-            ));
-        }
-    }
-
-    public function M50Service($NorthOrSouth, $fileNumber) {
-        $this->layout = '';
-        $files = scandir('./m50', 1);
-        if ($NorthOrSouth == 'north') {
-            $M50 = 'M50_northBound';
-            $junctions = 10;
-        } else {
-            $M50 = 'M50_southBound';
-            $juntions = 11;
-        }
-        if ($fileNumber == 1) {
-            $newest_file = $files[$fileNumber];
-            $json = file_get_contents('./m50/' . $newest_file);
-            $json_array = json_decode($json, true);
-            $m50s = @$json_array [$M50]['data'][(int) $junctions]['current_travel_time'];
-            $fileCount = 2;
-            while ($m50s == null) { //so that a value is always returned, if its null it finds most rect value for traveltime
-                $newest_file = $files[$fileCount];
-                $json = file_get_contents('./m50/' . $newest_file);
-                $json_array = json_decode($json, true);
-                $m50s = @$json_array [$M50]['data'][11]['current_travel_time'];
-                $fileCount++;
-            }
-            $out[] = [$m50s];
-
-
-            $this->set(array(
-                'out' => $out, //<-- Set the post in the view
-                '_serialize' => 'out', //<-- Tell cake to use that post
-                '_jsonp' => true              // <-- And wrap it in the callback function
-            ));
-        } else {
-            for ($i = 0; $i < $fileNumber; $i++) {
-                $newest_file = $files[$i];
-                $json = file_get_contents('./m50/' . $newest_file);
-                $json_array = json_decode($json, true);
-                $m50s = @$json_array [$M50]['data'][(int) $junctions]['current_travel_time'];
-                $out[$i] = $m50s;
-            }
-            $reversed = array_reverse($out); //so the data is right order with newest last
-            $this->set(array(
-                'out' => $reversed, //<-- Set the post in the view
-                '_serialize' => 'out', //<-- Tell cake to use that post
-                '_jsonp' => true                // <-- And wrap it in the callback function
-            ));
-        }
     }
 
     public function airQuality() {
@@ -258,7 +175,7 @@ class CarParksController extends AppController {
             if ($valueOrDesc == 'desc') {
                 $out[] = $airQualDesc;
             } else {
-                $out[] = [$airQualValue];
+//                $out[] = [$airQualValue];
             }
         } else {
             for ($i = 0; $i < $fileNumber; $i++) {
@@ -303,7 +220,7 @@ class CarParksController extends AppController {
 
         $maxnumberOfRecords = max($numberOfRecords);
         $avgarrayConter = 0;
-        $flags = [];
+//        $flags = [];
 
         for ($i = 0; $i < $maxnumberOfRecords; $i++) {
             $sum = 0;
@@ -677,8 +594,8 @@ class CarParksController extends AppController {
                 $cpFreeSpaces2 = $cpFreeSpaces2 + @$json_array2['result']['records'][$i]['free_spaces'];
             }
 
-            $out[0] = [$cpFreeSpaces];
-            $out[1] = [$cpFreeSpaces2];
+//            $out[0] = [$cpFreeSpaces];
+//            $out[1] = [$cpFreeSpaces2];
 
 
             $this->set(array(
