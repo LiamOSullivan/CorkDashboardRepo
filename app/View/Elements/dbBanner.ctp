@@ -2,8 +2,8 @@
     <br>
     <br>
 </div>
-<div style="padding-top: 20px; padding-left: 10px">
-    <img src="/img/cork_dashboard_1.png" alt="Cork Dashboard header banner" max-width="100%"/>
+<div class="row" style="padding-top: 20px; padding-left: 10px">
+    <img src="/img/cork_dashboard_1.png" alt="Cork Dashboard header banner" max-width="100%" width="100%"/>
 </div>
 
 <script type="text/javascript">var switchTo5x = true;</script>

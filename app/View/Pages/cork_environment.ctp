@@ -10,8 +10,9 @@ TODO: enable subresource integrity
   crossorigin=""></script>-->
 
 <!--TODO: load these via PHP-->
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> 
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> 
 <script src="/js/TileLayer.Grayscale.js"></script>
 <script src="/js/carparks.js"></script>
 <script src="/js/carParkCapacities.js"></script>
@@ -31,7 +32,7 @@ TODO: enable subresource integrity
 
     <!--<body onload="myFunction()">-->
     <div class="homeBlock" style="width: 90%; padding-top:25px; padding-bottom:25px">
-        <div id="map" style="width: 100%; height:500px;"></div>
+        <div id="mapDiv" style="width: 100%; "></div>
     </div>
     <!--<div id="airQuality" style="width: 100%; height: 55px; font-size: 1.2em; font-weight: 300; text-align: center;"></div>-->
     <div id="dataSources" class="homeBlock" style="width:90%; text-align:justify">
@@ -74,6 +75,101 @@ TODO: enable subresource integrity
 
     let browser = get_browser_info();
 
+//Declare Map variables
+    var map;
+//    let groupAir = new L.FeatureGroup();
+//    let soundSites = new L.FeatureGroup();
+    let waterSites = new L.FeatureGroup();
+//    let weatherSites = new L.FeatureGroup();
+    let osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    let osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+    let osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+    let osmGrey = new L.TileLayer.Grayscale(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+
+//Initialise Map based on browser
+    if (browser.name == 'MSIE' && browser.version == '9') {
+        //alert(browser.version);
+        //alert(browser.name);
+        //alert('OK');
+
+        map = new L.Map('mapDiv', {
+            center: new L.LatLng(52.034439, -8.608861),
+            zoom: 9,
+            layers: [osm],
+            zoomControl: true
+        });
+    } else if (browser.name == 'MSIE' && browser.version == '10') {
+        //alert(browser.version);
+        //alert(browser.name);
+        //alert('OK');
+
+        map = new L.Map('mapDiv', {
+            center: new L.LatLng(52.034439, -8.608861),
+            zoom: 9,
+            layers: [osm],
+            zoomControl: true
+        });
+    } else if (browser.name == 'Firefox' && browser.version == '8') {
+        //alert(browser.version);
+        //alert(browser.name);
+        //alert('OK');
+
+        map = new L.Map('mapDiv', {
+            center: new L.LatLng(52.034439, -8.608861),
+            zoom: 9,
+            layers: [osm],
+            zoomControl: true
+        });
+    } else if (browser.name == 'Firefox' && browser.version == '7') {
+        //alert(browser.version);
+        //alert(browser.name);
+        //alert('OK');
+
+        map = new L.Map('mapDiv', {
+            center: new L.LatLng(52.034439, -8.608861),
+            zoom: 9,
+            layers: [osm],
+            zoomControl: true
+        });
+    } else {
+        map = new L.Map('mapDiv', {
+            center: new L.LatLng(52.034439, -8.608861),
+            zoom: 9,
+            layers: [osmGrey],
+            zoomControl: true
+        });
+    }
+//    let testMarker = L.marker([52.034439, -8.608861]).addTo(map);
+
+
+
+    //LEGEND
+    let legend = L.control({position: 'bottomright'});
+    legend.onAdd = function (map) {
+        let div = L.DomUtil.create('div', 'info legend'),
+                grades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
+                labels = [],
+                from, to;
+        labels.push('Ambient Sound Level');
+        for (let i = 0; i < grades.length; i++) {
+            from = grades[i];
+            to = grades[i + 1];
+            labels.push('<i style="background: ' + setAmbientSoundColor(from) + '"></i> ' +
+                    from + (to ? 'db&ndash;' + to + 'db' : 'db' + '+'));
+        }
+        labels.push('Water Levels');
+        labels.push('<i style="background: #deebf7"></i>  Decreasing');
+        labels.push('<i style="background: #9ecae1"></i>  No Change');
+        labels.push('<i style="background: #3182bd"></i>  Increasing');
+        labels.push('EPA Site');
+        labels.push('<i style="background: #5F5293"></i>  Site Location');
+        div.innerHTML = labels.join('<br>');
+        return div;
+    };
+    legend.addTo(map);
+
+    map.addEventListener('click', onMapClick);
+
 
     //alert(browser.name);
 
@@ -115,6 +211,27 @@ TODO: enable subresource integrity
 
 
     //Map Styling
+
+//    let layerControl = new L.LayerControl();
+
+    let baseMaps = {
+        //"MQ Greyscale": mapquestGrey,
+        // "MQ Colour": mapquestColour,
+        "OSM Greyscale": osmGrey,
+        "OSM Colour": osm
+
+    };
+    let overlayMaps = {
+//        "EPA Monitoring Sites": groupAir,
+//        "Ambient Sound Recording Sites": soundSites,
+        "EPA Water Level Sites": waterSites
+//        "Weather Sites": weatherSites
+    };
+    layerControl = L.control.layers(baseMaps, overlayMaps);
+    layerControl.addTo(map);
+    let initial = 0; //check to add everythign initially to first map.
+
+
     //Individual AirQuality Locations
 
     let airQualitySite1 = {//Cork Institute of Technology
@@ -146,136 +263,7 @@ TODO: enable subresource integrity
         opacity: 1,
         color: "#000"
     };
-    let map;
-    let groupAir = new L.FeatureGroup();
-    let soundSites = new L.FeatureGroup();
-    let waterSites = new L.FeatureGroup();
-    let weatherSites = new L.FeatureGroup();
-//    let layerControl = new L.LayerControl();
 
-
-
-    let cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
-            cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
-            cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
-    let mapquestUrl = 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-            mapquestAttribution = "Data CC-By-SA by <a href='http://openstreetmap.org/' target='_blank'>OpenStreetMap</a>, Tiles Courtesy of <a href='http://open.mapquest.com' target='_blank'>MapQuest</a>",
-            mapquestGrey = new L.TileLayer.Grayscale(mapquestUrl, {maxZoom: 18, attribution: mapquestAttribution, subdomains: ['1', '2', '3', '4'], bgcolor: '0x80BDE3'});
-    mapquestColour = new L.TileLayer(mapquestUrl, {maxZoom: 18, attribution: mapquestAttribution, subdomains: ['1', '2', '3', '4'], bgcolor: '0x80BDE3'});
-    //create the tile layer with correct attribution
-    let osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    let osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-    let osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-    let osmGrey = new L.TileLayer.Grayscale(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-    //alert(browser.version);
-    //alert(browser.name);
-
-
-    if (browser.name == 'MSIE' && browser.version == '9') {
-        //alert(browser.version);
-        //alert(browser.name);
-        //alert('OK');
-
-        map = new L.Map('map', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osm],
-            zoomControl: true
-        });
-    } else if (browser.name == 'MSIE' && browser.version == '10') {
-        //alert(browser.version);
-        //alert(browser.name);
-        //alert('OK');
-
-        map = new L.Map('map', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osm],
-            zoomControl: true
-        });
-    } else if (browser.name == 'Firefox' && browser.version == '8') {
-        //alert(browser.version);
-        //alert(browser.name);
-        //alert('OK');
-
-        map = new L.Map('map', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osm],
-            zoomControl: true
-        });
-    } else if (browser.name == 'Firefox' && browser.version == '7') {
-        //alert(browser.version);
-        //alert(browser.name);
-        //alert('OK');
-
-        map = new L.Map('map', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osm],
-            zoomControl: true
-        });
-    } else {
-        map = new L.Map('map', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osmGrey],
-            zoomControl: true
-        });
-    }
-    map.addEventListener('click', onMapClick);
-//LEGEND
-    let legend = L.control({position: 'bottomright'});
-    legend.onAdd = function (map) {
-        let div = L.DomUtil.create('div', 'info legend'),
-                grades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
-                labels = [],
-                from, to;
-        labels.push('Ambient Sound Level');
-        for (let i = 0; i < grades.length; i++) {
-            from = grades[i];
-            to = grades[i + 1];
-            labels.push('<i style="background: ' + setAmbientSoundColor(from) + '"></i> ' +
-                    from + (to ? 'db&ndash;' + to + 'db' : 'db' + '+'));
-        }
-        labels.push('Water Levels');
-        labels.push('<i style="background: #deebf7"></i>  Decreasing');
-        labels.push('<i style="background: #9ecae1"></i>  No Change');
-        labels.push('<i style="background: #3182bd"></i>  Increasing');
-        labels.push('EPA Site');
-        labels.push('<i style="background: #5F5293"></i>  Site Location');
-        div.innerHTML = labels.join('<br>');
-        return div;
-    };
-//    legend.addTo(map);
-//
-//        function getSoundSiteName(propertName) {
-//            return soundsites[propertName];
-//    
-//        }
-//    ;
-
-//    function getJunctionName(propertyName) {
-//        return M50[propertyName];
-//    }
-//    ;
-
-    let baseMaps = {
-        //"MQ Greyscale": mapquestGrey,
-        // "MQ Colour": mapquestColour,
-        "OSM Greyscale": osmGrey,
-        "OSM Colour": osm
-
-    };
-    let overlayMaps = {
-        "EPA Monitoring Sites": groupAir,
-        "Ambient Sound Recording Sites": soundSites,
-        "EPA Water Level Sites": waterSites,
-        "Weather Sites": weatherSites
-    };
-    layerControl = L.control.layers(baseMaps, overlayMaps);
-    layerControl.addTo(map);
-    let initial = 0; //check to add everythign initially to first map.
 
     function myFunction() {
         console.log("***myFunction()***");
@@ -285,7 +273,6 @@ TODO: enable subresource integrity
         waterSites.clearLayers();
 //        weatherSites.clearLayers();
         $row = 1;
-
         let previousWaterLevels = null;
 
 //        This works...
@@ -313,7 +300,7 @@ TODO: enable subresource integrity
                 console.log("Preious water levels: " + previousWaterLevels);
             }
         });
-
+        var waterMarkers = [];
         //Cork Water Levels Current index = 0
         $.get("/CarParks/corkWaterLevels/0", function (point) {
 //        $.get("/cork/WaterLevels/0", function (point) {
@@ -387,17 +374,52 @@ TODO: enable subresource integrity
                             opacity: 1,
                             fillOpacity: 1 //setMarkerIntensity(spaces)
                         };
+                        
                         waterSites.addLayer(L.geoJson(waterLevelSite, {
                             onEachFeature: onEachFeature, pointToLayer: function (feature, latlng) {
                                 return L.circleMarker(latlng, waterLevelSiteOptions);
                             }}));
+
+                        waterMarkers.push(L.Marker([52.035439, -8.608861]));
+                        waterMarkers[i].addTo(map);
                     }
                 }
             }
-            waterSites.addTo(map);
+           waterSites.addTo(map);
+           console.log("***added waterSites***");
+
         }); //End of GET for current water levels
 
 
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+//                mouseover: highlightFeature,
+//                mouseout: resetHighlight
+            });
+        }
+
+        function resetHighlight(e) {
+            let layer = e.target;
+//            layer.setStyle({// highlight the feature
+//                weight: 1,
+//                color: '#666',
+//                dashArray: ''
+//            });
+        }
+
+        function highlightFeature(e) {
+            let layer = e.target;
+//            layer.setStyle({// highlight the feature
+//                weight: 5,
+//                color: '#666',
+//                dashArray: ''
+//            });
+            if (!L.Browser.ie && !L.Browser.opera) {
+                layer.bringToFront();
+            }
+            popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
+        }
 
 
         //hydro levels
@@ -1195,90 +1217,62 @@ TODO: enable subresource integrity
 //
 //
 //        }); //end ambient sound 14
-    
 
-    function onEachFeature(feature, layer) {
-        layer.on({
-            mouseover: highlightFeature,
-            mouseout: resetHighlight
-        });
-    }
-
-    function resetHighlight(e) {
-        let layer = e.target;
-        layer.setStyle({// highlight the feature
-            weight: 1,
-            color: '#666',
-            dashArray: ''
-        });
-    }
-
-
-    function highlightFeature(e) {
-        let layer = e.target;
-        layer.setStyle({// highlight the feature
-            weight: 5,
-            color: '#666',
-            dashArray: ''
-        });
-        if (!L.Browser.ie && !L.Browser.opera) {
-            layer.bringToFront();
-        }
-        popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
-    }
+//
+//    
 
 
 
-    //CARPARKS
-    $.get("/CarParks/nowParking", function (point) {
-        function onEachFeature(feature, layer) {
-            layer.on({
-                mouseover: highlightFeature,
-                mouseout: resetHighlight
-            });
-        }
-
-        function resetHighlight(e) {
-            let layer = e.target;
-            layer.setStyle({// highlight the feature
-                weight: 1,
-                color: '#666',
-                dashArray: ''
-                //fillOpacity: setMarkerIntensity(
-            });
-        }
-
-        function highlightFeature(e) {
-            let layer = e.target;
-            layer.setStyle({// highlight the feature
-                weight: 5,
-                color: '#666',
-                dashArray: ''
-                //fillOpacity: 0.6
-            });
-            if (!L.Browser.ie && !L.Browser.opera) {
-                layer.bringToFront();
-            }
-
-            popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
-        }
-
-
-        function highlightRoadFeature(e) {
-            let layer = e.target;
-            layer.setStyle({// highlight the feature
-                weight: 10,
-                color: '#FF0000',
-                dashArray: ''
-                //fillOpacity: 0.6
-            });
-            if (!L.Browser.ie && !L.Browser.opera) {
-                layer.bringToFront();
-            }
-
-            layer.bindPopup(layer.feature.properties.popupContent); //essential
-        }
-    });
+        //CARPARKS
+//    $.get("/CarParks/nowParking", function (point) {
+//        function onEachFeature(feature, layer) {
+//            layer.on({
+//                mouseover: highlightFeature,
+//                mouseout: resetHighlight
+//            });
+//        }
+//
+//        function resetHighlight(e) {
+//            let layer = e.target;
+//            layer.setStyle({// highlight the feature
+//                weight: 1,
+//                color: '#666',
+//                dashArray: ''
+//                //fillOpacity: setMarkerIntensity(
+//            });
+//        }
+//
+//        function highlightFeature(e) {
+//            let layer = e.target;
+//            layer.setStyle({// highlight the feature
+//                weight: 5,
+//                color: '#666',
+//                dashArray: ''
+//                //fillOpacity: 0.6
+//            });
+//            if (!L.Browser.ie && !L.Browser.opera) {
+//                layer.bringToFront();
+//            }
+//
+//            popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
+//        }
+//
+//
+//        function highlightRoadFeature(e) {
+//            let layer = e.target;
+//            layer.setStyle({// highlight the feature
+//                weight: 10,
+//                color: '#FF0000',
+//                dashArray: ''
+//                //fillOpacity: 0.6
+//            });
+//            if (!L.Browser.ie && !L.Browser.opera) {
+//                layer.bringToFront();
+//            }
+//
+//            layer.bindPopup(layer.feature.properties.popupContent); //essential
+//        }
+//    });
 
 //
 //    function setWaterGuageColour(currentVal, previousVal) {
@@ -1309,21 +1303,7 @@ TODO: enable subresource integrity
 //
 //    }
 
-//    function setAmbientSoundColor(ambientSound) {
-//        let good = 55;
-//        let bad = 70;
-//        return ambientSound < 10 ? '#fff7ec' :
-//                ambientSound < 20 ? '#fee8c8' :
-//                ambientSound < 30 ? '#fdd49e' :
-//                ambientSound < 40 ? '#fdbb84' :
-//                ambientSound < 50 ? '#fc8d59' :
-//                ambientSound < 60 ? '#ef6548' :
-//                ambientSound < 70 ? '#d7301f' :
-//                ambientSound < 80 ? '#b30000' :
-//                ambientSound < 90 ? '#8f0000' :
-//                ambientSound > 90 ? '#7f0000' :
-//                '#000000';
-//    }
+
 
 //    function setTripsColour(travelTime) {
 //        let good = 10; //need the freeflow traveltime
@@ -1333,14 +1313,61 @@ TODO: enable subresource integrity
 //    }
 //
 
-} //End myFunction()
+    } //End myFunction()
+
+    function setAmbientSoundColor(ambientSound_) {
+        let good = 55;
+        let bad = 70;
+        return ambientSound_ < 10 ? '#fff7ec' :
+                ambientSound_ < 20 ? '#fee8c8' :
+                ambientSound_ < 30 ? '#fdd49e' :
+                ambientSound_ < 40 ? '#fdbb84' :
+                ambientSound_ < 50 ? '#fc8d59' :
+                ambientSound_ < 60 ? '#ef6548' :
+                ambientSound_ < 70 ? '#d7301f' :
+                ambientSound_ < 80 ? '#b30000' :
+                ambientSound_ < 90 ? '#8f0000' :
+                ambientSound_ > 90 ? '#7f0000' :
+                '#000000';
+    }
+
     function onMapClick(e) {
 //        console.log("Click");
 
     }
 
 
+
+//    let cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
+//            cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+//            cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
+//    let mapquestUrl = 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+//            mapquestAttribution = "Data CC-By-SA by <a href='http://openstreetmap.org/' target='_blank'>OpenStreetMap</a>, Tiles Courtesy of <a href='http://open.mapquest.com' target='_blank'>MapQuest</a>",
+//            mapquestGrey = new L.TileLayer.Grayscale(mapquestUrl, {maxZoom: 18, attribution: mapquestAttribution, subdomains: ['1', '2', '3', '4'], bgcolor: '0x80BDE3'});
+//    mapquestColour = new L.TileLayer(mapquestUrl, {maxZoom: 18, attribution: mapquestAttribution, subdomains: ['1', '2', '3', '4'], bgcolor: '0x80BDE3'});
+//    //create the tile layer with correct attribution
+
+    //alert(browser.version);
+    //alert(browser.name);
+
+
+
+
+//
+//        function getSoundSiteName(propertName) {
+//            return soundsites[propertName];
+//    
+//        }
+//    ;
+
+//    function getJunctionName(propertyName) {
+//        return M50[propertyName];
+//    }
+//    ;
+
+
 </script>
+
 
 
 

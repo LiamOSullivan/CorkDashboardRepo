@@ -474,3 +474,7 @@ a.mItem:hover
 #twitter-widget-0{
     width: 5% ; /*!important;*/
 }
+
+#mapDiv{
+    height: 600px;
+}
