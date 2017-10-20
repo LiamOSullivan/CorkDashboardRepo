@@ -210,8 +210,8 @@
 //    housePricesSecond();
 //    housePrices();
     //    rents();
-    setInterval("displaytime() ",                                1000 );
-    setInterval("refreshCams()",                                  300 000);
+    setInterval("displaytime() ",                                  1000 );
+    setInterval("refreshCams()",                                    300 000);
 //  setInterval("previousParking()", 60000);
 //  setInterval("previousM50North()", 60000);
 //  setInterval("getPreviousAirQuality()", 60000);
@@ -232,7 +232,7 @@
 //    setInterval("airQuality()", 60000);
     }
     //var currenttime = '<!--#config timefmt="%B %d, %Y %H:%M:%S"--><!--#echo var="DATE_LOCAL" -->' //SSI method of getting server date
-    let currenttime                  =                  '<?php print date("F d, Y H:i:s", time()) ?>'; // get server time
+    let currenttime                   =                   '<?php print date("F d, Y H:i:s", time()) ?>'; // get server time
    letmontharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
     let serverdate = new Date(currenttime);
 
@@ -1087,13 +1087,7 @@ fjs.parentNode.insertBefore(js, fjs);
 //echo $this->element('dbFooter');
 //echo $this->Js->writeBuffer();
 ?>
-
-
-
-
-
-
-                                                            </div>
+                                                       </div>
                                                         </footer>
                                                     </div>-->
 <?php //echo $this->element('googleAnalytics'); ?>

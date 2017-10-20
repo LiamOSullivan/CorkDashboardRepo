@@ -35,7 +35,8 @@
             </div>-->
         <div class="col-4" >
             <h2>Historic Environment</h2>
-            <a href="http://webgis.buildingsofireland.ie/HistoricEnvironment/index.html" class="bordered-feature-image" target="_blank"><img src="/img/Dashboard/cork_historic_environment.png" alt="" /></a>
+            <a href="http://webgis.buildingsofireland.ie/HistoricEnvironment/index.html" class="bordered-feature-image" target="_blank">
+                <img src="/img/Dashboard/cork_historic_environment.png" alt="" /></a>
             <br>
         </div>
     </div>
@@ -49,7 +50,8 @@
         </div>
         <div class="col-4" >
             <h2>Cork Startups</h2>
-            <a href="http://startupireland.ie/" class="bordered-feature-image" target="_blank"><img src="/img/Dashboard/cork_startups.png" alt="" /></a>
+            <a href="http://startupireland.ie/" class="bordered-feature-image" target="_blank">
+                <img src="/img/Dashboard/cork_startups.png" alt="" /></a>
             <br>
         </div>
         <div class="col-4" >

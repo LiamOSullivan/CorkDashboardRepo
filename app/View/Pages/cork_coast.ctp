@@ -41,7 +41,8 @@
         <div class="col-6" >
             <h2>Cork Coastline Mapped</h2>
 
-            <a href="CorkBayMapped" class="bordered-feature-image"><img src="/img/Dashboard/cork_marine_atlas.png" alt="" /></a>
+            <a href="CorkBayMapped" class="bordered-feature-image">
+                <img src="/img/Dashboard/cork_marine_atlas.png" alt="" /></a>
         </div>
     </div>
 </div>

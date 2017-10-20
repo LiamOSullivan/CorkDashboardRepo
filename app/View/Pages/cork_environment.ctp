@@ -49,223 +49,197 @@ TODO: enable subresource integrity
 </div>
 
 <script>
-    // check browser version type
-    function get_browser_info() {
-        console.log("***getBrowserINfo***");
-        let ua = navigator.userAgent, tem, M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
-        if (/trident/i.test(M[1])) {
-            tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
-            return {name: 'IE', version: (tem[1] || '')};
-        }
-        if (M[1] === 'Chrome') {
-            tem = ua.match(/\bOPR\/(\d+)/)
-            if (tem != null) {
-                return {name: 'Opera', version: tem[1]};
-            }
-        }
-        M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
-        if ((tem = ua.match(/version\/(\d+)/i)) != null) {
-            M.splice(1, 1, tem[1]);
-        }
-        return {
-            name: M[0],
-            version: M[1]
-        };
-    }
-
-    let browser = get_browser_info();
+    function myFunction() {
+        let browser = get_browser_info();
 
 //Declare Map variables
-    var map;
+        var map;
 //    let groupAir = new L.FeatureGroup();
 //    let soundSites = new L.FeatureGroup();
-    let waterSites = new L.FeatureGroup();
+        let waterSites = new L.FeatureGroup();
 //    let weatherSites = new L.FeatureGroup();
-    let osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    let osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-    let osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-    let osmGrey = new L.TileLayer.Grayscale(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+        let osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        let osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+        let osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+        let osmGrey = new L.TileLayer.Grayscale(osmUrl, {maxZoom: 18, attribution: osmAttrib});
 
 //Initialise Map based on browser
-    if (browser.name == 'MSIE' && browser.version == '9') {
-        //alert(browser.version);
-        //alert(browser.name);
-        //alert('OK');
+        if (browser.name == 'MSIE' && browser.version == '9') {
+            //alert(browser.version);
+            //alert(browser.name);
+            //alert('OK');
 
-        map = new L.Map('mapDiv', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osm],
-            zoomControl: true
-        });
-    } else if (browser.name == 'MSIE' && browser.version == '10') {
-        //alert(browser.version);
-        //alert(browser.name);
-        //alert('OK');
+            map = new L.Map('mapDiv', {
+                center: new L.LatLng(52.034439, -8.608861),
+                zoom: 9,
+                layers: [osm],
+                zoomControl: true
+            });
+        } else if (browser.name == 'MSIE' && browser.version == '10') {
+            //alert(browser.version);
+            //alert(browser.name);
+            //alert('OK');
 
-        map = new L.Map('mapDiv', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osm],
-            zoomControl: true
-        });
-    } else if (browser.name == 'Firefox' && browser.version == '8') {
-        //alert(browser.version);
-        //alert(browser.name);
-        //alert('OK');
+            map = new L.Map('mapDiv', {
+                center: new L.LatLng(52.034439, -8.608861),
+                zoom: 9,
+                layers: [osm],
+                zoomControl: true
+            });
+        } else if (browser.name == 'Firefox' && browser.version == '8') {
+            //alert(browser.version);
+            //alert(browser.name);
+            //alert('OK');
 
-        map = new L.Map('mapDiv', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osm],
-            zoomControl: true
-        });
-    } else if (browser.name == 'Firefox' && browser.version == '7') {
-        //alert(browser.version);
-        //alert(browser.name);
-        //alert('OK');
+            map = new L.Map('mapDiv', {
+                center: new L.LatLng(52.034439, -8.608861),
+                zoom: 9,
+                layers: [osm],
+                zoomControl: true
+            });
+        } else if (browser.name == 'Firefox' && browser.version == '7') {
+            //alert(browser.version);
+            //alert(browser.name);
+            //alert('OK');
 
-        map = new L.Map('mapDiv', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osm],
-            zoomControl: true
-        });
-    } else {
-        map = new L.Map('mapDiv', {
-            center: new L.LatLng(52.034439, -8.608861),
-            zoom: 9,
-            layers: [osmGrey],
-            zoomControl: true
-        });
-    }
+            map = new L.Map('mapDiv', {
+                center: new L.LatLng(52.034439, -8.608861),
+                zoom: 9,
+                layers: [osm],
+                zoomControl: true
+            });
+        } else {
+            map = new L.Map('mapDiv', {
+                center: new L.LatLng(52.034439, -8.608861),
+                zoom: 9,
+                layers: [osmGrey],
+                zoomControl: true
+            });
+        }
 //    let testMarker = L.marker([52.034439, -8.608861]).addTo(map);
 
+        //LEGEND
+        let legend = L.control({position: 'bottomright'});
+        legend.onAdd = function (map) {
+            let div = L.DomUtil.create('div', 'info legend'),
+                    grades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
+                    labels = [],
+                    from, to;
+            labels.push('Ambient Sound Level');
+            for (let i = 0; i < grades.length; i++) {
+                from = grades[i];
+                to = grades[i + 1];
+                labels.push('<i style="background: ' + setAmbientSoundColor(from) + '"></i> ' +
+                        from + (to ? 'db&ndash;' + to + 'db' : 'db' + '+'));
+            }
+            labels.push('Water Levels');
+            labels.push('<i style="background: #deebf7"></i>  Decreasing');
+            labels.push('<i style="background: #9ecae1"></i>  No Change');
+            labels.push('<i style="background: #3182bd"></i>  Increasing');
+            labels.push('EPA Site');
+            labels.push('<i style="background: #5F5293"></i>  Site Location');
+            div.innerHTML = labels.join('<br>');
+            return div;
+        };
+        legend.addTo(map);
+
+        map.addEventListener('click', onMapClick);
+
+        //alert(browser.name);
+
+        //EPAOverall Air Quality
+        //    $.get("/CarParks/airQuality", function (point) {
+        //        obj = JSON.parse(point);
+        //        let count = 6; //there are 6 results in the return //change to 2 for cork?
+        //        for (let i = 0; i < count; i++) {
+        //            if (obj.aqihsummary[i]["aqih-region"] == "Cork_City") {
+        //                let airReport = "Current Air Quality Index for Health for " + obj.aqihsummary[i]["aqih-region"] + " is " + obj.aqihsummary[i].aqih
+        //
+        ////                let div = document.getElementById('airQuality');
+        ////                div.innerHTML = div.innerHTML + airReport;
+        ////                if (obj.aqihsummary[i].aqih == "1,Good") {
+        ////                    div.style.backgroundColor = 'green';
+        ////                    div.style.color = 'white';
+        ////                } else if (obj.aqihsummary[i].aqih == "2,Good") {
+        ////                    div.style.backgroundColor = 'green';
+        ////                    div.style.color = 'white';
+        ////                } else if (obj.aqihsummary[i].aqih == "3,Good") {
+        ////                    div.style.backgroundColor = 'green';
+        ////                    div.style.color = 'white';
+        ////                } else if (obj.aqihsummary[i].aqih == "4,Fair") {
+        ////                    div.style.backgroundColor = 'orange';
+        ////                    div.style.color = 'white';
+        ////                } else if (obj.aqihsummary[i].aqih == "5,Fair") {
+        ////                    div.style.backgroundColor = 'orange';
+        ////                    div.style.color = 'white';
+        ////                } else if (obj.aqihsummary[i].aqih == "6,Fair") {
+        ////                    div.style.backgroundColor = 'orange';
+        ////                    div.style.color = 'white';
+        ////                } else {
+        ////                    div.style.backgroundColor = 'red';
+        ////                    div.style.color = 'white';
+        ////                }
+        //            }
+        //        }
+        //    }); //END AirQuality
 
 
-    //LEGEND
-    let legend = L.control({position: 'bottomright'});
-    legend.onAdd = function (map) {
-        let div = L.DomUtil.create('div', 'info legend'),
-                grades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
-                labels = [],
-                from, to;
-        labels.push('Ambient Sound Level');
-        for (let i = 0; i < grades.length; i++) {
-            from = grades[i];
-            to = grades[i + 1];
-            labels.push('<i style="background: ' + setAmbientSoundColor(from) + '"></i> ' +
-                    from + (to ? 'db&ndash;' + to + 'db' : 'db' + '+'));
-        }
-        labels.push('Water Levels');
-        labels.push('<i style="background: #deebf7"></i>  Decreasing');
-        labels.push('<i style="background: #9ecae1"></i>  No Change');
-        labels.push('<i style="background: #3182bd"></i>  Increasing');
-        labels.push('EPA Site');
-        labels.push('<i style="background: #5F5293"></i>  Site Location');
-        div.innerHTML = labels.join('<br>');
-        return div;
-    };
-    legend.addTo(map);
-
-    map.addEventListener('click', onMapClick);
-
-
-    //alert(browser.name);
-
-    //EPAOverall Air Quality
-    //    $.get("/CarParks/airQuality", function (point) {
-    //        obj = JSON.parse(point);
-    //        let count = 6; //there are 6 results in the return //change to 2 for cork?
-    //        for (let i = 0; i < count; i++) {
-    //            if (obj.aqihsummary[i]["aqih-region"] == "Cork_City") {
-    //                let airReport = "Current Air Quality Index for Health for " + obj.aqihsummary[i]["aqih-region"] + " is " + obj.aqihsummary[i].aqih
-    //
-    ////                let div = document.getElementById('airQuality');
-    ////                div.innerHTML = div.innerHTML + airReport;
-    ////                if (obj.aqihsummary[i].aqih == "1,Good") {
-    ////                    div.style.backgroundColor = 'green';
-    ////                    div.style.color = 'white';
-    ////                } else if (obj.aqihsummary[i].aqih == "2,Good") {
-    ////                    div.style.backgroundColor = 'green';
-    ////                    div.style.color = 'white';
-    ////                } else if (obj.aqihsummary[i].aqih == "3,Good") {
-    ////                    div.style.backgroundColor = 'green';
-    ////                    div.style.color = 'white';
-    ////                } else if (obj.aqihsummary[i].aqih == "4,Fair") {
-    ////                    div.style.backgroundColor = 'orange';
-    ////                    div.style.color = 'white';
-    ////                } else if (obj.aqihsummary[i].aqih == "5,Fair") {
-    ////                    div.style.backgroundColor = 'orange';
-    ////                    div.style.color = 'white';
-    ////                } else if (obj.aqihsummary[i].aqih == "6,Fair") {
-    ////                    div.style.backgroundColor = 'orange';
-    ////                    div.style.color = 'white';
-    ////                } else {
-    ////                    div.style.backgroundColor = 'red';
-    ////                    div.style.color = 'white';
-    ////                }
-    //            }
-    //        }
-    //    }); //END AirQuality
-
-
-    //Map Styling
+        //Map Styling
 
 //    let layerControl = new L.LayerControl();
 
-    let baseMaps = {
-        //"MQ Greyscale": mapquestGrey,
-        // "MQ Colour": mapquestColour,
-        "OSM Greyscale": osmGrey,
-        "OSM Colour": osm
+        let baseMaps = {
+            //"MQ Greyscale": mapquestGrey,
+            // "MQ Colour": mapquestColour,
+            "OSM Greyscale": osmGrey,
+            "OSM Colour": osm
 
-    };
-    let overlayMaps = {
+        };
+        let overlayMaps = {
 //        "EPA Monitoring Sites": groupAir,
 //        "Ambient Sound Recording Sites": soundSites,
-        "EPA Water Level Sites": waterSites
+            "EPA Water Level Sites": waterSites
 //        "Weather Sites": weatherSites
-    };
-    layerControl = L.control.layers(baseMaps, overlayMaps);
-    layerControl.addTo(map);
-    let initial = 0; //check to add everythign initially to first map.
+        };
+        layerControl = L.control.layers(baseMaps, overlayMaps);
+        layerControl.addTo(map);
+        let initial = 0; //check to add everythign initially to first map.
 
 
-    //Individual AirQuality Locations
+        //Individual AirQuality Locations
 
-    let airQualitySite1 = {//Cork Institute of Technology
-        "type": "Feature",
-        "properties": {
-            "amenity": "EPA Environmental Sensor",
-            "popupContent": "<h5><b>EPA Site: Cork Institute of Technology </b></h5>" + "<table style=\"width:405px\"> <tr> <td><img src=\"http://erc.epa.ie/real-time-air/www/images/epaweb/JPEG/Cork_IT_OZONE_past7days_O3.JPG\" width=\"400px\"> </td></tr> </table> ",
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-8.534432, 51.885330]
-        }
-    };
-    let airQualitySite2 = {//South Link Road
-        "type": "Feature",
-        "properties": {
-            "amenity": "EPA Environmental Sensor",
-            "popupContent": "<h5><b>EPA Site: South Link Road </b></h5>" + "<table style=\"width:405px\"> <tr><td><img src=\"http://erc.epa.ie/real-time-air/www/images/epaweb/JPEG/Kinsale_Rd_past7days_O3_NO2_SO2.JPG\" width=\"400px\" height=\"400px\"> </td></tr> </table> ",
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-8.456669, 51.877165]
-        }
-    };
-    let airQualitySiteOptions = {
-        radius: 10,
-        fillColor: "#5F5293",
-        fillOpacity: 1,
-        opacity: 1,
-        color: "#000"
-    };
+        let airQualitySite1 = {//Cork Institute of Technology
+            "type": "Feature",
+            "properties": {
+                "amenity": "EPA Environmental Sensor",
+                "popupContent": "<h5><b>EPA Site: Cork Institute of Technology </b></h5>" + "<table style=\"width:405px\"> <tr> <td><img src=\"http://erc.epa.ie/real-time-air/www/images/epaweb/JPEG/Cork_IT_OZONE_past7days_O3.JPG\" width=\"400px\"> </td></tr> </table> ",
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-8.534432, 51.885330]
+            }
+        };
+        let airQualitySite2 = {//South Link Road
+            "type": "Feature",
+            "properties": {
+                "amenity": "EPA Environmental Sensor",
+                "popupContent": "<h5><b>EPA Site: South Link Road </b></h5>" + "<table style=\"width:405px\"> <tr><td><img src=\"http://erc.epa.ie/real-time-air/www/images/epaweb/JPEG/Kinsale_Rd_past7days_O3_NO2_SO2.JPG\" width=\"400px\" height=\"400px\"> </td></tr> </table> ",
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-8.456669, 51.877165]
+            }
+        };
+        let airQualitySiteOptions = {
+            radius: 10,
+            fillColor: "#5F5293",
+            fillOpacity: 1,
+            opacity: 1,
+            color: "#000"
+        };
 
 
-    function myFunction() {
+
         console.log("***myFunction()***");
         initial++;
         //        groupAir.clearLayers(); //air quality ou
@@ -302,9 +276,11 @@ TODO: enable subresource integrity
         });
         var waterMarkers = [];
         //Cork Water Levels Current index = 0
+        //waterMarkers.push(L.marker([52.034439, -8.608861]));
+
+
         $.get("/CarParks/corkWaterLevels/0", function (point) {
 //        $.get("/cork/WaterLevels/0", function (point) {
-
             ///get the other file and then compare
             //alert(previousWaterLevels);
             let obj = JSON.parse(point);
@@ -312,7 +288,8 @@ TODO: enable subresource integrity
             let numOfWaterStations = obj.features.length;
             let previousNumOfWaterStations = obj.features.length;
             console.log("numOfWaterStations: " + numOfWaterStations);
-            for (let i = 0; i < numOfWaterStations; i++) {
+
+            for (var i = 0; i < numOfWaterStations; i++) {
                 //if Cork/Dub Stations{
                 if (obj.features[i]["properties"]["station.ref"] < 41000) {
                     if (obj.features[i]["properties"]["station.region_id"] === 8) {
@@ -351,7 +328,7 @@ TODO: enable subresource integrity
                                 + previousDate + ": </font>The Water Level at "
                                 + previousStationName + " was "
                                 + previousWaterLevel + " </b></td></tr></table>";
-                        console.log(text);
+                        //console.log(text);
 
                         let waterLevelSite = {
                             "type": "Feature",
@@ -374,55 +351,63 @@ TODO: enable subresource integrity
                             opacity: 1,
                             fillOpacity: 1 //setMarkerIntensity(spaces)
                         };
-                        
+
                         waterSites.addLayer(L.geoJson(waterLevelSite, {
                             onEachFeature: onEachFeature, pointToLayer: function (feature, latlng) {
                                 return L.circleMarker(latlng, waterLevelSiteOptions);
                             }}));
 
-                        waterMarkers.push(L.Marker([52.035439, -8.608861]));
-                        waterMarkers[i].addTo(map);
+//                        waterMarkers.push(L.Marker([52.035439, -8.607861]));
+                        L.marker([lat, lon]).addTo(map);
                     }
                 }
             }
-           waterSites.addTo(map);
-           console.log("***added waterSites***");
+//            waterSites.addTo(map);
+//            addMarkersToMap(waterMarkers);
+
 
         }); //End of GET for current water levels
+//        console.log("***added waterMarkers***"); //unreachable!?!
+        
+
+    }; //End myFunction()
+
+ 
 
 
 
-        function onEachFeature(feature, layer) {
-            layer.on({
+
+    function onEachFeature(feature, layer) {
+        layer.on({
 //                mouseover: highlightFeature,
 //                mouseout: resetHighlight
-            });
-        }
+        });
+    }
 
-        function resetHighlight(e) {
-            let layer = e.target;
+    function resetHighlight(e) {
+        let layer = e.target;
 //            layer.setStyle({// highlight the feature
 //                weight: 1,
 //                color: '#666',
 //                dashArray: ''
 //            });
-        }
+    }
 
-        function highlightFeature(e) {
-            let layer = e.target;
+    function highlightFeature(e) {
+        let layer = e.target;
 //            layer.setStyle({// highlight the feature
 //                weight: 5,
 //                color: '#666',
 //                dashArray: ''
 //            });
-            if (!L.Browser.ie && !L.Browser.opera) {
-                layer.bringToFront();
-            }
-            popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
+        if (!L.Browser.ie && !L.Browser.opera) {
+            layer.bringToFront();
         }
+        popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
+    }
 
 
-        //hydro levels
+    //hydro levels
 //        $.get("/CarParks/hydroLevels", function (point) {
 //            obj = JSON.parse(point);
 //            for (i = 0; i < 30; i = i + 7) {
@@ -459,7 +444,7 @@ TODO: enable subresource integrity
 //        });
 
 
-        //water levels     
+    //water levels     
 //      
 //        $.get("/CarParks/readWaterLevels", function (point) {
 //            obj = JSON.parse(point);
@@ -510,132 +495,132 @@ TODO: enable subresource integrity
 //       
 
 
-        //weather 
-        /* for(let j = 1; j<7;j++){ //all the stations that we have
-         let action = "/CarParks/weather/"+j;
-         $.get(action, function(point){
-         obj = JSON.parse(point);
-         let lat = obj.current_observation.display_location.latitude;
-         let lon = obj.current_observation.display_location.longitude;
-         let name = obj.current_observation.observation_location.city;
-         let currentTemp = obj.current_observation.temp_c;
-         let currentWeather = obj.current_observation.weather;
-         let url = obj.current_observation.ob_url;
-         
-         let weatherIcon = L.Icon.extend({
-         options: {
-         iconSize:     [36, 45], 
-         iconAnchor:   [18, 45],
-         popupAnchor:  [-3, -46]
-         }
-         });
-         
-         let weatherIcon= new weatherIcon({iconUrl: '/dublindashboard/img/Dashboard/icons/weather_icon.png'});    
-         let siteId = "weatehrSite1";
-         let text = "<table style=\"width:300px\"><tr><td><p class=\"intab\">Conditions at "+name+"</p><b> Weather: "+ currentWeather +"<br> Temperature: " +currentTemp + " Celcius </b></td></tr><tr><td><p class=\"attribution\">Data obtained from wunderground <a href=\""+url+"\"  target=\"_blank\">(more)</a></p></tr></td></table>";
-         
-         let weatherSite = {
-         "type": "Feature",
-         "properties": {
-         "name": ""+name,
-         "amenity": "weatherStation",
-         "popupContent": text,
-         },
-         "geometry": {
-         "type": "Point",
-         "coordinates": [lon,lat]
-         }
-         };
-         
-         let weatherSiteOptions = {
-         radius: 8,
-         fillColor: "#228B22",
-         color: "#000",
-         weight: 1,
-         opacity: 1,
-         fillOpacity: 1 //setMarkerIntensity(spaces)
-         };
-         weatherSites.addLayer(L.geoJson(weatherSite ,{ 
-         onEachFeature: onEachWeatherFeature, pointToLayer: function (feature, latlng) {
-         return L.marker(latlng, {icon:weatherIcon}).bindPopup(weatherSite.popupContent);;
-         }}));   
-         });
-         
-         }//end for loop
-         
-         */
-        //NRA weather Stations in Dublin
-        //        let action = "/CarParks/nraWeather/" + 1;
-        //        $.get(action, function (point) {
-        //            obj = JSON.parse(point);
-        //            for (let i = 0; i < 86; i++) {
-        //                let lat = obj[i].lat[0];
-        //                let lon = obj[i].lon[0];
-        //                let name = obj[i].siteName[0];
-        //                let id = obj[i].siteID[0];
-        //                let number = obj[i].number[0];
-        //
-        //                let currentTemp = obj[i].temp[0];
-        //                let windSpeed = obj[i].windSpeed[0];
-        //                let windDirection = obj[i].windDirection[0];
-        //                let roadTemp = obj[i].roadTemp[0];
-        //                let precipitation = obj[i].precipitation[0];
-        //                let currentWeather = "";
-        //
-        //
-        //                if (!precipitation) {
-        //                    let precipitation = "NA";
-        //                }
-        //
-        //                let weatherIcon = L.Icon.extend({
-        //                    options: {
-        //                        iconSize: [40, 40],
-        //                        iconAnchor: [20, 40],
-        //                        popupAnchor: [-3, -41]
-        //                    }
-        //                });
-        //
-        //                let weatherIcon = new weatherIcon({iconUrl: '/dublindashboard/img/Dashboard/icons/weather_icon.png'});
-        //                let siteId = "weatehrSite1";
-        //                let text = "<table style=\"width:300px\"><tr><td><p class=\"intab\">Conditions at " + name + "</p><b> Weather: " + currentWeather + "<br> Air Temperature: " + currentTemp + " Celcius <br> Road Temperature: " + roadTemp + "<br> Wind Speed: " + windSpeed + " <br> Wind Direction: " + windDirection + "<br> Precipitation: " + precipitation + " </b></td></tr><tr><td><p class=\"attribution\">Data obtained from TIF </p></tr></td></table>";
-        //
-        //                let weatherSite = {
-        //                    "type": "Feature",
-        //                    "properties": {
-        //                        "name": "" + name,
-        //                        "amenity": "weatherStation",
-        //                        "popupContent": text,
-        //                    },
-        //                    "geometry": {
-        //                        "type": "Point",
-        //                        "coordinates": [lon, lat]
-        //                    }
-        //                };
-        //
-        //                let weatherSiteOptions = {
-        //                    radius: 8,
-        //                    fillColor: "#228B22",
-        //                    color: "#000",
-        //                    weight: 1,
-        //                    opacity: 1,
-        //                    fillOpacity: 1 //setMarkerIntensity(spaces)
-        //                };
-        //                weatherSites.addLayer(L.geoJson(weatherSite, {
-        //                    onEachFeature: onEachWeatherFeature, pointToLayer: function (feature, latlng) {
-        //                        return L.marker(latlng, {icon: weatherIcon}).bindPopup(weatherSite.popupContent);
-        //                        ;
-        //                    }}));
-        //            }//end for
-        //        });
-        //
-        //        function onEachWeatherFeature(feature, layer) {
-        //            popup = layer.bindPopup(layer.feature.properties.popupContent);  //essential
-        //
-        //        }
-        //
+    //weather 
+    /* for(let j = 1; j<7;j++){ //all the stations that we have
+     let action = "/CarParks/weather/"+j;
+     $.get(action, function(point){
+     obj = JSON.parse(point);
+     let lat = obj.current_observation.display_location.latitude;
+     let lon = obj.current_observation.display_location.longitude;
+     let name = obj.current_observation.observation_location.city;
+     let currentTemp = obj.current_observation.temp_c;
+     let currentWeather = obj.current_observation.weather;
+     let url = obj.current_observation.ob_url;
+     
+     let weatherIcon = L.Icon.extend({
+     options: {
+     iconSize:     [36, 45], 
+     iconAnchor:   [18, 45],
+     popupAnchor:  [-3, -46]
+     }
+     });
+     
+     let weatherIcon= new weatherIcon({iconUrl: '/dublindashboard/img/Dashboard/icons/weather_icon.png'});    
+     let siteId = "weatehrSite1";
+     let text = "<table style=\"width:300px\"><tr><td><p class=\"intab\">Conditions at "+name+"</p><b> Weather: "+ currentWeather +"<br> Temperature: " +currentTemp + " Celcius </b></td></tr><tr><td><p class=\"attribution\">Data obtained from wunderground <a href=\""+url+"\"  target=\"_blank\">(more)</a></p></tr></td></table>";
+     
+     let weatherSite = {
+     "type": "Feature",
+     "properties": {
+     "name": ""+name,
+     "amenity": "weatherStation",
+     "popupContent": text,
+     },
+     "geometry": {
+     "type": "Point",
+     "coordinates": [lon,lat]
+     }
+     };
+     
+     let weatherSiteOptions = {
+     radius: 8,
+     fillColor: "#228B22",
+     color: "#000",
+     weight: 1,
+     opacity: 1,
+     fillOpacity: 1 //setMarkerIntensity(spaces)
+     };
+     weatherSites.addLayer(L.geoJson(weatherSite ,{ 
+     onEachFeature: onEachWeatherFeature, pointToLayer: function (feature, latlng) {
+     return L.marker(latlng, {icon:weatherIcon}).bindPopup(weatherSite.popupContent);;
+     }}));   
+     });
+     
+     }//end for loop
+     
+     */
+    //NRA weather Stations in Dublin
+    //        let action = "/CarParks/nraWeather/" + 1;
+    //        $.get(action, function (point) {
+    //            obj = JSON.parse(point);
+    //            for (let i = 0; i < 86; i++) {
+    //                let lat = obj[i].lat[0];
+    //                let lon = obj[i].lon[0];
+    //                let name = obj[i].siteName[0];
+    //                let id = obj[i].siteID[0];
+    //                let number = obj[i].number[0];
+    //
+    //                let currentTemp = obj[i].temp[0];
+    //                let windSpeed = obj[i].windSpeed[0];
+    //                let windDirection = obj[i].windDirection[0];
+    //                let roadTemp = obj[i].roadTemp[0];
+    //                let precipitation = obj[i].precipitation[0];
+    //                let currentWeather = "";
+    //
+    //
+    //                if (!precipitation) {
+    //                    let precipitation = "NA";
+    //                }
+    //
+    //                let weatherIcon = L.Icon.extend({
+    //                    options: {
+    //                        iconSize: [40, 40],
+    //                        iconAnchor: [20, 40],
+    //                        popupAnchor: [-3, -41]
+    //                    }
+    //                });
+    //
+    //                let weatherIcon = new weatherIcon({iconUrl: '/dublindashboard/img/Dashboard/icons/weather_icon.png'});
+    //                let siteId = "weatehrSite1";
+    //                let text = "<table style=\"width:300px\"><tr><td><p class=\"intab\">Conditions at " + name + "</p><b> Weather: " + currentWeather + "<br> Air Temperature: " + currentTemp + " Celcius <br> Road Temperature: " + roadTemp + "<br> Wind Speed: " + windSpeed + " <br> Wind Direction: " + windDirection + "<br> Precipitation: " + precipitation + " </b></td></tr><tr><td><p class=\"attribution\">Data obtained from TIF </p></tr></td></table>";
+    //
+    //                let weatherSite = {
+    //                    "type": "Feature",
+    //                    "properties": {
+    //                        "name": "" + name,
+    //                        "amenity": "weatherStation",
+    //                        "popupContent": text,
+    //                    },
+    //                    "geometry": {
+    //                        "type": "Point",
+    //                        "coordinates": [lon, lat]
+    //                    }
+    //                };
+    //
+    //                let weatherSiteOptions = {
+    //                    radius: 8,
+    //                    fillColor: "#228B22",
+    //                    color: "#000",
+    //                    weight: 1,
+    //                    opacity: 1,
+    //                    fillOpacity: 1 //setMarkerIntensity(spaces)
+    //                };
+    //                weatherSites.addLayer(L.geoJson(weatherSite, {
+    //                    onEachFeature: onEachWeatherFeature, pointToLayer: function (feature, latlng) {
+    //                        return L.marker(latlng, {icon: weatherIcon}).bindPopup(weatherSite.popupContent);
+    //                        ;
+    //                    }}));
+    //            }//end for
+    //        });
+    //
+    //        function onEachWeatherFeature(feature, layer) {
+    //            popup = layer.bindPopup(layer.feature.properties.popupContent);  //essential
+    //
+    //        }
+    //
 
-        //sound sites
-        //only for a single site  
+    //sound sites
+    //only for a single site  
 //        $.get("/CarParks/ambientSound1", function (point) {
 //            obj = JSON.parse(point);
 //            let count = Number(obj.entries);
@@ -1223,7 +1208,7 @@ TODO: enable subresource integrity
 
 
 
-        //CARPARKS
+    //CARPARKS
 //    $.get("/CarParks/nowParking", function (point) {
 //        function onEachFeature(feature, layer) {
 //            layer.on({
@@ -1313,7 +1298,8 @@ TODO: enable subresource integrity
 //    }
 //
 
-    } //End myFunction()
+
+
 
     function setAmbientSoundColor(ambientSound_) {
         let good = 55;
@@ -1334,6 +1320,32 @@ TODO: enable subresource integrity
     function onMapClick(e) {
 //        console.log("Click");
 
+    }
+
+    // check browser version type
+    function get_browser_info() {
+        console.log("***getBrowserINfo***");
+        let ua = navigator.userAgent, tem,
+                M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i)
+                || [];
+        if (/trident/i.test(M[1])) {
+            tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+            return {name: 'IE', version: (tem[1] || '')};
+        }
+        if (M[1] === 'Chrome') {
+            tem = ua.match(/\bOPR\/(\d+)/)
+            if (tem != null) {
+                return {name: 'Opera', version: tem[1]};
+            }
+        }
+        M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+        if ((tem = ua.match(/version\/(\d+)/i)) != null) {
+            M.splice(1, 1, tem[1]);
+        }
+        return {
+            name: M[0],
+            version: M[1]
+        };
     }
 
 
