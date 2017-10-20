@@ -32,7 +32,7 @@ TODO: enable subresource integrity
 
     <!--<body onload="myFunction()">-->
     <div class="homeBlock" style="width: 90%; padding-top:25px; padding-bottom:25px">
-        <div id="mapDiv" style="width: 100%; "></div>
+        <div id="map" style="width: 100%; "></div>
     </div>
     <!--<div id="airQuality" style="width: 100%; height: 55px; font-size: 1.2em; font-weight: 300; text-align: center;"></div>-->
     <div id="dataSources" class="homeBlock" style="width:90%; text-align:justify">
@@ -51,7 +51,6 @@ TODO: enable subresource integrity
 <script>
     function myFunction() {
         let browser = get_browser_info();
-
 //Declare Map variables
         var map;
 //    let groupAir = new L.FeatureGroup();
@@ -62,14 +61,13 @@ TODO: enable subresource integrity
         let osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
         let osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
         let osmGrey = new L.TileLayer.Grayscale(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-
 //Initialise Map based on browser
         if (browser.name == 'MSIE' && browser.version == '9') {
             //alert(browser.version);
             //alert(browser.name);
             //alert('OK');
 
-            map = new L.Map('mapDiv', {
+            map = new L.Map('map', {
                 center: new L.LatLng(52.034439, -8.608861),
                 zoom: 9,
                 layers: [osm],
@@ -80,7 +78,7 @@ TODO: enable subresource integrity
             //alert(browser.name);
             //alert('OK');
 
-            map = new L.Map('mapDiv', {
+            map = new L.Map('map', {
                 center: new L.LatLng(52.034439, -8.608861),
                 zoom: 9,
                 layers: [osm],
@@ -91,7 +89,7 @@ TODO: enable subresource integrity
             //alert(browser.name);
             //alert('OK');
 
-            map = new L.Map('mapDiv', {
+            map = new L.Map('map', {
                 center: new L.LatLng(52.034439, -8.608861),
                 zoom: 9,
                 layers: [osm],
@@ -102,14 +100,14 @@ TODO: enable subresource integrity
             //alert(browser.name);
             //alert('OK');
 
-            map = new L.Map('mapDiv', {
+            map = new L.Map('map', {
                 center: new L.LatLng(52.034439, -8.608861),
                 zoom: 9,
                 layers: [osm],
                 zoomControl: true
             });
         } else {
-            map = new L.Map('mapDiv', {
+            map = new L.Map('map', {
                 center: new L.LatLng(52.034439, -8.608861),
                 zoom: 9,
                 layers: [osmGrey],
@@ -125,13 +123,13 @@ TODO: enable subresource integrity
                     grades = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
                     labels = [],
                     from, to;
-            labels.push('Ambient Sound Level');
-            for (let i = 0; i < grades.length; i++) {
-                from = grades[i];
-                to = grades[i + 1];
-                labels.push('<i style="background: ' + setAmbientSoundColor(from) + '"></i> ' +
-                        from + (to ? 'db&ndash;' + to + 'db' : 'db' + '+'));
-            }
+//            labels.push('Ambient Sound Level');
+//            for (let i = 0; i < grades.length; i++) {
+//                from = grades[i];
+//                to = grades[i + 1];
+//                labels.push('<i style="background: ' + setAmbientSoundColor(from) + '"></i> ' +
+//                        from + (to ? 'db&ndash;' + to + 'db' : 'db' + '+'));
+//            }
             labels.push('Water Levels');
             labels.push('<i style="background: #deebf7"></i>  Decreasing');
             labels.push('<i style="background: #9ecae1"></i>  No Change');
@@ -142,9 +140,7 @@ TODO: enable subresource integrity
             return div;
         };
         legend.addTo(map);
-
-        map.addEventListener('click', onMapClick);
-
+//        map.addEventListener('click', onMapClick);
         //alert(browser.name);
 
         //EPAOverall Air Quality
@@ -203,52 +199,38 @@ TODO: enable subresource integrity
         };
         layerControl = L.control.layers(baseMaps, overlayMaps);
         layerControl.addTo(map);
-        let initial = 0; //check to add everythign initially to first map.
+       
+//let initial = 0; //check to add everythign initially to first map.
+
+        var firefoxIcon = L.icon({
+            iconUrl: 'http://joshuafrazier.info/images/firefox.svg',
+            iconSize: [38, 95], // size of the icon
+            popupAnchor: [0, -15]
+        });
+        
+//        var customPopup = '<h1>Test Popup<h1>';
+
+//    <img src='http://joshuafrazier.info/images/maptime.gif' alt='maptime logo gif' width='350px'/>";
+
+
+        var customOptions =
+        {
+        'maxWidth': '500',
+        'className' : 'custom'
+        }
 
 
         //Individual AirQuality Locations
 
-        let airQualitySite1 = {//Cork Institute of Technology
-            "type": "Feature",
-            "properties": {
-                "amenity": "EPA Environmental Sensor",
-                "popupContent": "<h5><b>EPA Site: Cork Institute of Technology </b></h5>" + "<table style=\"width:405px\"> <tr> <td><img src=\"http://erc.epa.ie/real-time-air/www/images/epaweb/JPEG/Cork_IT_OZONE_past7days_O3.JPG\" width=\"400px\"> </td></tr> </table> ",
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-8.534432, 51.885330]
-            }
-        };
-        let airQualitySite2 = {//South Link Road
-            "type": "Feature",
-            "properties": {
-                "amenity": "EPA Environmental Sensor",
-                "popupContent": "<h5><b>EPA Site: South Link Road </b></h5>" + "<table style=\"width:405px\"> <tr><td><img src=\"http://erc.epa.ie/real-time-air/www/images/epaweb/JPEG/Kinsale_Rd_past7days_O3_NO2_SO2.JPG\" width=\"400px\" height=\"400px\"> </td></tr> </table> ",
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-8.456669, 51.877165]
-            }
-        };
-        let airQualitySiteOptions = {
-            radius: 10,
-            fillColor: "#5F5293",
-            fillOpacity: 1,
-            opacity: 1,
-            color: "#000"
-        };
-
-
-
+//        l
         console.log("***myFunction()***");
-        initial++;
+        //initial++;
         //        groupAir.clearLayers(); //air quality ou
 //        soundSites.clearLayers(); //ambient sound
         waterSites.clearLayers();
 //        weatherSites.clearLayers();
         $row = 1;
         let previousWaterLevels = null;
-
 //        This works...
 //        $.get("/CarParks/corkWaterLevels/0", function (data) {
 //            if (!data) {
@@ -288,7 +270,6 @@ TODO: enable subresource integrity
             let numOfWaterStations = obj.features.length;
             let previousNumOfWaterStations = obj.features.length;
             console.log("numOfWaterStations: " + numOfWaterStations);
-
             for (var i = 0; i < numOfWaterStations; i++) {
                 //if Cork/Dub Stations{
                 if (obj.features[i]["properties"]["station.ref"] < 41000) {
@@ -351,61 +332,86 @@ TODO: enable subresource integrity
                             opacity: 1,
                             fillOpacity: 1 //setMarkerIntensity(spaces)
                         };
-
-                        waterSites.addLayer(L.geoJson(waterLevelSite, {
-                            onEachFeature: onEachFeature, pointToLayer: function (feature, latlng) {
-                                return L.circleMarker(latlng, waterLevelSiteOptions);
-                            }}));
+//
+//                        waterSites.addLayer(L.geoJson(waterLevelSite, {
+//                            onEachFeature: onEachFeature, pointToLayer: function (feature, latlng) {
+//                                return L.circleMarker(latlng, waterLevelSiteOptions);
+//                            }}));
 
 //                        waterMarkers.push(L.Marker([52.035439, -8.607861]));
-                        L.marker([lat, lon]).addTo(map);
+//                        L.marker([lat, lon],{icon: firefoxIcon}).bindPopup(popupTest, customPopupOptions).addTo(map);
+//                    L.marker([lat, lon], {icon: firefoxIcon}).bindPopup('test popup').addTo(map);
+                    waterMarkers.push(L.marker([lat, lon], {icon: firefoxIcon}).bindPopup('Mozilla Toronto Office').addTo(map));
                     }
                 }
             }
 //            waterSites.addTo(map);
 //            addMarkersToMap(waterMarkers);
 
-
         }); //End of GET for current water levels
 //        console.log("***added waterMarkers***"); //unreachable!?!
-        
-
-    }; //End myFunction()
-
- 
 
 
+    } //End myFunction()
 
+//    function onEachFeature(feature, layer) {
+//        layer.on({
+////                mouseover: highlightFeature,
+////                mouseout: resetHighlight
+//        });
+//    }
+//
+//    function resetHighlight(e) {
+//        let layer = e.target;
+////            layer.setStyle({// highlight the feature
+////                weight: 1,
+////                color: '#666',
+////                dashArray: ''
+////            });
+//    }
 
-    function onEachFeature(feature, layer) {
-        layer.on({
-//                mouseover: highlightFeature,
-//                mouseout: resetHighlight
-        });
-    }
+//    function highlightFeature(e) {
+//        let layer = e.target;
+////            layer.setStyle({// highlight the feature
+////                weight: 5,
+////                color: '#666',
+////                dashArray: ''
+////            });
+//        if (!L.Browser.ie && !L.Browser.opera) {
+//            layer.bringToFront();
+//        }
+////        popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
+//    }
 
-    function resetHighlight(e) {
-        let layer = e.target;
-//            layer.setStyle({// highlight the feature
-//                weight: 1,
-//                color: '#666',
-//                dashArray: ''
-//            });
-    }
-
-    function highlightFeature(e) {
-        let layer = e.target;
-//            layer.setStyle({// highlight the feature
-//                weight: 5,
-//                color: '#666',
-//                dashArray: ''
-//            });
-        if (!L.Browser.ie && !L.Browser.opera) {
-            layer.bringToFront();
-        }
-        popup = layer.bindPopup(layer.feature.properties.popupContent); //essential
-    }
-
+//et airQualitySite1 = {//Cork Institute of Technology
+//            "type": "Feature",
+//            "properties": {
+//                "amenity": "EPA Environmental Sensor",
+//                "popupContent": "<h5><b>EPA Site: Cork Institute of Technology </b></h5>" + "<table style=\"width:405px\"> <tr> <td><img src=\"http://erc.epa.ie/real-time-air/www/images/epaweb/JPEG/Cork_IT_OZONE_past7days_O3.JPG\" width=\"400px\"> </td></tr> </table> ",
+//            },
+//            "geometry": {
+//                "type": "Point",
+//                "coordinates": [-8.534432, 51.885330]
+//            }
+//        };
+//        let airQualitySite2 = {//South Link Road
+//            "type": "Feature",
+//            "properties": {
+//                "amenity": "EPA Environmental Sensor",
+//                "popupContent": "<h5><b>EPA Site: South Link Road </b></h5>" + "<table style=\"width:405px\"> <tr><td><img src=\"http://erc.epa.ie/real-time-air/www/images/epaweb/JPEG/Kinsale_Rd_past7days_O3_NO2_SO2.JPG\" width=\"400px\" height=\"400px\"> </td></tr> </table> ",
+//            },
+//            "geometry": {
+//                "type": "Point",
+//                "coordinates": [-8.456669, 51.877165]
+//            }
+//        };
+//        let airQualitySiteOptions = {
+//            radius: 10,
+//            fillColor: "#5F5293",
+//            fillOpacity: 1,
+//            opacity: 1,
+//            color: "#000"
+//        };
 
     //hydro levels
 //        $.get("/CarParks/hydroLevels", function (point) {
@@ -1301,26 +1307,26 @@ TODO: enable subresource integrity
 
 
 
-    function setAmbientSoundColor(ambientSound_) {
-        let good = 55;
-        let bad = 70;
-        return ambientSound_ < 10 ? '#fff7ec' :
-                ambientSound_ < 20 ? '#fee8c8' :
-                ambientSound_ < 30 ? '#fdd49e' :
-                ambientSound_ < 40 ? '#fdbb84' :
-                ambientSound_ < 50 ? '#fc8d59' :
-                ambientSound_ < 60 ? '#ef6548' :
-                ambientSound_ < 70 ? '#d7301f' :
-                ambientSound_ < 80 ? '#b30000' :
-                ambientSound_ < 90 ? '#8f0000' :
-                ambientSound_ > 90 ? '#7f0000' :
-                '#000000';
-    }
-
-    function onMapClick(e) {
-//        console.log("Click");
-
-    }
+//    function setAmbientSoundColor(ambientSound_) {
+//        let good = 55;
+//        let bad = 70;
+//        return ambientSound_ < 10 ? '#fff7ec' :
+//                ambientSound_ < 20 ? '#fee8c8' :
+//                ambientSound_ < 30 ? '#fdd49e' :
+//                ambientSound_ < 40 ? '#fdbb84' :
+//                ambientSound_ < 50 ? '#fc8d59' :
+//                ambientSound_ < 60 ? '#ef6548' :
+//                ambientSound_ < 70 ? '#d7301f' :
+//                ambientSound_ < 80 ? '#b30000' :
+//                ambientSound_ < 90 ? '#8f0000' :
+//                ambientSound_ > 90 ? '#7f0000' :
+//                '#000000';
+//    }
+//
+//    function onMapClick(e) {
+////        console.log("Click");
+//
+//    }
 
     // check browser version type
     function get_browser_info() {

@@ -475,6 +475,12 @@ a.mItem:hover
     width: 5% ; /*!important;*/
 }
 
-#mapDiv{
-    height: 600px;
+#map {
+    width: 960px;
+    height:500px;
+}
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: #e93434;
+    color: #ffffff;
 }
