@@ -7,16 +7,16 @@
             <br>
         </header>
     </div>
-    <!--<div id="timewrapper" style="border-bottom:2px solid #e5e5e5">
+<!--    <div id="timewrapper" style="border-bottom:2px solid #e5e5e5">
             <p><span id="servertime"></span></p>
         
     </div>-->
 
-    <div class="homeBlock" >
-        <h2>Car Parks and City Bikes</h2>
+    <div class="row" style="border-bottom:2px solid #e5e5e5" >
+        <h2>Car Parks and Rental Bikes</h2>
         <div align="center" >
             <div style="overflow:auto; margin: 10px ; width:100%; ">
-                <iframe scrolling="no" src="http://149.157.67.17/pages/DublinTravel" style=" width:2000px; height:2000px; border:none; margin-left:-270px; margin-right:-60px; margin-top:-460px;  ">
+                <iframe scrolling="no" src="http://149.157.67.17/pages/DublinTravel" style=" width:1000px; height:1000px; border:none; margin-left:-270px; margin-right:-60px; margin-top:-460px;  ">
                 </iframe>
             </div>
         </div>
@@ -26,7 +26,7 @@
                                         </div> -->
     </div>
     <br>
-    <div class="homeBlock">
+    <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2>Weather Stations</h2>
         <div align="center">
             <img src="img/weather_placeholder.png" style = "width:70%;" alt="weather placeholder"/>
@@ -48,33 +48,23 @@
     </div>
 
 
-    <div class="homeBlock">
-        <div>
-            <h2>Live Traffic Cams</h2>
-        </div>
-    </div>
-
-    <div class="homeBlock">
-        <div>
-            <div><a href="http://www.jacklynchtunnel.ie/traffic-cameras"> 
-                    <div id="containerA" class="col span_1_of_3" >
-                        <div id="cam6"></div>
-                    </div>
-                    <div id="containerB" class="col span_1_of_3" >
-                        <div id="cam137"></div>
-                    </div>
-                    <div id="containerC" class="col span_1_of_3" >
-                        <div id="cam163"></div>
-                    </div>
-                </a>
+    <div class="row" style="border-bottom:2px solid #e5e5e5">
+        <h2>Live Traffic Cams</h2>
+        <a href="http://www.jacklynchtunnel.ie/traffic-cameras"> 
+            <div id="containerA" class="col-4" >
+                <div id="cam6"></div>
             </div>
-        </div>
+            <div id="containerB" class="col-4" >
+                <div id="cam137"></div>
+            </div>
+            <div id="containerC" class="col-4" >
+                <div id="cam163"></div>
+            </div>
+        </a>
     </div>
 
-    <div class="homeBlock">
-        <div>
-            <h2>Latest News</h2>
-        </div>
+    <div class="row" style="border-bottom:2px solid #e5e5e5">
+        <h2>Latest News</h2>
         <div id="news">
             <ul style="list-style-type:none; margin-left:0px; padding-left:0px;">
                 <li>SEE: New Reporting Tool <a href="https://www.yourcouncil.ie/"> 'Your Council' </a> added to the Cork Dashboard <a href="/pages/DublinReport">here</a></li>
@@ -87,43 +77,27 @@
         </div>
     </div>    
 
-    <div class="homeBlock">
-        <h2> A Twitter List by <a href="https://twitter.com/CorkDashboard/lists/cork-dashboard">@CorkDashboard</a></h2>
-        <div id="twitter_container" align="center">
-
-            <a class="twitter-timeline"
-               href="https://twitter.com/CorkDashboard/lists/cork-dashboard"
-               data-width="70%"
-               data-tweet-limit="3"
-               data-chrome="noheader nofooter"
-               scrollbar = "true">
-                Tweets by @CorkDashboard
-            </a>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-    </div>
-
     <!--                    <a class="twitter-timeline" style = "width:100%; height:500;" 
-                        href="https://twitter.com/CorkDashboard/lists/cork-dashboard">A Twitter List by CorkDashboard</a> 
-                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+                    href="https://twitter.com/CorkDashboard/lists/cork-dashboard">A Twitter List by CorkDashboard</a> 
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
 
-    <div class="homeBlock">
+    <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2>Connect with Cork Smart Gateway:</h2>
         <div>
-            <div class="col span_1_of_3" align="center">
+            <div class="col-4" align="center">
                 <a href="http://www.corksmartgateway.ie/">
                     <img title="CorkSmartGateway" src="img/icons/CSG_icon.png" style="height:50px" alt="Cork Smart Gateway"/>
 
                 </a>
 
             </div>
-            <div class="col span_1_of_3" align="center">
+            <div class="col-4" align="center">
                 <a href="https://www.linkedin.com/groups/8460601/profile">
                 <!--<img src="img/icons/Logo-2C-41px-TM.png" style="height:50px" align="center" alt="Linked in logo"/>-->
                     <img src="img/icons/Logo-2C-128px-TM.png" style="height:50px" align="center" alt="Linked in logo"/>
                 </a>
             </div>
-            <div class="col span_1_of_3" align="center"  >
+            <div class="col-4" align="center"  >
                 <a href="https://twitter.com/SmartCork">
                     <img src="img/icons/Twitter_Logo_Blue.png" style="height:50px;" align="center" alt="twitter logo"/>
                 </a>
@@ -168,21 +142,38 @@
                     <canvas id="cork_carparks" width="100%" height="200"></canvas>
     
                 </div>-->
-    <div class="homeBlock">
+    <div class="row" style="border-bottom:2px solid #e5e5e5;">
         <h2>Average House Price</h2>
         <canvas id="cork_house_prices" width="100%" ></canvas>
     </div>
-    <div class="homeBlock">
+    <div class="row" style="border-bottom:2px solid #e5e5e5;">
         <h2>Average Residential Rent</h2>
         <canvas id="cork_residential_rents" width="100%"></canvas>
     </div>
-    <div class="homeBlock">
-        <h2>Average Residential Rent</h2>
-        <canvas id="cork_residential_rents" width="100%"></canvas>
+    <!--    <div class="ro">
+            <h2></h2>
+            <canvas width="100%"></canvas>
+        </div>-->
+
+    <div class="row" style="border-bottom:2px solid #e5e5e5">
+        <h2> A Twitter List by <a href="https://twitter.com/CorkDashboard/lists/cork-dashboard">@CorkDashboard</a></h2>
+        <div id="twitter_container" align="center">
+
+            <a class="twitter-timeline"
+               href="https://twitter.com/CorkDashboard/lists/cork-dashboard"
+               data-width="80%"
+               data-tweet-limit="2"
+               data-chrome="noheader nofooter"
+               scrollbar = "true">
+                Tweets by @CorkDashboard
+            </a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
     </div>
+
     <!--            <div >
-                    <canvas id="airquality" style="width: 200px; height: 200px; margin: 0 auto; font-size:180%"></canvas>
-                </div>-->
+            <canvas id="airquality" style="width: 200px; height: 200px; margin: 0 auto; font-size:180%"></canvas>
+            </div>-->
     <!--    </div>-->
 
 </div>
@@ -190,29 +181,27 @@
 <script src="http://www.chartjs.org/dist/2.6.0/Chart.bundle.js"></script>
 <script src="http://www.chartjs.org/samples/2.6.0/utils.js"></script>
 <script src="/js/cork_data_charts.js" type="text/javascript"></script>
-
 <script type="text/javascript">
-
     function myFunction() {
-    refresh Cams();
-    displaytime();
-    //    previousParking();
-//    previousM50North();
-//    getPreviousAirQuality();
-//    unemployment();
-//    employment();
-//    crimesTheft();
-//    crimesPublicOrder();
-//    waterLevels();
-//    soundLevels();
-//    weather();
-//    trolleys();
-//    housePricesSecond();
-//    housePrices();
-    //    rents();
-    setInterval("displaytime() ",                                  1000 );
-    setInterval("refreshCams()",                                    300 000);
-//  setInterval("previousParking()", 60000);
+    refreshCams();
+            displaytime();
+            //    previousParking();
+            //    previousM50North();
+                    //    getPreviousAirQuality();
+                            //    unemployment();
+                            //    employment();
+                            //    crimesTheft();
+                            //    crimesPublicOrder();
+                            //    waterLevels();
+                            //    soundLevels();
+                            //    weather();
+                            //    trolleys();
+                            //    housePricesSecond();
+                            //    housePrices();
+                            //    rents();
+                            setInterval("displaytime()  ", 1000);
+                            setInterval("refreshCams( )", 300000);
+                    //                                    / /  setInterval("previousParking()", 60000);
 //  setInterval("previousM50North()", 60000);
 //  setInterval("getPreviousAirQuality()", 60000);
 //  setInterval("unemployment()", 600000);
@@ -230,36 +219,38 @@
 //    setInterval("m50South()", 60000);
 //    setInterval("m50North()", 60000);
 //    setInterval("airQuality()", 60000);
-    }
-    //var currenttime = '<!--#config timefmt="%B %d, %Y %H:%M:%S"--><!--#echo var="DATE_LOCAL" -->' //SSI method of getting server date
-    let currenttime                   =                   '<?php print date("F d, Y H:i:s", time()) ?>'; // get server time
-   letmontharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-    let serverdate = new Date(currenttime);
+//var currenttime = '<!--#config timefmt="%B %d, %Y %H:%M:%S"--><!--#echo var="DATE_LOCAL" -->' //SSI method of getting server date
 
-    function padlength(what){
-    let output=(what.toString().length==1)? "0"+what : what;
-    return output;
-    }
+let currenttime
+=   '<?php print date("F d, Y H:i:s", time()) ?>'; // get server time
+letmontharray = new Array("January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December");
+let serverdate = new Date(currenttime);
 
-    function displaytime(){
-    serverdate.setSeconds(serverdate.getSeconds()+1);
-    let datestring=montharray[serverdate.getMonth()]+" "+padlength(serverdate.getDate())+", "+serverdate.getFullYear();
-    let timestring=padlength(serverdate.getHours())+":"+padlength(serverdate.getMinutes())+":"+padlength(serverdate.getSeconds());
-    document.getElementById("servertime").innerHTML=datestring+" "+timestring;
-    }
+function padlength(what){
+let output=(what.toString().length==1)? "0"+what : what;
+return output;
+}
+}
 
-    $( function() {
-    $( "#alerts" ).accordion();
-    } );
+function displaytime(){
+serverdate.setSeconds(serverdate.getSeconds()+1);
+let datestring=montharray[serverdate.getMonth()]+" "+padlength(serverdate.getDate())+", "+serverdate.getFullYear();
+let timestring=padlength(serverdate.getHours())+":"+padlength(serverdate.getMinutes())+":"+padlength(serverdate.getSeconds());
+document.getElementById("servertime").innerHTML=datestring+" "+timestring;
+}
 
-    function refreshCams() {
-    let imgurl6 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?" + Math.random();
-    let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();
-    let imgurl23 = "https://cdn.mtcc.ie/static/cctv/0266.jpg?" + Math.random();
-    document.getElementById("cam163").innerHTML = "<img src=" + imgurl163 + " alt=\"cam\" style=\"width:100%\">";
-    document.getElementById("cam137").innerHTML = "<img src=" + imgurl23 + " alt=\"cam\" style=\"width:100%\">";
-    document.getElementById("cam6").innerHTML = "<img src=" + imgurl6 + " alt=\"cam\" style=\"width:100%\">";
-    }
+$( function() {
+$( "#alerts" ).accordion();
+} );
+
+function refreshCams() {
+let imgurl6 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?" + Math.random();
+let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();
+let imgurl23 = "https://cdn.mtcc.ie/static/cctv/0266.jpg?" + Math.random();
+document.getElementById("cam163").innerHTML = "<img src=" + imgurl163 + " alt=\"cam\" style=\"width:100%\">";
+document.getElementById("cam137").innerHTML = "<img src=" + imgurl23 + " alt=\"cam\" style=\"width:100%\">";
+document.getElementById("cam6").innerHTML = "<img src=" + imgurl6 + " alt=\"cam\" style=\"width:100%\">";
+}
 
 </script>
 <!--                <div>

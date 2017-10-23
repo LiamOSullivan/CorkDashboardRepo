@@ -55,12 +55,12 @@ TODO: enable subresource integrity
         var map;
 //    let groupAir = new L.FeatureGroup();
 //    let soundSites = new L.FeatureGroup();
-        let waterSites = new L.FeatureGroup();
+//        let waterSites = new L.FeatureGroup();
 //    let weatherSites = new L.FeatureGroup();
-        let osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-        let osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-        let osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-        let osmGrey = new L.TileLayer.Grayscale(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+//        let osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+//        let osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+//        let osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+//        let osmGrey = new L.TileLayer.Grayscale(osmUrl, {maxZoom: 18, attribution: osmAttrib});
 //Initialise Map based on browser
         if (browser.name == 'MSIE' && browser.version == '9') {
             //alert(browser.version);
@@ -84,6 +84,7 @@ TODO: enable subresource integrity
                 layers: [osm],
                 zoomControl: true
             });
+            
         } else if (browser.name == 'Firefox' && browser.version == '8') {
             //alert(browser.version);
             //alert(browser.name);
@@ -110,11 +111,23 @@ TODO: enable subresource integrity
             map = new L.Map('map', {
                 center: new L.LatLng(52.034439, -8.608861),
                 zoom: 9,
-                layers: [osmGrey],
+//                layers: [osmGrey],
                 zoomControl: true
             });
         }
-//    let testMarker = L.marker([52.034439, -8.608861]).addTo(map);
+        
+          L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+        
+        
+        
+//        let testMarker = L.marker([52.034439, -8.608861]).addTo(map).bindPopup('Mozilla Toronto Office');
+        
+        L.marker([52.034439, -8.608861])
+        .addTo(map)
+        .bindPopup("<b>Hello world!</b><br />I am a popup.");
 
         //LEGEND
         let legend = L.control({position: 'bottomright'});
@@ -140,7 +153,7 @@ TODO: enable subresource integrity
             return div;
         };
         legend.addTo(map);
-//        map.addEventListener('click', onMapClick);
+        map.addEventListener('click', onMapClick);
         //alert(browser.name);
 
         //EPAOverall Air Quality
@@ -194,30 +207,26 @@ TODO: enable subresource integrity
         let overlayMaps = {
 //        "EPA Monitoring Sites": groupAir,
 //        "Ambient Sound Recording Sites": soundSites,
-            "EPA Water Level Sites": waterSites
+//            "EPA Water Level Sites": waterSites
 //        "Weather Sites": weatherSites
         };
-        layerControl = L.control.layers(baseMaps, overlayMaps);
-        layerControl.addTo(map);
-       
+//     layerControl = L.control.layers(baseMaps, overlayMaps);
+//        layerControl.addTo(map);
+//       
 //let initial = 0; //check to add everythign initially to first map.
 
-        var firefoxIcon = L.icon({
-            iconUrl: 'http://joshuafrazier.info/images/firefox.svg',
-            iconSize: [38, 95], // size of the icon
-            popupAnchor: [0, -15]
-        });
+       
         
 //        var customPopup = '<h1>Test Popup<h1>';
 
 //    <img src='http://joshuafrazier.info/images/maptime.gif' alt='maptime logo gif' width='350px'/>";
 
 
-        var customOptions =
-        {
-        'maxWidth': '500',
-        'className' : 'custom'
-        }
+//        var customOptions =
+//        {
+//        'maxWidth': '500',
+//        'className' : 'custom'
+//        };
 
 
         //Individual AirQuality Locations
@@ -227,7 +236,7 @@ TODO: enable subresource integrity
         //initial++;
         //        groupAir.clearLayers(); //air quality ou
 //        soundSites.clearLayers(); //ambient sound
-        waterSites.clearLayers();
+//        waterSites.clearLayers();
 //        weatherSites.clearLayers();
         $row = 1;
         let previousWaterLevels = null;
@@ -256,7 +265,7 @@ TODO: enable subresource integrity
                 console.log("Preious water levels: " + previousWaterLevels);
             }
         });
-        var waterMarkers = [];
+//        var waterMarkers = [];
         //Cork Water Levels Current index = 0
         //waterMarkers.push(L.marker([52.034439, -8.608861]));
 
@@ -311,27 +320,27 @@ TODO: enable subresource integrity
                                 + previousWaterLevel + " </b></td></tr></table>";
                         //console.log(text);
 
-                        let waterLevelSite = {
-                            "type": "Feature",
-                            "properties": {
-                                "name": stationName,
-                                "amenity": "Water Level",
-                                "popupContent": text
-                            },
-                            "geometry": {
-                                "type": "Point",
-                                "coordinates": [lon, lat]
-                            }
-                        };
-                        let waterLevelSiteOptions = {
-                            radius: 8,
-                            fillColor: "#ff7800",
-// TO DO: bring this back for indicator color                           fillColor: setWaterColour(waterLevel, previousWaterLevel),
-                            color: "#000",
-                            weight: 1,
-                            opacity: 1,
-                            fillOpacity: 1 //setMarkerIntensity(spaces)
-                        };
+//                        let waterLevelSite = {
+//                            "type": "Feature",
+//                            "properties": {
+//                                "name": stationName,
+//                                "amenity": "Water Level"
+////                                "popupContent": text
+//                            },
+//                            "geometry": {
+//                                "type": "Point",
+//                                "coordinates": [lon, lat]
+//                            }
+//                        };
+//                        let waterLevelSiteOptions = {
+//                            radius: 8,
+//                            fillColor: "#ff7800",
+//// TO DO: bring this back for indicator color                           fillColor: setWaterColour(waterLevel, previousWaterLevel),
+//                            color: "#000",
+//                            weight: 1,
+//                            opacity: 1,
+//                            fillOpacity: 1 //setMarkerIntensity(spaces)
+//                        };
 //
 //                        waterSites.addLayer(L.geoJson(waterLevelSite, {
 //                            onEachFeature: onEachFeature, pointToLayer: function (feature, latlng) {
@@ -341,7 +350,8 @@ TODO: enable subresource integrity
 //                        waterMarkers.push(L.Marker([52.035439, -8.607861]));
 //                        L.marker([lat, lon],{icon: firefoxIcon}).bindPopup(popupTest, customPopupOptions).addTo(map);
 //                    L.marker([lat, lon], {icon: firefoxIcon}).bindPopup('test popup').addTo(map);
-                    waterMarkers.push(L.marker([lat, lon], {icon: firefoxIcon}).bindPopup('Mozilla Toronto Office').addTo(map));
+//                    let m =L.marker([lat, lon], {icon: firefoxIcon}).bindPopup('Mozilla Toronto Office');
+//                            m.addTo(map);
                     }
                 }
             }

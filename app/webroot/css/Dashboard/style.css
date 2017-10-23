@@ -26,7 +26,7 @@
 
 .menu {
     float:left;
-    width:16.66%;
+    width:18%;
     text-align:left;
     padding:20px;
     /*background-color:#ffffff;*/
@@ -48,7 +48,7 @@
 }
 .middle {
     float:left;
-    width:48%;
+    width:50%;
     padding:20px;
     text-align:left;
     /*//border: 2px solid rgba(181, 31, 36, 0.3);*/
@@ -220,18 +220,21 @@ a.mItem:link
 {
     text-decoration: none;
     color: rgba(181, 31, 36, 1.0);
+    width: 100%;
 }
 
 
 a.mItem:visited {
     text-decoration: none;
     color: rgba(181, 31, 36, 1.0);
+    width: 100%;
 }
 
 a.mItem:hover
 {
     text-decoration: none;
     color: rgba(181, 31, 36, 0.5);
+    width: 100%;
 }
 
 
@@ -484,3 +487,4 @@ a.mItem:hover
     background: #e93434;
     color: #ffffff;
 }
+
