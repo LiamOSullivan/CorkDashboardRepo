@@ -9,8 +9,8 @@
     </div>
     <div class="row">
         <div class="col-4">
-            <img src="/img/Cork_Indicator_Icons/Environment_Transport.png" max-width = "100%" alt=""/>
-        </div>
+            <a href="EnvironmentTransport/stats">  <img src="/img/Cork_Indicator_Icons/Environment_Transport.png" max-width = "100%" alt=""/>
+        </a></div>
         <div class="col-4">
             <img src="/img/Cork_Indicator_Icons/CrimeEmergencyServices.png"  max-width = "100%" alt=""/>
         </div>
@@ -22,7 +22,8 @@
                 <img src="/img/Cork_Indicator_Icons/Housing.png" max-width = "100%" alt=""/>
             </div>
             <div class="col-4">
-                <img src="/img/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png" max-width = "100%" alt=""/>
+                <a href="Economy/stats/container"> <img src="/img/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png" max-width = "100%" alt=""/>
+            </a>
             </div>
             <div class="col-4">
                 <img src="/img/Cork_Indicator_Icons/Population.png" max-width = "100%" alt=""/>

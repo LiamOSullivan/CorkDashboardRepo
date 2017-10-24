@@ -10,7 +10,7 @@
             <!--<img src="img/sidebar_buttons/corkdoing_l_trends.png" width=100% height=100% alt="How's Cork Doing?"/>-->
         </a>                    
     </div>
-    <div class="menuitem"><a class="mItem" href="/pages/CorkRealtime"><h2>Real Time Environment & Travel</h2>
+    <div class="menuitem"><a class="mItem" href="/pages/CorkRealtime"><h2 >Real Time Environment & Travel</h2>
             <!--<img src="img/Cork_Indicator_Icons/Environment_Transport.png" width=100% height=100% alt="Realtime Environment and Transport"/>-->
         </a>
     </div>

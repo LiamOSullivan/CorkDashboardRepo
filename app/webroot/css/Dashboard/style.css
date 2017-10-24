@@ -1,15 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Helvetica:400,300,200);
-@import url(https://fonts.googleapis.com/css?family=Proxima+Nova:400,300,200);
-
-/*
-        Halcyonic 3.1 by HTML5 UP
-        html5up.net | @n33co
-        Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-/*********************************************************************************/
-/* Global                                                                        */
-/*********************************************************************************/
+/*@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');*/
 
 /* Basic */
 
@@ -19,6 +8,8 @@
 }*/
 
 /*Responsive Layout*/
+
+
 
 * {
     box-sizing: border-box; /*padding and border are included in the total width and height of the elements*/
@@ -66,6 +57,8 @@
     /*border-right: 2px solid #e5e5e5;*/
 }
 
+
+
 /*For when there's only a single column of content next to the siderbar*/
 .onlyContent{
     float:left;
@@ -77,7 +70,7 @@
 
 @media only screen and (max-width:620px) {
     /* For mobile phones: */
-    .main, .right, .menu {
+    .menu, .main, .right {
         width:100%;
     }
 }
@@ -123,7 +116,7 @@ body, input, textarea, select
 {
     color: rgba(0,0,0,0.65);
     font-size: 16px;
-    font-family: 'proxima nova';
+    font-family: 'Proxima Nova', Georgia, sans-serif;
     line-height: 1.85em;
     font-weight: normal;
 }
@@ -134,8 +127,8 @@ h1 {
     position: relative;
     left: 0;
     /*bottom: 35px;*/
-    font-family: 'Proxima Nova', sans-serif;
-    font-size: 2.25em;
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+    font-size:3vw;
     font-weight: bold
 }
 
@@ -143,8 +136,8 @@ h2 {
     position: relative;
     left: 0;
     /*bottom: 35px;*/
-    font-family: 'Proxima Nova', sans-serif;
-    font-size: 1.75em;
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+    font-size: 2vw;
 }
 
 h3 {
@@ -152,7 +145,7 @@ h3 {
     left: 0;
     /*bottom: 35px;*/
     font-family: 'Proxima Nova', sans-serif;
-    font-size: 1.25em;
+    font-size: 1vw;
 }
 
 ul, ol, dl

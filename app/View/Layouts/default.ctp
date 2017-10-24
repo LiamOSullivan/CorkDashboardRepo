@@ -6,6 +6,8 @@
         <meta name="description" content="Provides access to statistics for Cork ." />
         <meta name="keywords" 
               content="Corkdashboard, Cork, population, travel time, weather, parking, river levels, housing, labour, health, overview" />
+         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
+        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.min.js"></script>
@@ -13,11 +15,11 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.css"></script> -->
         <!--<script src="js/dashboard_init.js" type="text/javascript"></script>-->
         <!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
-        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
-
-
+       
         <noscript>
-        <link href="/css/style.css" rel="stylesheet" type="text/css"/> <!--
+        <!--<link href="/css/style.css" rel="stylesheet" type="text/css"/>--> 
+        <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />       
+        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/><!--
         <link href="css/Dashboard/style-desktop.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css"/>-->
         </noscript>
@@ -33,29 +35,6 @@
         <?php //echo $this->Html->css('6cols'); ?>
         <?php //echo $this->Html->css('col'); ?>
 
-
-        <!--        Old dashboard styles 
-                <style>
-                    canvas{ -moz-user-select: none;
-                            -webkit-user-select: none;
-                            -ms-user-select: none;
-        
-                    }
-                    .chart-container {
-                        width: 800px;
-                        margin-left: 20px;
-                        margin-right: 20px;
-                        margin-bottom: 20px;
-                    }
-                    .container {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                    }
-        
-                </style>-->
-        <!--Responsive styles-->     
         <title>The Cork Dashboard | <?= $this->fetch('title') ?></title>
 
     </head>
@@ -72,7 +51,7 @@
             <?php echo $this->element('sidebar') ?>
             <?php echo $this->fetch('content') ?>
         </div>
-        
+
         <div id="footer-wrapper">
             <footer id="footer" class="container">
                 <div class="row">
@@ -84,7 +63,7 @@
         <!-- Copyright -->
         <div id="copyright">
             <?php echo $this->element('copyright'); ?>
-            
+
         </div>
 
 
