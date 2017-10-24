@@ -130,24 +130,35 @@
                     <div class="content" id="tab32"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimeRates/tab32")); ?>
                     </div>
                     <br> 
-                </div>
-                <div class="col-8" align="center">
-                    <h2>Dublin Fire Brigade Activity</h2>
-                     <br>
+                    <div style="border-bottom:2px solid #e5e5e5">
+                    </div>
+                    <br>
+                    <h2>Cork Fire Brigade Activity</h2>
+                    <br>
                     <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/totalFireBrigade/tab41")); ?></div> 
-                     <br>
+                    <br>
                     <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/rtaBrigade/tab51")); ?></div> 
-                     <br>
+                    <br>
                     <div class="content" id="tab61"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/waterBrigade/tab61")); ?></div> 
-                     <br>
+                    <br>
                     <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/falseBrigade/tab71")); ?></div> 
-                     <br>
+                    <br>
                     <div class="content" id="tab81"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/miscBrigade/tab81")); ?></div> 
-
+                    <br>
+                    <div style="border-bottom:2px solid #e5e5e5">
+                    </div>
+                    <br>
+                    <h2>Cork Fire Brigade Ambulance Call Outs</h2>
+                    <br>
+                    <div class="content" id="tab91"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/ambulanceBrigade/tab91")); ?></div> 
+                    <br>                        
+                    <div class="content" id="tab101"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadInjuries/tab101")); ?></div> 
+                    <br>
+                    <div class="content" id="tab111"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadDeaths/tab111")); ?></div> 
+                    <br>
                 </div>
             </div>
         </div>
-
         <div id="footer-wrapper">
             <footer id="footer" class="container">
                 <div class="row">
@@ -162,10 +173,28 @@
 
         </div>
     </div>
+    <script type="text/javascript">
+//        $('#menu1').tabify();
+//        $('#menu2').tabify();
+//        $('#menu22').tabify();
+//        $('#menu23').tabify();
+//        $('#menu24').tabify();
+//        $('#menu3').tabify();
+//        $('#menu4').tabify();
+//        $('#menu5').tabify();
+//        $('#menu6').tabify();
+//        $('#menu7').tabify();
+//        $('#menu8').tabify();
+//        $('#menu9').tabify();
+//        $('#menu10').tabify();
+//        $('#menu224').tabify();
+//        $('#menu11').tabify();
+    </script>
+
 </body>
 </html>
-
-<!--Content--> 
+<!--
+Content 
 <div id="onlyContent">
     <div id="content">
         <div class="container">
@@ -220,8 +249,8 @@
 
                                             </ul>                       
 
-                                            <div class="content" id="tab21"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimes/tab21")); ?></div>
-                                            <div class="content" id="tab221"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimeRates/tab221")); ?></div>
+                                            <div class="content" id="tab21"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimes/tab21")); ?></div>
+                                            <div class="content" id="tab221"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimeRates/tab221")); ?></div>
 
                                         </div>
 
@@ -230,8 +259,8 @@
                                                 <li class="active"><a href="#tab224">Count</a></li>
                                                 <li><a href="#tab233">Rate</a></li>
                                             </ul>                       
-                                            <div class="content" id="tab224"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/robberyCrimes/tab224")); ?></div>
-                                            <div class="content" id="tab233"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/robberyCrimeRates/tab233")); ?></div> 
+                                            <div class="content" id="tab224"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/robberyCrimes/tab224")); ?></div>
+                                            <div class="content" id="tab233"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/robberyCrimeRates/tab233")); ?></div> 
                                         </div>
                                     </div>
                                 </center> 
@@ -243,8 +272,8 @@
                                                 <li><a href="#tab232">Rate</a></li>
 
                                             </ul>                       
-                                            <div class="content" id="tab231"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/burglaryCrimes/tab231")); ?></div>
-                                            <div class="content" id="tab232"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/burglaryCrimeRates/tab232")); ?></div> 
+                                            <div class="content" id="tab231"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/burglaryCrimes/tab231")); ?></div>
+                                            <div class="content" id="tab232"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/burglaryCrimeRates/tab232")); ?></div> 
                                         </div>
                                         <div id="containerA" class="col span_1_of_2" >
                                             <ul class ="menu" id="menu24">
@@ -253,10 +282,10 @@
 
                                             </ul>                       
 
-                                            <div class="content" id="tab241"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/drugCrimes/tab241")); ?></div>
-                                            <div class="content" id="tab242"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/drugCrimeRates/tab242")); ?></div> 
-                                            <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimes/tab31")); ?></div> 
-                                            <div class="content" id="tab32"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimeRates/tab32")); ?></div> 
+                                            <div class="content" id="tab241"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/drugCrimes/tab241")); ?></div>
+                                            <div class="content" id="tab242"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/drugCrimeRates/tab242")); ?></div> 
+                                            <div class="content" id="tab31"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimes/tab31")); ?></div> 
+                                            <div class="content" id="tab32"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimeRates/tab32")); ?></div> 
 
                                         </div>
                                     </div>
@@ -269,11 +298,6 @@
                                                 <li><a href="#tab32">Rate</a></li>
 
                                             </ul>                       
-
-
-
-
-
 
                                         </div>
                                     </div>
@@ -288,12 +312,6 @@
 
                                             </ul>                       
 
-                                            Dublin Fire Brigade Activity
-                                            <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/totalFireBrigade/tab41")); ?></div> 
-                                            <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/rtaBrigade/tab51")); ?></div> 
-                                            <div class="content" id="tab61"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/waterBrigade/tab61")); ?></div> 
-                                            <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/falseBrigade/tab71")); ?></div> 
-                                            <div class="content" id="tab81"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/miscBrigade/tab81")); ?></div> 
 
 
 
@@ -309,14 +327,14 @@
                                                 <li><a href="#tab32">% Change</a></li> 
 
                                             </ul>                       
-                                            <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/rtaBrigade/tab51")); ?></div> 
+                                            <div class="content" id="tab51"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/rtaBrigade/tab51")); ?></div> 
                                         </div>
                                         <div id="containerA" class="col span_1_of_2" >
                                             <ul class ="menu" id="menu6">
                                                 <li class="active"><a href="#tab61">Count</a></li>
                                                 <li><a href="#tab32">% Change</a></li> 
                                             </ul>                       
-                                            <div class="content" id="tab61"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/waterBrigade/tab61")); ?></div> 
+                                            <div class="content" id="tab61"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/waterBrigade/tab61")); ?></div> 
 
 
                                         </div>
@@ -333,7 +351,7 @@
                                             </ul>                       
 
 
-                                            <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/falseBrigade/tab71")); ?></div> 
+                                            <div class="content" id="tab71"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/falseBrigade/tab71")); ?></div> 
 
 
                                         </div>
@@ -346,7 +364,7 @@
                                             </ul>                       
 
 
-                                            <div class="content" id="tab81"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/miscBrigade/tab81")); ?></div> 
+                                            <div class="content" id="tab81"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/miscBrigade/tab81")); ?></div> 
 
 
                                         </div>
@@ -354,7 +372,13 @@
                                 </center> 
 
 
-                                <h4>Dublin Fire Brigade Ambulance Call Outs</h4>    	 
+                                <h4>Dublin Fire Brigade Ambulance Call Outs</h4>  
+
+                                <div class="content" id="tab91"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/ambulanceBrigade/tab91")); ?></div> 
+                                <div class="content" id="tab91"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/ambulanceBrigade/tab91")); ?></div> 
+                                <div class="content" id="tab101"><//?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadInjuries/tab101")); ?></div> 
+                                <div class="content" id="tab111"><//?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadDeaths/tab111")); ?></div> 
+
 
                                 <center>                  
                                     <div class="section group">
@@ -366,7 +390,6 @@
                                             </ul>                       
 
 
-                                            <div class="content" id="tab91"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/ambulanceBrigade/tab91")); ?></div> 
 
 
 
@@ -386,7 +409,7 @@
                                             </ul>                       
 
 
-                                            <div class="content" id="tab101"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadInjuries/tab101")); ?></div> 
+                                            <div class="content" id="tab101"><//?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadInjuries/tab101")); ?></div> 
 
 
 
@@ -405,7 +428,7 @@
                                             </ul>                       
 
 
-                                            <div class="content" id="tab111"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadDeaths/tab111")); ?></div> 
+                                            <div class="content" id="tab111"><//?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadDeaths/tab111")); ?></div> 
 
 
 
@@ -443,23 +466,7 @@
                                 </div>
 
 
-                                <script type="text/javascript">
-                                    $('#menu1').tabify();
-                                    $('#menu2').tabify();
-                                    $('#menu22').tabify();
-                                    $('#menu23').tabify();
-                                    $('#menu24').tabify();
-                                    $('#menu3').tabify();
-                                    $('#menu4').tabify();
-                                    $('#menu5').tabify();
-                                    $('#menu6').tabify();
-                                    $('#menu7').tabify();
-                                    $('#menu8').tabify();
-                                    $('#menu9').tabify();
-                                    $('#menu10').tabify();
-                                    $('#menu224').tabify();
-                                    $('#menu11').tabify();
-                                </script>
+
                                 </section>
 
 
@@ -474,18 +481,18 @@
 <div id="footer-wrapper">
 <footer id="footer" class="container">
 <div class="row">
-        <?php echo $this->element('dbFooter'); ?>
+        <?//php echo $this->element('dbFooter'); ?>
 </div>
 </footer>
 </div>
-        <?php echo $this->element('googleAnalytics'); ?>
+        <?//php echo $this->element('googleAnalytics'); ?>
 Copyright 
 <div id="copyright">
-        <?php echo $this->element('copyright'); ?>
+        <?//php echo $this->element('copyright'); ?>
 </div>
 
 </body>
-</html>
+</html>-->
 
 
 
