@@ -1,197 +1,174 @@
-<!DOCTYPE html>                                                                                                                                                                                 <!DOCTYP
-    <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="description" content="Provides access to statistics for Cork ." />
-<meta name="description" content="Provides access to statistics about the crime rate and emergency services response in Dublin." />
-<meta name="keywords" content="Cork Dashboard, Cork, murder, crime, theft, fire, ambulance, police, gardai" />
-<link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
-<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel-layers.min.js"></script> 
-<script src="//cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.css"></script> -->
-<!--<script src="js/dashboard_init.js" type="text/javascript"></script>-->
-<!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Provides access to statistics for Cork ." />
+        <meta name="description" content="Provides access to statistics about the crime rate and emergency services response in Dublin." />
+        <meta name="keywords" content="Cork Dashboard, Cork, murder, crime, theft, fire, ambulance, police, gardai" />
+        <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
+        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel-layers.min.js"></script> 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.css"></script> -->
+        <!--<script src="js/dashboard_init.js" type="text/javascript"></script>-->
+        <!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
 
-<noscript>
-<!--<link href="/css/style.css" rel="stylesheet" type="text/css"/>--> 
-<link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />       
-<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/><!--
-<link href="css/Dashboard/style-desktop.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css"/>-->
-</noscript>
-<!--        [if lte IE 9]><link rel="stylesheet" href="/dublindashboard/css/Dashboard/ie9.css" /><![endif]
-        [if lte IE 8]><script src="/dublindashboard/js/Dashboard/html5shiv.js"></script><![endif]-->
+        <noscript>
+        <!--<link href="/css/style.css" rel="stylesheet" type="text/css"/>--> 
+        <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />       
+        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/><!--
+        <link href="css/Dashboard/style-desktop.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css"/>-->
+        </noscript>
+        <!--        [if lte IE 9]><link rel="stylesheet" href="/dublindashboard/css/Dashboard/ie9.css" /><![endif]
+                [if lte IE 8]><script src="/dublindashboard/js/Dashboard/html5shiv.js"></script><![endif]-->
+        <!--<script src="/dublindashboard/js/Dashboard/config.js"></script> 
+        <script src="/dublindashboard/js/Dashboard/skel.min.js"></script>
+        <script src="/dublindashboard/js/Dashboard/skel-panels.min.js"></script> 
+        <script src="/dublindashboard/js/Dashboard/skel-layers.min.js"></script> 
+        <script src="/dublindashboard/js/Dashboard/init.js"></script>-->
+        <!--<noscript>
+        <link rel="stylesheet" href="/dublindashboard/css/Dashboard/skel-noscript.css" />
+        <link rel="stylesheet" href="/dublindashboard/css/Dashboard/style.css" />
+        <link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css" />
+        
+        </noscript>-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="/dublindashboard/css/Dashboard/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><script src="/dublindashboard/js/Dashboard/html5shiv.js"></script><![endif]-->
+        <?//php echo $this->Html->script('jquery.min.js'); ?>
+        <!-- Stylesheets -->
+        <?//php echo $this->Html->css('responsivegridsystem2'); ?> 
+        <?//php echo $this->Html->css('tabs'); ?> 
+        <?//php echo $this->fetch('content'); ?>
 
-<?php //echo $this->Html->script('jquery.min.js'); ?>
+        <?//php echo $this->Html->script('jquery.min.js'); ?>
 
-<!-- Stylesheets -->
-<?php //echo $this->Html->css('3cols'); ?>
-<?php //echo $this->Html->css('2cols'); ?>
-<?php //echo $this->Html->css('4cols'); ?>
-<?php //echo $this->Html->css('6cols'); ?>
-<?php //echo $this->Html->css('col'); ?>
+        <!-- Stylesheets -->
+        <?//php echo $this->Html->css('3cols'); ?>
+        <?//php echo $this->Html->css('2cols'); ?>
+        <?//php echo $this->Html->css('4cols'); ?>
+        <?//php echo $this->Html->css('6cols'); ?>
+        <?//php echo $this->Html->css('col'); ?>
 
-<!--<title>The Cork Dashboard | //<//?= //$this->fetch('title') ?></title>-->
-
-
-<title>The Cork Dashboard | Crime and Emergency Services Indicators></title>
-
-<!--<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<script src="/dublindashboard/js/Dashboard/jquery.min.js"></script>
- <script src="/dublindashboard/js/Dashboard/config.js"></script> 
-
-<script src="/dublindashboard/js/Dashboard/skel.min.js"></script>
- <script src="/dublindashboard/js/Dashboard/skel-panels.min.js"></script> 
-<script src="/dublindashboard/js/Dashboard/skel-layers.min.js"></script> 
-<script src="/dublindashboard/js/Dashboard/init.js"></script>-->
-
-
-<!--<noscript>
-<link rel="stylesheet" href="/dublindashboard/css/Dashboard/skel-noscript.css" />
-<link rel="stylesheet" href="/dublindashboard/css/Dashboard/style.css" />
-<link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css" />
-
-</noscript>-->
-<!--[if lte IE 9]><link rel="stylesheet" href="/dublindashboard/css/Dashboard/ie9.css" /><![endif]-->
-<!--[if lte IE 8]><script src="/dublindashboard/js/Dashboard/html5shiv.js"></script><![endif]-->
-<?//php echo $this->Html->script('jquery.min.js'); ?>
-<!-- Stylesheets -->
-<?//php echo $this->Html->css('3cols'); ?>
-<?//php echo $this->Html->css('2cols'); ?>
-<?//php echo $this->Html->css('4cols'); ?>
-<?//php echo $this->Html->css('6cols'); ?>
-<?//php echo $this->Html->css('col'); ?>
-
-<?//php echo $this->Html->css('responsivegridsystem2'); ?> 
-<?//php echo $this->Html->css('tabs'); ?> 
-<?//php echo $this->fetch('content'); ?>
-
-    <!--<style type="text/css">-->
-
-<!--/*  THIS IS JUST TO GET THE GRID TO SHOW UP.  YOU DONT NEED THIS IN YOUR CODE */-->
-<!--#maincontent .col {-->
-<!--background: #ccc;-->
-<!--background: rgba(255,255,255, 0.3);-->
-<!--}-->
-<!--</style>-->
-</head>
-<body>
-    <!-- Header -->
-    <div id="header-wrapper">
-        <?php echo $this->element('dbBanner'); ?>
-        <?php echo $this->element('dbNavMenu'); ?>
-    </div>
-
-    <!--Responsive content-->
-    <div style="overflow:auto">
-        <?php echo $this->element('sidebar') ?>
-        <div class="onlyContent">
-            <div style="border-bottom:2px solid #e5e5e5">
-                <header>
-                    <h1>Crime and Emergency Services Indicators</h1>
-                    <br>
-                </header>
-            </div>
-            <?php echo $this->fetch('content') ?>
-            <div class="row" style="border-bottom:2px solid #e5e5e5">
-                <div class="col-8" >
-                    <h2>Crime Statistics</h2>
-                    <br>
-                    <div class="content" id="tab21"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimes/tab21")); ?>
+        <!--<title>The Cork Dashboard | //<//?= //$this->fetch('title') ?></title>-->
+        <title>The Cork Dashboard | Crime and Emergency Services Indicators></title>
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="header-wrapper">
+            <?php echo $this->element('dbBanner'); ?>
+            <?php echo $this->element('dbNavMenu'); ?>
+        </div>
+        <!--Responsive content-->
+        <div style="overflow:auto">
+            <?php echo $this->element('sidebar') ?>
+            <div class="onlyContent">
+                <div style="border-bottom:2px solid #e5e5e5">
+                    <header>
+                        <h1>Crime and Emergency Services Indicators</h1>
+                        <br>
+                    </header>
+                </div>
+                <?php echo $this->fetch('content') ?>
+                <div class="row" style="border-bottom:2px solid #e5e5e5">
+                    <div class="col-9" >
+                        <h2>Crime Statistics</h2>
+                        <br>
+                        <div class="content" id="tab21"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimes/tab21")); ?>
+                        </div>
+                        <br>
+                        <div class="content" id="tab221"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimeRates/tab221")); ?>
+                        </div>
+                        <br>
+                        <div class="content" id="tab224"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/robberyCrimes/tab224")); ?>
+                        </div>
+                        <br>
+                        <div class="content" id="tab233"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/robberyCrimeRates/tab233")); ?>
+                        </div> 
+                        <br>    
+                        <div class="content" id="tab231"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/burglaryCrimes/tab231")); ?>
+                        </div>
+                        <br>                         
+                        <div class="content" id="tab232"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/burglaryCrimeRates/tab232")); ?>
+                        </div>
+                        <br> 
+                        <div class="content" id="tab241"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/drugCrimes/tab241")); ?>
+                        </div>
+                        <br> 
+                        <div class="content" id="tab242"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/drugCrimeRates/tab242")); ?>
+                        </div>
+                        <br> 
+                        <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimes/tab31")); ?>
+                        </div> 
+                        <br> 
+                        <div class="content" id="tab32"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimeRates/tab32")); ?>
+                        </div>
+                        <br> 
+                        <div style="border-bottom:2px solid #e5e5e5">
+                        </div>
+                        <br>
+                        <h2>Cork Fire Brigade Activity</h2>
+                        <br>
+                        <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/totalFireBrigade/tab41")); ?></div> 
+                        <br>
+                        <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/rtaBrigade/tab51")); ?></div> 
+                        <br>
+                        <div class="content" id="tab61"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/waterBrigade/tab61")); ?></div> 
+                        <br>
+                        <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/falseBrigade/tab71")); ?></div> 
+                        <br>
+                        <div class="content" id="tab81"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/miscBrigade/tab81")); ?></div> 
+                        <br>
+                        <div style="border-bottom:2px solid #e5e5e5">
+                        </div>
+                        <br>
+                        <h2>Cork Fire Brigade Ambulance Call Outs</h2>
+                        <br>
+                        <div class="content" id="tab91"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/ambulanceBrigade/tab91")); ?></div> 
+                        <br>                        
+                        <div class="content" id="tab101"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadInjuries/tab101")); ?></div> 
+                        <br>
+                        <div class="content" id="tab111"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadDeaths/tab111")); ?></div> 
+                        <br>
                     </div>
-                    <br>
-                    <div class="content" id="tab221"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimeRates/tab221")); ?>
-                    </div>
-                    <br>
-                    <div class="content" id="tab224"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/robberyCrimes/tab224")); ?>
-                    </div>
-                    <br>
-                    <div class="content" id="tab233"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/robberyCrimeRates/tab233")); ?>
-                    </div> 
-                    <br>    
-                    <div class="content" id="tab231"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/burglaryCrimes/tab231")); ?>
-                    </div>
-                    <br>                         
-                    <div class="content" id="tab232"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/burglaryCrimeRates/tab232")); ?>
-                    </div>
-                    <br> 
-                    <div class="content" id="tab241"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/drugCrimes/tab241")); ?>
-                    </div>
-                    <br> 
-                    <div class="content" id="tab242"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/drugCrimeRates/tab242")); ?>
-                    </div>
-                    <br> 
-                    <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimes/tab31")); ?>
-                    </div> 
-                    <br> 
-                    <div class="content" id="tab32"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/theftCrimeRates/tab32")); ?>
-                    </div>
-                    <br> 
-                    <div style="border-bottom:2px solid #e5e5e5">
-                    </div>
-                    <br>
-                    <h2>Cork Fire Brigade Activity</h2>
-                    <br>
-                    <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/totalFireBrigade/tab41")); ?></div> 
-                    <br>
-                    <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/rtaBrigade/tab51")); ?></div> 
-                    <br>
-                    <div class="content" id="tab61"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/waterBrigade/tab61")); ?></div> 
-                    <br>
-                    <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/falseBrigade/tab71")); ?></div> 
-                    <br>
-                    <div class="content" id="tab81"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/miscBrigade/tab81")); ?></div> 
-                    <br>
-                    <div style="border-bottom:2px solid #e5e5e5">
-                    </div>
-                    <br>
-                    <h2>Cork Fire Brigade Ambulance Call Outs</h2>
-                    <br>
-                    <div class="content" id="tab91"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/ambulanceBrigade/tab91")); ?></div> 
-                    <br>                        
-                    <div class="content" id="tab101"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadInjuries/tab101")); ?></div> 
-                    <br>
-                    <div class="content" id="tab111"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadDeaths/tab111")); ?></div> 
-                    <br>
                 </div>
             </div>
-        </div>
-        <div id="footer-wrapper">
-            <footer id="footer" class="container">
-                <div class="row">
-                    <?php echo $this->element('dbFooter'); ?>
-                </div>
-            </footer>
-        </div>
-        <?php echo $this->element('googleAnalytics'); ?>
-        <!-- Copyright -->
-        <div id="copyright">
-            <?php echo $this->element('copyright'); ?>
+            <div id="footer-wrapper">
+                <footer id="footer" class="container">
+                    <div class="row">
+                        <?php echo $this->element('dbFooter'); ?>
+                    </div>
+                </footer>
+            </div>
+            <?php echo $this->element('googleAnalytics'); ?>
+            <!-- Copyright -->
+            <div id="copyright">
+                <?php echo $this->element('copyright'); ?>
 
+            </div>
         </div>
-    </div>
-    <script type="text/javascript">
-//        $('#menu1').tabify();
-//        $('#menu2').tabify();
-//        $('#menu22').tabify();
-//        $('#menu23').tabify();
-//        $('#menu24').tabify();
-//        $('#menu3').tabify();
-//        $('#menu4').tabify();
-//        $('#menu5').tabify();
-//        $('#menu6').tabify();
-//        $('#menu7').tabify();
-//        $('#menu8').tabify();
-//        $('#menu9').tabify();
-//        $('#menu10').tabify();
-//        $('#menu224').tabify();
-//        $('#menu11').tabify();
-    </script>
+        <script type="text/javascript">
+            //        $('#menu1').tabify();
+            //        $('#menu2').tabify();
+            //        $('#menu22').tabify();
+            //        $('#menu23').tabify();
+            //        $('#menu24').tabify();
+            //        $('#menu3').tabify();
+            //        $('#menu4').tabify();
+            //        $('#menu5').tabify();
+            //        $('#menu6').tabify();
+            //        $('#menu7').tabify();
+            //        $('#menu8').tabify();
+            //        $('#menu9').tabify();
+            //        $('#menu10').tabify();
+            //        $('#menu224').tabify();
+            //        $('#menu11').tabify();
+        </script>
 
-</body>
+    </body>
 </html>
 <!--
 Content 
@@ -477,18 +454,18 @@ Content
             </div>
         </div>
 
-        <!-- Footer 
+<!-- Footer 
 <div id="footer-wrapper">
 <footer id="footer" class="container">
 <div class="row">
-        <?//php echo $this->element('dbFooter'); ?>
+<?//php echo $this->element('dbFooter'); ?>
 </div>
 </footer>
 </div>
-        <?//php echo $this->element('googleAnalytics'); ?>
+<?//php echo $this->element('googleAnalytics'); ?>
 Copyright 
 <div id="copyright">
-        <?//php echo $this->element('copyright'); ?>
+<?//php echo $this->element('copyright'); ?>
 </div>
 
 </body>
