@@ -10,15 +10,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-<!--                <script src="/dublindashboard/js/Dashboard/jquery.min.js"></script>-->
-                <!-- <script src="/dublindashboard/js/Dashboard/config.js"></script> -->
-        <!--		
-                        <script src="/dublindashboard/js/Dashboard/skel.min.js"></script>
-                         <script src="/dublindashboard/js/Dashboard/skel-panels.min.js"></script> 
-                        <script src="/dublindashboard/js/Dashboard/skel-layers.min.js"></script> 
-                        <script src="/dublindashboard/js/Dashboard/init.js"></script>-->
-
-
         <noscript>
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />       
         <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
@@ -80,10 +71,6 @@
                         <br>
                         <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "Economy/overseasVisitors/tab71")); ?></div> 
                         <br>
-
-                        <br>
-
-                        <br>
                         <div style="border-bottom:2px solid #e5e5e5">
                         </div>
                         <br>
@@ -92,11 +79,7 @@
                         <div class="content" id="tab11"> <?php echo $this->element($Graph5, array("function" => "Economy/silcs/tab11")); ?>  </div>  
                         <br>  
                         <div class="content" id="tab13"><?php echo $this->element($Graph4, array("function" => "Economy/poverty/tab13")); ?> </div> 
-
-
-
                         <br>
-
                         <br>
                     </div>
                 </div>
