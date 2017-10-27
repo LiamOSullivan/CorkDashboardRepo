@@ -19,18 +19,7 @@ let house_prices_div = "cork_house_prices";
 let residential_rents_url = "http://149.157.67.17/JsonService/lookService/dublinnationalrents/1/30.json";
 let residential_rents_div = "cork_residential_rents";
 let datum = [];
-//Planning Applications
-//
-let cork_planning_applications_url = "http://149.157.67.17/JsonService/lookService/planningapplications/";
-let cork_county_planning = [
-    '1/30.json', //received
-    "2/30.json", //granted
-    "3/30.json"  //refused
-];
-let cork_city_received = "4/30.json";
-let cork_city_granted = "5/30.json";
-let cork_city_refused = "6/30.json";
-let cork_planning_applications_div = "cork_planning_applications";
+
 //House Prices
 $(function () {
 
@@ -170,7 +159,26 @@ $(function () {
 //        let colorNames = Object.keys(window.chartColors);
     });
 });
+
+//Planning Applications
 //
+let cork_planning_applications_url = "http://149.157.67.17/JsonService/lookService/planningapplications/";
+let cork_county_planning = [
+    '1/30.json', //received
+    "2/30.json", //granted
+    "3/30.json"  //refused
+];
+let cork_city_planning = [
+    '4/30.json', //received
+    "5/30.json", //granted
+    "6/30.json"  //refused
+];
+
+let county_planning_applications_div = "county_planning_applications";
+let city_planning_applications_div = "city_planning_applications";
+
+
+///////////////////////////////////////////////////////////////////////////County
 $(function () {
     var data = {
         labels: ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
@@ -216,14 +224,14 @@ $(function () {
     }
 
     function createGraph() {
-        let ctx = document.getElementById(cork_planning_applications_div).getContext("2d");
+        let ctx = document.getElementById(county_planning_applications_div).getContext("2d");
         window.myLine = new Chart(ctx, {
             type: 'bar',
             data: data,
             title: "Cork County",
             options: {
                 title: {
-                    display: true,
+                    display: false,
                     fontSize: 24,
                     text: 'Cork County'
                 },
@@ -237,35 +245,83 @@ $(function () {
                 }
             }
         });
-//        let colorNames = Object.keys(window.chartColors);
-    }
-    ;
-//    console.log(">>>dataSet.datasets[0].dataArr = "+dataSet.datasets[0].dataArr);
-//
-
-
-
-//    $.ajax({
-//        url: cork_planning_applications_url + cork_county_granted,
-//        context: document.body,
-//        dataType: 'jsonp'
-//    }).done(function (data) {
-//        addData(data);
-//    });
-
-//    $.ajax({
-//        url: cork_planning_applications_url + cork_county_refused,
-//        context: document.body,
-//        dataType: 'jsonp'
-//    }).done(function (data) {
-//        addData(data);
-//    });
-
-//    function addData(data_) {
-//        dataset.push(data_);
-//        console.log("***Dataset: " + dataset);
-//    }
+    };
 });
+
+///////////////////////////////////////////////////////////////////////////City
+$(function () {
+    var data = {
+        labels: ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+        datasets: [
+            {
+                label: "Received",
+                backgroundColor: window.chartColors.corkRed,
+                data: [0, 0, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                label: "Granted",
+                backgroundColor: "black",
+                data: [0, 0, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                label: "Refused",
+                backgroundColor: window.chartColors.corkRed,
+                data: [0, 0, 0, 0, 0, 0, 0, 0]
+            }
+        ]
+    };
+    for (let i = 0; i < 3; i += 1) {
+        $.ajax({
+            url: cork_planning_applications_url + cork_city_planning[i],
+            context: document.body,
+            dataType: 'jsonp'
+        }).done(function (data_) {
+            addData(data_, i);
+            //        console.log(">>>data.datasets[0].data = " + data.datasets[0].data);
+
+        });
+    }
+
+    let count = 0; //counts to know when the 3 sets of data have been filled
+    function addData(d_, i_) {
+        data.datasets[i_].data = d_;
+        if (count === 2) { //only create graph if 3 datasets have been filled
+            createGraph();
+        } else {
+            count += 1;
+        }
+
+    }
+
+    function createGraph() {
+        let ctx = document.getElementById(city_planning_applications_div).getContext("2d");
+        window.myLine = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            title: "Cork County",
+            options: {
+                title: {
+                    display: false,
+                    fontSize: 24,
+                    text: 'Cork County'
+                },
+                barValueSpacing: 20,
+                scales: {
+                    yAxes: [{
+                            ticks: {
+                                min: 0
+                            }
+                        }]
+                }
+            }
+        });
+    };
+});
+
+
+
+
+
 //
 //////Air Quality
 ////$(function () {

@@ -24,7 +24,7 @@
         <div class = "col-9" align="center">
             <iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
 
-            <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+            <a href="https://www.w3schools.com" target="iframe_a"></a>
 <!--            <iframe scrolling="no" src="https://www.met.ie/forecasts/county.asp" style="border: 0px none; margin-left: 0px; margin-right: -60px; height: 790px; margin-top: 0px; width: 100%; float: left;">
             </iframe>-->
         </div> 
@@ -60,17 +60,43 @@
 
     <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2>Live Traffic Cams</h2>
-        <a href="http://www.jacklynchtunnel.ie/traffic-cameras"> 
-            <div id="containerA" class="col-4" >
-                <div id="cam6"></div>
-            </div>
-            <div id="containerB" class="col-4" >
-                <div id="cam137"></div>
-            </div>
-            <div id="containerC" class="col-4" >
+        <div class="col-3" >
+            <center style="border-bottom:2px solid #e5e5e5;">
+                Dunkettle IC
+            </center>
+        </div>
+        <div class="col-6" >
+            <center style="border-bottom:2px solid #e5e5e5;">
+                Jack Lynch Tunnel
+            </center>
+        </div>
+        <div class="col-3" >
+            <center style="border-bottom:2px solid #e5e5e5;">
+                N40 Curraheen
+            </center>
+        </div>
+        <a href="https://cdn.mtcc.ie/static/cctv/0265.jpg" target= "blank">
+            <div id="cam163" class="col-3" >
                 <div id="cam163"></div>
             </div>
         </a>
+
+        <a href="http://www.jacklynchtunnel.ie/traffic-cameras" target="blank"> 
+            <div id="cam6" class="col-3" >
+                <div id="cam6"></div>
+            </div>
+            <div id="cam137" class="col-3" >
+                <div id="cam137"></div>
+            </div>
+        </a>
+        <a href="https://cdn.mtcc.ie/static/cctv/0264.jpg" target="blank">
+            <div id="cam264" class="col-3" >
+                <div id="cam264"></div>
+            </div>
+        </a>
+        See all (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
+        <br>
+        <br>
     </div>
 
     <div class="row" style="border-bottom:2px solid #e5e5e5">
@@ -123,8 +149,13 @@
     </div>
     <div class="row" style="border-bottom:2px solid #e5e5e5;">
         <h2>Planning Applications</h2>
-        <canvas id="cork_planning_applications" width="100%"></canvas>
-        <br><br>
+        <h3>County</h3>
+        <canvas id="county_planning_applications" width="100%"></canvas>
+        <br>
+        <h3>City</h3>
+        <canvas id="city_planning_applications" width="100%"></canvas>
+        <br>
+        <br>
     </div>
     <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2> A Twitter List by <a href="https://twitter.com/CorkDashboard/lists/cork-dashboard">@CorkDashboard</a></h2>
@@ -152,46 +183,60 @@
 <script type="text/javascript">
     function myFunction() {
 
-    //$('#mapsnapshot').load('http://www.corkdashboard.ie/pages/CorkTravel #map');
+        //$('#mapsnapshot').load('http://www.corkdashboard.ie/pages/CorkTravel #map');
 
-    refreshCams();
-            setInterval("refreshCams()", 300000);
-            // displaytime();
-                    //    previousParking();
-                            //    previousM50North();
-                                    //    getPreviousAirQuality();
-                                            //    unemployment();
-                                                    //    employment();
-                                                            //    crimesTheft();
-                                                                    //    crimesPublicOrder();
-                                                                            //    waterLevels();
-                                                                                    //    soundLevels();
-                                                                                            //    weather();
-                                                                                                    //    trolleys();
-                                                                                                            //    housePricesSecond();
-                                                                                                                    //    housePrices();
-                                                                                                                            //    rents();
-                                                                                                                                    //setInterval("displaytime()  ", 1000);
+        refreshCams();
+        setInterval("refreshCams()", 300000);
+    }
+  function refreshCams() {
+        let imgurl6 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?" + Math.random();
+        let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();
+        let imgurl23 = "https://cdn.mtcc.ie/static/cctv/0266.jpg?" + Math.random();
+        let imgurl264 = "https://cdn.mtcc.ie/static/cctv/0264.jpg"
+        document.getElementById("cam163").innerHTML = "<img src=" + imgurl163 + " alt=\"cam\" style=\"width:100%\">";
+        document.getElementById("cam137").innerHTML = "<img src=" + imgurl23 + " alt=\"cam\" style=\"width:100%\">";
+        document.getElementById("cam6").innerHTML = "<img src=" + imgurl6 + " alt=\"cam\" style=\"width:100%\">";
+        document.getElementById("cam264").innerHTML = "<img src=" + imgurl264 + " alt=\"cam\" style=\"width:100%\">";
+    }
 
-                                                                                                                                            //                                    / /  setInterval("previousParking()", 60000);
-                                                                                                                                                    //  setInterval("previousM50North()", 60000);
-                                                                                                                                                            //  setInterval("getPreviousAirQuality()", 60000);
-                                                                                                                                                                    //  setInterval("unemployment()", 600000);
-                                                                                                                                                                            //  setInterval("employment()", 600000);
-                                                                                                                                                                                    //  setInterval("crimesTheft()", 600000);
-                                                                                                                                                                                            //  setInterval("crimesPublicOrder()", 600000);
 
-                                                                                                                                                                                                    //    setInterval("waterLevels()", 60000);
-                                                                                                                                                                                                            //    setInterval("soundLevels()", 60000);
-                                                                                                                                                                                                                    //    setInterval("housePrices()", 600000);//10 mins
-                                                                                                                                                                                                                            //    setInterval("housePricesSecond()", 600000);//10 mins
-                                                                                                                                                                                                                                    //    setInterval("rents()", 600000);//10 mins
-                                                                                                                                                                                                                                                                                                    //    setInterval("trolleys()", 600000);
-                                                                                                                                                                                                                                                                                            //    setInterval("weather()", 1200000);//20mins
-                                                                                                                                                                                                                                                                                            //    setInterval("m50South()", 60000);
-                                                                                                                                                                                                                                                                                            //    setInterval("m50North()", 60000);
-                                                                                                                                                                                                                                                                                            //    setInterval("airQuality()", 60000);
-                                                                                                                                                                                                                                                                                          //var currenttime = '<!--#config timefmt="%B %d, %Y %H:%M:%S"--><!--#echo var="DATE_LOCAL" -->' //SSI method of getting server date
+
+    // displaytime();
+    //    previousParking();
+    //    previousM50North();
+    //    getPreviousAirQuality();
+    //    unemployment();
+    //    employment();
+    //    crimesTheft();
+    //    crimesPublicOrder();
+    //    waterLevels();
+    //    soundLevels();
+    //    weather();
+    //    trolleys();
+    //    housePricesSecond();
+    //    housePrices();
+    //    rents();
+    //setInterval("displaytime()  ", 1000);
+
+    //                                    / /  setInterval("previousParking()", 60000);
+    //  setInterval("previousM50North()", 60000);
+    //  setInterval("getPreviousAirQuality()", 60000);
+    //  setInterval("unemployment()", 600000);
+    //  setInterval("employment()", 600000);
+    //  setInterval("crimesTheft()", 600000);
+    //  setInterval("crimesPublicOrder()", 600000);
+
+    //    setInterval("waterLevels()", 60000);
+    //    setInterval("soundLevels()", 60000);
+    //    setInterval("housePrices()", 600000);//10 mins
+    //    setInterval("housePricesSecond()", 600000);//10 mins
+    //    setInterval("rents()", 600000);//10 mins
+    //    setInterval("trolleys()", 600000);
+    //    setInterval("weather()", 1200000);//20mins
+    //    setInterval("m50South()", 60000);
+    //    setInterval("m50North()", 60000);
+    //    setInterval("airQuality()", 60000);
+    //var currenttime = '<!--#config timefmt="%B %d, %Y %H:%M:%S"--><!--#echo var="DATE_LOCAL" -->' //SSI method of getting server date
 
 //let currenttime
 //=   '<?//php print date("F d, Y H:i:s", time()) ?>'; // get server time
@@ -202,7 +247,7 @@
 //let output=(what.toString().length==1)? "0"+what : what;
 //return output;
 //}
-    }
+
 
 //function displaytime(){
 //serverdate.setSeconds(serverdate.getSeconds()+1);
@@ -215,14 +260,7 @@
 //$( "#alerts" ).accordion();
 //} );
 
-    function refreshCams() {
-        let imgurl6 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?" + Math.random();
-        let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();
-        let imgurl23 = "https://cdn.mtcc.ie/static/cctv/0266.jpg?" + Math.random();
-        document.getElementById("cam163").innerHTML = "<img src=" + imgurl163 + " alt=\"cam\" style=\"width:100%\">";
-        document.getElementById("cam137").innerHTML = "<img src=" + imgurl23 + " alt=\"cam\" style=\"width:100%\">";
-        document.getElementById("cam6").innerHTML = "<img src=" + imgurl6 + " alt=\"cam\" style=\"width:100%\">";
-    }
+
 
 </script>
 <!--                <div>
