@@ -242,6 +242,31 @@ class JsonServiceController extends AppController {
           $this->render('/Elements/carparkreturn'); // This View is declared at /Elements/ajaxreturn.ctp */
     }
 
+    //TODO: Pull column names from table
+//    public function getColumnNamesService($tableName) {
+//        if ($tableName == 'houses') {
+//            $tableName = 'houseprices';
+//        }
+//        $sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = :table";
+//        try {
+//            $core = Core::getInstance();
+//            $stmt = $core->dbh->prepare($sql);
+//            $stmt->bindValue(':table', $table, PDO::PARAM_STR);
+//            $stmt->execute();
+//            $output = array();
+//            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+//                $output[] = $row['COLUMN_NAME'];
+//            }
+//            $this->set(array(
+//                'out' => $output, //<-- Set the post in the view
+//                '_serialize' => 'out', //<-- Tell cake to use that post
+//                '_jsonp' => true                // <-- And wrap it in the callback function
+//            ));
+//        } catch (PDOException $pe) {
+//            trigger_error('Could not connect to MySQL database. ' . $pe->getMessage(), E_USER_ERROR);
+//        }
+//    }
+
     public function lookService($tableName, $rowNumber, $numberOfFiles) {
         //work around for houses
         if ($tableName == 'houses') {

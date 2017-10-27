@@ -14,13 +14,50 @@ window.chartColors = {
     purple: 'rgb(153, 102, 255)',
     corkGrey: 'rgb(201, 203, 207)'
 };
-let house_prices_url = "http://149.157.67.17/JsonService/lookService/houses/2/30.json";
+let house_prices_url = "http://149.157.67.17/JsonService/lookService/houses/2/35.json";
 let house_prices_div = "cork_house_prices";
-let residential_rents_url = "http://149.157.67.17/JsonService/lookService/dublinnationalrents/1/30.json";
+let residential_rents_url = "http://149.157.67.17/JsonService/lookService/dublinnationalrents/1/39.json"; //TODO: Generate #files through query
 let residential_rents_div = "cork_residential_rents";
 let datum = [];
 
 //House Prices
+let prices_col_labels = [
+    "2008Q1",
+    "2008Q2",
+    "2008Q3",
+    "2008Q4",
+    "2009Q1",
+    "2009Q2",
+    "2009Q3",
+    "2009Q4",
+    "2010Q1",
+    "2010Q2",
+    "2010Q3",
+    "2010Q4",
+    "2011Q1",
+    "2011Q2",
+    "2011Q3",
+    "2011Q4",
+    "2012Q1",
+    "2012Q2",
+    "2012Q3",
+    "2012Q4",
+    "2013Q1",
+    "2013Q2",
+    "2013Q3",
+    "2013Q4",
+    "2014Q1",
+    "2014Q2",
+    "2014Q3",
+    "2014Q4",
+    "2015Q1",
+    "2015Q2",
+    "2015Q3",
+    "2015Q4",
+    "2016Q1",
+    "2016Q2",
+    "2016Q3"];
+
 $(function () {
 
     $.ajax({
@@ -30,11 +67,12 @@ $(function () {
     }).done(function (data) {
 
         datum = data;
-        let labels = new Array(datum.length);
+        //let labels = new Array(datum.length);
+
         let config = {
             type: 'line',
             data: {
-                labels: labels,
+                labels: prices_col_labels,
                 datasets: [{
                         label: "",
                         borderColor: window.chartColors.corkRed,
@@ -79,7 +117,7 @@ $(function () {
                             ticks: {
                                 beginAtZero: false,
                                 min: 200000,
-                                max: 300000
+                                max: 340000
                             }
                         }]
                 }
@@ -90,6 +128,49 @@ $(function () {
 //        let colorNames = Object.keys(window.chartColors);
     });
 });
+
+let rent_col_labels = [
+    "2008Q1",
+    "2008Q2",
+    "2008Q3",
+    "2008Q4",
+    "2009Q1",
+    "2009Q2",
+    "2009Q3",
+    "2009Q4",
+    "2010Q1",
+    "2010Q2",
+    "2010Q3",
+    "2010Q4",
+    "2011Q1",
+    "2011Q2",
+    "2011Q3",
+    "2011Q4",
+    "2012Q1",
+    "2012Q2",
+    "2012Q3",
+    "2012Q4",
+    "2013Q1",
+    "2013Q2",
+    "2013Q3",
+    "2013Q4",
+    "2014Q1",
+    "2014Q2",
+    "2014Q3",
+    "2014Q4",
+    "2015Q1",
+    "2015Q2",
+    "2015Q3",
+    "2015Q4",
+    "2016Q1",
+    "2016Q2",
+    "2016Q3",
+    "2016Q3",
+    "2016Q4",
+    "2017Q1",
+    "2017Q2"
+    ];
+
 //Residential Rent
 $(function () {
     $.ajax({
@@ -99,11 +180,11 @@ $(function () {
     }).done(function (data) {
 
         datum = data;
-        let labels = new Array(datum.length);
+        //let labels = new Array(datum.length);
         let config = {
             type: 'line',
             data: {
-                labels: labels,
+                labels: rent_col_labels,
                 datasets: [{
                         label: "",
                         borderColor: window.chartColors.corkRed,
@@ -179,6 +260,8 @@ let city_planning_applications_div = "city_planning_applications";
 
 
 ///////////////////////////////////////////////////////////////////////////County
+
+//TODO: Pull column names from table rather than hard-coding
 $(function () {
     var data = {
         labels: ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
@@ -245,7 +328,8 @@ $(function () {
                 }
             }
         });
-    };
+    }
+    ;
 });
 
 ///////////////////////////////////////////////////////////////////////////City
@@ -315,7 +399,8 @@ $(function () {
                 }
             }
         });
-    };
+    }
+    ;
 });
 
 

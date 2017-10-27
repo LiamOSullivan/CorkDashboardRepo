@@ -33,16 +33,17 @@
     <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
         <div class = "col-4" align="center">
-            <iframe src="http://www.met.ie/widgets/latest-mini.asp" target="blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            <iframe target="_blank"  src="http://www.met.ie/widgets/latest-mini.asp" href="http://www.met.ie/widgets/latest-mini.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
         </div>
         <div class = "col-4" align="center">
-            <iframe src="http://www.met.ie/widgets/3daysummary.asp" target="blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            <iframe src="http://www.met.ie/widgets/3daysummary.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
         </div>
         <div class = "col-4" align="center">
-            <iframe src="http://www.met.ie/widgets/charts-mini.asp" target="blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            <iframe src="http://www.met.ie/widgets/charts-mini.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
                         <!--<img src="img/weather_placeholder.png" style = "width:70%;" alt="weather placeholder"/>-->
         </div>
-        Source (opens new): <a href="www.met.ie" target="blank"> Met Eireann</a>
+        Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a>
+        <br>
         <br>
     </div>
     <!--                        
