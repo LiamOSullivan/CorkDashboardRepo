@@ -20,28 +20,30 @@
         <br>
 
     </div>
-    <div class="row" style="border-bottom:2px solid #e5e5e5">
+<!--    <div class="row" style="border-bottom:2px solid #e5e5e5">
         <div class = "col-9" align="center">
             <iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
 
             <a href="https://www.w3schools.com" target="iframe_a"></a>
-<!--            <iframe scrolling="no" src="https://www.met.ie/forecasts/county.asp" style="border: 0px none; margin-left: 0px; margin-right: -60px; height: 790px; margin-top: 0px; width: 100%; float: left;">
-            </iframe>-->
+            <iframe scrolling="no" src="https://www.met.ie/forecasts/county.asp" style="border: 0px none; margin-left: 0px; margin-right: -60px; height: 790px; margin-top: 0px; width: 100%; float: left;">
+            </iframe>
         </div> 
-    </div>
+    </div>-->
 
     <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
         <div class = "col-4" align="center">
-            <iframe src="http://www.met.ie/widgets/latest-mini.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            <iframe src="http://www.met.ie/widgets/latest-mini.asp" target="blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
         </div>
         <div class = "col-4" align="center">
-            <iframe src="http://www.met.ie/widgets/3daysummary.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            <iframe src="http://www.met.ie/widgets/3daysummary.asp" target="blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
         </div>
         <div class = "col-4" align="center">
-            <iframe src="http://www.met.ie/widgets/charts-mini.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            <iframe src="http://www.met.ie/widgets/charts-mini.asp" target="blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
                         <!--<img src="img/weather_placeholder.png" style = "width:70%;" alt="weather placeholder"/>-->
-        </div>  
+        </div>
+        Source (opens new): <a href="www.met.ie" target="blank"> Met Eireann</a>
+        <br>
     </div>
     <!--                        
                             <p>
@@ -154,7 +156,6 @@
         <br>
         <h3>City</h3>
         <canvas id="city_planning_applications" width="100%"></canvas>
-        <br>
         <br>
     </div>
     <div class="row" style="border-bottom:2px solid #e5e5e5">
