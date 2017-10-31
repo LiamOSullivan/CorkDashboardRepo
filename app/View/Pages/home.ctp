@@ -143,13 +143,13 @@
         <br>
     </div>
     <div class="row" style="border-bottom:2px solid #e5e5e5;">
-        <h2>Average House Price</h2>
-        <canvas id="cork_house_prices" width="100%" ></canvas>
-    </div>
-    <div class="row" style="border-bottom:2px solid #e5e5e5;">
         <h2>Average Residential Rent</h2>
         <canvas id="cork_residential_rents" width="100%"></canvas>
     </div>
+    <div class="row" style="border-bottom:2px solid #e5e5e5;">
+        <h2>Average House Price</h2>
+        <canvas id="cork_house_prices" width="100%" ></canvas>
+    </div>    
     <div class="row" style="border-bottom:2px solid #e5e5e5;">
         <h2>Planning Applications</h2>
         <h3>County</h3>

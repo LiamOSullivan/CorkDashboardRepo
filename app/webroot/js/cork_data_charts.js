@@ -7,128 +7,21 @@
 window.chartColors = {
     red: 'rgb(255, 99, 132)',
     corkRed: 'rgb(181, 31, 36)',
+    corkRedA: 'rgba(181, 31, 36, 0.7)',
     orange: 'rgb(255, 159, 64)',
     yellow: 'rgb(255, 205, 86)',
     green: 'rgb(75, 192, 192)',
     blue: 'rgb(54, 162, 235)',
     purple: 'rgb(153, 102, 255)',
-    corkGrey: 'rgb(201, 203, 207)'
+    corkGrey: 'rgb(201, 203, 207)',
+    corkGreyA: 'rgba(201, 203, 207, 0.7)'
 };
-let house_prices_url = "http://149.157.67.17/JsonService/lookService/houses/2/35.json";
-let house_prices_div = "cork_house_prices";
+
+
+
 let residential_rents_url = "http://149.157.67.17/JsonService/lookService/dublinnationalrents/1/39.json"; //TODO: Generate #files through query
 let residential_rents_div = "cork_residential_rents";
 let datum = [];
-
-//House Prices
-let prices_col_labels = [
-    "2008Q1",
-    "2008Q2",
-    "2008Q3",
-    "2008Q4",
-    "2009Q1",
-    "2009Q2",
-    "2009Q3",
-    "2009Q4",
-    "2010Q1",
-    "2010Q2",
-    "2010Q3",
-    "2010Q4",
-    "2011Q1",
-    "2011Q2",
-    "2011Q3",
-    "2011Q4",
-    "2012Q1",
-    "2012Q2",
-    "2012Q3",
-    "2012Q4",
-    "2013Q1",
-    "2013Q2",
-    "2013Q3",
-    "2013Q4",
-    "2014Q1",
-    "2014Q2",
-    "2014Q3",
-    "2014Q4",
-    "2015Q1",
-    "2015Q2",
-    "2015Q3",
-    "2015Q4",
-    "2016Q1",
-    "2016Q2",
-    "2016Q3"];
-
-$(function () {
-
-    $.ajax({
-        url: house_prices_url,
-        context: document.body,
-        dataType: 'jsonp'
-    }).done(function (data) {
-
-        datum = data;
-        //let labels = new Array(datum.length);
-
-        let config = {
-            type: 'line',
-            data: {
-                labels: prices_col_labels,
-                datasets: [{
-                        label: "",
-                        borderColor: window.chartColors.corkRed,
-                        backgroundColor: window.chartColors.corkRed,
-                        borderWidth: 2,
-                        data: datum,
-                        fill: true
-                    }]
-            },
-            options: {
-                elements: {
-                    point: {
-                        radius: 0.0
-                    }
-                },
-                responsive: true,
-                title: {
-                    display: false,
-                    text: 'House Prices'
-                },
-                legend: {
-                    display: false
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                            display: true,
-                            scaleLabel: {
-                                display: false,
-                                labelString: ''
-                            }
-                        }],
-                    yAxes: [{
-                            display: true,
-                            ticks: {
-                                beginAtZero: false,
-                                min: 200000,
-                                max: 340000
-                            }
-                        }]
-                }
-            }
-        };
-        let ctx = document.getElementById(house_prices_div).getContext("2d");
-        window.myLine = new Chart(ctx, config);
-//        let colorNames = Object.keys(window.chartColors);
-    });
-});
-
 let rent_col_labels = [
     "2008Q1",
     "2008Q2",
@@ -165,12 +58,10 @@ let rent_col_labels = [
     "2016Q1",
     "2016Q2",
     "2016Q3",
-    "2016Q3",
     "2016Q4",
     "2017Q1",
     "2017Q2"
-    ];
-
+];
 //Residential Rent
 $(function () {
     $.ajax({
@@ -241,7 +132,143 @@ $(function () {
     });
 });
 
-//Planning Applications
+//House Prices/////////////////////////////////////////////////////////////////////////////
+let house_prices_url = "http://149.157.67.17/JsonService/lookService/houses/";
+let houses_col = ["2/35.json", "4/35.json"]; //new, used
+let house_prices_div = "cork_house_prices";
+let prices_col_labels = [
+    "2008Q1",
+    "2008Q2",
+    "2008Q3",
+    "2008Q4",
+    "2009Q1",
+    "2009Q2",
+    "2009Q3",
+    "2009Q4",
+    "2010Q1",
+    "2010Q2",
+    "2010Q3",
+    "2010Q4",
+    "2011Q1",
+    "2011Q2",
+    "2011Q3",
+    "2011Q4",
+    "2012Q1",
+    "2012Q2",
+    "2012Q3",
+    "2012Q4",
+    "2013Q1",
+    "2013Q2",
+    "2013Q3",
+    "2013Q4",
+    "2014Q1",
+    "2014Q2",
+    "2014Q3",
+    "2014Q4",
+    "2015Q1",
+    "2015Q2",
+    "2015Q3",
+    "2015Q4",
+    "2016Q1",
+    "2016Q2",
+    "2016Q3"];
+//TODO: Pull column names from table rather than hard-coding
+$(function () {
+    let house_count = 0; //counts to know when the 2 sets of data have been filled
+    let houses_config = {
+        type: 'line',
+        data: {
+            labels: prices_col_labels,
+            datasets: [
+                {
+                    label: "New",
+                    backgroundColor : window.chartColors.corkRedA,
+                    borderColor: 'white',
+                    data: [0],
+                    fill: true
+                },
+                {
+                    label: "Second Hand",
+                    backgroundColor : 'black',
+                    bordercolor: 'black',
+                    data: [0],
+                    fill: true
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            elements: {
+                point: {
+                    radius: 0.0
+                }
+            },
+            title: {
+                display: false,
+                text: 'House Prices'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: false,
+                            labelString: ''
+                        }
+                    }],
+                yAxes: [{
+                        display: true,
+                        ticks: {
+                            beginAtZero: false,
+                            min: 175000,
+                            max: 350000
+                        }
+                    }]
+            }
+        }
+    };
+
+    for (let i = 0; i < 2; i += 1) {
+        $.ajax({
+            url: house_prices_url + houses_col[i],
+            context: document.body,
+            dataType: 'jsonp'
+        }).done(function (houses_data_) {
+            addHousesData(houses_data_, i);
+            //console.log(">>>house_data.datasets[].data " + i + " = " + houses_data.datasets[i].data);
+        });
+    }
+
+
+    function addHousesData(d_, i_) {
+        houses_config.data.datasets[i_].data = d_;
+        if (house_count === 1) { //only create graph if 2 datasets have been filled
+            createHousesGraph();
+        } else {
+            house_count += 1;
+        }
+
+    }
+
+    function createHousesGraph() {
+        let ctx_houses = document.getElementById(house_prices_div).getContext("2d");
+        window.myLine = new Chart(ctx_houses, houses_config);
+//        let colorNames = Object.keys(window.chartColors);
+    }
+
+
+});
+
+
+
+//Planning Applications///////////////////////////////////////////////////////////////////////////////////
 //
 let cork_planning_applications_url = "http://149.157.67.17/JsonService/lookService/planningapplications/";
 let cork_county_planning = [
@@ -254,32 +281,31 @@ let cork_city_planning = [
     "5/30.json", //granted
     "6/30.json"  //refused
 ];
-
 let county_planning_applications_div = "county_planning_applications";
 let city_planning_applications_div = "city_planning_applications";
-
-
 ///////////////////////////////////////////////////////////////////////////County
 
 //TODO: Pull column names from table rather than hard-coding
 $(function () {
-    var data = {
+    var plan_data = {
         labels: ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
         datasets: [
             {
                 label: "Received",
-                backgroundColor: window.chartColors.corkRed,
-                data: [0, 0, 0, 0, 0, 0, 0, 0]
+                backgroundColor: window.chartColors.corkGrey,
+                borderColor: window.chartColors.corkRed,
+                borderWidth: 2,
+                data: [0]
             },
             {
                 label: "Granted",
                 backgroundColor: "black",
-                data: [0, 0, 0, 0, 0, 0, 0, 0]
+                data: [0]
             },
             {
                 label: "Refused",
                 backgroundColor: window.chartColors.corkRed,
-                data: [0, 0, 0, 0, 0, 0, 0, 0]
+                data: [0]
             }
         ]
     };
@@ -297,7 +323,7 @@ $(function () {
 
     let count = 0; //counts to know when the 3 sets of data have been filled
     function addData(d_, i_) {
-        data.datasets[i_].data = d_;
+        plan_data.datasets[i_].data = d_;
         if (count === 2) { //only create graph if 3 datasets have been filled
             createGraph();
         } else {
@@ -310,7 +336,7 @@ $(function () {
         let ctx = document.getElementById(county_planning_applications_div).getContext("2d");
         window.myLine = new Chart(ctx, {
             type: 'bar',
-            data: data,
+            data: plan_data,
             title: "Cork County",
             options: {
                 title: {
@@ -331,7 +357,6 @@ $(function () {
     }
     ;
 });
-
 ///////////////////////////////////////////////////////////////////////////City
 $(function () {
     var data = {
@@ -339,7 +364,9 @@ $(function () {
         datasets: [
             {
                 label: "Received",
-                backgroundColor: window.chartColors.corkRed,
+                backgroundColor: window.chartColors.corkGrey,
+                borderColor: window.chartColors.corkRed,
+                borderWidth: 2,
                 data: [0, 0, 0, 0, 0, 0, 0, 0]
             },
             {
@@ -402,11 +429,6 @@ $(function () {
     }
     ;
 });
-
-
-
-
-
 //
 //////Air Quality
 ////$(function () {
