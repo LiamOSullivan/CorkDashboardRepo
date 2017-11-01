@@ -2,11 +2,11 @@
 <div class="menu" id="menuContent">
     <div style="border-bottom:2px solid #e5e5e5;" >
         <header>
-            <h1>Explore</h1>
+            <h1 style="max-width:100%">Explore</h1>
             <br>
         </header>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkDoing"><h2>Data Trends</h2>
+    <div class="side_menuitem"><a class="mItem" href="/pages/CorkDoing"><h2 >Data Trends</h2>
             <!--<img src="img/sidebar_buttons/corkdoing_l_trends.png" width=100% height=100% alt="How's Cork Doing?"/>-->
         </a>                    
     </div>

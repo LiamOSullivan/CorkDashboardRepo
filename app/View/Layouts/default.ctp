@@ -15,25 +15,18 @@
         <!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
         <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
-
-
+<!--<link href="/css/Dashboard/w3c.css" rel="stylesheet" type="text/css"/>-->
         <noscript>
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
-        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/> <!--
+        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/> 
+        <!--<link href="/css/Dashboard/w3c.css" rel="stylesheet" type="text/css"/> 
+        
+        <!--
         <link href="css/Dashboard/style-desktop.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css"/>-->
         </noscript>
         <!--        [if lte IE 9]><link rel="stylesheet" href="/dublindashboard/css/Dashboard/ie9.css" /><![endif]
                 [if lte IE 8]><script src="/dublindashboard/js/Dashboard/html5shiv.js"></script><![endif]-->
-
-        <?php //echo $this->Html->script('jquery.min.js'); ?>
-
-        <!-- Stylesheets -->
-        <?php //echo $this->Html->css('3cols'); ?>
-        <?php //echo $this->Html->css('2cols'); ?>
-        <?php //echo $this->Html->css('4cols'); ?>
-        <?php //echo $this->Html->css('6cols'); ?>
-        <?php //echo $this->Html->css('col'); ?>
 
 
         <!--        Old dashboard styles 
@@ -59,12 +52,11 @@
                 </style>-->
         <!--Responsive styles-->     
         <title>The Cork Dashboard | <?= $this->fetch('title') ?></title>
-
     </head>
     <body onload="myFunction()">
 
         <!-- Header -->
-        <div id="header-wrapper">
+        <div>
             <?php echo $this->element('dbBanner'); ?>
             <?php echo $this->element('dbNavMenu'); ?>
         </div>
@@ -85,11 +77,8 @@
         <?php echo $this->element('googleAnalytics'); ?>
         <!-- Copyright -->
         <div id="copyright">
-            <?php echo $this->element('copyright'); ?>
-            
+            <?php echo $this->element('copyright'); ?>        
         </div>
-
-
     </body>
 </html>
 
