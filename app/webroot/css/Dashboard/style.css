@@ -1,5 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');*/
-
 /* Basic */
 
 /*body
@@ -16,52 +14,53 @@
 }
 
 
-p, li {  color: rgba(0,0,0,0.65);
-    font-size: 1.5vw;
+p, li, h1, h2 , h3, a{
     font-family: 'Proxima Nova', Georgia, sans-serif;
     font-weight: normal;
-    
+       
 }
 
-body, input, textarea, select
+p, li {  
+    color: rgba(0,0,0,0.8);
+    font-size: 1.0vw;
+}
+
+/*body, input, textarea, select
 {
     color: rgba(0,0,0,0.65);
     font-size: 16px;
     font-family: 'Proxima Nova', Georgia, sans-serif;
     line-height: 1.85em;
     font-weight: normal;
-}
+}*/
 
 h1 {
     position: relative;
     left: 0;
     /*bottom: 35px;*/
-    font-family: 'Proxima Nova', Georgia, sans-serif;
-    font-size:3.5vmin;
-    font-weight: bold
+    font-size:5.5vmin;
+
 }
 
 h2 {
     position: relative;
     left: 0;
     /*bottom: 35px;*/
-    font-family: 'Proxima Nova', Georgia, sans-serif;
-    font-size: 2.75vmin;
+    font-size: 3.75vmin;
 }
 
 h3 {
     position: relative;
     left: 0;
     /*bottom: 35px;*/
-    font-family: 'Proxima Nova', sans-serif;
-    font-size: 2vmin;
+    font-size: 2.5vmin;
 }
 
-ul, ol, dl
+/*ul, ol, dl
 {
     margin: 0 0 2em 0;
     font-size:1.45em;
-}
+}*/
 /*
 p {
     text-align: justify;
@@ -115,6 +114,7 @@ a:hover
 {
     color: rgba(181, 31, 36, 1.0);
     text-decoration: none;
+    max-width: 100%;
 
 }
 
@@ -122,24 +122,27 @@ a.mItem:link
 {
     text-decoration: none;
     color: rgba(181, 31, 36, 1.0);
-    width: 100%;
+    max-width: 100%;
 }
 
 
 a.mItem:visited {
     text-decoration: none;
     color: rgba(181, 31, 36, 1.0);
-    width: 100%;
+    max-width: 100%;
 }
 
 a.mItem:hover
 {
     text-decoration: none;
     color: rgba(181, 31, 36, 0.5);
-    width: 100%;
+    max-width: 100%;
 }
 
-
+/*.header{
+    min-height: 
+    
+}*/
 
 /*//The container for eleemnts n the home page*/
 .homeBlock{
@@ -151,8 +154,8 @@ a.mItem:hover
 
 .menu {
     float:left;
-    width:18%;
-    height:100%;
+    width:20%;
+    /*height:100%;*/
     text-align:left;
     padding:20px;
     /*background-color:#ffffff;*/
@@ -160,13 +163,13 @@ a.mItem:hover
     /*border: 2px solid rgba(181, 31, 36, 0.3);*/
 
     border-right: 2px solid #e5e5e5;
-    margin-right:10px;
+    /*margin-right:10px;*/
 
 }
 .side_menuitem {
-    padding:8px;
-    margin-top:10px;
-    margin-right:10px;
+    padding:4px;
+/*    margin-top:10px;
+    margin-right:10px;*/
     border-bottom: 2px solid #e5e5e5;
 }
 .middle {
@@ -184,6 +187,7 @@ a.mItem:hover
     width:30%;
     padding:20px;
     text-align:left;
+    /*overflow:hidden;*/
     /*border: 2px solid rgba(181, 31, 36, 0.3);*/
     /*border-right: 2px solid #e5e5e5;*/
 }
@@ -258,17 +262,17 @@ a.mItem:hover
 1024 x 600
 
 */
-/*@media only screen and (max-width:1024px) {
+@media only screen and (max-width:1024px) {
     .menu{
          width:30%;
     }
     .middle, .onlyContent {
-        width:65%;
+        width:70%;
     }
     .right{
         width:100%;
     }
-}*/
+}
 
 /*Tablet Landscape
 1024 x 768*/
@@ -288,19 +292,14 @@ a.mItem:hover
 /*Tablet Portrait
 768 x 1024*/
 /*
-@media only screen and (max-width:768px) {
-    .menu{
-        width:30%;
-    }
-    .middle, .onlyContent {
-        width:65%;
-    }
-    .right{
+*/@media only screen and (max-width:768px) {
+    .menu, .middle, .onlyContent {
+        
         width:100%;
     }
 
 
-}*/
+}
 
 /*Smartphone Landscape
 480 x 320*/
@@ -537,7 +536,7 @@ a.mItem:hover
     /*//url('images/bg04.png');*/
     padding: 10px;
     box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.15);
-    margin: 0 0 1.5em 0;
+    /*margin: 0 0 1.5em 0;*/
     outline: 0;
 
 }
@@ -549,7 +548,7 @@ a.mItem:hover
     /*//url('images/bg04.png');*/
     padding: 10px;
     box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.15);
-    margin: 0 0 1.5em 0;
+    /*margin: 0 0 1.5em 0;*/
     outline: 0;
 }
 
@@ -565,7 +564,7 @@ a.mItem:hover
     width: 100%;
 }
 
-.button-big
+/*.button-big
 {
     display: inline-block;
     background: #ed391b;
@@ -611,12 +610,12 @@ a.mItem:hover
 }
 
 #twitter-widget-0{
-    width: 5% ; /*!important;*/
-}
+    width: 5% ; !important;
+}*/
 
 #map {
     width: 960px;
-    height:500px;
+    height: 500px;
 }
 .custom .leaflet-popup-tip,
 .custom .leaflet-popup-content-wrapper {
