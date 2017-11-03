@@ -86,6 +86,7 @@ $(function () {
                     }]
             },
             options: {
+                maintainAspectRatio: false,
                 elements: {
                     point: {
                         radius: 0.0
@@ -119,6 +120,7 @@ $(function () {
                             display: true,
                             ticks: {
                                 beginAtZero: false,
+                                stepSize: 100,
                                 min: 650,
                                 max: 1000 //TODO: Use max from data and add amount
                             }
@@ -182,14 +184,14 @@ $(function () {
             datasets: [
                 {
                     label: "New",
-                    backgroundColor : window.chartColors.corkRedA,
+                    backgroundColor: window.chartColors.corkRedA,
                     borderColor: 'white',
                     data: [0],
                     fill: true
                 },
                 {
                     label: "Second Hand",
-                    backgroundColor : 'black',
+                    backgroundColor: 'black',
                     bordercolor: 'black',
                     data: [0],
                     fill: true
@@ -197,10 +199,17 @@ $(function () {
             ]
         },
         options: {
+            maintainAspectRatio: false,
             responsive: true,
             elements: {
                 point: {
                     radius: 0.0
+                }
+            },
+            legend: {
+                display: true,
+                labels: {
+                    boxWidth: 20
                 }
             },
             title: {
@@ -227,6 +236,7 @@ $(function () {
                         display: true,
                         ticks: {
                             beginAtZero: false,
+                            stepSize: 50000,
                             min: 175000,
                             max: 350000
                         }
@@ -339,12 +349,19 @@ $(function () {
             data: plan_data,
             title: "Cork County",
             options: {
+                maintainAspectRatio: false,
                 title: {
                     display: false,
                     fontSize: 24,
                     text: 'Cork County'
                 },
                 barValueSpacing: 20,
+                legend: {
+                    display: true,
+                    labels: {
+                        boxWidth: 20
+                    }
+                },
                 scales: {
                     yAxes: [{
                             ticks: {
@@ -411,12 +428,19 @@ $(function () {
             data: data,
             title: "Cork County",
             options: {
+                maintainAspectRatio: false,
                 title: {
                     display: false,
                     fontSize: 24,
                     text: 'Cork County'
                 },
                 barValueSpacing: 20,
+                legend: {
+                    display: true,
+                    labels: {
+                        boxWidth: 20
+                    }
+                },
                 scales: {
                     yAxes: [{
                             ticks: {

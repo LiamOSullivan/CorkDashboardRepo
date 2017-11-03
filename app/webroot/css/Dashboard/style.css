@@ -22,7 +22,7 @@ p, li, h1, h2 , h3, a{
 
 p, li {  
     color: rgba(0,0,0,0.8);
-    font-size: 1.0vw;
+    font-size: 1.5vw;
 }
 
 /*body, input, textarea, select
@@ -162,7 +162,7 @@ a.mItem:hover
     background-color:rgba(229, 229, 229, 0.5);
     /*border: 2px solid rgba(181, 31, 36, 0.3);*/
 
-    border-right: 2px solid #e5e5e5;
+/*    border-right: 2px solid #e5e5e5;*/
     /*margin-right:10px;*/
 
 }
@@ -179,6 +179,7 @@ a.mItem:hover
     text-align:left;
     /*//border: 2px solid rgba(181, 31, 36, 0.3);*/
     border-right: 2px solid #e5e5e5;
+    border-left: 2px solid #e5e5e5;
     /*    margin-right:10px;*/
 }
 

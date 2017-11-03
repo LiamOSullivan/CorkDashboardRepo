@@ -20,15 +20,15 @@
         <br>
 
     </div>
-<!--    <div class="row" style="border-bottom:2px solid #e5e5e5">
-        <div class = "col-9" align="center">
-            <iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
-
-            <a href="https://www.w3schools.com" target="iframe_a"></a>
-            <iframe scrolling="no" src="https://www.met.ie/forecasts/county.asp" style="border: 0px none; margin-left: 0px; margin-right: -60px; height: 790px; margin-top: 0px; width: 100%; float: left;">
-            </iframe>
-        </div> 
-    </div>-->
+    <!--    <div class="row" style="border-bottom:2px solid #e5e5e5">
+            <div class = "col-9" align="center">
+                <iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
+    
+                <a href="https://www.w3schools.com" target="iframe_a"></a>
+                <iframe scrolling="no" src="https://www.met.ie/forecasts/county.asp" style="border: 0px none; margin-left: 0px; margin-right: -60px; height: 790px; margin-top: 0px; width: 100%; float: left;">
+                </iframe>
+            </div> 
+        </div>-->
 
     <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
@@ -142,22 +142,30 @@
         <h1>Data at a Glance</h1>
         <br>
     </div>
-    <div class="row" style="border-bottom:2px solid #e5e5e5;">
+    <div class="row" style="border-bottom:2px solid #e5e5e5; ">
         <h2>Average Residential Rent</h2>
-        <canvas id="cork_residential_rents" width="100%"></canvas>
+        <div style="min-height: 200px">
+            <canvas id="cork_residential_rents" width="100%" ></canvas>
+        </div>
     </div>
-    <div class="row" style="border-bottom:2px solid #e5e5e5;">
+    <div class="row" style="border-bottom:2px solid #e5e5e5;" >
         <h2>Average House Price</h2>
-        <canvas id="cork_house_prices" width="100%" ></canvas>
+        <div style="min-height: 200px">
+            <canvas id="cork_house_prices" width="100%" ></canvas>
+        </div>
     </div>    
     <div class="row" style="border-bottom:2px solid #e5e5e5;">
         <h2>Planning Applications</h2>
         <h3>County</h3>
-        <canvas id="county_planning_applications" width="100%"></canvas>
-        <br>
+        <div style="min-height: 200px">
+            <canvas id="county_planning_applications" width="100%" ></canvas>
+        </div>
+        
         <h3>City</h3>
-        <canvas id="city_planning_applications" width="100%"></canvas>
-        <br>
+        <div style="min-height: 200px">
+            <canvas id="city_planning_applications" width="100%" ></canvas>
+        </div>
+   
     </div>
     <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2> A Twitter List by <a href="https://twitter.com/CorkDashboard/lists/cork-dashboard">@CorkDashboard</a></h2>
@@ -190,7 +198,7 @@
         refreshCams();
         setInterval("refreshCams()", 300000);
     }
-  function refreshCams() {
+    function refreshCams() {
         let imgurl6 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?" + Math.random();
         let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();
         let imgurl23 = "https://cdn.mtcc.ie/static/cctv/0266.jpg?" + Math.random();
