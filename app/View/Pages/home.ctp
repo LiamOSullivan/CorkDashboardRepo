@@ -160,12 +160,12 @@
         <div style="min-height: 200px">
             <canvas id="county_planning_applications" width="100%" ></canvas>
         </div>
-        
+
         <h3>City</h3>
         <div style="min-height: 200px">
             <canvas id="city_planning_applications" width="100%" ></canvas>
         </div>
-   
+
     </div>
     <div class="row" style="border-bottom:2px solid #e5e5e5">
         <h2> A Twitter List by <a href="https://twitter.com/CorkDashboard/lists/cork-dashboard">@CorkDashboard</a></h2>
@@ -183,6 +183,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 

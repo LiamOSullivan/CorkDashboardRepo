@@ -15,7 +15,7 @@
         <!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
         <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
-<!--<link href="/css/Dashboard/w3c.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="/css/Dashboard/w3c.css" rel="stylesheet" type="text/css"/>-->
         <noscript>
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
         <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/> 
@@ -66,19 +66,19 @@
             <?php echo $this->element('sidebar') ?>
             <?php echo $this->fetch('content') ?>
         </div>
-        
-<!--        <div id="footer-wrapper">
-            <footer id="footer" class="container">
-                <div class="row">
-                    <?//php echo $this->element('dbFooter'); ?>
-                </div>
-            </footer>
-        </div>-->
-        <!--<?//php echo $this->element('googleAnalytics'); ?>-->
+
+        <!--        <div id="footer-wrapper">
+                    <footer id="footer" class="container">
+                        <div class="row">
+                            <?//php echo $this->element('dbFooter'); ?>
+                        </div>
+                    </footer>
+                </div>-->
+                <!--<?//php echo $this->element('googleAnalytics'); ?>-->
         <!-- Copyright -->
-<!--        <div id="copyright">
-            <?//php echo $this->element('copyright'); ?>        
-        </div>-->
+        <div id="copyright">
+            <?php echo $this->element('copyright'); ?>        
+        </div>
     </body>
 </html>
 

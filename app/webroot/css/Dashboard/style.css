@@ -295,8 +295,11 @@ a.mItem:hover
 /*
 */@media only screen and (max-width:768px) {
     .menu, .middle, .onlyContent {
-        
         width:100%;
+    }
+    .right{
+        width:100%;
+        
     }
 
 
