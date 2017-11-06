@@ -1,47 +1,47 @@
-<!--<div class="side_menuitem"><a class="mItem" href="/pages/index">Home</a></div>   in nav bar --> 
+<!--<div class="side_menuitem"><a class="side_menu_text" href="/pages/index">Home</a></div>   in nav bar --> 
 <div class="menu" id="menuContent">
     <div style="border-bottom:2px solid #e5e5e5;" >
             <h1 style="max-width:100%">Explore</h1>
             <br>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkDoing"><h2>Data Trends</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkDoing">Data Trends
             <!--<img src="img/sidebar_buttons/corkdoing_l_trends.png" width=100% height=100% alt="How's Cork Doing?"/>-->
         </a>                    
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkRealtime"><h2>Real Time Environment & Travel</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkRealtime">Real Time Environment & Travel
             <!--<img src="img/Cork_Indicator_Icons/Environment_Transport.png" width=100% height=100% alt="Realtime Environment and Transport"/>-->
         </a>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkMapped"><h2>Mapped Data</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkMapped">Mapped Data
             <!--<img src="img/sidebar_buttons/mapped_l.png" width=100% height=100% alt="Mapped"/>-->
         </a>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/cork_planning"><h2>Planning</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/cork_planning">Planning
             <!--<img src="img/sidebar_buttons/planning_l.png" width=100% height=100% alt="Planning"/>-->
         </a>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkHousing"><h2>Housing</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkHousing">Housing
             <!--<img src="img/Cork_Indicator_Icons/Housing.png" width=100% height=100% alt="Housing"/></a>-->
              </a>
     </div>
 
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkReport"><h2>Citizen Reporting</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkReport">Citizen Reporting
             <!--<img src="img/sidebar_buttons/reporting_l.png" width=100% height=100% alt="Report About Cork"/>-->
         </a>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkDataStore"><h2>Cork Data Store</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkDataStore">Cork Data Store
             <!--<img src="img/sidebar_buttons/datastores_l_b.png" width=100% height=100% alt="Datastore"/>-->
         </a>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkCoast"><h2>Coastline</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkCoast">Coastline
             <!--<img src="img/sidebar_buttons/corkcoast_l.png" width=100% height=100% alt="Coastline Dashboard"/>-->
         </a>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="/pages/CorkApps"><h2>Software & Apps</h2>
+    <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkApps">Software & Apps
             <!--<img src="img/sidebar_buttons/corkapps_l.png" width=100% height=100% alt="Apps"/>-->
         </a>
     </div>
-    <div class="side_menuitem"><a class="mItem" href="Overview/stats"><h2>Site Index</h2></a></div>
+    <div class="side_menuitem"><a class="side_menu_text" href="Overview/stats">Site Index</a></div>
 </div>
 
 

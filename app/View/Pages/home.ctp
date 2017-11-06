@@ -30,7 +30,7 @@
             </div> 
         </div>-->
 
-    <div class="row" style="border-bottom:2px solid #e5e5e5">
+    <div class="col-12" style="border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
         <div class = "col-4" align="center">
             <iframe target="_blank"  src="http://www.met.ie/widgets/latest-mini.asp" href="http://www.met.ie/widgets/latest-mini.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
@@ -42,9 +42,8 @@
             <iframe src="http://www.met.ie/widgets/charts-mini.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
                         <!--<img src="img/weather_placeholder.png" style = "width:70%;" alt="weather placeholder"/>-->
         </div>
-        Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a>
-        <br>
-        <br>
+        <p>Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a></p>
+
     </div>  
     <!--                        
                             <p>
@@ -61,22 +60,23 @@
                             </p>-->
 
 
-    <div class="row" style="border-bottom:2px solid #e5e5e5">
+    <div class="col-12" style="border-bottom:2px solid #e5e5e5">
         <h2>Live Traffic Cams</h2>
+        <p>Click an image for a larger view</p>
         <div class="col-3" >
-            <center style="border-bottom:2px solid #e5e5e5;">
-                Dunkettle IC
-            </center>
+             <div class="cam_header">
+                <h3>Dunkettle IC</h3>
+            </div>
         </div>
         <div class="col-6" >
-            <center style="border-bottom:2px solid #e5e5e5;">
-                Jack Lynch Tunnel
-            </center>
+            <div class="cam_header">
+                <h3>Jack Lynch Tunnel</h3>
+          </div>
         </div>
         <div class="col-3" >
-            <center style="border-bottom:2px solid #e5e5e5;">
-                N40 Curraheen
-            </center>
+             <div class="cam_header">
+                <h3>N40 Curraheen</h3>
+            </div>
         </div>
         <a href="https://cdn.mtcc.ie/static/cctv/0265.jpg" target= "blank">
             <div id="cam163" class="col-3" >
@@ -97,15 +97,15 @@
                 <div id="cam264"></div>
             </div>
         </a>
-        See all (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
-        <br>
-        <br>
+        
+        <p>See all (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
+        </p>
     </div>
 
-    <div class="row" style="border-bottom:2px solid #e5e5e5">
+    <div class="col-12" style="border-bottom:2px solid #e5e5e5">
         <h2>Latest News</h2>
         <div id="news">
-            <ul style="list-style-type:none; margin-left:0px; padding-left:0px;">
+            <ul style="list-style-type:none; padding-left:0px;">
                 <li>SEE: New Reporting Tool <a href="https://www.yourcouncil.ie/"> 'Your Council' </a> added to the Cork Dashboard <a href="/pages/CorkReport">here</a></li>
                 <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q1%202017.pdf">Cork Economic Bulletin</a> Q1 2017</li>
                 <li>New: Explore Real-Time Transport and Environment data for Cork <a href="/pages/CorkRealtime">here</a></li>
@@ -115,23 +115,22 @@
             </ul>
         </div>
     </div>    
-
-    <div class="row" style="border-bottom:2px solid #e5e5e5">
+    <div class="col-12" >
         <h2>Connect with Cork Smart Gateway:</h2>
-        <div>
-            <div class="col-4" align="center">
+        <div class="col-12" style="display: table" >
+            <div align="center" class="icon-cell">
                 <a href="http://www.corksmartgateway.ie/">
-                    <img title="CorkSmartGateway" src="/img/Dashboard/icons/CSG_icon.png" style="height:50px" alt="Cork Smart Gateway"/>
+                    <img title="CorkSmartGateway" src="/img/Dashboard/icons/CSG_icon.png" style="height:100%" alt="Cork Smart Gateway"/>
                 </a>
             </div>
-            <div class="col-4" align="center">
+            <div align="center" class="icon-cell">
                 <a href="https://www.linkedin.com/groups/8460601/profile">
-                    <img src="/img/Dashboard/icons/Logo-2C-128px-TM.png" style="height:50px" align="center" alt="Linked in logo"/>
+                    <img src="/img/Dashboard/icons/Logo-2C-128px-TM.png" style="height:100%" alt="Linked in logo"/>
                 </a>
             </div>
-            <div class="col-4" align="center"  >
+            <div align="center" class="icon-cell">
                 <a href="https://twitter.com/SmartCork">
-                    <img src="/img/Dashboard/icons/Twitter_Logo_Blue.png" style="height:50px;" align="center" alt="twitter logo"/>
+                    <img src="/img/Dashboard/icons/Twitter_Logo_Blue.png" style="height:100%" alt="twitter logo"/>
                 </a>
             </div>
         </div>
@@ -204,7 +203,7 @@
         let imgurl6 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?" + Math.random();
         let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();
         let imgurl23 = "https://cdn.mtcc.ie/static/cctv/0266.jpg?" + Math.random();
-        let imgurl264 = "https://cdn.mtcc.ie/static/cctv/0264.jpg"
+        let imgurl264 = "https://cdn.mtcc.ie/static/cctv/0264.jpg";
         document.getElementById("cam163").innerHTML = "<img src=" + imgurl163 + " alt=\"cam\" style=\"width:100%\">";
         document.getElementById("cam137").innerHTML = "<img src=" + imgurl23 + " alt=\"cam\" style=\"width:100%\">";
         document.getElementById("cam6").innerHTML = "<img src=" + imgurl6 + " alt=\"cam\" style=\"width:100%\">";
