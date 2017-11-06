@@ -241,10 +241,18 @@ a.side_menu_text:hover
 /*used for e.g. CSG social media logos on index page*/
 .icon-cell{
 
-    padding: 4px; 
+   
     display: table-cell; 
     vertical-align: middle; 
     height:5vw;
+    padding: 4px; 
+}
+
+.footer-cell{
+    display: table-cell; 
+    vertical-align: middle; 
+    height:4vw;
+    padding: 2px; 
 }
 
 /*for caption above live cam images*/
@@ -384,6 +392,8 @@ a.side_menu_text:hover
     .right{
         width:100%;
     }
+    
+    
 
 
     p, li {  

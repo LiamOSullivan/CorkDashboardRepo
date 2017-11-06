@@ -66,15 +66,10 @@
             <?php echo $this->element('sidebar') ?>
             <?php echo $this->fetch('content') ?>
         </div>
-
-        <!--        <div id="footer-wrapper">
-                    <footer id="footer" class="container">
-                        <div class="row">
-                            <?//php echo $this->element('dbFooter'); ?>
-                        </div>
-                    </footer>
-                </div>-->
-                <!--<?//php echo $this->element('googleAnalytics'); ?>-->
+        <div id="footer-wrapper">
+            <?php echo $this->element('dbFooter'); ?>
+        </div>
+        <!--<?//php echo $this->element('googleAnalytics'); ?>-->
         <!-- Copyright -->
         <div id="copyright">
             <?php echo $this->element('copyright'); ?>        
