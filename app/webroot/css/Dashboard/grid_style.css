@@ -1,0 +1,272 @@
+/* 
+    Author     : Liam
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+
+
+    /*background-color: goldenrod;*/
+    /*box-sizing: border-box; padding and border are included in the total width and height of the elements*/
+    /*border: solid 2px #e5e5e5;*/
+    
+}
+
+/*p, li, h1, h2 , h3, a{
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+    font-weight: normal;
+
+}
+
+p, li {  
+    color: rgba(0,0,0,0.8);
+    font-size: 1.5vw;
+    text-align: justify;
+}*/
+
+/*//mobile first*/
+#page{
+    display: grid;
+    width:100%;
+    height: 1000px;
+    border: none;
+
+    /*grid-gap:1em;*/
+    /* grid-auto-rows:100px; */
+    /*grid-auto-rows: minmax(100px, auto);*/
+    grid-template-areas:
+        "head"
+        "nav"
+        "sidebar"
+        "rtHead"
+        "traffic"
+        "weather"
+        "cameras"
+        "glance"
+        "mapAlert"
+        "twitter"
+        "latest"
+        "connectCSG"
+        "footer"
+        "copyr"
+        ;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+
+}
+
+/*420*/
+@media screen and (min-width: 420px)  {
+    #page{
+        display: grid;
+        width:100%;
+        height: 1200px;
+
+/*        grid-gap:1em;
+         
+        grid-auto-rows:100px; 
+        grid-auto-rows: minmax(100px, auto);*/
+        grid-template-areas:
+            "head       head"        
+            "head       head"
+            "nav        nav"
+            "sidebar    sidebar"
+            "sidebar    sidebar"
+            "traffic weather"
+            "traffic weather"
+            "traffic weather"
+            "glance      glance "
+            "glance      glance "
+            "glance      glance "
+            "twitter      latest"
+            "twitter      latest"
+            "twitter connectCSG"
+            "mapAlert   mapAlert"
+            "mapAlert   mapAlert"
+            "cameras     cameras"  
+            "cameras     cameras"
+            "footer     footer"
+            "copyr      copyr"
+            ;
+        grid-template-rows: repeat(20, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2px;
+
+    }
+}   
+
+ 
+/*800 × 600*/
+@media screen and (min-width: 800px)  {
+    #page{
+        display: grid;
+        width:100%;
+        height:1000px ;
+
+        /*grid-gap:1em;*/
+        /* grid-auto-rows:100px; */
+        /*grid-auto-rows: minmax(100px, auto);*/
+        grid-template-areas:
+            "head       head        nav"
+            "sidebar    traffic     weather"
+            "sidebar    traffic     weather"
+            "sidebar    traffic     weather"
+            "sidebar    traffic     twitter"
+            "sidebar    latest      twitter"
+            "sidebar    latest      twitter"
+            "sidebar    latest      twitter"
+            "connectCSG glance      glance "
+            "connectCSG glance      glance "
+            "mapAlert   glance      glance "      
+            "mapAlert   glance      glance"
+            "mapAlert         cameras     cameras"  
+            "mapAlert          cameras     cameras"
+            "footer     footer      footer  "
+            "copyr      copyr       copyr"
+            ;
+        grid-template-rows: 120px repeat(12, 1fr);
+        grid-template-columns: 2fr 3fr 3fr;
+        grid-gap: 2px;
+
+    }
+}
+/*1024 × 768*/
+/*netbook resolution of 1280 × 800*/
+/*1440 × 900*/
+@media screen and (min-width: 1280px)  {
+    #page{
+        display: grid;
+        width:100%;
+        height:1000px ;
+
+        /*grid-gap:1em;*/
+        /* grid-auto-rows:100px; */
+        /*grid-auto-rows: minmax(100px, auto);*/
+        grid-template-areas:
+            "head   head    head    nav    nav"
+            "sidebar   traffic weather glance  glance"
+            "sidebar   traffic weather glance  glance"
+            "sidebar   traffic weather glance  glance"
+            "sidebar   traffic twitter glance  glance"
+            "sidebar   latest  twitter  glance  glance"
+            "sidebar   latest  twitter glance  glance"
+            "sidebar latest twitter mapAlert mapAlert"
+            "connectCSG cameras cameras mapAlert mapAlert"  
+            "connectCSG cameras cameras mapAlert mapAlert"
+            "footer  footer footer  footer  footer"
+            ".       copyr   copyr   copyr  ."
+
+
+            ;
+        grid-template-rows: 120px repeat(9, 1fr) 80px 40px;
+        grid-template-columns: 2fr 3fr 3fr 2fr 2fr;
+        grid-gap: 2px;
+
+    }
+}
+#page > div{
+    max-width:100%;
+    border-bottom:2px solid #e5e5e5;
+}
+
+#page > .analytics{
+
+}
+
+#page> .cellHead{
+    padding-bottom: 10px;    
+}
+
+#page > header{
+    grid-area: head;
+    /*    background-color: crimson;*/
+
+}
+#page > .cameras{
+    grid-area: cameras;
+    /*background-color: lightblue;*/
+}
+#page > .connectCSG{
+    grid-area: connectCSG;
+    
+    /*background-color: chocolate;*/
+}
+#page > .copyright{
+    grid-area: copyr;
+    /*    background-color: #ddd ;*/
+}
+#page > footer{
+    grid-area: footer;
+    max-width:100%;
+    /*background-color: #eee ;*/
+}
+#page > .glance{
+    grid-area: glance;
+    /*background-color: lightgrey;*/
+}
+#page > .latest{
+    grid-area: latest;
+}
+#page > .mapAlerter{
+    grid-area: mapAlert;
+}
+#page > .sidebar{
+    grid-area: sidebar;
+    /*background-color: chartreuse;*/
+}
+#page > nav{
+    grid-area: nav;
+}
+#page > .nestedChart1{
+    grid-area: nest1;
+}
+#page > .nestedChart2{
+    grid-area: nest2;
+}
+#page > .nestedChart3{
+    grid-area: nest3;
+}
+#page > .nestedChart4{
+    grid-area: nest4;
+}
+#page > .nestedChart5{
+    grid-area: nest5;
+}
+#page > .nestedChart6{
+    grid-area: nest6;
+}
+
+#page > .rtHead{
+    grid-area: rtHead;
+    /*    background-color:  indianred;*/
+}
+
+#page > .traffic{
+    grid-area: traffic;
+}
+
+#page > .twitter{
+    grid-area: twitter;
+}
+
+
+#page > .weather{
+    grid-area: weather;
+}
+
+
+/*#page > div:nth-child(odd){
+    background-color: lightgrey;
+}
+/*
+
+page > div:nth-child(even){
+    background-color: white;
+}*/
+
+
+
+
+
+
