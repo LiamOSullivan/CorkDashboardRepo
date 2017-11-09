@@ -5,15 +5,13 @@
 *{
     margin: 0;
     padding: 0;
-
-
     /*background-color: goldenrod;*/
-    /*box-sizing: border-box; padding and border are included in the total width and height of the elements*/
-    /*border: solid 2px #e5e5e5;*/
-    
+    box-sizing: border-box; /*padding and border are included in the total width and height of the elements*/
+    border: solid 1px black;
+
 }
 
-/*p, li, h1, h2 , h3, a{
+p, li, h1, h2 , h3, a{
     font-family: 'Proxima Nova', Georgia, sans-serif;
     font-weight: normal;
 
@@ -21,39 +19,213 @@
 
 p, li {  
     color: rgba(0,0,0,0.8);
-    font-size: 1.5vw;
+    font-size: 4.5vw;
     text-align: justify;
+}
+
+
+/*body, input, textarea, select
+{
+    color: rgba(0,0,0,0.65);
+    font-size: 16px;
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+    line-height: 1.85em;
+    font-weight: normal;
 }*/
+
+h1 {
+    font-size: 6.5vmin;
+    font-weight: normal;
+    border-bottom:2px solid #e5e5e5;
+    padding-bottom: 5vmin;
+}
+
+h2 {
+    /*    position: relative;
+        left: 0;*/
+    /*bottom: 35px;*/
+    font-size: 5.5vmin;
+}
+
+h3 {
+    position: relative;
+    left: 0;
+    /*bottom: 35px;*/
+    font-size: 5vmin;
+}
+
+/*ul, ol, dl
+{
+    margin: 0 0 2em 0;
+    font-size:1.45em;
+}*/
+/*
+p {
+    text-align: justify;
+    margin: 0 0 2em 0;
+    font-size:1.45em;
+}*/
+
+a:link {
+    color: rgba(181, 31, 36, 0.5);
+    text-decoration: none;
+
+}
+
+/* visited link */
+a:visited {
+    color: rgba(181, 31, 36, 0.5);
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: rgba(181, 31, 36, 1.0);
+    text-decoration: none;
+
+}
+
+a.navi:link
+{
+    text-decoration: none;
+    color: white;
+}
+
+
+a.navi:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a.navi:hover
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: rgba(181, 31, 36, 0.5);
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: rgba(181, 31, 36, 1.0);
+    text-decoration: none;
+    max-width: 100%;
+
+}
+
+.side_menu_text{
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+    font-size:5vmin;
+    font-weight: normal;
+}
+
+a.side_menu_text:link
+{
+    text-decoration: none;
+    color: rgba(181, 31, 36, 1.0);
+
+}
+
+
+a.side_menu_text:visited {
+
+    color: rgba(181, 31, 36, 1.0);
+
+}
+
+a.side_menu_text:hover
+{
+
+    color: rgba(181, 31, 36, 0.5);
+
+}
+.side_menuitem {
+    padding:2vw 0vw 2vw 0vw;
+    /*    margin-top:10px;
+        margin-right:10px;*/
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.menu {
+
+    /*    text-align:left;
+        padding:20px;*/
+    /*background-color:#ffffff;*/
+    background-color:rgba(229, 229, 229, 0.5);
+    /*border: 2px solid rgba(181, 31, 36, 0.3);*/
+
+    /*    border-right: 2px solid #e5e5e5;*/
+    /*margin-right:10px;*/
+
+}
+
 
 /*//mobile first*/
 #page{
     display: grid;
     width:100%;
-    height: 1000px;
-    border: none;
-
+    /*height: auto;*/
+    /*border: none;*/
+    /*align-content: space-between;*/
     /*grid-gap:1em;*/
     /* grid-auto-rows:100px; */
     /*grid-auto-rows: minmax(100px, auto);*/
     grid-template-areas:
         "head"
+        "head"
         "nav"
         "sidebar"
-        "rtHead"
-        "traffic"
-        "weather"
-        "cameras"
-        "glance"
+        "rt"
         "mapAlert"
-        "twitter"
-        "latest"
+        "glance"
         "connectCSG"
         "footer"
         "copyr"
         ;
     grid-template-rows: auto;
+    /*repeat(10, 1fr);*/
     grid-template-columns: 1fr;
 
+
+}
+#page > .realtime {
+    display: grid;
+    align-content: space-between;
+    grid-template-areas:
+        "."
+        "weather"
+        "traffic"
+        "cameras"
+        "twitter"
+        "latest"
+
+        ;      
+    grid-template-columns: 1fr; 
+    grid-area: rt;
+
+
+    /*    background-color:  indianred;*/
+}
+
+
+#page > .glance {
+    display: grid;
+    align-content: space-between;
+    grid-template-areas:
+        "."
+        "chart1"
+        "chart2"
+        "chart3"
+        "chart4"
+        ;      
+    grid-template-columns: 1fr; 
+    grid-area: glance;
+
+
+    /*    background-color:  indianred;*/
 }
 
 /*420*/
@@ -61,75 +233,129 @@ p, li {
     #page{
         display: grid;
         width:100%;
-        height: 1200px;
+        /*height: 1200px;*/
+        /*border:none;*/
 
-/*        grid-gap:1em;
-         
-        grid-auto-rows:100px; 
-        grid-auto-rows: minmax(100px, auto);*/
+/*                grid-gap:1em;
+                 
+                grid-auto-rows:100px; */
+       
         grid-template-areas:
             "head       head"        
             "head       head"
             "nav        nav"
             "sidebar    sidebar"
             "sidebar    sidebar"
-            "traffic weather"
-            "traffic weather"
-            "traffic weather"
+            "rt rt"
+            "rt rt"
+            "rt rt"
+            "rt rt"
             "glance      glance "
             "glance      glance "
             "glance      glance "
-            "twitter      latest"
-            "twitter      latest"
-            "twitter connectCSG"
+            ". connectCSG"
             "mapAlert   mapAlert"
             "mapAlert   mapAlert"
-            "cameras     cameras"  
-            "cameras     cameras"
             "footer     footer"
             "copyr      copyr"
             ;
-        grid-template-rows: repeat(20, 1fr);
+        /*grid-template-rows: repeat(17, 1fr);*/
         grid-template-columns: 1fr 1fr;
-        grid-gap: 2px;
+         grid-template-rows: auto;
+        /*grid-gap: 2px;*/
 
     }
+
+    #page > .realtime {
+        display: grid;
+        align-content: space-between;
+        grid-template-areas:
+            ". ."
+            "weather traffic"
+            "weather traffic"
+            "cameras cameras"
+            "twitter latest"
+            "twitter latest"
+            ;      
+        grid-template-columns: 1fr 1fr; 
+        grid-area: rt;
+
+
+        /*    background-color:  indianred;*/
+    }
+
+
+
+
 }   
 
- 
+
 /*800 × 600*/
 @media screen and (min-width: 800px)  {
     #page{
         display: grid;
         width:100%;
-        height:1000px ;
+        /*height:1000px ;*/
 
         /*grid-gap:1em;*/
         /* grid-auto-rows:100px; */
         /*grid-auto-rows: minmax(100px, auto);*/
         grid-template-areas:
             "head       head        nav"
-            "sidebar    traffic     weather"
-            "sidebar    traffic     weather"
-            "sidebar    traffic     weather"
-            "sidebar    traffic     twitter"
-            "sidebar    latest      twitter"
-            "sidebar    latest      twitter"
-            "sidebar    latest      twitter"
+            "sidebar    rt      rt"
+            "sidebar    rt      rt"
+            "sidebar    rt      rt"
+            "sidebar    rt      rt"
+            "sidebar    rt      rt"
+            "sidebar    rt      rt"
+            "sidebar    rt      rt"
             "connectCSG glance      glance "
             "connectCSG glance      glance "
             "mapAlert   glance      glance "      
             "mapAlert   glance      glance"
-            "mapAlert         cameras     cameras"  
-            "mapAlert          cameras     cameras"
+            "mapAlert   glance      glance"  
+            "mapAlert   glance      glance"
             "footer     footer      footer  "
             "copyr      copyr       copyr"
             ;
-        grid-template-rows: 120px repeat(12, 1fr);
+        /*grid-template-rows: 120px repeat(12, 1fr);*/
+        
         grid-template-columns: 2fr 3fr 3fr;
-        grid-gap: 2px;
+         grid-template-rows: auto;
+/*        grid-gap: 2px;*/
 
     }
+    #page > .realtime {
+        display: grid;
+        align-content: space-between;
+        grid-template-areas:
+            ". ."
+            "weather traffic"
+            "weather traffic"
+            "cameras cameras"
+            "twitter latest"
+            "twitter latest"
+            ;      
+        grid-template-columns: 1fr 1fr; 
+        grid-area: rt;
+
+
+        /*    background-color:  indianred;*/
+    }
+    #page > .glance {
+        display: grid;
+        align-content: space-between;
+        grid-template-areas:
+            ". ."
+            "chart1 chart2"
+            "chart3 chart4"
+            ;      
+        grid-template-columns: 1fr 1fr; 
+        grid-area: glance;
+
+        /*    background-color:  indianred;*/
+    }
+
 }
 /*1024 × 768*/
 /*netbook resolution of 1280 × 800*/
@@ -138,58 +364,60 @@ p, li {
     #page{
         display: grid;
         width:100%;
-        height:1000px ;
+        /*height:1000px ;*/
 
         /*grid-gap:1em;*/
         /* grid-auto-rows:100px; */
         /*grid-auto-rows: minmax(100px, auto);*/
         grid-template-areas:
             "head   head    head    nav    nav"
-            "sidebar   traffic weather glance  glance"
-            "sidebar   traffic weather glance  glance"
-            "sidebar   traffic weather glance  glance"
-            "sidebar   traffic twitter glance  glance"
-            "sidebar   latest  twitter  glance  glance"
-            "sidebar   latest  twitter glance  glance"
-            "sidebar latest twitter mapAlert mapAlert"
-            "connectCSG cameras cameras mapAlert mapAlert"  
-            "connectCSG cameras cameras mapAlert mapAlert"
+            "sidebar   rt   rt glance  glance"
+            "sidebar   rt   rt glance  glance"
+            "sidebar   rt   rt glance  glance"
+            "sidebar   rt   rt glance  glance"
+            "sidebar   rt   rt  glance  glance"
+            "sidebar   rt   rt glance  glance"
+            "sidebar rt   rt glance glance"
+            "connectCSG rt   rt mapAlert mapAlert"  
+            "connectCSG rt   rt mapAlert mapAlert"
             "footer  footer footer  footer  footer"
             ".       copyr   copyr   copyr  ."
 
 
             ;
-        grid-template-rows: 120px repeat(9, 1fr) 80px 40px;
+        
+        /*grid-template-rows: 120px repeat(9, 1fr) 80px 40px;*/
         grid-template-columns: 2fr 3fr 3fr 2fr 2fr;
-        grid-gap: 2px;
+         grid-template-rows: auto;
+/*        grid-gap: 2px;*/
 
     }
-}
-#page > div{
-    max-width:100%;
-    border-bottom:2px solid #e5e5e5;
+    #page > .realtime {
+        display: grid;
+        align-content: space-between;
+        grid-template-areas:
+            ". ."
+            "weather traffic"
+            "weather traffic"
+            "cameras cameras"
+            "twitter latest"
+            "twitter latest"
+            ;      
+        grid-template-columns: 1fr 1fr; 
+        grid-area: rt;
+
+
+        /*    background-color:  indianred;*/
+    }
 }
 
 #page > .analytics{
 
 }
 
-#page> .cellHead{
-    padding-bottom: 10px;    
-}
 
-#page > header{
-    grid-area: head;
-    /*    background-color: crimson;*/
-
-}
-#page > .cameras{
-    grid-area: cameras;
-    /*background-color: lightblue;*/
-}
 #page > .connectCSG{
     grid-area: connectCSG;
-    
     /*background-color: chocolate;*/
 }
 #page > .copyright{
@@ -198,18 +426,16 @@ p, li {
 }
 #page > footer{
     grid-area: footer;
-    max-width:100%;
     /*background-color: #eee ;*/
 }
-#page > .glance{
-    grid-area: glance;
-    /*background-color: lightgrey;*/
-}
-#page > .latest{
-    grid-area: latest;
-}
-#page > .mapAlerter{
-    grid-area: mapAlert;
+
+#page > header{
+    grid-area: head;
+    align-self:center;
+    padding: 0;
+    margin: 0; 
+    background-color: white;
+
 }
 #page > .sidebar{
     grid-area: sidebar;
@@ -218,50 +444,61 @@ p, li {
 #page > nav{
     grid-area: nav;
 }
-#page > .nestedChart1{
-    grid-area: nest1;
+/*/nested chart.js charts*/
+
+#page > .glance .chart1{
+    grid-area: chart1;
 }
-#page > .nestedChart2{
-    grid-area: nest2;
+#page > .glance .chart2{
+    grid-area: chart2;
 }
-#page > .nestedChart3{
-    grid-area: nest3;
+#page > .glance .chart3{
+    grid-area: chart3;
 }
-#page > .nestedChart4{
-    grid-area: nest4;
+#page > .glance .chart4{
+    grid-area: chart4;
 }
-#page > .nestedChart5{
-    grid-area: nest5;
+#page > .glance .chart5{
+    grid-area: chart5;
 }
-#page > .nestedChart6{
-    grid-area: nest6;
+#page > .glance .chart6{
+    grid-area: chart6;
 }
 
-#page > .rtHead{
-    grid-area: rtHead;
-    /*    background-color:  indianred;*/
+
+#page > .realtime .latest{
+    grid-area: latest;
 }
 
-#page > .traffic{
+#page > .mapAlerter{
+    grid-area: mapAlert;
+}
+
+#page > .realtime .traffic{
     grid-area: traffic;
 }
 
-#page > .twitter{
+#page > .realtime .twitter{
     grid-area: twitter;
 }
 
+#page > .realtime .cameras{
+    grid-area: cameras;
+    /*background-color: lightblue;*/
+}
 
-#page > .weather{
+#page > .realtime .weather{
     grid-area: weather;
 }
 
 
-/*#page > div:nth-child(odd){
-    background-color: lightgrey;
+#page > div{
+    /*border: none;*/
+    /*background-color: lightgrey;*/
 }
-/*
 
-page > div:nth-child(even){
+
+/*page > div:nth-child(even){
     background-color: white;
 }*/
 

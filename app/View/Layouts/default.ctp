@@ -15,7 +15,7 @@
         <!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
         <link href="/css/Dashboard/grid_style.css" rel="stylesheet" type="text/css"/>
-        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
         <!--<link href="/css/Dashboard/w3c.css" rel="stylesheet" type="text/css"/>-->
         <noscript>
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
@@ -26,61 +26,64 @@
         <link href="css/Dashboard/style-desktop.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css"/>-->
         </noscript>
-
-
         <!--Responsive styles-->     
-        <title>The Cork Dashboard | <?= $this->fetch('title') ?></title>
+        <title>The Cork Dashboard</title> 
+        <!--//| <?//= $this->fetch('title') ?></title>-->
     </head>
     <body onload="myFunction()">
         <section id="page">
             <header>
                 <?php echo $this->element('dbBanner') ?>
             </header>
-
             <nav>
-                <?php echo $this->element('dbNavMenu') ?>    
+                //<?//php echo $this->element('dbNavMenu') ?>    
             </nav>
-            
-<!--            <div>
-                <h1>Cork in Real Time</h1>
-            </div>-->
-            
+
+            <!--            <div>
+                            <h1>Cork in Real Time</h1>
+                        </div>-->
+
             <div class="sidebar">
-                <?php echo $this->element('sidebar') ?>
+                //<?//php echo $this->element('sidebar') ?>
             </div>
 
             <div class="glance">
-                <?php echo $this->element('glance') ?>
+                //<?//php echo $this->element('glance') ?>
+                <div class="chart1">c1</div>
+                <div class="chart2">c2</div>
+                <div class="chart3">c3</div>
+                <div class="chart4">c4</div>
             </div>
             <!--<div class="realtime">In Real Time</div>-->
 
             <div class="connectCSG">
-                <?php echo $this->element('connect') ?>
+                //<?//php echo $this->element('connect') ?>
             </div>
+            <div class="realtime">
+                <div class="traffic">
+                    //<?//php echo $this->element('traffic') ?>
+                </div>
 
-            <div class="traffic">
-                <?php echo $this->element('traffic') ?>
-            </div>
+                <div class="weather">
+                    //<?//php echo $this->element('weather') ?>
+                </div>
 
-            <div class="weather">
-                <?php echo $this->element('weather') ?>
+                <div class="twitter">
+                    //<?//php echo $this->element('twitter') ?>
+                </div>
+                <div class="latest">
+                    //<?//php echo $this->element('latest') ?>
+                </div>
+                <div class="cameras">
+                    //<?//php echo $this->element('cameras') ?>
+                </div>
             </div>
-
-            <div class="twitter">
-                <?php echo $this->element('twitter') ?>
-            </div>
-            <div class="latest">
-                <?php echo $this->element('latest') ?>
-            </div>
-            <div class="cameras">
-                <?php echo $this->element('cameras') ?>
-            </div>
-            <!--<div class="mapAlerter">mapAlerter</div>-->
-            <footer>
-                <?php echo $this->element('dbFooter') ?>
+            <div class="mapAlerter"></div>
+            <footer>footer
+                //<?//php echo $this->element('dbFooter') ?>
             </footer> 
             <div class="copyright">
-                <?php echo $this->element('copyright') ?></div>
+                //<?//php echo $this->element('copyright') ?></div>
             <!--<analytics>analytics</analytics>--> 
         </section>
 

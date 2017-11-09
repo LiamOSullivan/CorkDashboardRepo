@@ -1,7 +1,7 @@
 <div style ="background-color: rgba(181, 31, 36, 1.0)" >
         <h1>
         <a href="/pages/home" class="navi">Home Page</a>   |
-        <a href="/pages/ContactUs" class="navi">About Cork Dashboard </a>
+        <a href="/pages/ContactUs" class="navi">About</a>
         </h1>
 </div>
 <!--<div align="right">
