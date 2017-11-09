@@ -1,5 +1,5 @@
 <div>
-    <h2>Connect with Cork Smart Gateway:</h2>
+    <h1>Connect with Cork Smart Gateway:</h1>
     <div>
         <div align="center" >
             <a href="http://www.corksmartgateway.ie/">

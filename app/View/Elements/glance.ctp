@@ -1,7 +1,6 @@
 <div>
     <div style="border-bottom:2px solid #e5e5e5;" >
         <h1>Data at a Glance</h1>
-        <br>
     </div>
     <div  style="border-bottom:2px solid #e5e5e5; ">
         <h2>Average Residential Rent</h2>

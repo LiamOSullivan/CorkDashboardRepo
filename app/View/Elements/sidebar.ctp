@@ -1,8 +1,7 @@
 <!--<div class="side_menuitem"><a class="side_menu_text" href="/pages/index">Home</a></div>   in nav bar --> 
 <div class="menu">
-    <div style="border-bottom:2px solid #e5e5e5; padding-bottom:" >
-            <h1 style="max-width:100%">Explore</h1>  
-            <br>
+    <div style="border-bottom:2px solid #e5e5e5;" >
+            <h1>Explore</h1>  
     </div>
     <div class="side_menuitem"><a class="side_menu_text" href="/pages/CorkDoing">Data Trends
             <!--<img src="img/sidebar_buttons/corkdoing_l_trends.png" width=100% height=100% alt="How's Cork Doing?"/>-->

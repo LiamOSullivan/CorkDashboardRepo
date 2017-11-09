@@ -1,4 +1,4 @@
-<div style="border-bottom:2px solid #e5e5e5">
+<div>
     <h2>Latest News</h2>
     <div id="news">
         <ul style="list-style-type:none;">
@@ -9,5 +9,6 @@
             <li>SEE: Latest <a href="http://data.corkcity.ie/dataset/planning-permission">Cork City Council Planning Applications </a></li>
             <!--<li>SEE: Q4 2016 Cork Economic Bulletin <a href="https://www.corkchamber.ie/UserFiles/file/February%20Final%20Economic%20Bulletin.pdf"> here</a></li>-->
         </ul>
+        <br>
     </div>
 </div>

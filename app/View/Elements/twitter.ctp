@@ -1,4 +1,4 @@
-<div style="border-bottom:2px solid #e5e5e5">
+<div>
     <h2> A Twitter List by <a href="https://twitter.com/CorkDashboard/lists/cork-dashboard">@CorkDashboard</a></h2>
     <div id="twitter_container" height='600px' align="center">
 

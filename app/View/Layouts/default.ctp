@@ -36,7 +36,7 @@
                 <?php echo $this->element('dbBanner') ?>
             </header>
             <nav>
-                //<?//php echo $this->element('dbNavMenu') ?>    
+                <?php echo $this->element('dbNavMenu') ?>    
             </nav>
 
             <!--            <div>
@@ -44,11 +44,11 @@
                         </div>-->
 
             <div class="sidebar">
-                //<?//php echo $this->element('sidebar') ?>
+                <?php echo $this->element('sidebar') ?>
             </div>
 
             <div class="glance">
-                //<?//php echo $this->element('glance') ?>
+                <?php echo $this->element('glance') ?>
                 <div class="chart1">c1</div>
                 <div class="chart2">c2</div>
                 <div class="chart3">c3</div>
@@ -56,34 +56,37 @@
             </div>
             <!--<div class="realtime">In Real Time</div>-->
 
-            <div class="connectCSG">
-                //<?//php echo $this->element('connect') ?>
-            </div>
             <div class="realtime">
-                <div class="traffic">
-                    //<?//php echo $this->element('traffic') ?>
+                <div style="border-bottom:2px solid #e5e5e5;">
+                <h1 >Cork in Real Time</h1>
+                </div>
+                <div class="traffic" style="border-bottom:2px solid #e5e5e5;">
+                    <?php echo $this->element('traffic') ?>
                 </div>
 
-                <div class="weather">
-                    //<?//php echo $this->element('weather') ?>
-                </div>
+<!--                <div class="weather">
+                    <?//php echo $this->element('weather') ?>
+                </div>-->
 
-                <div class="twitter">
-                    //<?//php echo $this->element('twitter') ?>
+                <div class="twitter" style="border-bottom:2px solid #e5e5e5;">
+                    <?php echo $this->element('twitter') ?>
                 </div>
-                <div class="latest">
-                    //<?//php echo $this->element('latest') ?>
+                <div class="latest" style="border-bottom:2px solid #e5e5e5;">
+                    <?php echo $this->element('latest') ?>
                 </div>
                 <div class="cameras">
-                    //<?//php echo $this->element('cameras') ?>
+                    <?php echo $this->element('cameras') ?>
                 </div>
             </div>
-            <div class="mapAlerter"></div>
-            <footer>footer
-                //<?//php echo $this->element('dbFooter') ?>
+            <div class="connectCSG" style="border-bottom:2px solid #e5e5e5;">
+                <?php echo $this->element('connect') ?>
+            </div>
+            <!--<div class="mapAlerter"></div>-->
+            <footer>
+                <?php echo $this->element('dbFooter') ?>
             </footer> 
             <div class="copyright">
-                //<?//php echo $this->element('copyright') ?></div>
+                <?php echo $this->element('copyright') ?></div>
             <!--<analytics>analytics</analytics>--> 
         </section>
 
@@ -125,10 +128,10 @@
             let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();
             let imgurl23 = "https://cdn.mtcc.ie/static/cctv/0266.jpg?" + Math.random();
             let imgurl264 = "https://cdn.mtcc.ie/static/cctv/0264.jpg";
-            document.getElementById("cam163").innerHTML = "<img src=" + imgurl163 + " alt=\"cam\" style=\"width:100%\">";
-            document.getElementById("cam137").innerHTML = "<img src=" + imgurl23 + " alt=\"cam\" style=\"width:100%\">";
-            document.getElementById("cam6").innerHTML = "<img src=" + imgurl6 + " alt=\"cam\" style=\"width:100%\">";
-            document.getElementById("cam264").innerHTML = "<img src=" + imgurl264 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam163").innerHTML = "<img src=" + imgurl163 + " alt=\"cam\" style=\"width:90%\">";
+            document.getElementById("cam137").innerHTML = "<img src=" + imgurl23 + " alt=\"cam\" style=\"width:90%\">";
+            document.getElementById("cam6").innerHTML = "<img src=" + imgurl6 + " alt=\"cam\" style=\"width:90%\">";
+            document.getElementById("cam264").innerHTML = "<img src=" + imgurl264 + " alt=\"cam\" style=\"width:90%\">";
         }
 
 

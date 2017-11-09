@@ -1,6 +1,6 @@
-<div style ="background-color: rgba(181, 31, 36, 1.0)" >
+<div style ="background-color: rgba(181, 31, 36, 1.0); max-width:100%;" >
         <h1>
-        <a href="/pages/home" class="navi">Home Page</a>   |
+        <a href="/pages/home" class="navi">Home</a>   |
         <a href="/pages/ContactUs" class="navi">About</a>
         </h1>
 </div>

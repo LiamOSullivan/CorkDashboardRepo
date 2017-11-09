@@ -7,7 +7,7 @@
     padding: 0;
     /*background-color: goldenrod;*/
     box-sizing: border-box; /*padding and border are included in the total width and height of the elements*/
-    border: solid 1px black;
+    /*border: solid 1px black;*/
 
 }
 
@@ -21,50 +21,29 @@ p, li {
     color: rgba(0,0,0,0.8);
     font-size: 4.5vw;
     text-align: justify;
+    padding: 1vmin 1vmin 2vmin 2vmin;
+    
 }
-
-
-/*body, input, textarea, select
-{
-    color: rgba(0,0,0,0.65);
-    font-size: 16px;
-    font-family: 'Proxima Nova', Georgia, sans-serif;
-    line-height: 1.85em;
-    font-weight: normal;
-}*/
 
 h1 {
     font-size: 6.5vmin;
-    font-weight: normal;
-    border-bottom:2px solid #e5e5e5;
-    padding-bottom: 5vmin;
+    font-weight: bold;
+    padding: 2vmin 1vmin 5vmin 2vmin;
+    
 }
 
-h2 {
-    /*    position: relative;
-        left: 0;*/
-    /*bottom: 35px;*/
+h2 {    
     font-size: 5.5vmin;
+    font-weight: normal;
+    padding: 1.5vmin 1vmin 3vmin 2vmin;
 }
 
 h3 {
     position: relative;
     left: 0;
-    /*bottom: 35px;*/
     font-size: 5vmin;
+     padding: 1.5vmin 1vmin 3vmin 2vmin;
 }
-
-/*ul, ol, dl
-{
-    margin: 0 0 2em 0;
-    font-size:1.45em;
-}*/
-/*
-p {
-    text-align: justify;
-    margin: 0 0 2em 0;
-    font-size:1.45em;
-}*/
 
 a:link {
     color: rgba(181, 31, 36, 0.5);
@@ -75,13 +54,13 @@ a:link {
 /* visited link */
 a:visited {
     color: rgba(181, 31, 36, 0.5);
-    text-decoration: none;
+    
 }
 
 a:hover
 {
     color: rgba(181, 31, 36, 1.0);
-    text-decoration: none;
+    
 
 }
 
@@ -120,6 +99,7 @@ a:hover
     font-family: 'Proxima Nova', Georgia, sans-serif;
     font-size:5vmin;
     font-weight: normal;
+    padding: 1vmin 1vmin 2vmin 2vmin;
 }
 
 a.side_menu_text:link
@@ -129,37 +109,23 @@ a.side_menu_text:link
 
 }
 
-
 a.side_menu_text:visited {
-
     color: rgba(181, 31, 36, 1.0);
 
 }
 
 a.side_menu_text:hover
 {
-
     color: rgba(181, 31, 36, 0.5);
-
 }
+
 .side_menuitem {
-    padding:2vw 0vw 2vw 0vw;
-    /*    margin-top:10px;
-        margin-right:10px;*/
+    padding: 2vw 1vw 2vw 1vw;
     border-bottom: 2px solid #e5e5e5;
 }
 
 .menu {
-
-    /*    text-align:left;
-        padding:20px;*/
-    /*background-color:#ffffff;*/
     background-color:rgba(229, 229, 229, 0.5);
-    /*border: 2px solid rgba(181, 31, 36, 0.3);*/
-
-    /*    border-right: 2px solid #e5e5e5;*/
-    /*margin-right:10px;*/
-
 }
 
 
@@ -170,7 +136,7 @@ a.side_menu_text:hover
     /*height: auto;*/
     /*border: none;*/
     /*align-content: space-between;*/
-    /*grid-gap:1em;*/
+    grid-gap:0.5vmin;
     /* grid-auto-rows:100px; */
     /*grid-auto-rows: minmax(100px, auto);*/
     grid-template-areas:
@@ -179,14 +145,13 @@ a.side_menu_text:hover
         "nav"
         "sidebar"
         "rt"
-        "mapAlert"
+        "mapAlert"        
         "glance"
         "connectCSG"
         "footer"
         "copyr"
         ;
     grid-template-rows: auto;
-    /*repeat(10, 1fr);*/
     grid-template-columns: 1fr;
 
 
@@ -201,13 +166,11 @@ a.side_menu_text:hover
         "cameras"
         "twitter"
         "latest"
-
         ;      
     grid-template-columns: 1fr; 
+    grid-gap:2vmin;
     grid-area: rt;
 
-
-    /*    background-color:  indianred;*/
 }
 
 
@@ -221,7 +184,8 @@ a.side_menu_text:hover
         "chart3"
         "chart4"
         ;      
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
+    grid-gap:0.5vmin;
     grid-area: glance;
 
 
@@ -443,6 +407,7 @@ a.side_menu_text:hover
 }
 #page > nav{
     grid-area: nav;
+    align-self: stretch;
 }
 /*/nested chart.js charts*/
 
