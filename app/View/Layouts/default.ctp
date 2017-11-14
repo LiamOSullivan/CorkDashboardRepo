@@ -49,44 +49,24 @@
 
             <div class="glance">
                 <?php echo $this->element('glance') ?>
-                <div class="chart1">c1</div>
-                <div class="chart2">c2</div>
-                <div class="chart3">c3</div>
-                <div class="chart4">c4</div>
             </div>
             <!--<div class="realtime">In Real Time</div>-->
 
             <div class="realtime">
-                <div style="border-bottom:2px solid #e5e5e5;">
-                <h1 >Cork in Real Time</h1>
-                </div>
-                <div class="traffic" style="border-bottom:2px solid #e5e5e5;">
-                    <?php echo $this->element('traffic') ?>
-                </div>
-
-<!--                <div class="weather">
-                    <?//php echo $this->element('weather') ?>
-                </div>-->
-
-                <div class="twitter" style="border-bottom:2px solid #e5e5e5;">
-                    <?php echo $this->element('twitter') ?>
-                </div>
-                <div class="latest" style="border-bottom:2px solid #e5e5e5;">
-                    <?php echo $this->element('latest') ?>
-                </div>
-                <div class="cameras">
-                    <?php echo $this->element('cameras') ?>
-                </div>
+                <?php echo $this->element('realtime') ?>
             </div>
+            
             <div class="connectCSG" style="border-bottom:2px solid #e5e5e5;">
                 <?php echo $this->element('connect') ?>
             </div>
+            
             <!--<div class="mapAlerter"></div>-->
             <footer>
                 <?php echo $this->element('dbFooter') ?>
             </footer> 
             <div class="copyright">
-                <?php echo $this->element('copyright') ?></div>
+                <?php echo $this->element('copyright') ?>
+            </div>
             <!--<analytics>analytics</analytics>--> 
         </section>
 

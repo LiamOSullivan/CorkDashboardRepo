@@ -1,6 +1,6 @@
 <div>
     <h2>Latest News</h2>
-    <div id="news">
+    <div id="news" style="padding:2vmin 5vmin 2vmin 5vmin">
         <ul style="list-style-type:none;">
             <li>SEE: New Reporting Tool <a href="https://www.yourcouncil.ie/"> 'Your Council' </a> added to the Cork Dashboard <a href="/pages/CorkReport">here</a></li>
             <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q1%202017.pdf">Cork Economic Bulletin</a> Q1 2017</li>

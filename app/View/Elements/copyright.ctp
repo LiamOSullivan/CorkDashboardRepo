@@ -1,4 +1,4 @@
-<div class="col-12" >
+<div class="col-12"" >
     <p style="text-align:center">
         &copy; Maynooth University. All rights reserved. | Images: <a href="http://fotogrph.com">fotogrph </a> |
         Map Icons by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from 
