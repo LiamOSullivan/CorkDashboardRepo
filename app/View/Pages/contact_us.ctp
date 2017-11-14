@@ -103,9 +103,9 @@
     </div>
     <div class="row">
         <h2>Funding</h2>
-
         <p>The Cork Dashboard is funded by <a href="http://www.sfi.ie">Science Foundation Ireland</a>.</p>
 
     </div>
 </div>
-</div>
+
+

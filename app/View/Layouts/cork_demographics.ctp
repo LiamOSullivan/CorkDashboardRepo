@@ -34,6 +34,41 @@
                         <br>
                     </header>
                 </div>
+
+                <div class="col-12" style="display: table; " >
+                    <div class="col-2">
+                        <a href="/./Economy/stats/container">
+                            <img src="//img/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </div>
+                    <div class="col-2" >
+                        <a href="/./EnvironmentTransport/stats"> 
+                            <img src="/img/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
+                        </a>
+                    </div>
+                    <div class="col-2">
+                        <a href="/./Housings/stats">
+                            <img src="/img/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </div>
+                    <div class="col-2">
+                        <a href="/./Demographics/stats">
+                            <img src="/img/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </div>
+                    <div class="col-2">
+                        <a href="/./HealthEducation/stats">
+                            <img src="/img/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </div>
+                    <div class="col-2">
+                        <a href="/./CrimeEmergencyServices/stats">
+                            <img src="/img/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
+                        </a>       
+                    </div>
+                </div>
+
+
                 <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
                     <div class="col-9" >

@@ -22,8 +22,47 @@
         <?//php echo $this->Html->css('responsivegridsystem2'); ?> 
         <?//php echo $this->Html->css('tabs'); ?> 
         <?//php echo $this->fetch('content'); ?>
+        <style>
+            #float_menu {
+                position: fixed;
+                right: 5%;
+                top: 60%;
+                width: 10%;
+                margin-top: 0;
+                list-style: none;
+                /*background-color: rgba(181, 31, 36, 1.0) ;*/
+            }
+        </style>
     </head>
     <body>
+
+
+        <!--Floating menu-->
+        <ul id=float_menu>
+
+            <li><a href="/./HealthEducation/stats">
+                    <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
+                </a> 
+            </li>
+            <li> <a href="/./EnvironmentTransport/stats"> 
+                    <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
+                </a>
+            </li>
+            <li><a href="/./Housings/stats">
+                    <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
+                </a> 
+            </li>
+            <li>
+                <a href="/./Demographics/stats">
+                    <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
+                </a> 
+            </li>
+            <li>
+                <a href="/./CrimeEmergencyServices/stats">
+                    <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
+                </a> 
+            </li>
+        </ul>
         <!-- Header -->
         <div id="header-wrapper">
             <?php echo $this->element('dbBanner'); ?>
@@ -33,15 +72,13 @@
         <div style="overflow:auto">
             <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
-                <div style="border-bottom:2px solid #e5e5e5">
-                    <header>
-                        <h1>Economic Indicators</h1>
-                        <br>
-                    </header>
+                <div class="col-9" style="border-bottom:2px solid #e5e5e5">
+                    <h1>Industry & Employment: Economic Indicators</h1>
+                    <br>
                 </div>
                 <?php echo $this->fetch('content') ?>
-                <div class="row" style="border-bottom:2px solid #e5e5e5">
-                    <div class="col-9" >
+                <div style="border-bottom:2px solid #e5e5e5">
+                    <div class="col-7">
                         <h2>Employment Statistics</h2>
                         <br>
                         <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "Economy/employmentFigsUp/tab31")); ?></div> 
@@ -84,34 +121,65 @@
                     </div>
                 </div>
             </div>
-            <div id="footer-wrapper">
-                <footer id="footer" class="container">
-                    <div class="row">
-                        <?php echo $this->element('dbFooter'); ?>
-                    </div>
-                </footer>
-            </div>
-            <?php echo $this->element('googleAnalytics'); ?>
-            <!-- Copyright -->
-            <div id="copyright">
-                <?php echo $this->element('copyright'); ?>
-
-            </div>
+            <!--            <div class="col-4" style="border-bottom:2px solid #e5e5e5 ">
+            
+                            <a href="/./Economy/stats/container">
+                                <img src="/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png" width="90%" max-width = "100%" alt=""/>
+                            </a> 
+                            <a href="/./EnvironmentTransport/stats"> 
+                                <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
+                            </a>
+                        </div>-->
+            <!--            <div class="col-2">
+                            <a href="/./Housings/stats">
+                                <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
+                            </a> 
+                        </div>
+                        <div class="col-2">
+                            <a href="/./Demographics/stats">
+                                <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
+                            </a> 
+                        </div>
+                        <div class="col-2">
+                            <a href="/./HealthEducation/stats">
+                                <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
+                            </a> 
+                        </div>
+                        <div class="col-2">
+                            <a href="/./CrimeEmergencyServices/stats">
+                                <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
+                            </a>       
+                        </div>-->
         </div>
 
+        <div id="footer-wrapper">
+            <footer id="footer" class="container">
+                <div class="row">
+                    <?php echo $this->element('dbFooter'); ?>
+                </div>
+            </footer>
+        </div>
+        <?php echo $this->element('googleAnalytics'); ?>
+        <!-- Copyright -->
+        <div id="copyright">
+            <?php echo $this->element('copyright'); ?>
 
-        <script type="text/javascript">
-//            $('#menu1').tabify();
-//            $('#menu2').tabify();
-//            $('#menu3').tabify();
-//            $('#menu33').tabify();
-//            $('#menu43').tabify();
-//            $('#menu53').tabify();
-//            $('#menu73').tabify();
-//            $('#menu83').tabify();
-        </script>
+        </div>
+    </div>
 
-    </body>
+
+    <script type="text/javascript">
+        //            $('#menu1').tabify();
+        //            $('#menu2').tabify();
+        //            $('#menu3').tabify();
+        //            $('#menu33').tabify();
+        //            $('#menu43').tabify();
+        //            $('#menu53').tabify();
+        //            $('#menu73').tabify();
+        //            $('#menu83').tabify();
+    </script>
+
+</body>
 </html>
 
 <!-- Content -->
