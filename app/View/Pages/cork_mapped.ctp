@@ -9,14 +9,14 @@
     <div class="row">
         <div class="col-4" >
             <h2>Cork City Census</h2>
-            <a href="http://airo.maynoothuniversity.ie/Instant_Atlas/Mapping%20Resources/AIRO%20Census%20Mapping/Local%20Authority/Cork%20City/atlas.html" class="bordered-feature-image">
-                <img src="/img/Dashboard/Cork_Census_Mapping.png" alt="Cork city census image" /></a>
+            <a href="http://airo.maynoothuniversity.ie/Instant_Atlas/Mapping%20Resources/AIRO%20Census%20Mapping/Local%20Authority/Cork%20City/atlas.html" target="_blank" class="bordered-feature-image">
+                <img src="/img/Dashboard/City_Census_Mapping.png" alt="Cork city census image" /></a>
             <br>
         </div> 
         <div class="col-4" >
             <h2>Cork County Census</h2>
-            <a href="http://airo.maynoothuniversity.ie/Instant_Atlas/Mapping%20Resources/AIRO%20Census%20Mapping/Local%20Authority/Cork%20County/atlas.html" class="bordered-feature-image">
-                <img src="/img/Dashboard/Cork_Census_Mapping.png" alt="Cork county census image" /></a>
+            <a href="http://airo.maynoothuniversity.ie/Instant_Atlas/Mapping%20Resources/AIRO%20Census%20Mapping/Local%20Authority/Cork%20County/atlas.html" target="_blank" class="bordered-feature-image">
+                <img src="/img/Dashboard/County_Census_Mapping.png" alt="Cork county census image" /></a>
             <br>
         </div>
 
@@ -28,7 +28,7 @@
             </div>-->
         <div class="col-4" >
             <h2>Crime Monitoring Tool</h2>
-            <a href="http://airo.maynoothuniversity.ie/external-content/recorded-crime-monitoring-tool" class="bordered-feature-image">
+            <a href="http://airo.maynoothuniversity.ie/external-content/recorded-crime-monitoring-tool" target="_blank" class="bordered-feature-image">
                 <img src="/img/Dashboard/airo_crime_tool.png" alt="" /></a>
             <br>
         </div>

@@ -64,17 +64,17 @@
         <h2>Live Traffic Cams</h2>
         <p>Click an image for a larger view</p>
         <div class="col-3" >
-             <div class="cam_header">
+            <div class="cam_header">
                 <h3>Dunkettle IC</h3>
             </div>
         </div>
         <div class="col-6" >
             <div class="cam_header">
                 <h3>Jack Lynch Tunnel</h3>
-          </div>
+            </div>
         </div>
         <div class="col-3" >
-             <div class="cam_header">
+            <div class="cam_header">
                 <h3>N40 Curraheen</h3>
             </div>
         </div>
@@ -97,7 +97,7 @@
                 <div id="cam264"></div>
             </div>
         </a>
-        
+
         <p>See all (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
         </p>
     </div>
@@ -140,30 +140,40 @@
     <div style="border-bottom:2px solid #e5e5e5;" >
         <h1>Data at a Glance</h1>
         <br>
+
     </div>
+    <p> Hover over for data, click to go to the detailed versions<p>
     <div class="row" style="border-bottom:2px solid #e5e5e5; ">
         <h2>Average Residential Rent</h2>
-        <div style="min-height: 200px">
-            <canvas id="cork_residential_rents" width="100%" ></canvas>
-        </div>
+        <a href="/./Housings/stats#tab71">    
+            <div style="min-height: 200px">
+                <canvas id="cork_residential_rents" width="100%" ></canvas>
+            </div>
+        </a>
     </div>
     <div class="row" style="border-bottom:2px solid #e5e5e5;" >
         <h2>Average House Price</h2>
-        <div style="min-height: 200px">
-            <canvas id="cork_house_prices" width="100%" ></canvas>
-        </div>
+        <a href="/./Housings/stats#tab11">    
+            <div style="min-height: 200px">
+                <canvas id="cork_house_prices" width="100%" ></canvas>
+            </div>
+        </a>
     </div>    
     <div class="row" style="border-bottom:2px solid #e5e5e5;">
         <h2>Planning Applications</h2>
-        <h3>County</h3>
-        <div style="min-height: 200px">
-            <canvas id="county_planning_applications" width="100%" ></canvas>
-        </div>
-
         <h3>City</h3>
-        <div style="min-height: 200px">
-            <canvas id="city_planning_applications" width="100%" ></canvas>
-        </div>
+        <a href="/./Housings/stats#tab21"> 
+            <div style="min-height: 200px">
+                <canvas id="city_planning_applications" width="100%" ></canvas>
+            </div>
+        </a>
+
+        <h3>County</h3>
+        <a href="/./Housings/stats#tab221"> 
+            <div style="min-height: 200px">
+                <canvas id="county_planning_applications" width="100%" ></canvas>
+            </div>
+        </a>
 
     </div>
     <div class="row" style="border-bottom:2px solid #e5e5e5">

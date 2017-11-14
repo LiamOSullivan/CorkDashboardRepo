@@ -43,18 +43,18 @@
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
                     <div class="col-12" >
                         <h2>Planning & Completions</h2>
-                        <br>            
-                        <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "Housings/constructionMonthlies/tab31")); ?></div> 
-                        <br>
-                        <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "Housings/socialPrivateHouses/tab41")); ?></div> 
                         <br>
                         <div class="content" id="tab21"><?php echo $this->element($Graph5, array("function" => "Housings/planningApplicationsDublin/tab21")); ?></div> 
                         <br>
+                        <div class="content" id="tab221"><?php echo $this->element($Graph5, array("function" => "Housings/planningApplicationsDunL/tab221")); ?></div> 
+                        <br>
+                        <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "Housings/constructionMonthlies/tab31")); ?></div> 
+                        <br>
+                        <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "Housings/socialPrivateHouses/tab41")); ?></div> 
+                        <br>                        
                         <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "Housings/supplyOfLands/tab51")); ?></div>
                         <br>                        
                         <div class="content" id="tab52"><?php echo $this->element($Graph5, array("function" => "Housings/supplyOfUnits/tab52")); ?></div> 
-                        <br>
-                        <div class="content" id="tab221"><?php echo $this->element($Graph5, array("function" => "Housings/planningApplicationsDunL/tab221")); ?></div> 
                         <br>
                         <div class="content" id="tab61"><?php echo $this->element($Graph5, array("function" => "Housings/developercontributions/tab61")); ?></div> 
                         <br>
