@@ -192,10 +192,9 @@
         </div>
     </div>
 </div>
-
-
-
-
+ <div id="footer-wrapper">
+           <?php echo $this->element('dbFooter'); ?>
+ </div>
 
 <script src="http://www.chartjs.org/dist/2.6.0/Chart.bundle.js"></script>
 <script src="http://www.chartjs.org/samples/2.6.0/utils.js"></script>
@@ -209,6 +208,7 @@
         refreshCams();
         setInterval("refreshCams()", 300000);
     }
+    
     function refreshCams() {
         let imgurl6 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?" + Math.random();
         let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();

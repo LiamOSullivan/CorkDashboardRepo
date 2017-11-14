@@ -25,26 +25,25 @@
             <h2>Park by Phone</h2>
         </div>
         <div class="col-3" id="journeyPlan" align="center">
-
             <img width="90%" src="/img/Dashboard/icons/app_transport.png" alt="db">
             <a href="https://play.google.com/store/apps/details?id=com.mdv.IrelandCompanion"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
             </a>
             <a href="https://itunes.apple.com/ie/app/journey-plan/id538331603?mt=8"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
             </a>
             <h2>Journey Planner </h2>
         </div>
         <div class="col-3" id="irishRail" align="center">
             <img width="90%" src="/img/Dashboard/icons/app_irish_rail.png" alt="db">
-            <div align="center" height="20px">
-                <a href="https://play.google.com/store/apps/details?id=de.hafas.android.irishrail"  target="_blank">
-                    <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
-                </a>
-                <a href="https://itunes.apple.com/ie/app/iarnrod-eireann-irish-rail/id588339413?mt=8"  target="_blank">
-                   <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
-                </a>
-            </div>
+
+            <a href="https://play.google.com/store/apps/details?id=de.hafas.android.irishrail"  target="_blank">
+                <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
+            </a>
+            <a href="https://itunes.apple.com/ie/app/iarnrod-eireann-irish-rail/id588339413?mt=8"  target="_blank">
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
+            </a>
+
             <h2>Irish Rail</h2>
         </div>
         <div class="col-3" id="corkAirport" align="center">
@@ -54,7 +53,7 @@
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
             </a>
             <a href="https://appsto.re/ie/ZWFpU.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
             </a>
             <h2>Cork Airport</h2>
         </div>
@@ -67,7 +66,7 @@
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
             </a>
             <a href="https://itunes.apple.com/ie/app/cycle-planner/id783631654?mt=8"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
             </a>
             <h2>Cycle Planner</h2>
         </div>
@@ -78,7 +77,7 @@
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
             </a>
             <a href="https://appsto.re/ie/3eT61.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
             </a>
             <h2>Cork Bikes </h2> 
         </div>
@@ -89,7 +88,7 @@
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
             </a>
             <a href="https://appsto.re/ie/qHE6Q.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
             </a>
             <h2>Cork Taxi</h2> 
         </div>
@@ -110,7 +109,7 @@
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
             </a>
             <a href="https://appsto.re/ie/iRUWfb.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork City Now</h2> 
         </div>
 
@@ -129,7 +128,7 @@
             <a href="https://play.google.com/store/apps/details?id=com.cityinformation.cork.android"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/f1XW8.i "  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork City </h2> 
         </div>
 
@@ -147,7 +146,7 @@
             <img width="90%" src="/img/Dashboard/cork_icons/Cork_Unofficial_Guide.png" alt="db">
 
             <a href="https://itunes.apple.com/ie/app/cork-the-unofficial-guide/id622082653?mt=8"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>West Cork Guide </h2> 
         </div>
 
@@ -167,7 +166,7 @@
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/>
             </a>
             <a href="https://appsto.re/ie/WGSocb.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg">
             </a>
             <h2>Spike Island</h2> 
         </div>
@@ -189,7 +188,7 @@
             <a href="https://play.google.com/store/apps/details?id=com.navigatour.youghal"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/6qOpJ.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Youghal App</h2>
         </div>
 
@@ -200,7 +199,7 @@
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
 
             <a href="https://itunes.apple.com/ie/app/dublin-2015/id930798779?mt=8"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork Tides </h2>
         </div>
 
@@ -210,7 +209,7 @@
             <a href="https://play.google.com/store/apps/details?id=com.my_theatre.cork"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/ZOIg-.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork Arts Theatre</h2>
         </div>
         <div id="corkoperahouse" class="col-3" align="center"> 
@@ -220,7 +219,7 @@
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
 
             <a href="https://appsto.re/ie/Zl7N-.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork Opera House</h2>
         </div>
     </div>
@@ -231,7 +230,7 @@
             <a href="https://play.google.com/store/apps/details?id=uk.co.solus.corkcounty"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/wnjX3.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork County Libraries </h2> 
         </div>
         <div id="CorkPlanning" class="col-3" align="center"> 
@@ -241,7 +240,7 @@
             <a href="https://play.google.com/store/apps/details?id=ie.corkcoco.pl.mobile.planningviewer"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/Q68r4.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>   
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>   
             <h2>Cork County Planning</h2>
         </div>
 
@@ -253,7 +252,7 @@
             <a href="https://play.google.com/store/apps/details?id=uk.co.solus.corkcity"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/F10K1.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork City Libraries </h2>
         </div>  
 
@@ -263,7 +262,7 @@
             <a href="https://play.google.com/store/apps/details?id=com.mapalerter"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://itunes.apple.com/ie/app/mapalerter/id732814462?mt=8"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Map Alerter </h2>
         </div> 
     </div>
@@ -283,7 +282,7 @@
             <a href="https://play.google.com/store/apps/details?id=com.maithu.cuh_icu_guidelines"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/a37--.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork Uni Hospital</h2>
         </div>
 
@@ -294,7 +293,7 @@
             <a href="https://play.google.com/store/apps/details?id=ie.ucc.connect"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/EvtD9.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>University College Cork </h2>
         </div>
         <div id="cit" class="col-3" align="center"> 
@@ -303,7 +302,7 @@
             <a href="https://play.google.com/store/apps/details?id=ocs.CAMSTopup.CIT"  target="_blank">
                 <img height="25vmin" src="/img/Dashboard/icons/google-play-badge_crop.png" alt=""/></a>
             <a href="https://appsto.re/ie/e4Y15.i"  target="_blank">
-               <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
+                <img height="25vmin" src="/img/Dashboard/icons/App_Store_Badge.svg"></a>
             <h2>Cork IT </h2> 
         </div>
     </div>
