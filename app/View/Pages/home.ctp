@@ -13,7 +13,7 @@
         </div>-->
 
     <div class="row" style="border-bottom:2px solid #e5e5e5" >
-        <h2>Car Parks and Rental Bikes</h2>
+        <h2>Traffic & Travel</h2>
 
         <a href="/pages/CorkTravel" class="bordered-feature-image">
             <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>
