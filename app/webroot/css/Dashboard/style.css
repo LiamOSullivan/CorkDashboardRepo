@@ -189,7 +189,7 @@ a.side_menu_text:hover
 .middle {
     float:left;
     width:50%;
-    /*padding:20px;*/
+    padding:20px;
     text-align:left;
     /*//border: 2px solid rgba(181, 31, 36, 0.3);*/
     border-right: 2px solid #e5e5e5;
@@ -200,7 +200,7 @@ a.side_menu_text:hover
 .right {
     float:left;
     width:30%;
-    padding:0px;
+    padding:20px;
     text-align:left;
     /*overflow:hidden;*/
     /*border: 2px solid rgba(181, 31, 36, 0.3);*/
@@ -252,7 +252,7 @@ a.side_menu_text:hover
     min-height: 4vmax; 
     text-align:center;
     border-bottom:2px solid #e5e5e5;
-    }
+}
 
 
 
@@ -402,15 +402,15 @@ a.side_menu_text:hover
 
     }
     .cam_header{
-    min-height: 6vmax; 
+        min-height: 6vmax; 
     }
-    
+
     h1, .side_menu_text{
 
         font-size:5vmin;
 
     }
-    
+
     h2{
 
         font-size:4.5vmin;
@@ -421,8 +421,8 @@ a.side_menu_text:hover
         font-size:3vmin;
 
     }
-    
-    
+
+
 
 
 
@@ -465,7 +465,7 @@ a.side_menu_text:hover
 
     }
 
-   p, li {  
+    p, li {  
 
         font-size: 4vmax;
         text-align: justify;
@@ -484,7 +484,7 @@ a.side_menu_text:hover
         font-size:5vmax;
 
     }
-    
+
     h2{
 
         font-size:4.5vmax;
@@ -496,7 +496,7 @@ a.side_menu_text:hover
 
     }
     .cam_header{
-    min-height: 10vmax; 
+        min-height: 10vmax; 
     }
 
 }

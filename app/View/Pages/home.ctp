@@ -61,8 +61,7 @@
 
 
     <div class="col-12" style="border-bottom:2px solid #e5e5e5">
-        <h2>Live Traffic Cams</h2>
-        <p>Click an image for a larger view</p>
+        <h2 style="padding:0">Live Traffic Cams</h2>
         <div class="col-3" >
             <div class="cam_header">
                 <h3>Dunkettle IC</h3>
@@ -97,8 +96,8 @@
                 <div id="cam264"></div>
             </div>
         </a>
-
-        <p>See all (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
+        <br>
+        <p>Click an image for a larger view. See all Irish camera locations (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
         </p>
     </div>
 

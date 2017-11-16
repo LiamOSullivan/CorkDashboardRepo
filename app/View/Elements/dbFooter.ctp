@@ -1,7 +1,8 @@
 
-<div class="col-12" style="display: table; " >
+<div class="col-12" style="display: table; padding:10vmin 0 10vmin 0;" >
 
-    <h2 stlye="padding:10vmin" align="center">Our Partners:</h2>
+        <h2 style="padding:3vmin;" align="center">Project Partners</h2>
+ 
     <div align="center" class="col-3" >
         <a href="https://www.maynoothuniversity.ie" target="_blank">
             <img style="height:7vmin" src="/img/Partner logos/maynooth_university_logo.png" alt=""/>
@@ -32,7 +33,6 @@
         <a href="https://www.corkcoco.ie" target="_blank">
             <img style="height:7vmin" src="/img/Partner logos/corkcounty_logo.png" alt=""/>
         </a>
-
     </div>
     <div align="center" class="col-3" >
         <a href="http://www.corksmartgateway.ie" target="_blank">

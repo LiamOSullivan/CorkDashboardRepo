@@ -7,8 +7,39 @@
         <meta name="keywords" content="Corkdashboard, Cork,employment, unemployment, industry, sectors, population" />
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
         <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                console.log("document ready!");
+
+                var $sticky = $('.sticky');
+                var $stickyrStopper = $('.sticky-stopper');
+                if (!!$sticky.offset()) { // make sure ".sticky" element exists
+
+                    var generalSidebarHeight = $sticky.innerHeight();
+                    var stickyTop = $sticky.offset().top;
+                    var stickOffset = 0;
+                    var stickyStopperPosition = $stickyrStopper.offset().top;
+                    var stopPoint = stickyStopperPosition - generalSidebarHeight - stickOffset;
+                    var diff = stopPoint + stickOffset;
+
+                    $(window).scroll(function () { // scroll event
+                        var windowTop = $(window).scrollTop(); // returns number
+
+                        if (stopPoint < windowTop) {
+                            $sticky.css({position: 'absolute', top: diff});
+                        } else if (stickyTop < windowTop + stickOffset) {
+                            $sticky.css({position: 'fixed', top: stickOffset});
+                        } else {
+                            $sticky.css({position: 'absolute', top: 'initial'});
+                        }
+                    });
+                }
+            });
+        </script>
 
         <noscript>
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />       
@@ -23,46 +54,44 @@
         <?//php echo $this->Html->css('tabs'); ?> 
         <?//php echo $this->fetch('content'); ?>
         <style>
-            #float_menu {
-                position: fixed;
-                right: 5%;
-                top: 60%;
+            .float_menu {
                 width: 10%;
-                margin-top: 0;
+                position: relative;
+                right: 5%;
+                top: 100px;
+                /*margin-top: 50%;*/
                 list-style: none;
                 /*background-color: rgba(181, 31, 36, 1.0) ;*/
             }
         </style>
     </head>
     <body>
-
-
+       
         <!--Floating menu-->
-        <ul id=float_menu>
-
-            <li><a href="/./HealthEducation/stats">
-                    <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
-                </a> 
-            </li>
-            <li> <a href="/./EnvironmentTransport/stats"> 
-                    <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
-                </a>
-            </li>
-            <li><a href="/./Housings/stats">
-                    <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
-                </a> 
-            </li>
-            <li>
-                <a href="/./Demographics/stats">
-                    <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
-                </a> 
-            </li>
-            <li>
-                <a href="/./CrimeEmergencyServices/stats">
-                    <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
-                </a> 
-            </li>
-        </ul>
+<!--                <ul class="float_menu sticky" >
+                            <li><a href="/./HealthEducation/stats">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </li>
+                    <li> <a href="/./EnvironmentTransport/stats"> 
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
+                        </a>
+                    </li>
+                    <li><a href="/./Housings/stats">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="/./Demographics/stats">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="/./CrimeEmergencyServices/stats">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </li>
+                </ul>-->
         <!-- Header -->
         <div id="header-wrapper">
             <?php echo $this->element('dbBanner'); ?>
@@ -154,7 +183,7 @@
 
         <div id="footer-wrapper">
             <footer id="footer" class="container">
-                <div class="row">
+                <div class="sticky-stopper"></div>
                     <?php echo $this->element('dbFooter'); ?>
                 </div>
             </footer>
@@ -168,7 +197,9 @@
     </div>
 
 
-    <script type="text/javascript">
+<!--    <script>
+
+
         //            $('#menu1').tabify();
         //            $('#menu2').tabify();
         //            $('#menu3').tabify();
@@ -177,7 +208,7 @@
         //            $('#menu53').tabify();
         //            $('#menu73').tabify();
         //            $('#menu83').tabify();
-    </script>
+    </script>-->
 
 </body>
 </html>
