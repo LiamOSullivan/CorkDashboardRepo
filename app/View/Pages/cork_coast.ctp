@@ -12,27 +12,26 @@
             <br>
         </header>
     </div>
-    <div class="row">
-        <div class="col-4" >
+    <div>
+        <div class="col-6" >
             <h2>Digital Ocean - Cork Harbour</h2>
             <a href ="http://www.digitalocean.ie/Dashboard/Cork" class="bordered-feature-image" target="_blank">
                 <img src="/img/Dashboard/cork_harbour_dashboard_resized.png" alt="cork harbour on digital ocean"></a>
-            <br>
+            
         </div>
-        <div class="col-4" >
+        <div class="col-6" >
             <h2>Tides Forecast</h2>
             <a href ="https://www.tide-forecast.com/locations/Cork/tides/latest" class="bordered-feature-image" target="_blank">
                 <img src="/img/Dashboard/cork_tides_medium.png" alt="tides map"></a>
-            <br>
+           
         </div>
-        <div class="col-4" >
+        <div class="col-6" >
             <h2>Bathing Water Quality</h2>
             <a href ="https://www.beaches.ie/" class="bordered-feature-image" target="_blank">
                 <img src="/img/Dashboard/beaches_cork.png" alt="water quality map"></a>
-            <br>
+        
         </div>
-    </div>
-    <div class="row">
+
         <div class="col-6" >
             <h2>Marine Traffic</h2>
             <a href="https://www.marinetraffic.com/en/ais/home/centerx:-8.9/centery:51.7/zoom:10"  target="_blank" class="bordered-feature-image">
