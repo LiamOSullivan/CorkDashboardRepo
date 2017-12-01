@@ -48,7 +48,7 @@ h1 {
     /*left: 0;*/
     /*bottom: 35px;*/
     font-size:6.5vw;
-    padding:2vh 3vw 2vh 3vw;
+    padding:1vh 3vw 1vh 3vw;
     
 
 }
@@ -58,7 +58,7 @@ h2 {
     /*left: 0;*/
     /*bottom: 35px;*/
     font-size: 5.5vw;
-    padding:1vh 3vw 1vh 3vw;
+    padding:0vh 3vw 0vh 3vw;
 }
 
 h3 {
@@ -258,9 +258,10 @@ a.side_menu_text:hover
 
 /*for caption above live cam images*/
 .cam_header{
-    min-height: 4vmax; 
+    /*min-height: 4vmax;*/ 
+    min-height: 2em;
     text-align:center;
-    border-bottom:2px solid #e5e5e5;
+    /*border-bottom:2px solid #e5e5e5;*/
 }
 
 .feature-image
