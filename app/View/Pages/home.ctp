@@ -4,7 +4,6 @@
     <div style="border-bottom:2px solid #e5e5e5">
         <header>
             <h1>Cork in Real Time </h1>
-            <br>
         </header>
     </div>
     <!--    <div id="timewrapper" style="border-bottom:2px solid #e5e5e5">
@@ -12,13 +11,11 @@
             
         </div>-->
 
-    <div class="row" style="border-bottom:2px solid #e5e5e5" >
+    <div style="border-bottom:2px solid #e5e5e5" >
         <h2>Traffic & Travel</h2>
-
         <a href="/pages/CorkTravel" class="bordered-feature-image">
             <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>
         <br>
-
     </div>
     <!--    <div class="row" style="border-bottom:2px solid #e5e5e5">
             <div class = "col-9" align="center">
@@ -32,17 +29,20 @@
 
     <div class="col-12" style="border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
-        <div class = "col-4" align="center">
-            <iframe target="_blank"  src="http://www.met.ie/widgets/latest-mini.asp" href="http://www.met.ie/widgets/latest-mini.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+        <div>
+            <div class = "col-4" align="center">
+                <iframe target="_blank"  src="http://www.met.ie/widgets/latest-mini.asp" href="http://www.met.ie/widgets/latest-mini.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class = "col-4" align="center">
+                <iframe src="http://www.met.ie/widgets/3daysummary.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class = "col-4" align="center">
+                <iframe src="http://www.met.ie/widgets/charts-mini.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+                            <!--<img src="img/weather_placeholder.png" style = "width:70%;" alt="weather placeholder"/>-->
+            </div>
+            <br>
         </div>
-        <div class = "col-4" align="center">
-            <iframe src="http://www.met.ie/widgets/3daysummary.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <div class = "col-4" align="center">
-            <iframe src="http://www.met.ie/widgets/charts-mini.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
-                        <!--<img src="img/weather_placeholder.png" style = "width:70%;" alt="weather placeholder"/>-->
-        </div>
-        <p>Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a></p>
+        <p >Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a></p>
 
     </div>  
     <!--                        
@@ -61,7 +61,7 @@
 
 
     <div class="col-12" style="border-bottom:2px solid #e5e5e5">
-        <h2 style="padding:0">Live Traffic Cams</h2>
+        <h2>Live Traffic Cams</h2>
         <div class="col-3" >
             <div class="cam_header">
                 <h3>Dunkettle IC</h3>
@@ -82,7 +82,6 @@
                 <div id="cam163"></div>
             </div>
         </a>
-
         <a href="http://www.jacklynchtunnel.ie/traffic-cameras" target="blank"> 
             <div id="cam6" class="col-3" >
                 <div id="cam6"></div>
@@ -96,7 +95,6 @@
                 <div id="cam264"></div>
             </div>
         </a>
-        <br>
         <p>Click an image for a larger view. See all Irish camera locations (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
         </p>
     </div>
@@ -114,7 +112,7 @@
             </ul>
         </div>
     </div>    
-    <div class="col-12" >
+    <div style="border-bottom:2px solid #e5e5e5; padding:0px 0px 4vh 0px" class="col-12" >
         <h2>Connect with Cork Smart Gateway:</h2>
         <div class="col-12" style="display: table" >
             <div align="center" class="icon-cell">
@@ -132,16 +130,15 @@
                     <img src="/img/Dashboard/icons/Twitter_Logo_Blue.png" style="height:100%" alt="twitter logo"/>
                 </a>
             </div>
-        </div>
+            </div>
+        
     </div>
 </div>
 <div class="right" id="rightContent">
     <div style="border-bottom:2px solid #e5e5e5;" >
         <h1>Data at a Glance</h1>
-        <br>
-
     </div>
-    <p> Hover over for data, click to go to the detailed versions<p>
+    <p style="padding-bottom: 0px"> Hover over the charts for data, click to go to the detailed versions<p>
     <div class="row" style="border-bottom:2px solid #e5e5e5; ">
         <h2>Average Residential Rent</h2>
         <a href="/./Housings/stats#tab71">    
@@ -191,9 +188,9 @@
         </div>
     </div>
 </div>
- <div id="footer-wrapper">
-           <?php echo $this->element('dbFooter'); ?>
- </div>
+<div id="footer-wrapper">
+    <?php echo $this->element('dbFooter'); ?>
+</div>
 
 <script src="http://www.chartjs.org/dist/2.6.0/Chart.bundle.js"></script>
 <script src="http://www.chartjs.org/samples/2.6.0/utils.js"></script>
@@ -207,7 +204,7 @@
         refreshCams();
         setInterval("refreshCams()", 300000);
     }
-    
+
     function refreshCams() {
         let imgurl6 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?" + Math.random();
         let imgurl163 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?" + Math.random();

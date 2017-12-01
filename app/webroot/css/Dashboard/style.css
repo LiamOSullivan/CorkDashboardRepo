@@ -17,12 +17,14 @@
 p, li, h1, h2 , h3, a{
     font-family: 'Proxima Nova', Georgia, sans-serif;
     font-weight: normal;
+    
 
 }
 
 p, li {  
     color: rgba(0,0,0,0.8);
-    font-size: 1.5vw;
+    font-size: 4.5vmin;;
+    padding:1vh 3vw 1vh 3vw;
     text-align: justify;
 }
 
@@ -36,26 +38,34 @@ p, li {
     font-weight: normal;
 }*/
 
+
+/*****************************
+Mobile first-  < 480 px
+******************************/
+
 h1 {
-    position: relative;
-    left: 0;
+    /*position: static;*/
+    /*left: 0;*/
     /*bottom: 35px;*/
-    font-size:5.5vmin;
+    font-size:6.5vw;
+    padding:2vh 3vw 2vh 3vw;
+    
 
 }
 
 h2 {
-    position: relative;
-    left: 0;
+    /*position: relative;*/
+    /*left: 0;*/
     /*bottom: 35px;*/
-    font-size: 3.75vmin;
+    font-size: 5.5vw;
+    padding:1vh 3vw 1vh 3vw;
 }
 
 h3 {
-    position: relative;
-    left: 0;
+    /*position: relative;*/
+    /*left: 0;*/
     /*bottom: 35px;*/
-    font-size: 2.5vmin;
+    font-size: 4.5vmin;
 }
 
 /*ul, ol, dl
@@ -121,11 +131,9 @@ a:hover
 }
 
 .side_menu_text{
-    position: relative;
-    left: 0;
-    /*bottom: 35px;*/
+    padding:2vh 3vw 2vh 3vw;
     font-family: 'Proxima Nova', Georgia, sans-serif;
-    font-size:2vmax;
+    font-size: 5.5vw;
     font-weight: normal;
 }
 
@@ -166,10 +174,10 @@ a.side_menu_text:hover
 
 .menu {
     float:left;
-    width:20%;
+    width:100%;
     /*height:100%;*/
     text-align:left;
-    padding:20px;
+   
     /*background-color:#ffffff;*/
     background-color:rgba(229, 229, 229, 0.5);
     /*border: 2px solid rgba(181, 31, 36, 0.3);*/
@@ -179,17 +187,18 @@ a.side_menu_text:hover
 
 }
 .side_menuitem {
-    padding:2vw 0vw 2vw 0vw;
+    
     /*    margin-top:10px;
         margin-right:10px;*/
+    padding:2vw 0vw 2vw 0vw;
     border-bottom: 2px solid #e5e5e5;
 }
 
 
 .middle {
     float:left;
-    width:50%;
-    padding:20px;
+    width:100%;
+    /*padding:20px;*/
     text-align:left;
     /*//border: 2px solid rgba(181, 31, 36, 0.3);*/
     border-right: 2px solid #e5e5e5;
@@ -199,8 +208,8 @@ a.side_menu_text:hover
 
 .right {
     float:left;
-    width:30%;
-    padding:20px;
+    width:100%;
+    /*padding:20px;*/
     text-align:left;
     /*overflow:hidden;*/
     /*border: 2px solid rgba(181, 31, 36, 0.3);*/
@@ -234,17 +243,17 @@ a.side_menu_text:hover
 
 [class*="col-"] {
     float: left;
-    padding: 15px;
+    /*padding: 15px;*/
 }
 
 
 /*used for e.g. CSG social media logos on index page*/
 .icon-cell{
 
-    padding: 4px; 
+    padding: 1vw; 
     display: table-cell; 
     vertical-align: middle; 
-    height:5vw;
+    height: 7vh;
 }
 
 /*for caption above live cam images*/
@@ -253,8 +262,6 @@ a.side_menu_text:hover
     text-align:center;
     border-bottom:2px solid #e5e5e5;
 }
-
-
 
 .feature-image
 {
@@ -374,7 +381,7 @@ a.side_menu_text:hover
 1024 x 600
 
 */
-@media only screen and (max-width:1024px) {
+/*@media only screen and (max-width:1024px) {
     .menu{
         width:30%;
     }
@@ -398,7 +405,7 @@ a.side_menu_text:hover
     }
     .side_menu_text{
 
-        font-size:3vmax;
+        font-size: 1.0vmin;
 
     }
     .cam_header{
@@ -429,7 +436,7 @@ a.side_menu_text:hover
 
 
 
-}
+}*/
 
 /*Tablet Landscape
 1024 x 768*/
@@ -449,14 +456,15 @@ a.side_menu_text:hover
 /*Tablet Portrait
 768 x 1024*/
 /*
-*/@media only screen and (max-width:768px) {
+*/
+/*@media only screen and (max-width:768px) {
 
-}
+}*/
 
 /*Smartphone Landscape
 480 x 320*/
 
-@media only screen and (max-width:480px) {
+/*@media only screen and (max-width:480px) {
     .menu, .middle, .onlyContent {
         width:100%;
     }
@@ -499,7 +507,7 @@ a.side_menu_text:hover
         min-height: 10vmax; 
     }
 
-}
+}*/
 
 /*Smartphone Portrait
 320 x 480*/
