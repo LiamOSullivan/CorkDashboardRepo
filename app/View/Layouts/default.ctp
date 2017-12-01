@@ -13,8 +13,10 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.css"></script> -->
         <!--<script src="js/dashboard_init.js" type="text/javascript"></script>-->
         <!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
-        <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
-        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />  
+                <!--<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
+                <link href="../webroot/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
         <!--<link href="/css/Dashboard/w3c.css" rel="stylesheet" type="text/css"/>-->
         <noscript>
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
