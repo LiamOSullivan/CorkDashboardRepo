@@ -2,9 +2,7 @@
 
 <div class="middle">
     <div style="border-bottom:2px solid #e5e5e5">
-        <header>
-            <h1>Cork in Real Time </h1>
-        </header>
+       <h1>Cork in Real Time </h1>
     </div>
     <!--    <div id="timewrapper" style="border-bottom:2px solid #e5e5e5">
                 <p><span id="servertime"></span></p>

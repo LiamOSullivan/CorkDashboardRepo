@@ -1,24 +1,15 @@
-/* Basic */
-
 /*body
 {
     background: e;
 }*/
 
-/*Responsive Layout*/
-
-
-
 * {
     box-sizing: border-box; /*padding and border are included in the total width and height of the elements*/
 }
 
-
 p, li, h1, h2 , h3, a{
     font-family: 'Proxima Nova', Georgia, sans-serif;
     font-weight: normal;
-    
-
 }
 
 p, li {  
@@ -27,6 +18,42 @@ p, li {
     padding:1vh 3vw 1vh 3vw;
     text-align: justify;
 }
+
+a:link {
+    color: rgba(181, 31, 36, 0.5);
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: rgba(181, 31, 36, 0.5);
+}
+
+a:hover{
+    color: rgba(181, 31, 36, 1.0);
+}
+
+a.navi:link {
+    color: white;
+}
+
+a.navi:visited {
+    color: white;
+}
+
+a.navi:hover {
+    color: black;
+}
+
+a:visited {
+    color: rgba(181, 31, 36, 0.5);
+}
+
+a:hover {
+    color: rgba(181, 31, 36, 1.0);
+    /*max-width: 100%;*/
+}
+
 
 
 /*body, input, textarea, select
@@ -38,9 +65,8 @@ p, li {
     font-weight: normal;
 }*/
 
-
 /*****************************
-Mobile first-  < 480 px
+Mobile first-  < 768 px
 ******************************/
 
 h1 {
@@ -49,22 +75,14 @@ h1 {
     /*bottom: 35px;*/
     font-size:6.5vw;
     padding:1vh 3vw 1vh 3vw;
-    
-
 }
 
 h2 {
-    /*position: relative;*/
-    /*left: 0;*/
-    /*bottom: 35px;*/
     font-size: 5.5vw;
     padding:0vh 3vw 0vh 3vw;
 }
 
 h3 {
-    /*position: relative;*/
-    /*left: 0;*/
-    /*bottom: 35px;*/
     font-size: 4.5vmin;
 }
 
@@ -73,98 +91,32 @@ h3 {
     margin: 0 0 2em 0;
     font-size:1.45em;
 }*/
-/*
-p {
-    text-align: justify;
-    margin: 0 0 2em 0;
-    font-size:1.45em;
-}*/
 
-a:link {
-    color: rgba(181, 31, 36, 0.5);
-    text-decoration: none;
-
-}
-
-/* visited link */
-a:visited {
-    color: rgba(181, 31, 36, 0.5);
-    text-decoration: none;
-}
-
-a:hover
-{
-    color: rgba(181, 31, 36, 1.0);
-    text-decoration: none;
-
-}
-
-a.navi:link
-{
-    text-decoration: none;
-    color: white;
-}
-
-
-a.navi:visited {
-    text-decoration: none;
-    color: white;
-}
-
-a.navi:hover
-{
-    text-decoration: none;
-    color: black;
-}
-
-a:visited {
-    color: rgba(181, 31, 36, 0.5);
-    text-decoration: none;
-}
-
-a:hover
-{
-    color: rgba(181, 31, 36, 1.0);
-    text-decoration: none;
-    max-width: 100%;
-
-}
-
-.side_menu_text{
+.side_menu_text {
     padding:2vh 3vw 2vh 3vw;
     font-family: 'Proxima Nova', Georgia, sans-serif;
     font-size: 5.5vw;
     font-weight: normal;
 }
 
-a.side_menu_text:link
-{
+a.side_menu_text:link {
     text-decoration: none;
     color: rgba(181, 31, 36, 1.0);
-
 }
-
 
 a.side_menu_text:visited {
-
     color: rgba(181, 31, 36, 1.0);
-
 }
 
-a.side_menu_text:hover
-{
-
+a.side_menu_text:hover {
     color: rgba(181, 31, 36, 0.5);
-
 }
-
 
 /*.header{
     min-height: 
-    
 }*/
 
-/*//The container for eleemnts n the home page*/
+/*//The container for elemnts n the home page*/
 .homeBlock{
     border-bottom:2px solid #e5e5e5; 
     /*border-left: 10px solid rgba(181, 31, 36, 0.5);*/
@@ -177,7 +129,7 @@ a.side_menu_text:hover
     width:100%;
     /*height:100%;*/
     text-align:left;
-   
+
     /*background-color:#ffffff;*/
     background-color:rgba(229, 229, 229, 0.5);
     /*border: 2px solid rgba(181, 31, 36, 0.3);*/
@@ -186,14 +138,14 @@ a.side_menu_text:hover
     /*margin-right:10px;*/
 
 }
+
 .side_menuitem {
-    
+
     /*    margin-top:10px;
         margin-right:10px;*/
     padding:2vw 0vw 2vw 0vw;
     border-bottom: 2px solid #e5e5e5;
 }
-
 
 .middle {
     float:left;
@@ -224,7 +176,6 @@ a.side_menu_text:hover
     width:80%;
     /*padding:20px;*/
     text-align:left;
-
 }
 
 /*responsive grid*/
@@ -246,10 +197,8 @@ a.side_menu_text:hover
     /*padding: 15px;*/
 }
 
-
 /*used for e.g. CSG social media logos on index page*/
 .icon-cell{
-
     padding: 1vw; 
     display: table-cell; 
     vertical-align: middle; 
@@ -264,21 +213,18 @@ a.side_menu_text:hover
     /*border-bottom:2px solid #e5e5e5;*/
 }
 
-.feature-image
-{
+.feature-image {
     display: block;
     margin: 0 0 2em 0;
     outline: 0;
 }
 
-.feature-image img
-{
+.feature-image img {
     display: block;
     width: 100%;
 }
 
-.bordered-feature-image
-{
+.bordered-feature-image {
     display: block;
     background: #fff; 
     /*//url('images/bg04.png');*/
@@ -286,11 +232,9 @@ a.side_menu_text:hover
     box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.15);
     /*margin: 0 0 1.5em 0;*/
     outline: 0;
-
 }
 
-.bordered-feature-image2
-{
+.bordered-feature-image2 {
     display: block;
     background: #000; 
     /*//url('images/bg04.png');*/
@@ -300,20 +244,19 @@ a.side_menu_text:hover
     outline: 0;
 }
 
-.bordered-feature-image img
-{
+.bordered-feature-image img {
     display: block;
     width: 100%;
 }
 
-.bordered-feature-image2 img
-{
+.bordered-feature-image2 img {
     display: block;
     width: 100%;
 }
 
 #map {
-    width: 960px;
+    /*To do: chnage to adaptive */
+    width: 960px; 
     height: 500px;
 }
 .custom .leaflet-popup-tip,
@@ -321,6 +264,160 @@ a.side_menu_text:hover
     background: #e93434;
     color: #ffffff;
 }
+
+/******************************************************************************
+iPhone Landscape 
+
+******************************************************************************/
+
+@media screen and (min-width: 568px) {
+   /*/768 - 1024/*/
+    h1 {
+        font-size:5.5vw;
+        padding:1vh 3vw 1vh 3vw;
+    }
+
+    h2 {
+        font-size: 4.5vw;
+        padding:0vh 3vw 0vh 3vw;
+    }
+
+    h3 {
+        font-size: 3.5vmin;
+        padding:0vh 3vw 0vh 3vw;
+    }
+
+    /*ul, ol, dl
+    {
+        margin: 0 0 2em 0;
+        font-size:1.45em;
+    }*/
+
+    .side_menu_text {
+        padding:2vh 3vw 2vh 3vw;
+        font-size: 4.5vw;
+    }
+
+    .icon-cell{
+        padding: 1vw; 
+        height: 14vh;
+    }
+
+}
+/*******************************************************************************
+Desktop, iPad Landscape
+1024 x 768 :: Menu and column of content
+*******************************************************************************/
+@media screen and (min-width: 1024px) { 
+
+    /*The container for elemnts n the home page
+        .homeBlock{
+        }*/
+
+    .menu {
+        width:30%;
+        text-align:left;
+
+    }
+
+    .side_menuitem {
+        /*padding:2vw 0vw 2vw 0vw;*/
+    }
+
+    .middle {
+        width:70%;
+    }
+    .right {
+        width:70%;
+        float: right;
+        border-right: 2px solid #e5e5e5;
+    border-left: 2px solid #e5e5e5;
+
+    }
+    .onlyContent{
+        width:70%;
+    }
+
+    p, li {  
+        font-size: 3.0vmin;;
+        padding:1vh 3vw 1vh 3vw;
+    }
+
+    h1 {
+        font-size:3.75vw;
+        padding:1vh 3vw 1vh 3vw;
+    }
+
+    h2 {
+        font-size: 3.25vw;
+        padding:0vh 3vw 0vh 3vw;
+    }
+
+    h3 {
+        font-size: 3.0vmin;
+        padding:0vh 3vw 0vh 3vw;
+    }
+
+/*    ul, ol, dl
+    {
+        margin: 0 0 2em 0;
+        font-size:1.45em;
+    }*/
+
+    .side_menu_text {
+        padding:2vh 3vw 2vh 3vw;
+        font-size: 2.5vw;
+    }
+
+    .icon-cell{
+        padding: 1vw; 
+        height: 10vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media only screen and (max-width:1280px) {
+    .menu{
+         width:30%;
+    }
+    .middle, .onlyContent {
+        width:65%;
+    }
+    .right{
+        width:100%;
+    }
+}*/
+
+/*@media screen and (max-width: 479px) {
+      start of phone styles 
+
+}
+
+@media screen and (max-width: 991px) {
+      start of large tablet styles 
+
+}*/
+
+/******************************************************************************
+Medium Tablet Portrait
+768 x 1024
+*****************************************************************************/
+/*
+@media only screen and (max-width:768px) {
+
+
+}*/
 
 
 
@@ -439,28 +536,7 @@ a.side_menu_text:hover
 
 }*/
 
-/*Tablet Landscape
-1024 x 768*/
 
-/*@media only screen and (max-width:1280px) {
-    .menu{
-         width:30%;
-    }
-    .middle, .onlyContent {
-        width:65%;
-    }
-    .right{
-        width:100%;
-    }
-}*/
-
-/*Tablet Portrait
-768 x 1024*/
-/*
-*/
-/*@media only screen and (max-width:768px) {
-
-}*/
 
 /*Smartphone Landscape
 480 x 320*/
