@@ -2,12 +2,9 @@
 <div class="onlyContent">
     <!--//<div style="overflow:auto">-->
     <div style="border-bottom:2px solid #e5e5e5">
-        <header>
-            <h1>Cork Data Trends</h1>
-            <br>
-        </header>
+        <h1>Data Trends for Cork</h1>
     </div>
-    <div class="row">
+    <div >
         <div class="col-4" >
             <h2>Indicators </h2>
             <a href="corkIndicators" class="bordered-feature-image">
@@ -28,11 +25,11 @@
             <br>
         </div>
     </div>
-    <div class="row">
+    <div >
         <div class="col-4" >
             <h2>Benchmarks</h2>
             <a href="CorkBenchMarks" class="bordered-feature-image">
-            <img src="/img/Dashboard/bm_european_monitor.png" alt="" /></a>
+                <img src="/img/Dashboard/bm_european_monitor.png" alt="" /></a>
             <br>
         </div>
         <div class="col-4" >
@@ -102,7 +99,7 @@
 <!--    </div>
 </div>-->
 <!--        <div class="container">
-            <div class="row">
+            <div >
                 <div class="2u">
                     Sidebar 
                     <section>
@@ -122,7 +119,7 @@
                             <h2>Home - How's Cork Doing?</h2>
                             <h3>Cork Data Reports</h3>
                         </header>
-                        <div class="row">
+                        <div >
                             <div class="6u">
 
                                  Feature #1 
@@ -170,7 +167,7 @@
 <!-- Footer 
 <div id="footer-wrapper">
 <footer id="footer" class="container">
-<div class="row">
+<div >
 <?php //echo $this->element('dbFooter'); ?>
 </div>
 </footer>

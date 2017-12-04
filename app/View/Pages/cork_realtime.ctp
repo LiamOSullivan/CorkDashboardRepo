@@ -3,10 +3,7 @@
 <div class="onlyContent">
     <!--//<div style="overflow:auto">-->
     <div style="border-bottom:2px solid #e5e5e5">
-        <header>
             <h1>Real Time  Maps</h1>
-            <br>
-        </header>
     </div>
     <div class="col-6" >
         <h2>Environment</h2>

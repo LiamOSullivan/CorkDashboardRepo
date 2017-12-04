@@ -13,10 +13,9 @@
             fosters evidence-informed analysis.
             <br>
         </p>
-        <div align="center" style="padding: 2vh 0vw 2vh 0vw">
-            <p>
-                <iframe src="https://player.vimeo.com/video/106426369" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </p>
+        <div align="center" style="padding: 2vh 2vw 2vh 2vw">
+                <iframe src="https://player.vimeo.com/video/106426369" width="640" height="360" 
+                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <!--</div>-->
         <p>

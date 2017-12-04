@@ -40,7 +40,7 @@
             <!--<img src="img/sidebar_buttons/corkapps_l.png" width=100% height=100% alt="Apps"/>-->
         </a>
     </div>
-    <div class="side_menuitem"><a class="side_menu_text" href="Overview/stats">Site Index</a></div>
+    <!--<div class="side_menuitem"><a class="side_menu_text" href="Overview/stats">Site Index</a></div>-->
 </div>
 
 
