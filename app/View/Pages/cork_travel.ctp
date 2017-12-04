@@ -2,12 +2,12 @@
 
 <!--		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
                 <meta name="description" content="Provides access to real-time, live data about current traffic and travel conditions in Cork.  This includes travel time, car parks, and traffic cams." />
-                <meta name="keywords" content="Corkdashboard, Cork, City Benchmarks, Interactive tools" />-->
+                <meta name="keywords" content="Corkdashboard, Cork, City Benchmarks, Interactive tools" />
 <script src="/dublindashboard/js/Dashboard/jquery.min.js"></script>
-        <!-- <script src="/dublindashboard/js/Dashboard/config.js"></script> -->
+         <script src="/dublindashboard/js/Dashboard/config.js"></script> 
 
 <script src="/dublindashboard/js/Dashboard/skel.min.js"></script>
-<!-- <script src="/dublindashboard/js/Dashboard/skel-panels.min.js"></script> -->
+ <script src="/dublindashboard/js/Dashboard/skel-panels.min.js"></script> 
 <script src="/dublindashboard/js/Dashboard/skel-layers.min.js"></script> 
 <script src="/dublindashboard/js/Dashboard/init.js"></script>
 
@@ -16,7 +16,7 @@
 <noscript>
 <link rel="stylesheet" href="/dublindashboard/css/Dashboard/skel-noscript.css" />
 <link rel="stylesheet" href="/dublindashboard/css/Dashboard/style.css" />
-<link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css" />
+<link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css" />-->
 
 </noscript>
 <!--[if lte IE 9]><link rel="stylesheet" href="/dublindashboard/css/Dashboard/ie9.css" /><![endif]-->
@@ -24,13 +24,10 @@
 
 <div class="onlyContent">
     <div style="border-bottom:2px solid #e5e5e5">
-        <header>
             <h1>Real Time Traffic & Travel</h1>
-            <br>
-        </header>
     </div>
     
-    <div class="row">
+    <div id ="map">
         
     </div>
 </div>
