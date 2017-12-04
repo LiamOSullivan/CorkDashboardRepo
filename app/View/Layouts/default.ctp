@@ -29,30 +29,7 @@
         </noscript>
         <!--        [if lte IE 9]><link rel="stylesheet" href="/dublindashboard/css/Dashboard/ie9.css" /><![endif]
                 [if lte IE 8]><script src="/dublindashboard/js/Dashboard/html5shiv.js"></script><![endif]-->
-
-
-        <!--        Old dashboard styles 
-                <style>
-                    canvas{ -moz-user-select: none;
-                            -webkit-user-select: none;
-                            -ms-user-select: none;
-        
-                    }
-                    .chart-container {
-                        width: 800px;
-                        margin-left: 20px;
-                        margin-right: 20px;
-                        margin-bottom: 20px;
-                    }
-                    .container {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                    }
-        
-                </style>-->
-        <!--Responsive styles-->     
+      
         <title>The Cork Dashboard | <?= $this->fetch('title') ?></title>
     </head>
     <body onload="myFunction()">

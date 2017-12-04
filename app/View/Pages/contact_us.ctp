@@ -1,21 +1,19 @@
 <div class="onlyContent">
     <!--//<div style="overflow:auto">-->
     <div style="border-bottom:2px solid #e5e5e5">
-        <header>
-            <h1>About the Cork Dashboard</h1>
-            <br>
-        </header>
+
+        <h1>About the Cork Dashboard</h1>
+
     </div>
     <div class="row">
-        <p>
-            <br>
+        <p> <br>
             The Cork Dashboard provides citizens, public sector workers and companies with real-time information, 
             time-series indicator data, and interactive maps about all aspects of Cork county and city. It enables 
             users to gain detailed, up to date intelligence about the city that aids everyday decision making and 
             fosters evidence-informed analysis.
-
+            <br>
         </p>
-        <div align="center">
+        <div align="center" style="padding: 2vh 0vw 2vh 0vw">
             <p>
                 <iframe src="https://player.vimeo.com/video/106426369" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </p>

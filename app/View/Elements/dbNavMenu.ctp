@@ -1,4 +1,4 @@
-<div style="background-color: rgba(181, 31, 36, 1.0)" >
+<div class="nav" >
         <h1>
         <a href="/pages/home" class="navi">Home Page</a>   |
         <a href="/pages/ContactUs" class="navi">About </a>

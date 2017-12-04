@@ -2,18 +2,19 @@
 
 <div class="middle">
     <div style="border-bottom:2px solid #e5e5e5">
-       <h1>Cork in Real Time </h1>
+        <h1>Cork in Real Time </h1>
     </div>
     <!--    <div id="timewrapper" style="border-bottom:2px solid #e5e5e5">
                 <p><span id="servertime"></span></p>
             
         </div>-->
 
-    <div style="border-bottom:2px solid #e5e5e5" >
+    <div style="padding-bottom: 4vh; border-bottom:2px solid #e5e5e5" >
         <h2>Traffic & Travel</h2>
-        <a href="/pages/CorkTravel" class="bordered-feature-image">
-            <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>
-
+        <div >
+            <a href="/pages/CorkTravel" class="bordered-feature-image">
+                <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>
+        </div>
     </div>
     <!--    <div class="row" style="border-bottom:2px solid #e5e5e5">
             <div class = "col-9" align="center">
@@ -25,7 +26,7 @@
             </div> 
         </div>-->
 
-    <div class="col-12" style="border-bottom:2px solid #e5e5e5">
+    <div class="col-12" style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
         <div>
             <div class = "col-6" align="center">
@@ -41,6 +42,8 @@
 
         </div>
         <div>
+            <!--TODO:Fix this hack!-->
+            <br><br><br><br><br><br><br><br><br><br>
             <p>Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a></p>
         </div>
     </div>  
@@ -59,7 +62,7 @@
                             </p>-->
 
 
-    <div class="col-12" style="border-bottom:2px solid #e5e5e5">
+    <div class="col-12" style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
         <h2>Live Traffic Cams</h2>
         <div class="col-3" >
             <div class="cam_header">
@@ -98,10 +101,10 @@
         </p>
     </div>
 
-    <div class="col-12" style="border-bottom:2px solid #e5e5e5">
+    <div class="col-12" style="border-bottom:2px solid #e5e5e5; padding-bottom: 2vh;">
         <h2>Latest News</h2>
         <div id="news">
-            <ul style="list-style-type:none; padding-left:0px;">
+            <ul style="list-style-type:none; padding-bottom:0px;">
                 <li>SEE: New Reporting Tool <a href="https://www.yourcouncil.ie/"> 'Your Council' </a> added to the Cork Dashboard <a href="/pages/CorkReport">here</a></li>
                 <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q1%202017.pdf">Cork Economic Bulletin</a> Q1 2017</li>
                 <li>New: Explore Real-Time Transport and Environment data for Cork <a href="/pages/CorkRealtime">here</a></li>
@@ -137,41 +140,41 @@
     <div style="border-bottom:2px solid #e5e5e5;" >
         <h1>Data at a Glance</h1>
     </div>
-    <p style="padding-bottom: 0px"> Hover over the charts for data, click to go to the detailed versions<p>
-    <div class="row" style="border-bottom:2px solid #e5e5e5; ">
+    <p> Hover over the charts for data, click to go to the detailed versions<p>
+    <div style="border-bottom:2px solid #e5e5e5; ">
         <h2>Average Residential Rent</h2>
         <a href="/./Housings/stats#tab71">    
-            <div style="min-height: 200px">
+            <div class="chartWrapper">
                 <canvas id="cork_residential_rents" width="100%" ></canvas>
             </div>
         </a>
     </div>
-    <div class="row" style="border-bottom:2px solid #e5e5e5;" >
+    <div style="border-bottom:2px solid #e5e5e5;" >
         <h2>Average House Price</h2>
         <a href="/./Housings/stats#tab11">    
-            <div style="min-height: 200px">
+            <div class="chartWrapper">
                 <canvas id="cork_house_prices" width="100%" ></canvas>
             </div>
         </a>
     </div>    
-    <div class="row" style="border-bottom:2px solid #e5e5e5;">
+    <div style="border-bottom:2px solid #e5e5e5;">
         <h2>Planning Applications</h2>
         <h3>City</h3>
         <a href="/./Housings/stats#tab21"> 
-            <div style="min-height: 200px">
+            <div class="chartWrapper">
                 <canvas id="city_planning_applications" width="100%" ></canvas>
             </div>
         </a>
 
         <h3>County</h3>
         <a href="/./Housings/stats#tab221"> 
-            <div style="min-height: 200px">
+            <div class="chartWrapper">
                 <canvas id="county_planning_applications" width="100%" ></canvas>
             </div>
         </a>
 
     </div>
-    <div class="row" style="border-bottom:2px solid #e5e5e5">
+    <div style="border-bottom:2px solid #e5e5e5">
         <h2> A Twitter List by <a href="https://twitter.com/CorkDashboard/lists/cork-dashboard">@CorkDashboard</a></h2>
         <div id="twitter_container" height='600px' align="center">
 

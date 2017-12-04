@@ -5,18 +5,13 @@
 
 * {
     box-sizing: border-box; /*padding and border are included in the total width and height of the elements*/
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 p, li, h1, h2 , h3, a{
     font-family: 'Proxima Nova', Georgia, sans-serif;
     font-weight: normal;
-}
-
-p, li {  
-    color: rgba(0,0,0,0.8);
-    font-size: 4.5vmin;;
-    padding:1vh 3vw 1vh 3vw;
-    text-align: justify;
 }
 
 a:link {
@@ -54,8 +49,6 @@ a:hover {
     /*max-width: 100%;*/
 }
 
-
-
 /*body, input, textarea, select
 {
     color: rgba(0,0,0,0.65);
@@ -65,25 +58,30 @@ a:hover {
     font-weight: normal;
 }*/
 
-/*****************************
+/*******************************************************************************
 Mobile first-  < 768 px
-******************************/
+*******************************************************************************/
+
+p, li {  
+    color: rgba(0,0,0,0.8);
+    font-size: 4.5vmin;
+    padding: 1vh 3vw 1vh 3vw;
+    text-align: justify;
+}
 
 h1 {
-    /*position: static;*/
-    /*left: 0;*/
-    /*bottom: 35px;*/
     font-size:6.5vw;
-    padding:1vh 3vw 1vh 3vw;
+    padding:3vh 3vw 3vh 3vw;
 }
 
 h2 {
     font-size: 5.5vw;
-    padding:0vh 3vw 0vh 3vw;
+    padding:2vh 3vw 2vh 3vw;
 }
 
 h3 {
-    font-size: 4.5vmin;
+    font-size: 4.0vmin;
+    padding:1vh 3vw 1vh 3vw;
 }
 
 /*ul, ol, dl
@@ -116,27 +114,11 @@ a.side_menu_text:hover {
     min-height: 
 }*/
 
-/*//The container for elemnts n the home page*/
-.homeBlock{
-    border-bottom:2px solid #e5e5e5; 
-    /*border-left: 10px solid rgba(181, 31, 36, 0.5);*/
-    padding-left: 10px;  
-    padding-bottom: 10px;
-}
-
 .menu {
     float:left;
     width:100%;
-    /*height:100%;*/
     text-align:left;
-
-    /*background-color:#ffffff;*/
     background-color:rgba(229, 229, 229, 0.5);
-    /*border: 2px solid rgba(181, 31, 36, 0.3);*/
-
-    /*    border-right: 2px solid #e5e5e5;*/
-    /*margin-right:10px;*/
-
 }
 
 .side_menuitem {
@@ -163,9 +145,14 @@ a.side_menu_text:hover {
     width:100%;
     /*padding:20px;*/
     text-align:left;
-    /*overflow:hidden;*/
-    /*border: 2px solid rgba(181, 31, 36, 0.3);*/
-    /*border-right: 2px solid #e5e5e5;*/
+    border-right: 2px solid #e5e5e5;
+    border-left: 2px solid #e5e5e5;
+}
+
+.chartWrapper{
+    min-height: 30vh;
+    padding: 0vh 5vw 0vh 5vw; 
+
 }
 
 
@@ -195,6 +182,11 @@ a.side_menu_text:hover {
 [class*="col-"] {
     float: left;
     /*padding: 15px;*/
+}
+
+.nav{
+    padding: 0.5vh 0vw 0.5vh 0vw; 
+    background-color: rgba(181, 31, 36, 1.0)
 }
 
 /*used for e.g. CSG social media logos on index page*/
@@ -229,7 +221,7 @@ a.side_menu_text:hover {
     background: #fff; 
     /*//url('images/bg04.png');*/
     padding: 10px;
-    box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.15);
+    /*box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.15);*/
     /*margin: 0 0 1.5em 0;*/
     outline: 0;
 }
@@ -266,12 +258,12 @@ a.side_menu_text:hover {
 }
 
 /******************************************************************************
-iPhone Landscape 
+Mobile phone/ iPhone Landscape 
 
 ******************************************************************************/
 
 @media screen and (min-width: 568px) {
-   /*/768 - 1024/*/
+    /*768 - 102*/
     h1 {
         font-size:5.5vw;
         padding:1vh 3vw 1vh 3vw;
@@ -287,11 +279,11 @@ iPhone Landscape
         padding:0vh 3vw 0vh 3vw;
     }
 
-    /*ul, ol, dl
+    ul, ol, dl
     {
         margin: 0 0 2em 0;
         font-size:1.45em;
-    }*/
+    }
 
     .side_menu_text {
         padding:2vh 3vw 2vh 3vw;
@@ -302,8 +294,14 @@ iPhone Landscape
         padding: 1vw; 
         height: 14vh;
     }
+    .chartWrapper{
+        min-height: 30vh;
+        padding: 0vh 5vw 0vh 5vw; 
 
+    }
 }
+
+
 /*******************************************************************************
 Desktop, iPad Landscape
 1024 x 768 :: Menu and column of content
@@ -317,7 +315,6 @@ Desktop, iPad Landscape
     .menu {
         width:30%;
         text-align:left;
-
     }
 
     .side_menuitem {
@@ -331,7 +328,7 @@ Desktop, iPad Landscape
         width:70%;
         float: right;
         border-right: 2px solid #e5e5e5;
-    border-left: 2px solid #e5e5e5;
+        border-left: 2px solid #e5e5e5;
 
     }
     .onlyContent{
@@ -358,11 +355,11 @@ Desktop, iPad Landscape
         padding:0vh 3vw 0vh 3vw;
     }
 
-/*    ul, ol, dl
-    {
-        margin: 0 0 2em 0;
-        font-size:1.45em;
-    }*/
+    /*    ul, ol, dl
+        {
+            margin: 0 0 2em 0;
+            font-size:1.45em;
+        }*/
 
     .side_menu_text {
         padding:2vh 3vw 2vh 3vw;
@@ -375,55 +372,10 @@ Desktop, iPad Landscape
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*@media only screen and (max-width:1280px) {
-    .menu{
-         width:30%;
-    }
-    .middle, .onlyContent {
-        width:65%;
-    }
-    .right{
-        width:100%;
-    }
-}*/
-
-/*@media screen and (max-width: 479px) {
-      start of phone styles 
-
-}
-
-@media screen and (max-width: 991px) {
-      start of large tablet styles 
-
-}*/
-
-/******************************************************************************
-Medium Tablet Portrait
-768 x 1024
-*****************************************************************************/
-/*
-@media only screen and (max-width:768px) {
-
-
-}*/
-
-
-
 /*Widescreen
 1680 x 1050*/
-/*@media only screen and (max-width:1680px) {
+
+/*@media only screen and (min-width:1200px) {
     .menu{
          width:30%;
     }
@@ -435,45 +387,80 @@ Medium Tablet Portrait
     }
 }*/
 
-/*Desktop
+/*******************************************************************************
+Desktop
 1280 x 1024
-
-*/
-/*@media only screen and (max-width:1280px) {
-    .menu{
+*******************************************************************************/
+@media only screen and (min-width:1280px) {
+    .menu {
         width:20%;
+        text-align:left;
     }
-    .middle, .onlyContent {
-        width:45%;
+
+    .side_menuitem {
+        padding:2vh 0vw 2vh 0vw;
+
     }
-    .right{
+    .middle {
+        width:50%;
+    }
+    .right {
         width:30%;
+        float: left;
+        border-right: none;
+        border-left: none;
+    }
+    .onlyContent{
+        width:70%;
+    }
+
+    p, li {  
+        font-size: 1.25vw;;
+        padding:1vh 2vw 1vh 1vw;
     }
 
     h1 {
-        position: relative;
-        left: 0;
-        bottom: 35px;
-        font-family: 'Proxima Nova', Georgia, sans-serif;
-        font-size:5vmin;
-        font-weight: bold
+        font-size:2.0vw;
+        padding:3vh 2vw 3vh 1vw;
     }
+
     h2 {
-        position: relative;
-        left: 0;
-        bottom: 35px;
-        font-family: 'Proxima Nova', Georgia, sans-serif;
-        font-size: 3.5vmin;
+        font-size: 1.5vw;
+        padding:3vh 2vw 3vh 1vw;
     }
 
     h3 {
-        position: relative;
-        left: 0;
-        bottom: 35px;
-        font-family: 'Proxima Nova', sans-serif;
-        font-size: 2.5vmin;
+        font-size: 1.25vw;
+        padding:3vh 2vw 3vh 1vw;
     }
-}*/
+
+    /*    ul, ol, dl
+        {
+            margin: 0 0 2em 0;
+            font-size:1.45em;
+        }*/
+
+    .side_menu_text {
+        padding: 0.25vh 1vw 0.25vh 1vw;
+        font-size: 1.5vw;
+    }
+
+    .icon-cell{
+        padding: 1vw; 
+        height: 10vh;
+    }
+
+    .chartWrapper{
+        min-height: 25vh;
+        padding: 0vh 3vw 2vh 3vw; 
+
+    }
+
+    .nav{
+        padding: 0vh 0vw 0vh 0vw; 
+        background-color: rgba(181, 31, 36, 1.0)
+    }
+}
 
 /*Netbook
 1024 x 600
@@ -817,5 +804,35 @@ Medium Tablet Portrait
     width: 5% ; !important;
 }*/
 
+/*@media only screen and (max-width:1280px) {
+    .menu{
+         width:30%;
+    }
+    .middle, .onlyContent {
+        width:65%;
+    }
+    .right{
+        width:100%;
+    }
+}*/
 
+/*@media screen and (max-width: 479px) {
+      start of phone styles 
+
+}
+
+@media screen and (max-width: 991px) {
+      start of large tablet styles 
+
+}*/
+
+/******************************************************************************
+Medium Tablet Portrait
+768 x 1024
+*****************************************************************************/
+/*
+@media only screen and (max-width:768px) {
+
+
+}*/
 
