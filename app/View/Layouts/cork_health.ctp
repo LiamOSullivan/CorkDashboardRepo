@@ -26,11 +26,17 @@
             <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
                 <div style="border-bottom:2px solid #e5e5e5">
-                    <header>
-                        <h1>Health and Education Indicators</h1>
-                        <br>
-                    </header>
+                    <h1>Health and Education Indicators</h1>
+
                 </div>
+                <div><h3>
+                        Explore information relating to the number of people on 
+                        trolleys in Cork’s hospitals, the health of Cork people, 
+                        the level of education attainment of Cork citizens, the 
+                        number of primary and secondary level pupils attending 
+                        school in Cork and the number of schools in Cork.
+                    </h3></div>
+
                 <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
                     <div class="col-12" >

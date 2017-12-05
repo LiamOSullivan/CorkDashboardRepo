@@ -34,10 +34,16 @@
             <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
                 <div style="border-bottom:2px solid #e5e5e5">
-                    <header>
-                        <h1>Housing Indicators</h1>
-                        <br>
-                    </header>
+                    <h1>Housing Indicators</h1>
+                </div>
+                <div>
+                    <h3>
+                        Explore information relating to planning applications, 
+                        monthly house unit completions, available supply of land 
+                        for housing, annual contributions to Cork councils from 
+                        developers, average house prices, average monthly rent and 
+                        number of inspections of rented accommodation.
+                    </h3>
                 </div>
                 <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">

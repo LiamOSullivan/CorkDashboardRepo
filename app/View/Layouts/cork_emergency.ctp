@@ -67,12 +67,14 @@
             <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
                 <div style="border-bottom:2px solid #e5e5e5">
-                    <header>
-                        <h1>Crime and Emergency Services Indicators</h1>
-                        <br>
-                    </header>
+                    <h1>Crime and Emergency Services Indicators</h1>
+                   
                 </div>
-                <?php echo $this->fetch('content') ?>
+                <div>
+                    <h3>Explore information relating to crime rates in Cork, fire 
+                brigade activities and injuries and fatalities on Cork roads.</h3>
+                </div>
+                    <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
                     <div class="col-9" >
                         <h2>Crime Statistics</h2>

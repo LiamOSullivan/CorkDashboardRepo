@@ -66,32 +66,32 @@
         </style>
     </head>
     <body>
-       
+
         <!--Floating menu-->
-<!--                <ul class="float_menu sticky" >
-                            <li><a href="/./HealthEducation/stats">
-                            <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
-                        </a> 
-                    </li>
-                    <li> <a href="/./EnvironmentTransport/stats"> 
-                            <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
-                        </a>
-                    </li>
-                    <li><a href="/./Housings/stats">
-                            <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="/./Demographics/stats">
-                            <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="/./CrimeEmergencyServices/stats">
-                            <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
-                        </a> 
-                    </li>
-                </ul>-->
+        <!--                <ul class="float_menu sticky" >
+                                    <li><a href="/./HealthEducation/stats">
+                                    <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
+                                </a> 
+                            </li>
+                            <li> <a href="/./EnvironmentTransport/stats"> 
+                                    <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
+                                </a>
+                            </li>
+                            <li><a href="/./Housings/stats">
+                                    <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="/./Demographics/stats">
+                                    <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="/./CrimeEmergencyServices/stats">
+                                    <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
+                                </a> 
+                            </li>
+                        </ul>-->
         <!-- Header -->
         <div id="header-wrapper">
             <?php echo $this->element('dbBanner'); ?>
@@ -101,13 +101,17 @@
         <div style="overflow:auto">
             <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
-                <div class="col-9" style="border-bottom:2px solid #e5e5e5">
+                <div style="border-bottom:2px solid #e5e5e5; ">
                     <h1>Industry & Employment: Economic Indicators</h1>
-                    <br>
+                </div>
+                <div>
+                    <h3>Explore information relating to employment, unemployment, 
+                        companies and household disposable income for the South West.  </h3>
                 </div>
                 <?php echo $this->fetch('content') ?>
                 <div style="border-bottom:2px solid #e5e5e5">
-                    <div class="col-7">
+                    <div class="col-7" style="padding: 1vh 2vw 1vh 2vw">
+                        <br>
                         <h2>Employment Statistics</h2>
                         <br>
                         <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "Economy/employmentFigsUp/tab31")); ?></div> 
@@ -184,17 +188,17 @@
         <div id="footer-wrapper">
             <footer id="footer" class="container">
                 <div class="sticky-stopper"></div>
-                    <?php echo $this->element('dbFooter'); ?>
-                </div>
-            </footer>
+                <?php echo $this->element('dbFooter'); ?>
         </div>
-        <?php echo $this->element('googleAnalytics'); ?>
-        <!-- Copyright -->
-        <div id="copyright">
-            <?php echo $this->element('copyright'); ?>
+    </footer>
+</div>
+<?php echo $this->element('googleAnalytics'); ?>
+<!-- Copyright -->
+<div id="copyright">
+    <?php echo $this->element('copyright'); ?>
 
-        </div>
-    </div>
+</div>
+</div>
 
 
 <!--    <script>

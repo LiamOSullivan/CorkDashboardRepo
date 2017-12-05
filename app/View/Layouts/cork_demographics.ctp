@@ -29,14 +29,16 @@
             <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
                 <div style="border-bottom:2px solid #e5e5e5">
-                    <header>
-                        <h1>Housing Indicators</h1>
-                        <br>
-                    </header>
+                        <h1>Population & Demographic Information</h1>
+                    
                 </div>
-
+                        <div><h3>
+                    Explore historical information relating to Cork’s population, 
+                    people born outside the state now living in Cork, Cork’s 
+                    age profile and the number of Cork households.
+                    </h3></div>
                 <div class="col-12" style="display: table; " >
-                    <div class="col-2">
+<!--                    <div class="col-2">
                         <a href="/./Economy/stats/container">
                             <img src="//img/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png" width="90%" max-width = "100%" alt=""/>
                         </a> 
@@ -65,7 +67,7 @@
                         <a href="/./CrimeEmergencyServices/stats">
                             <img src="/img/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
                         </a>       
-                    </div>
+                    </div>-->
                 </div>
 
 

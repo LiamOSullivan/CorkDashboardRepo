@@ -11,11 +11,9 @@
 
     <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5" >
         <h2>Traffic & Travel</h2>
-        <div style="padding:0vh 1vw 0vh 1vw;">
-            <iframe  class="mapFrame" scrolling ="no" src="http://corkdashboard.ie/pages/TravelMap" name="iframe_map"><p>Your browser does not support iframes.</p>  </iframe>
-            
-<!--            <a href="/pages/CorkTravel" class="bordered-feature-image">
-                <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>-->
+        <div style="padding:0vh 2vw 0vh 2vw;">
+            <a href="/pages/CorkTravel" class="bordered-feature-image">
+                <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>
         </div>
     </div>
     <!--    <div class="row" style="border-bottom:2px solid #e5e5e5">

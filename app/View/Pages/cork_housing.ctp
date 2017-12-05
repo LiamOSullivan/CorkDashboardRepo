@@ -3,7 +3,6 @@
 <div class="onlyContent">
     <div style="border-bottom:2px solid #e5e5e5">
         <h1>Housing</h1>
-
     </div>
     <div >
         <div class="col-6" >

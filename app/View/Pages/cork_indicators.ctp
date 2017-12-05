@@ -2,10 +2,12 @@
 <div class="onlyContent">
     <!--//<div style="overflow:auto">-->
     <div style="border-bottom:2px solid #e5e5e5">
-        <header>
-            <h1>Data Indicators</h1>
-            <br>
-        </header>
+        <h1>Data Indicators</h1>
+    </div>
+    <div>
+        <h3>See historical trends in Cork for a range of sectors including 
+            industry and employment, environment and transport, housing, 
+            population, health and education and crime and emergency services. </h3>
     </div>
     <div class="row">
         <div class="col-4">

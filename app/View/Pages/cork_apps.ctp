@@ -9,7 +9,7 @@
             <h1>Software & Apps</h1>   
     </div>
     <!--Row 1-->
-    <div style="float:left; padding: 1vh 0vw 1vh 0vw; border-bottom:2px solid #e5e5e5">
+    <div style="float:left; padding: 2vh 0vw 1vh 0vw; border-bottom:2px solid #e5e5e5">
         <div class="col-3" style=" padding: 2vh 0vw 1vh 0vw;" id="corkPark" align="center">
             <img width="70%" src="/img/Dashboard/cork_icons/Cork_City_Park_by_Phone.png" alt="db">
             <a href="https://play.google.com/store/apps/details?id=com.parkmagic.corkpark"  target="_blank"> 

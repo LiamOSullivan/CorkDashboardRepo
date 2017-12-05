@@ -151,7 +151,7 @@ a.side_menu_text:hover {
 
 .chartWrapper{
     min-height: 30vh;
-    padding: 0vh 5vw 0vh 5vw; 
+    padding: 0vh 3vw 0vh 3vw; 
 
 }
 
@@ -222,7 +222,7 @@ a.side_menu_text:hover {
     /*//url('images/bg04.png');*/
     padding: 10px;
     box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.15);
-    /*//margin: 0 0 1.5em 0;*/
+   margin: 0vh 1vw 0vh 1vw;
     outline: 0;
 }
 
@@ -244,6 +244,13 @@ a.side_menu_text:hover {
 .bordered-feature-image2 img {
     display: block;
     width: 100%;
+}
+
+.mapFrame{
+    width: 100%;
+  height: 408px;
+  overflow: hidden;
+  border: none;
 }
 
 #map {
@@ -455,7 +462,7 @@ Desktop
     }
 
     .chartWrapper{
-        min-height: 25vh;
+        min-height: 30vh;
         padding: 0vh 3vw 2vh 3vw; 
 
     }

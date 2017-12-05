@@ -39,11 +39,12 @@
             <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
                 <div style="border-bottom:2px solid #e5e5e5">
-                    <header>
                         <h1>Environmental Indicators</h1>
-                        <br>
-                    </header>
+                        
                 </div>
+                <div><h3>Explore information relating to waste, recycling, 
+                        water quality, Green Schools, Local Agenda 21 Projects 
+                        and traffic volumes on Cork roads.</h3></div>
                 <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
                     <div class="col-9" >

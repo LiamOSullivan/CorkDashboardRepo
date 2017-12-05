@@ -3,8 +3,13 @@
     <!--//<div style="overflow:auto">-->
     <div style="border-bottom:2px solid #e5e5e5">
         <h1>Data Trends for Cork</h1>
+        
     </div>
     <div >
+        <div>
+            <h3>See how Cork compares to other regions nationally and 
+            internationally using a range of social and economic indicators. </h3>
+        </div>
         <div class="col-4" >
             <h2>Indicators </h2>
             <a href="corkIndicators" class="bordered-feature-image">
