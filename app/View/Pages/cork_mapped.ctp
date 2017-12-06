@@ -3,6 +3,10 @@
     <div style="border-bottom:2px solid #e5e5e5">
         <h1>Mapped Data for Cork</h1>
     </div>
+    <p> Explore historical data and statistics from a variety of sources 
+        relevant to Cork city and county. Click an image to go to the external site.
+        
+    </p>
     <div>
         <div class="col-4" style="padding: 0.5vh 0.25vw 0.5vh 0.25vw;" >
             <h2>Cork City Census</h2>

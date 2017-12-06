@@ -11,14 +11,16 @@
 
     <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5" >
         <h2>Traffic & Travel</h2>
-           <p>The map contains live information for traveling to/ in the city, 
-            including availability of car parking and city bikes. </p>
+           
         <div style="padding:0vh 1vw 0vh 1vw;">
-            <iframe  class="mapFrame" scrolling ="no" src="http://corkdashboard.ie/pages/TravelMap" name="iframe_map"><p>Your browser does not support iframes.</p>  </iframe>
+            <iframe  class="mapFrame" scrolling ="no" src="/pages/TravelMap" name="iframe_map"><p>Your browser does not support iframes.</p>  </iframe>
             
 <!--            <a href="/pages/CorkTravel" class="bordered-feature-image">
                 <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>-->
         </div>
+        <p>The map contains live information for traveling to/ in the city, 
+               including availability of car parking and city bikes. Zoom in to see more.
+               <a href="/pages/TravelMap" target="_blank">Open</a> a larger map.</p>
     </div>
     <!--    <div class="row" style="border-bottom:2px solid #e5e5e5">
             <div class = "col-9" align="center">

@@ -2,10 +2,9 @@
 
 <div class="onlyContent">
     <div style="border-bottom:2px solid #e5e5e5">
-
-            <h1>Reporting Sites</h1>
-
+            <h1>Citizen Reporting Sites</h1>
     </div>
+    <p>These sites allow the submission of reports by citizens to local authorities.</p>
     <div>
         <div class="col-6" >
             <h2>Your Council - Cork County</h2>

@@ -4,6 +4,9 @@
     <div style=" border-bottom:2px solid #e5e5e5">
         <h1>Cork Planning Sites</h1>
     </div>
+    <p>The planning sites for the city and county local authorities give 
+        information on local planning applications, while MyPlan.ie host data for 
+        the whole country. Click an image to go to the page.</p>
     <div >
         <div class="col-6" >
             <h2>Cork City Council Planning Applications</h2>

@@ -4,12 +4,12 @@
     <h2 style="padding:3vmin;" align="center">Project Partners</h2>
 
 
-       <div align="center" class="col-4" style="padding:3vh 0vw 3vh 0vw;">
+    <div align="center" class="col-4" style="padding:3vh 0vw 3vh 0vw;">
         <a href="http://www.corksmartgateway.ie" target="_blank">
             <img style="height:7vmin" src="/img/Partner logos/csglogo.png" alt=""/>
         </a>
     </div>
-    
+
     <div align="center" class="col-4" style="padding:3vh 0vw 3vh 0vw;">
         <a href="http://www.corkcity.ie" target="_blank">
             <img style="height:7vmin" src="/img/Partner logos/corkcity_logo.png" alt=""/>
@@ -25,7 +25,7 @@
             <img style="height:7vmin" src="/img/Partner logos/maynooth_university_logo.png" alt=""/>
         </a>
     </div>
-    
+
     <div align="center" class="col-4" style="padding:3vh 0vw 3vh 0vw;">
         <a href="http://airo.maynoothuniversity.ie" target="_blank">
             <img style="height:7vmin" src="/img/Partner logos/airo_logo.png" alt=""/>   
@@ -36,13 +36,18 @@
             <img style="height:7vmin" src="/img/Partner logos/NCG_logo.png" alt=""/>  
         </a>
     </div>
-<div align="center" class="col-6" style="padding:3vh 0vw 3vh 0vw;">
-        <a href="http://www.sfi.ie" target="_blank">
-            <img style="height:7vmin" src="/img/Partner logos/SFI_logo.jpg" alt=""/>   
+    <div align="center" class="col-4" style="padding:3vh 0vw 3vh 0vw;">
+        <a href="http://www.cso.ie/en/index.html" target="_blank">
+            <img style="height:7vmin" src="/img/Partner logos/cso_logo2.png" alt=""/>   
         </a>
     </div>
- 
-    <div align="center" class="col-6" style="padding:3vh 0vw 3vh 0vw;">
+    <div align="center" class="col-4" style="padding:3vh 0vw 3vh 0vw;">
+        <a href="http://www.sfi.ie" target="_blank">
+            <img style="height:7vmin" src="/img/Partner logos/SFI_logo_2.jpg" alt=""/>   
+        </a>
+    </div>
+
+    <div align="center" class="col-4" style="padding:3vh 0vw 3vh 0vw;">
         <a href="https://www.osi.ie">
             <img style="height:7vmin" src="/img/Partner logos/OSi_logo.jpg" alt=""/>     
         </a> 
