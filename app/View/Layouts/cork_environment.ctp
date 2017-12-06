@@ -50,11 +50,14 @@
                     <div class="col-9" >
                         <h2>Waste Management</h2>
                         <br>
-                        <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "EnvironmentTransport/stats/tab31")); ?></div> 
+                        <div class="content" id="tab31">
+                            <?php echo $this->element($Graph5, array("function" => "EnvironmentTransport/stats/tab31")); ?></div> 
                         <br>
-                        <div class="content" id="tab1"><?php echo $this->element($Graph5, array("function" => "EnvironmentTransport/recycling/tab1")); ?></div> 
+                        <div class="content" id="tab1">
+                            <?php echo $this->element($Graph5, array("function" => "EnvironmentTransport/recycling/tab1")); ?></div> 
                         <br>
-                        <div class="content" id="tab14"><?php echo $this->element($Graph5, array("function" => "EnvironmentTransport/organicrecycling/tab14")); ?></div> 
+                        <div class="content" id="tab14">
+                            <?php echo $this->element($Graph5, array("function" => "EnvironmentTransport/organicrecycling/tab14")); ?></div> 
                         <br>
                         <div style="border-bottom:2px solid #e5e5e5">
                         </div>
@@ -81,7 +84,8 @@
                         <br>
                         <p><strong>Annual Average Daily Traffic</strong>, abbreviated <strong>AADT</strong>, is a measure used primarily in transportation planning and transportation engineering. Traditionally, it is the total volume of vehicle traffic of a highway or road for a year divided by 365 days.
                         </p><br>
-                        <p>Click on a site to see the collected traffic data. See below for more details on the information gathered.</p>
+                        <p>Click on a site to see the collected traffic data. 
+                            See below for more details on the information gathered.</p>
                         <br>
                         <center>  
                             <div class="row">
@@ -136,7 +140,7 @@
 //            $('#menu43').tabify();
 //            $('#menu53').tabify();
 //            $('#menu73').tabify();
-//            $('#menu83').tabify();
+////            $('#menu83').tabify();
         </script>
 
     </body>

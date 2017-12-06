@@ -82,6 +82,7 @@ h2 {
 h3 {
     font-size: 4.0vmin;
     padding:1vh 3vw 1vh 3vw;
+    text-align: justify;
 }
 
 /*ul, ol, dl
@@ -249,6 +250,14 @@ a.side_menu_text:hover {
 .mapFrame{
     width: 100%;
   height: 408px;
+  overflow: hidden;
+  border: none;
+}
+
+/*Indicator chart content*/ 
+.highchartsFrame{
+    width: 100%;
+  height: 5000px;
   overflow: hidden;
   border: none;
 }
@@ -462,7 +471,7 @@ Desktop
     }
 
     .chartWrapper{
-        min-height: 30vh;
+        min-height: 25vh;
         padding: 0vh 3vw 2vh 3vw; 
 
     }
@@ -471,6 +480,7 @@ Desktop
         padding: 0vh 0vw 0vh 0vw; 
         background-color: rgba(181, 31, 36, 1.0)
     }
+    
 }
 
 /*Netbook
