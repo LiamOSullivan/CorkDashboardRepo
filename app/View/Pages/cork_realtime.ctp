@@ -12,7 +12,7 @@
         <br>
     </div>
     <div class="col-6" >
-        <h2>Travel</h2>
+        <h2>Traffic & Travel</h2>
         <a href="/pages/CorkTravel" class="bordered-feature-image">
             <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>
         <br>

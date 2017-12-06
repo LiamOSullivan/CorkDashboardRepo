@@ -1,4 +1,4 @@
-<div style = "padding: 3vh 1vw 3vh 1vw">
+<div style = "padding: 2vh 1vw 2vh 1vw">
     <picture>
         <source srcset="/img/dashboard/cork_header_LHS_narrow.png" alt="Cork Dashboard header banner" media="(max-width: 620px)">
         <source srcset="/img/dashboard/cork_header_span.png" alt="Cork Dashboard header banner">
@@ -8,9 +8,4 @@
 </div>
 
 
-
-<!--<script type="text/javascript">var switchTo5x = true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "624cf92d-c0de-48a2-b04c-694d1acb9110", doNotHash: false, doNotCopy: false, hashAddressBar: false});
-</script>-->
 

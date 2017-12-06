@@ -422,10 +422,10 @@ Desktop
 
     }
     .middle {
-        width:50%;
+        width:55%;
     }
     .right {
-        width:30%;
+        width:25%;
         float: left;
         border-right: none;
         border-left: none;
@@ -436,22 +436,22 @@ Desktop
 
     p, li {  
         font-size: 1.25vw;;
-        padding:1vh 2vw 1vh 1vw;
+        padding:0vh 1vw 1vh 1vw;
     }
 
     h1 {
         font-size:2.0vw;
-        padding:3vh 2vw 3vh 1vw;
+        padding:2vh 1vw 2vh 1vw;
     }
 
     h2 {
         font-size: 1.5vw;
-        padding:3vh 2vw 3vh 1vw;
+        padding:2vh 1vw 2vh 1vw;
     }
 
     h3 {
         font-size: 1.25vw;
-        padding:3vh 2vw 3vh 1vw;
+        padding:1vh 1vw 1vh 1vw;
     }
 
     /*    ul, ol, dl
@@ -471,8 +471,8 @@ Desktop
     }
 
     .chartWrapper{
-        min-height: 25vh;
-        padding: 0vh 3vw 2vh 3vw; 
+        min-height: 20vh;
+        padding: 0vh 2vw 1vh 2vw; 
 
     }
 

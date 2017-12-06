@@ -11,6 +11,8 @@
 
     <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5" >
         <h2>Traffic & Travel</h2>
+           <p>The map contains live information for traveling to/ in the city, 
+            including availability of car parking and city bikes. </p>
         <div style="padding:0vh 1vw 0vh 1vw;">
             <iframe  class="mapFrame" scrolling ="no" src="http://corkdashboard.ie/pages/TravelMap" name="iframe_map"><p>Your browser does not support iframes.</p>  </iframe>
             
