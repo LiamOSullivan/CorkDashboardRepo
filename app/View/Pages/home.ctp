@@ -8,6 +8,24 @@
                 <p><span id="servertime"></span></p>
             
         </div>-->
+http://corkdashboard.ie/pages/environmentMap
+
+<div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5" >
+        <h2>Live Environment</h2>
+           
+        <div style="padding:0vh 1vw 0vh 1vw;">
+            <iframe  class="mapFrame" scrolling ="no" src="/pages/environmentMap" name="iframe_map"><p>Your browser does not support iframes.</p>  </iframe>
+            
+<!--            <a href="/pages/CorkTravel" class="bordered-feature-image">
+                <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>-->
+        </div>
+        <p>This map contains live environmental information from a variety of 
+            sources across the city and county. Zoom in to see more or go to 
+            the detailed page 
+            <a href="/pages/CorkTravel">here</a>
+                                                              
+               <a href="/pages/TravelMap" target="_blank">Open</a> a larger map.</p>
+    </div>
 
     <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5" >
         <h2>Traffic & Travel</h2>

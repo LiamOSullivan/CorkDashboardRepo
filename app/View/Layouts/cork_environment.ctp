@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Cork Environmental Indicators</title>
+        <title>Environmental & Transport Indicators</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="Provides access to indicators concerning environmental awareness in Dublin." />
         <meta name="keywords" content="Corkdashboard, Cork, City Benchmarks, water, waste, Irish Water, green flags, recycling, local agenda 21" />
