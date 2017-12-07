@@ -90,7 +90,7 @@
 </style>
     <body onload="myFunction()">
 
-        <div id="map" style="width: 100%; height: 600px"></div>
+        <div id="map" style="width: 100%; height: 100%"></div>
 
 
 
@@ -108,6 +108,9 @@
 <script src="/dublindashboard/js/carParkCapacities.js"></script>
 
 <script>
+    
+    let cork_lat =51.8196473;
+    let cork_lng = -8.8043306;
 
 // check browser version type
 
@@ -200,7 +203,7 @@
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-8.456669, 51.877165]
+                "coordinates": [-8.456669, 51.877165] 
             }
         };
 
@@ -278,7 +281,7 @@
 //alert('OK');
 
             map = new L.Map('map', {
-                center: new L.LatLng(52.034439, -8.608861),
+                center: new L.LatLng(cork_lat, cork_lng),
                 zoom: 9,
                 layers: [osm],
                 zoomControl: true
@@ -290,7 +293,7 @@
 //alert('OK');
 
             map = new L.Map('map', {
-                center: new L.LatLng(52.034439, -8.608861),
+                center: new L.LatLng(cork_lat, cork_lng),
                 zoom: 9,
                 layers: [osm],
                 zoomControl: true
@@ -302,7 +305,7 @@
 //alert('OK');
 
             map = new L.Map('map', {
-                center: new L.LatLng(52.034439, -8.608861),
+                center: new L.LatLng(cork_lat, cork_lng),
                 zoom: 9,
                 layers: [osm],
                 zoomControl: true
@@ -314,7 +317,7 @@
 //alert('OK');
 
             map = new L.Map('map', {
-                center: new L.LatLng(52.034439, -8.608861),
+                center: new L.LatLng(cork_lat, cork_lng),
                 zoom: 9,
                 layers: [osm],
                 zoomControl: true
@@ -322,7 +325,7 @@
 
         } else {
             map = new L.Map('map', {
-                center: new L.LatLng(52.034439, -8.608861),
+                center: new L.LatLng(cork_lat, cork_lng),
                 zoom: 9,
                 layers: [osmGrey],
                 zoomControl: true

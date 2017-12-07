@@ -1,6 +1,6 @@
 <div class="nav" >
         <h1>
-        <a href="/pages/home" class="navi">Home Page</a>   |
+        <a href="/pages/index" class="navi">Home Page</a>   |
         <a href="/pages/ContactUs" class="navi">About </a>
         </h1>
 </div>

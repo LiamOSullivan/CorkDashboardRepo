@@ -82,7 +82,7 @@
     <body onload="myFunction()">
 
 
-        <div id="map" style="width: 100%; height: 600px"></div>
+        <div id="map" style="width: 100%; height: 100%"></div>
         <!--<div id="dataSources" style="width: 100%; height: 750px" align="left"></div>-->
 
         <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> -->

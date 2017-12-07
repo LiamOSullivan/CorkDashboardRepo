@@ -10,13 +10,33 @@
         </div>-->
 
     <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5" >
-        <h2>Traffic & Travel</h2>
+        <h2>Live Environment</h2>
+
         <div style="padding:0vh 1vw 0vh 1vw;">
-            <iframe  class="mapFrame" scrolling ="no" src="http://corkdashboard.ie/pages/TravelMap" name="iframe_map"><p>Your browser does not support iframes.</p>  </iframe>
-            
-<!--            <a href="/pages/CorkTravel" class="bordered-feature-image">
-                <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>-->
+            <iframe  class="mapFrame" scrolling ="no" src="/pages/environmentMap" name="iframe_map"><p>Your browser does not support iframes.</p>  </iframe>
+
+            <!--            <a href="/pages/CorkTravel" class="bordered-feature-image">
+                            <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>-->
         </div>
+        <p>This map contains live environmental information from a variety of 
+            sources across the city and county. Zoom in to see more or go to 
+            the detailed page <a href="/pages/corkEnvironment">here</a>. 
+            Open a <a href="/pages/environmentMap" target="_blank"> full screen map</a>.</p>
+    </div>
+
+    <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5" >
+        <h2>Traffic & Travel</h2>
+
+        <div style="padding:0vh 1vw 0vh 1vw;">
+            <iframe  class="mapFrame" scrolling ="no" src="/pages/TravelMap" name="iframe_map"><p>Your browser does not support iframes.</p>  </iframe>
+
+            <!--            <a href="/pages/CorkTravel" class="bordered-feature-image">
+                            <img src="/img/Dashboard/cork_real_time_travel.png" alt="travel map image"></a>-->
+        </div>
+        <p>The map contains live information for traveling to/ in the city, 
+            including availability of car parking and city bikes. Zoom in to see 
+            more or go <a href="/pages/corkTravel">here</a> for additional information.
+            View a <a href="/pages/TravelMap" target="_blank"> full screen map</a> in a new window.</p>
     </div>
     <!--    <div class="row" style="border-bottom:2px solid #e5e5e5">
             <div class = "col-9" align="center">
@@ -107,21 +127,24 @@
         <h2>Latest News</h2>
         <div id="news" style="padding-bottom: 0vh;">
             <ul style="list-style-type:none; padding-bottom:0vh;">
-                <li>SEE: New Reporting Tool <a href="https://www.yourcouncil.ie/"> 'Your Council' </a> added to the Cork Dashboard <a href="/pages/CorkReport">here</a></li>
+                <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q3%202017.pdf" target="_blank">Cork Economic Bulletin</a> Q3 2017</li>
+                <li>SEE: New tool to view Planning Applications for <a href="https://housinggovie.maps.arcgis.com/apps/webappviewer/index.html?id=9cf2a09799d74d8e9316a3d3a4d3a8de" target="_blank">Cork City and County</a></li>
+                <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q2%202017.pdf" target="_blank">Cork Economic Bulletin</a> Q2 2017</li>
+                <li>SEE: New Reporting Tool <a href="https://www.yourcouncil.ie/" target="_blank"> 'Your Council' </a> added to the Cork Dashboard <a href="/pages/CorkReport" target="_blank">here</a></li>
                 <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q1%202017.pdf">Cork Economic Bulletin</a> Q1 2017</li>
-                <li>New: Explore Real-Time Transport and Environment data for Cork <a href="/pages/CorkRealtime">here</a></li>
-                <li>SEE: Latest Live register figures for Cork using the <a href="http://airo.maynoothuniversity.ie/external-content/live-register-office-monitoring-tool">Social Welfare Monitoring Tool</a></li>
-                <li>SEE: Latest <a href="http://data.corkcity.ie/dataset/planning-permission">Cork City Council Planning Applications </a></li>
-                </ul>
+                <li>New: Explore Real-Time Transport and Environment data for Cork <a href="/pages/CorkRealtime" target="_blank">here</a></li>
+
+            </ul>
         </div>
     </div>  
+
     <div class="col-12" style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
         <h2>MapAlerter for Cork City and County</h2>
-        
+
         <div style="padding:1vh 2vw 0vh 2vw;">
             <a href="https://www.mapalerter.com/councils/cork" target="_blank" class="bordered-feature-image">
                 <img src="/img/Dashboard/cork_map_alerter.png" alt="" /></a>
-              </div>  
+        </div>  
         <p>MapAlerter is a free service that gives Irish local authorities the ability to issue alerts for specific topics. Click to go to the <a href="https://www.mapalerter.com/councils/cork" target="_blank">MapAlerter</a> site.</p>
     </div>
 
