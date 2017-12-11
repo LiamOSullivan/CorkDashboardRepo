@@ -69,7 +69,7 @@ function preload() {
 //    }
 
 //Get weather  data
-    xmlWeather = loadXML("../webroot/files/locationforecast.xml");
+    xmlWeather = loadXML("/files/locationforecast.xml");
 }
 
 function  setup() {
