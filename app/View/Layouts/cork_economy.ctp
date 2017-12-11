@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>The Cork Dashboard | Economic Indicators</title>
+        <?php $this->layout = false; ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="Provides access to visual tools showing Dublin's economic performance" />
@@ -53,53 +54,11 @@
         <?//php echo $this->Html->css('responsivegridsystem2'); ?> 
         <?//php echo $this->Html->css('tabs'); ?> 
         <?//php echo $this->fetch('content'); ?>
-        <style>
-            .float_menu {
-                width: 10%;
-                position: relative;
-                right: 5%;
-                top: 100px;
-                /*margin-top: 50%;*/
-                list-style: none;
-                /*background-color: rgba(181, 31, 36, 1.0) ;*/
-            }
-        </style>
     </head>
     <body>
 
-        <!--Floating menu-->
-        <!--                <ul class="float_menu sticky" >
-                                    <li><a href="/./HealthEducation/stats">
-                                    <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
-                                </a> 
-                            </li>
-                            <li> <a href="/./EnvironmentTransport/stats"> 
-                                    <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
-                                </a>
-                            </li>
-                            <li><a href="/./Housings/stats">
-                                    <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
-                                </a> 
-                            </li>
-                            <li>
-                                <a href="/./Demographics/stats">
-                                    <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
-                                </a> 
-                            </li>
-                            <li>
-                                <a href="/./CrimeEmergencyServices/stats">
-                                    <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
-                                </a> 
-                            </li>
-                        </ul>-->
-        <!-- Header -->
-        <div id="header-wrapper">
-            <?php echo $this->element('dbBanner'); ?>
-            <?php echo $this->element('dbNavMenu'); ?>
-        </div>
         <!--Responsive content-->
         <div style="overflow:auto">
-            <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
                 <div style="border-bottom:2px solid #e5e5e5; ">
                     <h1>Industry & Employment: Economic Indicators</h1>
@@ -184,20 +143,6 @@
                             </a>       
                         </div>-->
         </div>
-
-        <div id="footer-wrapper">
-            <footer id="footer" class="container">
-                <div class="sticky-stopper"></div>
-                <?php echo $this->element('dbFooter'); ?>
-        </div>
-    </footer>
-</div>
-<?php echo $this->element('googleAnalytics'); ?>
-<!-- Copyright -->
-<div id="copyright">
-    <?php echo $this->element('copyright'); ?>
-
-</div>
 </div>
 
 

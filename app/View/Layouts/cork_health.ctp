@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>The Cork Dashboard | Health and Education Indicators</title>
+        <?php $this->layout = false; ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="Provides access to indicators regarding the health, healthcare and education in Dublin." />
@@ -16,14 +17,8 @@
         </noscript>
     </head>
     <body>
-        <!-- Header -->
-        <div id="header-wrapper">
-            <?php echo $this->element('dbBanner'); ?>
-            <?php echo $this->element('dbNavMenu'); ?>
-        </div>
         <!--Responsive content-->
         <div style="overflow:auto">
-            <?php echo $this->element('sidebar') ?>
             <div class="onlyContent">
                 <div style="border-bottom:2px solid #e5e5e5">
                     <h1>Health and Education Indicators</h1>
@@ -76,19 +71,6 @@
                         <br>
                     </div>
                 </div>
-            </div>
-            <div id="footer-wrapper">
-                <footer id="footer" class="container">
-                    <div class="row">
-                        <?php echo $this->element('dbFooter'); ?>
-                    </div>
-                </footer>
-            </div>
-            <?php echo $this->element('googleAnalytics'); ?>
-            <!-- Copyright -->
-            <div id="copyright">
-                <?php echo $this->element('copyright'); ?>
-
             </div>
         </div>
         <script type="text/javascript">

@@ -85,6 +85,8 @@ h3 {
     text-align: justify;
 }
 
+
+
 /*ul, ol, dl
 {
     margin: 0 0 2em 0;
@@ -256,8 +258,7 @@ a.side_menu_text:hover {
 
 /*Indicator chart content*/ 
 .highchartsFrame{
-    width: 100%;
-  height: 5000px;
+  width: 100%;
   overflow: hidden;
   border: none;
 }

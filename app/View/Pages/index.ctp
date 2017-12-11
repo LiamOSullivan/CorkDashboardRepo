@@ -1,5 +1,9 @@
 <?php $this->assign('title', 'Home'); ?>
 
+<script src="/libraries/p5.js" type="text/javascript"></script>
+<script src="/libraries/p5.dom.js" type="text/javascript"></script>
+<script src="/js/weatherVis.js" type="text/javascript"></script>
+
 <div class="middle">
     <div style="border-bottom:2px solid #e5e5e5">
         <h1>Cork in Real Time </h1>
@@ -48,15 +52,70 @@
             </div> 
         </div>-->
 
-    <div class="col-12" style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
+    <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
         <div>
-            <div class = "col-6" align="center">
-                <iframe target="_blank"  src="http://www.met.ie/widgets/latest-mini.asp" href="http://www.met.ie/widgets/latest-mini.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+            <!--            <div id="xmlDataLocal"> 
+                            <a href="http://metwdb-prod.ichec.ie/metno-wdb2ts/locationforecast?lat=54.7210798611;long=-8.7237392806">Data Example</a>   
+                            <a href="http://metwdb-prod.ichec.ie/metno-wdb2ts/locationforecast?lat=51.8969;long=-8.4863">Data Cork</a>   
+            
+                        </div>-->
+            <!--<div id="canvasDiv" style="padding:0vh 1vw 0vh 1vw;"></div>-->
+            <!--<div id="weatherText" style="padding:0vh 1vw 0vh 1vw;"></div>-->
+            <div id="weatherTable" style="table-layout:fixed; width:100%; padding:1vh 0vw 1vh 0vw;">
+                <table style="width:100%; text-align:center; 
+                       font-family: 'Proxima Nova', Georgia, sans-serif; font-weight: normal;">
+                    <tr style="text-align:center">
+                        <th><div id="weatherHead0" style="text-align:center"></div></th>
+                        <th><div id="weatherHead1" ></div></th>
+                        <th><div id="weatherHead2" ></div></th>
+                        <th><div id="weatherHead3" ></div></th>
+                        <th><div id="weatherHead4" ></div></th>
+                        <th><div id="weatherHead5" ></div></th>
+                        <th><div id="weatherHead6" ></div></th>
+                        <th><div id="weatherHead7" ></div></th>
+<!--                        <th><div id="weatherHead8" style="padding:0vh 1vw 0vh 1vw;"></div></th>
+                        <th><div id="weatherHead9" style="padding:0vh 1vw 0vh 1vw;"></div></th>
+                        <th><div id="weatherHead10" style="padding:0vh 1vw 0vh 1vw;"></div></th>
+                        <th><div id="weatherHead11" style="padding:0vh 1vw 0vh 1vw;"></div></th>-->
+                    </tr>
+                    <tr>
+                        <td><div id="weatherImage0" ></div></td>
+                        <td><div id="weatherImage1" ></div></td>
+                        <td><div id="weatherImage2" ></div></td>
+                        <td><div id="weatherImage3" ></div></td>
+                        <td><div id="weatherImage4" ></div></td>
+                        <td><div id="weatherImage5" ></div></td>
+                        <td><div id="weatherImage6" ></div></td>
+                        <td><div id="weatherImage7" ></div></td>
+<!--                        <td><div id="weatherImage8" style="padding:0vh 1vw 0vh 1vw;"></div></td>
+                        <td><div id="weatherImage9" style="padding:0vh 1vw 0vh 1vw;"></div></td>
+                        <td><div id="weatherImage10" style="padding:0vh 1vw 0vh 1vw;"></div></td>
+                        <td><div id="weatherImage11" style="padding:0vh 1vw 0vh 1vw;"></div></td>-->
+                    </tr>
+                    <tr>
+                        <td><div id="tableTemp0" ></div></td>
+                        <td><div id="tableTemp1" ></div></td>
+                        <td><div id="tableTemp2" ></div></td>
+                        <td><div id="tableTemp3" ></div></td>
+                        <td><div id="tableTemp4" ></div></td>
+                        <td><div id="tableTemp5" ></div></td>
+                        <td><div id="tableTemp6" ></div></td>
+                        <td><div id="tableTemp7" ></div></td>
+<!--                        <td><div id="tableTemp8" style="padding:0vh 1vw 0vh 1vw;"></div></td>
+                        <td><div id="tableTemp9" style="padding:0vh 1vw 0vh 1vw;"></div></td>
+                        <td><div id="tableTemp10" style="padding:0vh 1vw 0vh 1vw;"></div></td>
+                        <td><div id="tableTemp11" style="padding:0vh 1vw 0vh 1vw;"></div></td>-->
+                    </tr>
+                </table>
             </div>
-            <div class = "col-6" align="center">
-                <iframe src="http://www.met.ie/widgets/3daysummary.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
-            </div>
+
+            <!--            <div class = "col-6" align="center">
+                            <iframe target="_blank"  src="http://www.met.ie/widgets/latest-mini.asp" href="http://www.met.ie/widgets/latest-mini.asp" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class = "col-6" align="center">
+                            <iframe src="http://www.met.ie/widgets/3daysummary.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
+                        </div>-->
             <!--            <div class = "col-4" align="center">
                             <iframe src="http://www.met.ie/widgets/charts-mini.asp" target="_blank" style=" border-width:0 " width="134" height="222" frameborder="0" scrolling="no"></iframe>
                                         <img src="img/weather_placeholder.png" style = "width:70%;" alt="weather placeholder"/>
@@ -65,7 +124,7 @@
         </div>
         <div>
             <!--TODO:Fix this hack!-->
-            <br><br><br><br><br><br><br><br><br><br>
+            <!--            <br><br><br><br><br><br><br><br><br><br>-->
             <p>Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a></p>
         </div>
     </div>  

@@ -64,6 +64,13 @@
                 <img src="/img/Dashboard/corks_growth.png" alt="" /></a>
         </div>
     </div>
+     <div class="col-4" style="padding: 0.5vh 0.25vw 0.5vh 0.25vw;">
+            <h2>EPA Catchments - Water </h2>
+            <a href="https://www.catchments.ie/maps/" class="bordered-feature-image" target="_blank">
+                <img src="/img/Dashboard/epa_catchments_nw.png" alt="" /></a>
+     
+        </div>
+    </div>
 
 </div>
 

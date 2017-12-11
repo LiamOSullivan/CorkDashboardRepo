@@ -54,31 +54,15 @@
         <?//php echo $this->Html->css('col'); ?>
 
         <!--<title>The Cork Dashboard | //<//?= //$this->fetch('title') ?></title>-->
-        <title>The Cork Dashboard | Crime and Emergency Services Indicators></title>
+        <title>The Cork Dashboard | Crime and Emergency Services Indicators</title>
+        <?php $this->layout = false; ?>
     </head>
     <body>
-        <!-- Header -->
-        <div id="header-wrapper">
-            <?php echo $this->element('dbBanner'); ?>
-            <?php echo $this->element('dbNavMenu'); ?>
-        </div>
-        <!--Responsive content-->
-        <div style="overflow:auto">
-            <?php echo $this->element('sidebar') ?>
-            <div class="onlyContent">
-                <div style="border-bottom:2px solid #e5e5e5">
-                    <h1>Crime and Emergency Services Indicators</h1>
-                   
-                </div>
-                <div>
-                    <h3>Explore information relating to crime rates in Cork, fire 
-                brigade activities and injuries and fatalities on Cork roads.</h3>
-                </div>
-                    <?php echo $this->fetch('content') ?>
+                <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
-                    <div class="col-9" >
-                        <h2>Crime Statistics</h2>
-                        <br>
+                    <div class="col-12" >
+<!--                        <h2>Crime Statistics</h2>
+                        <br>-->
                         <div class="content" id="tab21"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/murderCrimes/tab21")); ?>
                         </div>
                         <br>
@@ -112,8 +96,8 @@
                         <div style="border-bottom:2px solid #e5e5e5">
                         </div>
                         <br>
-                        <h2>Cork Fire Brigade Activity</h2>
-                        <br>
+<!--                        <h2>Cork Fire Brigade Activity</h2>
+                        <br>-->
                         <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/totalFireBrigade/tab41")); ?></div> 
                         <br>
                         <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/rtaBrigade/tab51")); ?></div> 
@@ -127,31 +111,18 @@
                         <div style="border-bottom:2px solid #e5e5e5">
                         </div>
                         <br>
-                        <h2>Cork Fire Brigade Ambulance Call Outs</h2>
-                        <br>
-                        <div class="content" id="tab91"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/ambulanceBrigade/tab91")); ?></div> 
-                        <br>                        
+<!--                        <h2>Cork Fire Brigade Ambulance Call Outs</h2>
+                        <br>-->
+                        <!--<div class="content" id="tab91"><?//php echo $this->element($Graph5, array("function" => "EmergencyServices/ambulanceBrigade/tab91")); ?></div>--> 
+                        <!--<br>-->                        
                         <div class="content" id="tab101"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadInjuries/tab101")); ?></div> 
                         <br>
                         <div class="content" id="tab111"><?php echo $this->element($Graph5, array("function" => "EmergencyServices/roadDeaths/tab111")); ?></div> 
                         <br>
                     </div>
                 </div>
-            </div>
-            <div id="footer-wrapper">
-                <footer id="footer" class="container">
-                    <div class="row">
-                        <?php echo $this->element('dbFooter'); ?>
-                    </div>
-                </footer>
-            </div>
-            <?php echo $this->element('googleAnalytics'); ?>
-            <!-- Copyright -->
-            <div id="copyright">
-                <?php echo $this->element('copyright'); ?>
 
-            </div>
-        </div>
+      
         <script type="text/javascript">
             //        $('#menu1').tabify();
             //        $('#menu2').tabify();

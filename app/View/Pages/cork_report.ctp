@@ -20,6 +20,15 @@
 
         </div>
     </div>
+    <div>
+           <div class="col-6" >
+            <h2>Broken Street Lights</h2>
+            <a href="https://www.deadsureapp.com/Inventory?map=DeadSureCorkCity" target="_blank" class="bordered-feature-image">
+                <img src="/img/Dashboard/streetLights_nww.png" alt="" /></a>
+            <br>
+
+        </div>
+    </div>
 <!--    <div class="row">
         <div class="col-6" >
             <h2>Report Vacant Spaces</h2>

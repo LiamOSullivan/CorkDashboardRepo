@@ -13,23 +13,28 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.css"></script> -->
         <!--<script src="js/dashboard_init.js" type="text/javascript"></script>-->
         <!--<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />--> 
-        <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />  
-                <!--<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
-                <link href="../webroot/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>
+        <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  /> 
+        <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/> 
+        <!--P5 libraries-->
+
+     
+        <!--<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
+        <!--<link href="../webroot/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
         <!--<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
         <!--<link href="/css/Dashboard/w3c.css" rel="stylesheet" type="text/css"/>-->
+
+
         <noscript>
         <link href="/css/Dashboard/fonts/fonts.css" rel="stylesheet" type="text/css"  />        
         <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/> 
         <!--<link href="/css/Dashboard/w3c.css" rel="stylesheet" type="text/css"/> 
-        
         <!--
         <link href="css/Dashboard/style-desktop.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="/dublindashboard/css/Dashboard/style-desktop.css"/>-->
         </noscript>
         <!--        [if lte IE 9]><link rel="stylesheet" href="/dublindashboard/css/Dashboard/ie9.css" /><![endif]
                 [if lte IE 8]><script src="/dublindashboard/js/Dashboard/html5shiv.js"></script><![endif]-->
-      
+
         <title>The Cork Dashboard | <?= $this->fetch('title') ?></title>
     </head>
     <body onload="myFunction()">
