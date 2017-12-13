@@ -21,8 +21,8 @@
 
     <body>
         <div style="overflow:auto">
-            <div class="onlyContent">
-                <div style="border-bottom:2px solid #e5e5e5">
+            <!--<div class="onlyContent">-->
+<!--                <div style="border-bottom:2px solid #e5e5e5">
                         <h1>Population & Demographic Information</h1>
                     
                 </div>
@@ -30,9 +30,9 @@
                     Explore historical information relating to Cork’s population, 
                     people born outside the state now living in Cork, Cork’s 
                     age profile and the number of Cork households.
-                    </h3></div>
-                <div class="col-12" style="display: table; " >
-<!--                    <div class="col-2">
+                    </h3></div>-->
+<!--                <div class="col-12" style="display: table; " >
+                    <div class="col-2">
                         <a href="/./Economy/stats/container">
                             <img src="//img/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png" width="90%" max-width = "100%" alt=""/>
                         </a> 
@@ -61,16 +61,16 @@
                         <a href="/./CrimeEmergencyServices/stats">
                             <img src="/img/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
                         </a>       
-                    </div>-->
-                </div>
+                    </div>
+                </div>-->
 
 
                 <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
-                    <div class="col-9" >
+                    <div class="col-12" >
 
-                        <h2>Population Statistics</h2>
-                        <br>
+<!--                        <h2>Population Statistics</h2>
+                        <br>-->
                         <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "Demographics/population/tab31")); ?></div> 
                         <br>
                         <div class="content" id="tab32"><?php echo $this->element($Graph5, array("function" => "Demographics/populationRateChange/tab32")); ?></div>
@@ -86,8 +86,8 @@
                         <div style="border-bottom:2px solid #e5e5e5">
                         </div>
                         <br>
-                        <h2>Household Statistics</h2>
-                        <br>
+<!--                        <h2>Household Statistics</h2>
+                        <br>-->
                         <div class="content" id="tab91"><?php echo $this->element($Graph5, array("function" => "Demographics/numberOfHouseholds/tab91")); ?></div> 
                         <br>
                         <div class="content" id="tab101"><?php echo $this->element($Graph5, array("function" => "Demographics/numberInHouseholds/tab101")); ?></div> 
@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!--</div>-->
         <script type="text/javascript">
 //            $('#menu1').tabify();
 //            $('#menu2').tabify();

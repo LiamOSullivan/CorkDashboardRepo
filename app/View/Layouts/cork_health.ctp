@@ -19,7 +19,7 @@
     <body>
         <!--Responsive content-->
         <div style="overflow:auto">
-            <div class="onlyContent">
+<!--            <div class="onlyContent">
                 <div style="border-bottom:2px solid #e5e5e5">
                     <h1>Health and Education Indicators</h1>
 
@@ -30,14 +30,14 @@
                         the level of education attainment of Cork citizens, the 
                         number of primary and secondary level pupils attending 
                         school in Cork and the number of schools in Cork.
-                    </h3></div>
+                    </h3></div>-->
 
                 <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
                     <div class="col-12" >
 
-                        <h2>Health Statistics</h2>
-                        <br>
+<!--                        <h2>Health Statistics</h2>
+                        <br>-->
                         <div class="content" id="tab37z"><?php echo $this->element($Graph5, array("function" => "Socials/trolleys16/tab37z")); ?></div>                 
                         <br>
                         <div class="content" id="tab36z"><?php echo $this->element($Graph5, array("function" => "Socials/trolleys15/tab36z")); ?></div> 
@@ -53,8 +53,8 @@
                         <div style="border-bottom:2px solid #e5e5e5">
                         </div>
                         <br>
-                        <h2>Education Statistics</h2>
-                        <br>
+<!--                        <h2>Education Statistics</h2>
+                        <br>-->
                         <div class="content" id="tab1z"><?php echo $this->element($Graph5, array("function" => "Socials/edulevel/tab1z")); ?></div> 
                         <br>
                         <div class="content" id="tab2z"><?php echo $this->element($Graph5, array("function" => "Socials/edulevelRate/tab2z")); ?></div>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!--</div>-->
         <script type="text/javascript">
 //        $('#menu1z').tabify();
 //        $('#menu33').tabify();

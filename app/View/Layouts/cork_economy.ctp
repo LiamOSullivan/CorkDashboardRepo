@@ -59,91 +59,91 @@
 
         <!--Responsive content-->
         <div style="overflow:auto">
-            <div class="onlyContent">
-                <div style="border-bottom:2px solid #e5e5e5; ">
-                    <h1>Industry & Employment: Economic Indicators</h1>
-                </div>
-                <div>
-                    <h3>Explore information relating to employment, unemployment, 
-                        companies and household disposable income for the South West.  </h3>
-                </div>
-                <?php echo $this->fetch('content') ?>
-                <div style="border-bottom:2px solid #e5e5e5">
-                    <div class="col-7" style="padding: 1vh 2vw 1vh 2vw">
-                        <br>
-                        <h2>Employment Statistics</h2>
-                        <br>
-                        <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "Economy/employmentFigsUp/tab31")); ?></div> 
-                        <br>
-                        <div class="content" id="tab32"><?php echo $this->element($Graph5, array("function" => "Economy/employmentChange/tab32")); ?></div>
-                        <br>
-                        <div class="content" id="tab33"><?php echo $this->element($Graph5, array("function" => "Economy/annualEmploymentChange/tab33")); ?></div>
-                        <br>
-                        <div class="content" id="tab1"><?php echo $this->element($Graph5, array("function" => "Economy/unemploymentFigs/tab1")); ?></div> 
-                        <br>
-                        <div class="content" id="tab2"><?php echo $this->element($Graph5, array("function" => "Economy/unemploymentChange/tab2")); ?></div>
-                        <br>
-                        <div class="content" id="tab222"><?php echo $this->element($Graph5, array("function" => "Economy/annualUnemploymentChange/tab222")); ?></div>
-                        <br>
-                        <div class="content" id="tab3"><?php echo $this->element($Graph5, array("function" => "Economy/unemploymentRate/tab3")); ?></div>
-                        <br>
-                        <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "Economy/grossValueAdded/tab51")); ?></div> 
-                        <br>
-                        <div style="border-bottom:2px solid #e5e5e5">
-                        </div>
-                        <br>
-                        <h2>Industry Sectors</h2>
-                        <br>
-                        <div class="content" id="tab81"><?php echo $this->element($Graph5, array("function" => "Economy/employeecompanysize/tab81")); ?></div> 
-                        <br>
-                        <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "Economy/businessSegments/tab41")); ?></div> 
-                        <br>
-                        <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "Economy/overseasVisitors/tab71")); ?></div> 
-                        <br>
-                        <div style="border-bottom:2px solid #e5e5e5">
-                        </div>
-                        <br>
-                        <h2>Income & Poverty</h2>
-                        <br>
-                        <div class="content" id="tab11"> <?php echo $this->element($Graph5, array("function" => "Economy/silcs/tab11")); ?>  </div>  
-                        <br>  
-                        <div class="content" id="tab13"><?php echo $this->element($Graph4, array("function" => "Economy/poverty/tab13")); ?> </div> 
-                        <br>
-                        <br>
+            <!--            <div class="onlyContent">-->
+            <!--                <div style="border-bottom:2px solid #e5e5e5; ">
+                                <h1>Industry & Employment: Economic Indicators</h1>
+                            </div>
+                            <div>
+                                <h3>Explore information relating to employment, unemployment, 
+                                    companies and household disposable income for the South West.  </h3>
+                            </div>-->
+            <?php echo $this->fetch('content') ?>
+<!--            <div style="border-bottom:2px solid #e5e5e5">-->
+                <div class="col-12" >
+                    <br>
+                    <!--                        <h2>Employment Statistics</h2>
+                                            <br>-->
+                    <div class="content" id="tab31"><?php echo $this->element($Graph5, array("function" => "Economy/employmentFigsUp/tab31")); ?></div> 
+                    <br>
+                    <div class="content" id="tab32"><?php echo $this->element($Graph5, array("function" => "Economy/employmentChange/tab32")); ?></div>
+                    <br>
+                    <div class="content" id="tab33"><?php echo $this->element($Graph5, array("function" => "Economy/annualEmploymentChange/tab33")); ?></div>
+                    <br>
+                    <div class="content" id="tab1"><?php echo $this->element($Graph5, array("function" => "Economy/unemploymentFigs/tab1")); ?></div> 
+                    <br>
+                    <div class="content" id="tab2"><?php echo $this->element($Graph5, array("function" => "Economy/unemploymentChange/tab2")); ?></div>
+                    <br>
+                    <div class="content" id="tab222"><?php echo $this->element($Graph5, array("function" => "Economy/annualUnemploymentChange/tab222")); ?></div>
+                    <br>
+                    <div class="content" id="tab3"><?php echo $this->element($Graph5, array("function" => "Economy/unemploymentRate/tab3")); ?></div>
+                    <br>
+                    <div class="content" id="tab51"><?php echo $this->element($Graph5, array("function" => "Economy/grossValueAdded/tab51")); ?></div> 
+                    <br>
+                    <div style="border-bottom:2px solid #e5e5e5">
                     </div>
+                    <br>
+                    <!--                        <h2>Industry Sectors</h2>
+                                            <br>-->
+                    <div class="content" id="tab81"><?php echo $this->element($Graph5, array("function" => "Economy/employeecompanysize/tab81")); ?></div> 
+                    <br>
+                    <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "Economy/businessSegments/tab41")); ?></div> 
+                    <br>
+                    <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "Economy/overseasVisitors/tab71")); ?></div> 
+                    <br>
+                    <div style="border-bottom:2px solid #e5e5e5">
+                    </div>
+                    <br>
+                    <!--                        <h2>Income & Poverty</h2>
+                                            <br>-->
+                    <div class="content" id="tab11"> <?php echo $this->element($Graph5, array("function" => "Economy/silcs/tab11")); ?>  </div>  
+                    <br>  
+                    <div class="content" id="tab13"><?php echo $this->element($Graph4, array("function" => "Economy/poverty/tab13")); ?> </div> 
+                    <br>
+                    <br>
                 </div>
             </div>
-            <!--            <div class="col-4" style="border-bottom:2px solid #e5e5e5 ">
-            
-                            <a href="/./Economy/stats/container">
-                                <img src="/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png" width="90%" max-width = "100%" alt=""/>
-                            </a> 
-                            <a href="/./EnvironmentTransport/stats"> 
-                                <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
-                            </a>
-                        </div>-->
-            <!--            <div class="col-2">
-                            <a href="/./Housings/stats">
-                                <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
-                            </a> 
-                        </div>
-                        <div class="col-2">
-                            <a href="/./Demographics/stats">
-                                <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
-                            </a> 
-                        </div>
-                        <div class="col-2">
-                            <a href="/./HealthEducation/stats">
-                                <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
-                            </a> 
-                        </div>
-                        <div class="col-2">
-                            <a href="/./CrimeEmergencyServices/stats">
-                                <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
-                            </a>       
-                        </div>-->
         </div>
-</div>
+        <!--            <div class="col-4" style="border-bottom:2px solid #e5e5e5 ">
+        
+                        <a href="/./Economy/stats/container">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                        <a href="/./EnvironmentTransport/stats"> 
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png" width="90%" max-width = "100%" alt=""/>
+                        </a>
+                    </div>-->
+        <!--            <div class="col-2">
+                        <a href="/./Housings/stats">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Housing.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </div>
+                    <div class="col-2">
+                        <a href="/./Demographics/stats">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Population.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </div>
+                    <div class="col-2">
+                        <a href="/./HealthEducation/stats">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" width="90%" max-width = "100%" alt=""/>
+                        </a> 
+                    </div>
+                    <div class="col-2">
+                        <a href="/./CrimeEmergencyServices/stats">
+                            <img src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png" width="90%" max-width = "100%" alt=""/>
+                        </a>       
+                    </div>-->
+    </div>
+<!--</div>-->
 
 
 <!--    <script>

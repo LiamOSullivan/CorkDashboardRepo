@@ -28,10 +28,10 @@
    
         <!--Responsive content-->
         <div style="overflow:auto">
-            <div class="onlyContent">
-                <div style="border-bottom:2px solid #e5e5e5">
+            <!--<div class="onlyContent">-->
+<!--                <div style="border-bottom:2px solid #e5e5e5">
                     <h1>Housing Indicators</h1>
-                </div>
+                </div>  
                 <div>
                     <h3>
                         Explore information relating to planning applications, 
@@ -40,12 +40,12 @@
                         developers, average house prices, average monthly rent and 
                         number of inspections of rented accommodation.
                     </h3>
-                </div>
+                </div>-->
                 <?php echo $this->fetch('content') ?>
                 <div class="row" style="border-bottom:2px solid #e5e5e5">
                     <div class="col-12" >
-                        <h2>Planning & Completions</h2>
-                        <br>
+<!--                        <h2>Planning & Completions</h2>
+                        <br>-->
                         <div class="content" id="tab21"><?php echo $this->element($Graph5, array("function" => "Housings/planningApplicationsDublin/tab21")); ?></div> 
                         <br>
                         <div class="content" id="tab221"><?php echo $this->element($Graph5, array("function" => "Housings/planningApplicationsDunL/tab221")); ?></div> 
@@ -63,8 +63,8 @@
                         <div style="border-bottom:2px solid #e5e5e5">
                         </div>
                         <br>
-                        <h2>Property Costs</h2>
-                        <br>
+<!--                        <h2>Property Costs</h2>
+                        <br>-->
                         <div class="content" id="tab11"><?php echo $this->element($Graph5, array("function" => "Housings/housePrices/tab11")); ?></div> 
                         <br>
                         <div class="content" id="tab71"><?php echo $this->element($Graph5, array("function" => "Housings/dublinNationalRents/tab71")); ?></div> 
@@ -78,7 +78,7 @@
                     </div>
                 </div>
             </div>
-       </div>
+       <!--</div>-->
 
 
         <script type="text/javascript">
