@@ -182,17 +182,16 @@
         </p>
     </div>
 
-    <div class="col-12" style="border-bottom:2px solid #e5e5e5; padding-bottom: 0vh;">
+    <div class="col-12" style="border-bottom:2px solid #e5e5e5; padding-bottom:2vh;">
         <h2>Latest News</h2>
-        <div id="news" style="padding-bottom: 0vh;">
-            <ul style="list-style-type:none; padding-bottom:0vh;">
+        <div id="news">
+            <ul style="list-style-type:none;">
                 <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q3%202017.pdf" target="_blank">Cork Economic Bulletin</a> Q3 2017</li>
                 <li>SEE: New tool to view Planning Applications for <a href="https://housinggovie.maps.arcgis.com/apps/webappviewer/index.html?id=9cf2a09799d74d8e9316a3d3a4d3a8de" target="_blank">Cork City and County</a></li>
                 <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q2%202017.pdf" target="_blank">Cork Economic Bulletin</a> Q2 2017</li>
                 <li>SEE: New Reporting Tool <a href="https://www.yourcouncil.ie/" target="_blank"> 'Your Council' </a> added to the Cork Dashboard <a href="/pages/CorkReport" target="_blank">here</a></li>
                 <li>SEE: Latest <a href="https://www.corkchamber.ie/UserFiles/file/Q1%202017.pdf">Cork Economic Bulletin</a> Q1 2017</li>
-                <li>New: Explore Real-Time Transport and Environment data for Cork <a href="/pages/CorkRealtime" target="_blank">here</a></li>
-
+               <li>New: Explore Real-Time Transport and Environment data for Cork <a href="/pages/CorkRealtime" target="_blank">here</a></li>
             </ul>
         </div>
     </div>  

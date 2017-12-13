@@ -49,12 +49,12 @@ a:hover {
     /*max-width: 100%;*/
 }
 
-  /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /*body, input, textarea, select
 {
@@ -203,7 +203,7 @@ a.side_menu_text:hover {
     padding: 1vw; 
     display: table-cell; 
     vertical-align: middle; 
-    height: 7vh;
+    height: 6vh;
 }
 
 /*for caption above live cam images*/
@@ -286,11 +286,22 @@ Mobile phone/ iPhone Landscape  ***BREAKPOINT #1***
 ******************************************************************************/
 @media screen and (min-width: 568px) {
 
-    p, li {  
+    p {  
 
         font-size: 4.5vmin;
         padding: 1vh 3vw 1vh 3vw;
 
+    }
+    
+   ul{
+        font-size: 4.5vmin;;
+        padding:0vh 0vw 0vh 0vw; 
+
+    } 
+
+    li {
+       font-size: 4.5vmin;
+        padding:1vh 2vw 1vh 2vw;      
     }
 
     h1 {
@@ -322,9 +333,7 @@ Mobile phone/ iPhone Landscape  ***BREAKPOINT #1***
 
     .icon-cell{
         padding: 1vw; 
-        display: table-cell; 
-        vertical-align: middle; 
-        height: 7vh;
+        height: 6vh;
     }
     .chartWrapper{
         min-height: 30vh;
@@ -336,17 +345,6 @@ Mobile phone/ iPhone Landscape  ***BREAKPOINT #1***
 /******************************************************************************
 Medium Tablet Portrait
 768 x 1024
-*****************************************************************************/
-/*
-*//*
-
-
-*/
-
-
-/*******************************************************************************
-Medium table 768
-
                                                 ***BREAKPOINT #2***
 *******************************************************************************/
 @media only screen and (min-width:768px) {
@@ -375,18 +373,19 @@ Medium table 768
     }
 
     p{  
-         padding:2vh 3vw 2vh 3vw;
         font-size: 2.5vw;
+        padding:2vh 3vw 2vh 3vw;
+        
     }
 
     ul{
-        font-size: 3.0vmin;;
+        font-size: 2.5vw;
         padding:0vh 0vw 0vh 0vw; 
 
     } 
 
     li {
-        font-size: 3.0vmin;;
+        font-size: 2.5vw;;
         padding:1vh 2vw 1vh 2vw;      
     }
 
@@ -420,10 +419,10 @@ Medium table 768
 
     .icon-cell{
         padding: 1vw; 
-        height: 10vh;
+        height: 7vh;
     }
 
-  
+
 
 }
 
@@ -433,16 +432,7 @@ Desktop, iPad Landscape
 
                                                 ***BREAKPOINT #3***
 *******************************************************************************/
-/*******************************************************************************
-Medium table 768
 
-                                                ***BREAKPOINT #2***
-*******************************************************************************/
-/*@media screen and (min-width: 1024px) { */
-
-/*The container for elemnts n the home page
-    .homeBlock{
-    }*/
 
 
 @media only screen and (min-width:1024px) {
@@ -471,18 +461,18 @@ Medium table 768
     }
 
     p{  
-         padding:2vh 3vw 2vh 3vw;
+        padding:2vh 3vw 2vh 3vw;
         font-size: 2.0vw;
     }
 
     ul{
-        font-size: 3.0vmin;;
+        font-size: 2.0vh;;
         padding:0vh 0vw 0vh 0vw; 
 
     } 
 
     li {
-        font-size: 3.0vmin;;
+        font-size: 2.0vh;;
         padding:1vh 2vw 1vh 2vw;      
     }
 
@@ -516,10 +506,10 @@ Medium table 768
 
     .icon-cell{
         padding: 1vw; 
-        height: 10vh;
+        height: 7vh;
     }
 
-   
+
 
 }
 
@@ -527,6 +517,7 @@ Medium table 768
 /*******************************************************************************
 Desktop
 1280 x 1024
+                                                ***BREAKPOINT #3 ***
 *******************************************************************************/
 @media only screen and (min-width:1280px) {
     .menu {
@@ -584,7 +575,7 @@ Desktop
 
     .icon-cell{
         padding: 1vw; 
-        height: 10vh;
+        height: 8vh;
     }
 
     .chartWrapper{
@@ -651,11 +642,6 @@ Desktop
         font-size:3vmin;
 
     }
-
-
-
-
-
 
 
 
