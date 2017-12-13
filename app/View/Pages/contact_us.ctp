@@ -13,16 +13,15 @@
             fosters evidence-informed analysis.
             <br>
         </p>
-        <div align="center" style="padding: 2vh 2vw 2vh 2vw">
+<!--        <div align="center" style="padding: 2vh 2vw 2vh 2vw">
                 <iframe src="https://player.vimeo.com/video/106426369" width="640" height="360" 
                         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
+        </div>-->
         <!--</div>-->
-        <p>
-            (<a href="http://vimeo.com/106479850" target="blank">External link- lower resolution version</a>)</p>
+<!--        <p>
+            (<a href="http://vimeo.com/106479850" target="blank">External link- lower resolution version</a>)</p>-->
         <p>			
-            The Cork Dashboard pulls together data from major data sources -- 
-            The Cork Dashboard pulls data from a range of sources including Cork City and County Councils, 
+            The Cork Dashboard pulls together data from major data sources including Cork City and County Councils, 
             the Central Statistics Office, Eurostat, the Environmental Protection Agency, Met Éireann, 
             Transport Infrastructure Ireland, government departments, and links to a variety of existing applications. 
             The underlying data is freely available so others can undertake their own analysis and build their own 
@@ -43,7 +42,7 @@
             <h3>Principal Investigators </h3>
             <p>
                 <a href="https://www.maynoothuniversity.ie/people/rob-kitchin/">Professor Rob Kitchin</a><br>
-                <a href="https://www.maynoothuniversity.ie/people/chris-brunsdon/">Professor Chris Brunsdonn </a><br>
+                <a href="https://www.maynoothuniversity.ie/people/chris-brunsdon/">Professor Chris Brunsdon </a><br>
                 <a href="https://www.maynoothuniversity.ie/people/martin-charlton/">Martin Charlton </a><br>
                 <a href="https://www.maynoothuniversity.ie/people/jeneen-naji/">Dr Jeneen Naji</a>
             </p>
@@ -83,20 +82,21 @@
 
     <div class="row">
         <h2>Academic Publications</h2>
-        <p> Click below for literature regarding the dashboard.</p>
+        <p> Selected literature regarding the dashboard.</p>
 
-        <p>
+<!--<!--        <p>
             R. Kitchin, T.P. Lauriault, G. McArdle  (2015) 
-            <a target ="_blank"  href="http://rsa.tandfonline.com/doi/full/10.1080/21681376.2014.983149#.VRrNd47F_WS">‘Knowing and Governing Cities through Urban Indicators, City Benchmarking, and Real-Time Dashboards’</a>, Regional Studies, Regional Science, Journal of the Regional Studies Association, Oxford, Taylor & Francis, 2(1):6-28</p>
+            <a target ="_blank"  href="http://rsa.tandfonline.com/doi/full/10.1080/21681376.2014.983149#.VRrNd47F_WS">‘Knowing and Governing Cities through Urban Indicators, City Benchmarking, and Real-Time Dashboards’</a>, Regional Studies, Regional Science, Journal of the Regional Studies Association, Oxford, Taylor & Francis, 2(1):6-28</p>-->
         <p>
-            R. Kitchin, S. Maalsen, G. McArdle  (2015) 
-            <a target ="_blank"  href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2608988">‘The Praxis and Politics of Building Urban Dashboards’</a>, The Programmable City Working Paper 11</p>
+            Kitchin, R., Maalsen, S. and McArdle, G. (2016) 
+            ‘The Praxis and Politics of Building Urban Dashboards’</a>, Geoforum 77: 93-101.</p>
         <p>
-            G. McArdle, R. Kitchin  (2015) 
-            <a target ="_blank"  href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2643430">‘Improving the Veracity of Open and Real-Time Urban Data’</a>, The Programmable City Working Paper 13</p>
+            McArdle, G. and Kitchin, R. (2016) 
+            ‘Improving the Veracity of Open and Real-Time Urban Data’</a>, Built Environment 42(3): 446-462</p>
         <p>
-            R. Kitchin, G. McArdle  (2016) 
-            <a target ="_blank"  href="https://osf.io/ghmdj/">‘Urban Data and City Dashboards: Six Key Issues’</a>, The Programmable City Working Paper 21</p>
+            Kitchin, R. and McArdle, G. (2017) Urban data and city dashboards: Six key issues. 
+            In Kitchin, R., McArdle, G. and Lauriault, T. (eds) Data and the City.  Routledge, London, pp. 111-126.
+        </p>
     </div>
     <div class="row">
         <h2>Funding</h2>

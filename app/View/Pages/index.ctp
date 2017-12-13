@@ -125,7 +125,7 @@
         <div>
             <!--TODO:Fix this hack!-->
             <!--            <br><br><br><br><br><br><br><br><br><br>-->
-            <p>Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a></p>
+            <p>Source (opens new): <a href="http://www.met.ie/forecasts/regional.asp?Prov=Munster " target="_blank"> Met Eireann</a></p>
         </div>
     </div>  
     <!--                        

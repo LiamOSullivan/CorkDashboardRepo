@@ -20,28 +20,23 @@
                 <img src="/img/Dashboard/County_Census_Mapping.png" alt="Cork county census image" /></a>
             <h2>Cork County Census</h2>
         </div>
-
-        <!--    <div style="width:40%; padding:20px; float:left" >
-                <h2>Social Welfare Monitoring Tool</h2>
-                <a href="http://airo.maynoothuniversity.ie/external-content/live-register-office-monitoring-tool" class="bordered-feature-image">
-                    <img src="/img/Dashboard/airo_live_register.png" alt="" /></a>
-                <br>
-            </div>-->
+ 
     </div>
-     <div class="row">
+    <div class="row">
+        <div class="col-6" style="float: left; padding: 0.5vh 0.25vw 0.5vh 0.25vw;">
+
+            <a href="http://airomaps.nuim.ie/id/Census2016/ " target="_blank" class="bordered-feature-image">
+                <img src="/img/Dashboard/census2016_nw.png" alt="" /></a>
+            <h2>Census 2016</h2>
+        </div>
         <div class="col-6" style="float: left; padding: 0.5vh 0.25vw 0.5vh 0.25vw;">
 
             <a href="http://airo.maynoothuniversity.ie/external-content/recorded-crime-monitoring-tool" target="_blank" class="bordered-feature-image">
                 <img src="/img/Dashboard/airo_crime_tool.png" alt="" /></a>
             <h2>Crime Monitoring Tool</h2>
         </div>
-        <!--    <div style="width:40%; padding:20px; float:left" >
-                <h2>SEAI Heat Demand Map</h2>
-                <a href="http://maps.seai.ie/heatdemand/" class="bordered-feature-image" target="_blank">
-                    <img src="/img/Dashboard/cork_heat_demand.png" alt="" /></a>
-        
-                <br>
-            </div>-->
+    </div>
+    <div class="row">
 
         <div class="col-6" style="float: left; padding: 0.5vh 0.25vw 0.5vh 0.25vw;">
 
@@ -49,8 +44,7 @@
                 <img src="/img/Dashboard/cork_historic_environment.png" alt="" /></a>
             <h2>Historic Environment</h2>
         </div>
-    </div>
-     <div class="row">
+
 
         <div class="col-6" style="float: left; padding: 0.5vh 0.25vw 0.5vh 0.25vw;">
 
@@ -58,21 +52,24 @@
                 <img src="/img/Dashboard/cork_sentinel_hub.png" alt="" /></a>
             <h2>Cork Sentinel Hub</h2>
         </div>
+    </div>
+    <div class="row">
         <div class="col-6" style="float: left; padding: 0.5vh 0.25vw 0.5vh 0.25vw;">
 
             <a href="http://startupireland.ie/" class="bordered-feature-image" target="_blank">
                 <img src="/img/Dashboard/cork_startups.png" alt="" /></a>
             <h2>Cork Startups</h2>
         </div>
-    </div>
-     <div class="row">
-   
+
+
         <div class="col-6" style="float: left; padding: 0.5vh 0.25vw 0.5vh 0.25vw;">
 
             <a href="https://earthengine.google.com/timelapse/#v=51.8969,-8.4863,10.615,latLng&t=0.01" class="bordered-feature-image" target="_blank">
                 <img src="/img/Dashboard/corks_growth.png" alt="" /></a>
             <h2>Cork's Growth</h2>
         </div>
+    </div>
+    <div class="row">
 
         <div class="col-6" style="float: left; padding: 0.5vh 0.25vw 0.5vh 0.25vw;">
 
@@ -86,5 +83,12 @@
 </div>
 
 
+<!--    <div style="width:40%; padding:20px; float:left" >
+           <h2>SEAI Heat Demand Map</h2>
+           <a href="http://maps.seai.ie/heatdemand/" class="bordered-feature-image" target="_blank">
+               <img src="/img/Dashboard/cork_heat_demand.png" alt="" /></a>
+   
+           <br>
+       </div>-->
 
 
