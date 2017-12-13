@@ -3,52 +3,53 @@
     <!--//<div style="overflow:auto">-->
     <div style="border-bottom:2px solid #e5e5e5">
         <h1>Data Trends for Cork</h1>
-        
     </div>
-    <div >
-        <div>
-            <h3>See how Cork compares to other regions nationally and 
-            internationally using a range of social and economic indicators. </h3>
-        </div>
-        <div class="col-4" >
-            <h2>Indicators </h2>
+    <div>
+        <p>See how Cork compares to other regions nationally and 
+            internationally using a range of social and economic indicators. </p>
+    </div>
+    <div class="row">
+        <div class="col-4"style="float: left;" >
+        
             <a href="corkIndicators" class="bordered-feature-image">
                 <img src="/img/Dashboard/Cork_Doing3.png" alt="" /></a>
             <!--<a href="cork_indicators.ctp"></a>-->
-            <br>
+                <h2>Indicators </h2>
         </div>
-        <div class="col-4" >
-            <h2>Spending</h2>
+
+        <div class="col-4"style="float: left;" >
+            
             <a href="CorkSpending" class="bordered-feature-image">
                 <img src="/img/Dashboard/Cork_county_spending.png"  alt="" /></a>
-            <br>
+            <h2>Spending</h2>
         </div>
-        <div class="col-4" >
-            <h2>Cost of Living</h2>
+
+       <div class="col-4"style="float: left;" >
+            
             <a href="https://www.numbeo.com/cost-of-living/in/Cork" target="_blank" class="bordered-feature-image">
                 <img src="/img/Dashboard/cost_of_living_cork.png" alt=""  /></a>
-            <br>
+           <h2>Cost of Living</h2>
         </div>
     </div>
-    <div >
-        <div class="col-4" >
-            <h2>Benchmarks</h2>
+    <div class="row">
+        <div class="col-4"style="float: left;" >
+            
             <a href="CorkBenchMarks" class="bordered-feature-image">
                 <img src="/img/Dashboard/bm_european_monitor.png" alt="" /></a>
-            <br>
+            <h2>Benchmarks</h2>
         </div>
-        <div class="col-4" >
-            <h2>Economic Bulletin</h2>
+        <div class="col-4"style="float: left;" >
+            
             <a href="CorkEconomicMonitor" class="bordered-feature-image">
                 <img src="/img/Dashboard/cork_economic_monitor.png" alt="" /></a>
-            <br>
+            <h2>Economic Bulletin</h2>
         </div>
-        <div class="col-4" >
-            <h2>Compare Cork </h2>
+        <div class="col-4"style="float: left;" >
+            
             <a href="https://public.tableausoftware.com/views/GHDI_Indicators_DublinDash/IndexScoresTotal?:embed=y&:display_count=no&:showVizHome=no" target = "_blank" class="bordered-feature-image">
                 <img src="/img/Dashboard/airo_indicators_nw.png" alt=""  target="_blank"/></a>
 
-            <br>
+            <h2>Compare Cork </h2>
         </div>
     </div>
 </div>

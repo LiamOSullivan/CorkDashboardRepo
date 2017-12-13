@@ -49,6 +49,13 @@ a:hover {
     /*max-width: 100%;*/
 }
 
+  /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
 /*body, input, textarea, select
 {
     color: rgba(0,0,0,0.65);
@@ -159,11 +166,10 @@ a.side_menu_text:hover {
 }
 
 
-
 /*For when there's only a single column of content next to the siderbar*/
 .onlyContent{
     float:left;
-    width:80%;
+    width:100%;
     /*padding:20px;*/
     text-align:left;
 }
@@ -225,7 +231,7 @@ a.side_menu_text:hover {
     /*//url('images/bg04.png');*/
     padding: 10px;
     box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.15);
-   margin: 0vh 1vw 0vh 1vw;
+    margin: 0vh 1vw 0vh 1vw;
     outline: 0;
 }
 
@@ -251,16 +257,16 @@ a.side_menu_text:hover {
 
 .mapFrame{
     width: 100%;
-  height: 408px;
-  overflow: hidden;
-  border: none;
+    height: 408px;
+    overflow: hidden;
+    border: none;
 }
 
 /*Indicator chart content*/ 
 .highchartsFrame{
-  width: 100%;
-  overflow: hidden;
-  border: none;
+    width: 100%;
+    overflow: hidden;
+    border: none;
 }
 
 #map {
@@ -275,32 +281,39 @@ a.side_menu_text:hover {
 }
 
 /******************************************************************************
-Mobile phone/ iPhone Landscape 
+Mobile phone/ iPhone Landscape  ***BREAKPOINT #1***
 
 ******************************************************************************/
-
 @media screen and (min-width: 568px) {
-    /*768 - 102*/
+
+    p, li {  
+
+        font-size: 4.5vmin;
+        padding: 1vh 3vw 1vh 3vw;
+
+    }
+
     h1 {
-        font-size:5.5vw;
-        padding:1vh 3vw 1vh 3vw;
+        font-size:6.5vw;
+        padding:2vh 3vw 2vh 3vw;
     }
 
     h2 {
-        font-size: 4.5vw;
-        padding:0vh 3vw 0vh 3vw;
+        font-size: 5.5vw;
+        padding:2vh 3vw 2vh 3vw;
     }
 
     h3 {
-        font-size: 3.5vmin;
-        padding:0vh 3vw 0vh 3vw;
+        font-size: 4.0vmin;
+        padding:1vh 3vw 1vh 3vw;
+        text-align: justify;
     }
 
-    ul, ol, dl
-    {
-        margin: 0 0 2em 0;
-        font-size:1.45em;
-    }
+    /*    ul, ol, dl
+        {
+            margin: 0 0 2em 0;
+            font-size:1.45em;
+        }*/
 
     .side_menu_text {
         padding:2vh 3vw 2vh 3vw;
@@ -309,7 +322,9 @@ Mobile phone/ iPhone Landscape
 
     .icon-cell{
         padding: 1vw; 
-        height: 14vh;
+        display: table-cell; 
+        vertical-align: middle; 
+        height: 7vh;
     }
     .chartWrapper{
         min-height: 30vh;
@@ -318,17 +333,23 @@ Mobile phone/ iPhone Landscape
     }
 }
 
+/******************************************************************************
+Medium Tablet Portrait
+768 x 1024
+*****************************************************************************/
+/*
+*//*
+
+
+*/
+
 
 /*******************************************************************************
-Desktop, iPad Landscape
-1024 x 768 :: Menu and column of content
+Medium table 768
+
+                                                ***BREAKPOINT #2***
 *******************************************************************************/
-@media screen and (min-width: 1024px) { 
-
-    /*The container for elemnts n the home page
-        .homeBlock{
-        }*/
-
+@media only screen and (min-width:768px) {
     .menu {
         width:30%;
         text-align:left;
@@ -350,31 +371,41 @@ Desktop, iPad Landscape
     }
     .onlyContent{
         width:70%;
+        float: right;
     }
 
-    p, li {  
+    p{  
+         padding:2vh 3vw 2vh 3vw;
+        font-size: 2.5vw;
+    }
+
+    ul{
         font-size: 3.0vmin;;
-        padding:1vh 3vw 1vh 3vw;
+        padding:0vh 0vw 0vh 0vw; 
+
+    } 
+
+    li {
+        font-size: 3.0vmin;;
+        padding:1vh 2vw 1vh 2vw;      
     }
 
     h1 {
-        font-size:3.75vw;
-        padding:1vh 3vw 1vh 3vw;
+        font-size:3.5vw;
+        padding:2vh 2vw 2vh 2vw;
     }
 
     h2 {
-        font-size: 3.25vw;
-        padding:0vh 3vw 0vh 3vw;
+        font-size: 2.75vw;
+        padding:2vh 2vw 2vh 2vw;
     }
 
     h3 {
-        font-size: 3.0vmin;
-        padding:0vh 3vw 0vh 3vw;
+        font-size: 2.5vmin;
+        padding:0vh 2vw 1vh 3vw;
     }
-    
-    ul, li {
-        padding: 0;        
-    }
+
+
 
     /*    ul, ol, dl
         {
@@ -391,22 +422,107 @@ Desktop, iPad Landscape
         padding: 1vw; 
         height: 10vh;
     }
+
+  
+
 }
 
-/*Widescreen
-1680 x 1050*/
+/*******************************************************************************
+Desktop, iPad Landscape
+1024 x 768 :: Menu and column of content
 
-/*@media only screen and (min-width:1200px) {
-    .menu{
-         width:30%;
+                                                ***BREAKPOINT #3***
+*******************************************************************************/
+/*******************************************************************************
+Medium table 768
+
+                                                ***BREAKPOINT #2***
+*******************************************************************************/
+/*@media screen and (min-width: 1024px) { */
+
+/*The container for elemnts n the home page
+    .homeBlock{
+    }*/
+
+
+@media only screen and (min-width:1024px) {
+    .menu {
+        width:30%;
+        text-align:left;
     }
-    .middle, .onlyContent {
-        width:65%;
+
+    .side_menuitem {
+        /*padding:2vw 0vw 2vw 0vw;*/
     }
-    .right{
-        width:100%;
+
+    .middle {
+        width:70%;
     }
-}*/
+    .right {
+        width:70%;
+        float: right;
+        border-right: 2px solid #e5e5e5;
+        border-left: 2px solid #e5e5e5;
+
+    }
+    .onlyContent{
+        width:70%;
+        float: right;
+    }
+
+    p{  
+         padding:2vh 3vw 2vh 3vw;
+        font-size: 2.0vw;
+    }
+
+    ul{
+        font-size: 3.0vmin;;
+        padding:0vh 0vw 0vh 0vw; 
+
+    } 
+
+    li {
+        font-size: 3.0vmin;;
+        padding:1vh 2vw 1vh 2vw;      
+    }
+
+    h1 {
+        font-size:3.25vw;
+        padding:2vh 2vw 2vh 2vw;
+    }
+
+    h2 {
+        font-size: 2.55vw;
+        padding:2vh 2vw 2vh 2vw;
+    }
+
+    h3 {
+        font-size: 2.25vmin;
+        padding:0vh 2vw 1vh 3vw;
+    }
+
+
+
+    /*    ul, ol, dl
+        {
+            margin: 0 0 2em 0;
+            font-size:1.45em;
+        }*/
+
+    .side_menu_text {
+        padding:2vh 3vw 2vh 3vw;
+        font-size: 2.5vw;
+    }
+
+    .icon-cell{
+        padding: 1vw; 
+        height: 10vh;
+    }
+
+   
+
+}
+
 
 /*******************************************************************************
 Desktop
@@ -481,7 +597,7 @@ Desktop
         padding: 0vh 0vw 0vh 0vw; 
         background-color: rgba(181, 31, 36, 1.0)
     }
-    
+
 }
 
 /*Netbook
@@ -848,13 +964,19 @@ Desktop
 
 }*/
 
-/******************************************************************************
-Medium Tablet Portrait
-768 x 1024
-*****************************************************************************/
-/*
-@media only screen and (max-width:768px) {
 
 
+/*Widescreen
+1680 x 1050*/
+
+/*@media only screen and (min-width:1200px) {
+    .menu{
+         width:30%;
+    }
+    .middle, .onlyContent {
+        width:65%;
+    }
+    .right{
+        width:100%;
+    }
 }*/
-
