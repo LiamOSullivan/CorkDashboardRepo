@@ -75,8 +75,8 @@
                         <br>
                         <div class="content" id="tab32"><?php echo $this->element($Graph5, array("function" => "Demographics/populationRateChange/tab32")); ?></div>
                         <br>
-                        <div class="content" id="tab21"><?php echo $this->element($Graph5, array("function" => "Demographics/females/tab21")); ?></div> 
-                        <br>
+                        <!--<div class="content" id="tab21"><?//php echo $this->element($Graph5, array("function" => "Demographics/females/tab21")); ?></div>--> 
+                        <!--<br>-->
                         <div class="content" id="tab41"><?php echo $this->element($Graph5, array("function" => "Demographics/popBornOutside/tab41")); ?></div> 
                         <br>
                         <div class="content" id="tab11"><?php echo $this->element($Graph5, array("function" => "Demographics/ageProfiles/tab11")); ?></div>

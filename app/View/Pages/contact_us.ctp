@@ -89,12 +89,14 @@
             <a target ="_blank"  href="http://rsa.tandfonline.com/doi/full/10.1080/21681376.2014.983149#.VRrNd47F_WS">‘Knowing and Governing Cities through Urban Indicators, City Benchmarking, and Real-Time Dashboards’</a>, Regional Studies, Regional Science, Journal of the Regional Studies Association, Oxford, Taylor & Francis, 2(1):6-28</p>-->
         <p>
             Kitchin, R., Maalsen, S. and McArdle, G. (2016) 
-            ‘The Praxis and Politics of Building Urban Dashboards’</a>, Geoforum 77: 93-101.</p>
+            <a href="http://www.sciencedirect.com/science/article/pii/S0016718515300245" target="_blank">
+               The Praxis and Politics of Building Urban Dashboards</a>, Geoforum 77: 93-101.</p>
         <p>
             McArdle, G. and Kitchin, R. (2016) 
-            ‘Improving the Veracity of Open and Real-Time Urban Data’</a>, Built Environment 42(3): 446-462</p>
+            <a href="http://www.ingentaconnect.com/contentone/alex/benv/2016/00000042/00000003/art00012" target="_blank">
+            Improving the Veracity of Open and Real-Time Urban Data</a>, Built Environment 42(3): 446-462</p>
         <p>
-            Kitchin, R. and McArdle, G. (2017) Urban data and city dashboards: Six key issues. 
+            Kitchin, R. and McArdle, G. (2017) <a href="https://osf.io/ghmdj/" target="_blank"> Urban data and city dashboards: Six key issues. </a>
             In Kitchin, R., McArdle, G. and Lauriault, T. (eds) Data and the City.  Routledge, London, pp. 111-126.
         </p>
     </div>

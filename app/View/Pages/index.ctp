@@ -232,10 +232,12 @@
     <div style="border-bottom:2px solid #e5e5e5;" >
         <h1>Data at a Glance</h1>
     </div>
-    <p> Hover over the charts for data, click to go to the detailed versions<p>
+    <p> Hover over the charts for data, click to see detailed versions. 
+        You can browse various statistical graphs <a href="/pages/corkIndicators" >here</a>.
+    </p>
     <div style="border-bottom:2px solid #e5e5e5; ">
         <h2>Average Residential Rent</h2>
-        <a href="/./Housings/stats#tab71">    
+        <a href="/./Housings/stats#tab71" target="_blank">    
             <div class="chartWrapper">
                 <canvas id="cork_residential_rents" width="100%" ></canvas>
             </div>
@@ -243,23 +245,23 @@
     </div>
     <div style="border-bottom:2px solid #e5e5e5;" >
         <h2>Average House Price</h2>
-        <a href="/./Housings/stats#tab11">    
+        <a href="/./Housings/stats#tab11" target="_blank">    
             <div class="chartWrapper">
                 <canvas id="cork_house_prices" width="100%" ></canvas>
             </div>
         </a>
     </div>    
-    <div style="border-bottom:2px solid #e5e5e5;">
+    <div style="border-bottom:2px solid #e5e5e5;" >
         <h2>Planning Applications</h2>
         <h3>City</h3>
-        <a href="/./Housings/stats#tab21"> 
+        <a href="/./Housings/stats#tab21" target="_blank"> 
             <div class="chartWrapper">
                 <canvas id="city_planning_applications" width="100%" ></canvas>
             </div>
         </a>
 
         <h3>County</h3>
-        <a href="/./Housings/stats#tab221"> 
+        <a href="/./Housings/stats#tab221" target="_blank"> 
             <div class="chartWrapper">
                 <canvas id="county_planning_applications" width="100%" ></canvas>
             </div>
