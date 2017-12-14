@@ -5,7 +5,9 @@
 <meta name="description" content="Provides access to real-time, live data about current traffic and travel conditions in Cork.  This includes travel time, car parks, and traffic cams." />
 <meta name="keywords" content="Corkdashboard, Cork, City Benchmarks, Interactive tools" />
 <script src="/dublindashboard/js/Dashboard/jquery.min.js"></script>
-        <!-- <script src="/dublindashboard/js/Dashboard/config.js"></script> 
+
+
+       <!-- <script src="/dublindashboard/js/Dashboard/config.js"></script> 
         
         <script src="/dublindashboard/js/Dashboard/skel.min.js"></script>
         <!-- <script src="/dublindashboard/js/Dashboard/skel-panels.min.js"></script> 
@@ -15,99 +17,246 @@
 
 <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> 
 
+<style type="text/css">
+    .leaflet-popup-content {
+        /*margin: 14px 20px;*/
+        /*//overflow: scroll;*/
+        min-width: 50px;
+        /*//max-Width: 600px;*/
+        width:auto !important;
+        font-size: 18px;
+    }
+    .leaflet-control-layers-expanded {
+        padding: 6px 10px 6px 6px;
+        font: 18px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+        color: #333;
+        background: #fff;
+        text-align: left;
+    }
+
+
+    .leaflet-div-icon {
+        background: transparent;
+        border: none;
+        color:white;
+    }
+
+    .leaflet-marker-icon .number{
+        position: relative;
+        top: -44px;
+        font-size: 14px;
+        width: 25px;
+        text-align: center;
+    }
+
+    .legend {
+        text-align: left;
+        line-height: 18px;
+        color: #555;
+        background-color:white;
+    }
+    .legend i {
+        width: 18px;
+        height: 18px;
+        clear:both;
+        float:left;
+
+
+    }
+
+    .info {
+        padding: 2px 8px;
+
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+    .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+    }
+
+</style>
+
+
 <div class="onlyContent">
     <div style="border-bottom:2px solid #e5e5e5; width:100%">
         <h1>Real Time Traffic & Travel Map</h1>
     </div>
-     <p>The map contains live information for traveling to/ in the city, 
-            including availability of car parking and city bikes. </p>
+    <p>The map contains live information for traveling to/in the city, 
+        including availability of car parking and city bikes. </p>
 
-    <style type="text/css">
-        .leaflet-popup-content {
-            /*margin: 14px 20px;*/
-            /*//overflow: scroll;*/
-            min-width: 50px;
-            /*//max-Width: 600px;*/
-            width:auto !important;
-            font-size: 18px;
-        }
-        .leaflet-control-layers-expanded {
-            padding: 6px 10px 6px 6px;
-            font: 18px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-            color: #333;
-            background: #fff;
-            text-align: left;
-        }
+    <!--    <body onload="myFunction()">-->
 
-
-        .leaflet-div-icon {
-            background: transparent;
-            border: none;
-            color:white;
-        }
-
-        .leaflet-marker-icon .number{
-            position: relative;
-            top: -44px;
-            font-size: 14px;
-            width: 25px;
-            text-align: center;
-        }
-
-        .legend {
-            text-align: left;
-            line-height: 18px;
-            color: #555;
-            background-color:white;
-        }
-        .legend i {
-            width: 18px;
-            height: 18px;
-            clear:both;
-            float:left;
-
-
-        }
-
-        .info {
-            padding: 2px 8px;
-
-            background: white;
-            background: rgba(255,255,255,0.8);
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            border-radius: 5px;
-        }
-        .info h4 {
-            margin: 0 0 5px;
-            color: #777;
-        }
-
-    </style>
-
-    <body onload="myFunction()">
-
-        <div style="padding: 2vh 2vw 2vh 2vw;"> 
-            <div id="map" style="width: 100%; height: 600px"></div>
-            <div id="dataSources" class="homeBlock" style="width:100%; text-align:justify"></div>
+    <div style="padding: 2vh 2vw 2vh 2vw;"> 
+        <div id="map" style="width: 100%; height: 600px"></div>
+        <div id="dataSources" class="homeBlock" style="width:100%; text-align:justify"></div>
+    </div>
+    <div style="border-bottom:2px solid #e5e5e5; width:100%">
+        <h1>Live Traffic Cams</h1>
+    </div>
+    <p>Click an image for a larger view. See all Irish camera locations (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
+    </p>
+    <div class="col-12" style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
+        <div class="row">
+            <div class="col-3" >
+                <div class="cam_header">
+                    <h3>Dunkettle IC</h3>
+                </div>
+            </div>
+            <div class="col-6" >
+                <div class="cam_header">
+                    <h3>Jack Lynch Tunnel</h3>
+                </div>
+            </div>
+            <div  class="col-3" >
+                <div class="cam_header">
+                    <h3>N40 Curraheen</h3>
+                </div>
+            </div>
         </div>
-           <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> -->
-     <!-- <script src="/dublindashboard/js/leaflet.js"></script> -->
-        <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> 
-        <script src="/dublindashboard/js/carparks.js"></script>
-        <script src="/dublindashboard/js/soundsites.js"></script>
-        <script src="/dublindashboard/js/M50.js"></script>
-        <script src="/dublindashboard/js/R1D1.js"></script>
-       <!-- <script src="/dublindashboard/js/leaflet_numbered_markers.js"></script> -->
-        <script src="/dublindashboard/js/TileLayer.Grayscale.js"></script>
-       <!-- <script src="/dublindashboard/js/leaflet-list-markers.js"></script> -->
-        <script src="/dublindashboard/js/carParkCapacities.js"></script>
-        <script src="/dublindashboard/js/allRoutes.js"></script>
-        <script src="/dublindashboard/js/allRoutesSegments.js"></script>
-        <script src="/dublindashboard/js/Dashboard/leaflet.markercluster-src.js"></script>
-        <link rel="stylesheet" href="/dublindashboard/css/Dashboard/MarkerCluster.css" />
-        <link rel="stylesheet" href="/dublindashboard/css/Dashboard/MarkerCluster.Default.css" />
+        <div class="row" style="border-bottom:2px solid #e5e5e5;">
+            <a href="https://cdn.mtcc.ie/static/cctv/0265.jpg" target= "blank">
+                <div id="cam265" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
 
-        <script>
+                </div>
+            </a>
+            <a href="http://www.jacklynchtunnel.ie/traffic-cameras" target="blank"> 
+                <div id="camj1" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+
+                </div>
+                <div id="camj2" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+
+                </div>
+            </a>
+            <a href="https://cdn.mtcc.ie/static/cctv/0264.jpg" target="blank">
+                <div id="cam264" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-3" >
+                <div class="cam_header">
+                    <h3>M8 J12 (Mitchelstown)</h3>
+                </div>
+            </div>
+            <div class="col-3" >
+                <div class="cam_header">
+                    <h3>N20 Charleville</h3>
+                </div>
+            </div>
+            <div class="col-3" >
+                <div class="cam_header">
+                    <h3>N22 Macroom</h3>
+                </div>
+            </div>
+            <div  class="col-3" >
+                <div class="cam_header">
+                    <h3>N22 Ballyvourney</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="border-bottom:2px solid #e5e5e5;">
+            <a href="https://cdn.mtcc.ie/static/cctv/0016.jpg" target= "blank">
+                <div id="cam16" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+
+                </div>
+            </a>
+            <a href="https://cdn.mtcc.ie/static/cctv/0079.jpg" target="blank"> 
+                <div id="cam79" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+
+                </div>
+            </a>
+            <a href="https://cdn.mtcc.ie/static/cctv/0077.jpg" target="blank">
+                <div id="cam77" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+
+                </div>
+            </a>
+            <a href="https://cdn.mtcc.ie/static/cctv/0008.jpg" target="blank"> 
+                <div id="cam8" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+
+                </div>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col-3" >
+                <div class="cam_header">
+                    <h3>N25 J3 (Middleton Bypass)</h3> 
+                </div>
+            </div>
+            <div class="col-3" >
+                <div class="cam_header">
+                    <h3>N25 Middleton Bypass</h3> 
+                </div>
+            </div>
+            <div  class="col-3" >
+                <div class="cam_header">
+                    <h3>M8 Corrin Interchange</h3> 
+                </div>
+            </div>
+            <div  class="col-3" >
+                <div class="cam_header">
+                    <h3>M8 Mitchelstown NE</h3> 
+                </div>
+            </div>  
+        </div>
+        <div class="row" style="border-bottom:2px solid #e5e5e5;">
+            <a href="https://cdn.mtcc.ie/static/cctv/0076.jpg" target= "blank">
+                <div id="cam76" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+                </div>
+            </a>
+            <a href="https://cdn.mtcc.ie/static/cctv/0178.jpg" target="blank"> 
+                <div id="cam178" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+                </div>
+            </a>
+            <a href="https://cdn.mtcc.ie/static/cctv/0204.jpg" target="blank">
+                <div id="cam204" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+                </div>
+            </a>
+            <a href="https://cdn.mtcc.ie/static/cctv/0205.jpg" target="blank"> 
+                <div id="cam205" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-3" >
+                <div class="cam_header">
+                    <h3>N72 Fermoy</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <a href="https://cdn.mtcc.ie/static/cctv/0197.jpg" target="blank"> 
+                <div id="cam197" class="col-3" style="padding: 1vh 1vh 1vh 1vh">
+
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+
+   <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> -->
+<!-- <script src="/dublindashboard/js/leaflet.js"></script> -->
+    <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> 
+    <script src="/dublindashboard/js/carparks.js"></script>
+    <script src="/dublindashboard/js/soundsites.js"></script>
+    <script src="/dublindashboard/js/M50.js"></script>
+    <script src="/dublindashboard/js/R1D1.js"></script>
+   <!-- <script src="/dublindashboard/js/leaflet_numbered_markers.js"></script> -->
+    <script src="/dublindashboard/js/TileLayer.Grayscale.js"></script>
+   <!-- <script src="/dublindashboard/js/leaflet-list-markers.js"></script> -->
+    <script src="/dublindashboard/js/carParkCapacities.js"></script>
+    <script src="/dublindashboard/js/allRoutes.js"></script>
+    <script src="/dublindashboard/js/allRoutesSegments.js"></script>
+    <script src="/dublindashboard/js/Dashboard/leaflet.markercluster-src.js"></script>
+    <link rel="stylesheet" href="/dublindashboard/css/Dashboard/MarkerCluster.css" />
+    <link rel="stylesheet" href="/dublindashboard/css/Dashboard/MarkerCluster.Default.css" />
+
+    <script>
 
 
         // check browser version type
@@ -1110,7 +1259,8 @@
 
         function getJunctionName(propertyName) {
             return M50[propertyName];
-        };
+        }
+        ;
 
         var carParks = new L.FeatureGroup();
         carParks.addTo(map);
@@ -1157,6 +1307,9 @@
 
 
         function myFunction() {
+
+            refreshCams();
+            setInterval("refreshCams()", 300000);
             initial++;
 
 
@@ -3813,7 +3966,10 @@
             });
 
 
-        }
+        } //end of myFunction
+
+
+
 
 
         function highlightRoadFeature(e) {
@@ -4046,35 +4202,36 @@
 
         }
 
+        function refreshCams() {
+            let camimg265 = "https://cdn.mtcc.ie/static/cctv/0265.jpg?";
+            let camimgj1 = "https://cdn.mtcc.ie/static/cctv/0266.jpg?";
+            let camimgj2 = "https://cdn.mtcc.ie/static/cctv/0267.jpg?";
+            let camimg264 = "https://cdn.mtcc.ie/static/cctv/0264.jpg";
+            document.getElementById("cam265").innerHTML = "<img src=" + camimg265 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("camj1").innerHTML = "<img src=" + camimgj1 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("camj2").innerHTML = "<img src=" + camimgj2 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam264").innerHTML = "<img src=" + camimg264 + " alt=\"cam\" style=\"width:100%\">";
+            let camimg16 = "https://cdn.mtcc.ie/static/cctv/0016.jpg?";
+            let camimg79 = "https://cdn.mtcc.ie/static/cctv/0079.jpg?";
+            let camimg77 = "https://cdn.mtcc.ie/static/cctv/0077.jpg?";
+            let camimg8 = "https://cdn.mtcc.ie/static/cctv/0008.jpg";
+            document.getElementById("cam16").innerHTML = "<img src=" + camimg16 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam79").innerHTML = "<img src=" + camimg79 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam77").innerHTML = "<img src=" + camimg77 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam8").innerHTML = "<img src=" + camimg8 + " alt=\"cam\" style=\"width:100%\">";
+            let camimg76 = "https://cdn.mtcc.ie/static/cctv/0076.jpg?";
+            let camimg178 = "https://cdn.mtcc.ie/static/cctv/0178.jpg?";
+            let camimg204 = "https://cdn.mtcc.ie/static/cctv/0204.jpg?";
+            let camimg205 = "https://cdn.mtcc.ie/static/cctv/0205.jpg";
+            let camimg197 = "https://cdn.mtcc.ie/static/cctv/0197.jpg";
+            document.getElementById("cam76").innerHTML = "<img src=" + camimg76 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam178").innerHTML = "<img src=" + camimg178 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam204").innerHTML = "<img src=" + camimg204 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam205").innerHTML = "<img src=" + camimg205 + " alt=\"cam\" style=\"width:100%\">";
+            document.getElementById("cam197").innerHTML = "<img src=" + camimg197 + " alt=\"cam\" style=\"width:100%\">";
+
+        }
 
 
-
-        </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </section>
-
-
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</body>
-</html>
+    </script>
+<!--</body>-->

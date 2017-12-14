@@ -42,7 +42,7 @@ echo $this->Html->script('wCitySites.js');
 
                 </span><img 
                     id="ImageRadioFieldID1" 
-                    src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServicesBlue.png"
+                    src="/img/Dashboard/Cork_Indicator_Icons/PopulationBlue.png" 
                     width="100%" 
                     height="auto" 
                     onclick="RadioClicked('RadioFieldID1', 'thisradio', 'MyFormID', 0)" 
@@ -59,7 +59,8 @@ echo $this->Html->script('wCitySites.js');
                         >
                 </span><img 
                     id="ImageRadioFieldID2" 
-                    src=  "/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png"
+                    src=  "/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png"
+
                     width=100% 
                     height="auto" 
                     onclick="RadioClicked('RadioFieldID2', 'thisradio', 'MyFormID', 1)" 
@@ -75,7 +76,8 @@ echo $this->Html->script('wCitySites.js');
                         checked=false>
                 </span><img 
                     id="ImageRadioFieldID3" 
-                    src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" 
+                    src="/img/Dashboard/Cork_Indicator_Icons/Housing.png"
+
                     width="100%" 
                     height="auto" 
                     onclick="RadioClicked('RadioFieldID3', 'thisradio', 'MyFormID', 2)" 
@@ -91,7 +93,7 @@ echo $this->Html->script('wCitySites.js');
                         >
                 </span><img 
                     id="ImageRadioFieldID4" 
-                    src="/img/Dashboard/Cork_Indicator_Icons/Housing.png"
+                    src=  "/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png"
                     width="100%" 
                     height="auto" 
                     onclick="RadioClicked('RadioFieldID4', 'thisradio', 'MyFormID', 3)" 
@@ -107,7 +109,8 @@ echo $this->Html->script('wCitySites.js');
                         >
                 </span><img 
                     id="ImageRadioFieldID5" 
-                    src=  "/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png"
+                    src="/img/Dashboard/Cork_Indicator_Icons/Health_Education.png" 
+
                     width=100% 
                     height="auto" 
                     onclick="RadioClicked('RadioFieldID5', 'thisradio', 'MyFormID', 4)" 
@@ -122,7 +125,7 @@ echo $this->Html->script('wCitySites.js');
                         checked=false>
                 </span><img 
                     id="ImageRadioFieldID6" 
-                    src="/img/Dashboard/Cork_Indicator_Icons/Population.png" 
+                    src="/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png"
                     width="100%" 
                     height="auto" 
                     onclick="RadioClicked('RadioFieldID6', 'thisradio', 'MyFormID', 5)" 
@@ -135,14 +138,14 @@ echo $this->Html->script('wCitySites.js');
     </div>
 
     <div style="padding:0vh 1vw 0vh 1vw;">
-        <iframe class = "highchartsFrame"  style="height:8000px" 
-                id="graphContent" scrolling="no" src="/./CrimeEmergencyServices/stats" name="iframe_indicators">
+        <iframe class = "highchartsFrame"  style="height:4000px" 
+                id="graphContent" scrolling="no" src="/./Demographics/stats" name="iframe_indicators">
             <p>Your browser does not support iframes.</p>  </iframe>
 
     </div>
 
-<!--    <div class="col-12" id="indicatorMapTop" style="padding:0vh 0vw 5vh 0vw;"></div>
-    <div id="map" style= "width: 100%; height: 600px"></div>
+    <div class="col-12" id="indicatorMapTop" style="padding:0vh 0vw 5vh 0vw; display: block "></div>
+<!--    <div id="map" style= "width: 100%; height: 600px"></div>
     <div id="indicatorMapBottom" style="padding:0vh 0vw 5vh 0vw;"></div>-->
 
 
@@ -222,57 +225,66 @@ echo $this->Html->script('wCitySites.js');
     <script type="text/javascript">
 
         let contentLinks = [];
-        contentLinks[0] = "/./CrimeEmergencyServices/stats";
-        contentLinks[1] = "/./EnvironmentTransport/stats";
-        contentLinks[2] = "/./HealthEducation/stats";
-        contentLinks[3] = "/./Housings/stats";
-        contentLinks[4] = "/./Economy/stats/container";
-        contentLinks[5] = "/./Demographics/stats";
+        contentLinks[5] = "/./CrimeEmergencyServices/stats";
+        contentLinks[3] = "/./EnvironmentTransport/stats";
+        contentLinks[4] = "/./HealthEducation/stats";
+        contentLinks[2] = "/./Housings/stats";
+        contentLinks[1] = "/./Economy/stats/container";
+        contentLinks[0] = "/./Demographics/stats";
+
+        let iFrameSizes = [];
+        iFrameSizes[5] = "7500px";
+        iFrameSizes[3] = "3000px";
+        iFrameSizes[4] = "6000px";
+        iFrameSizes[2] = "5000px";
+        iFrameSizes[1] = "6000px";
+        iFrameSizes[0] = "4000px";
+
         let headers = [];
-        headers[0] = "<div><br>"
+        headers[5] = "<div><br>"
                 + "<h2>Crime and Emergency Services Indicators</h2></div>"
                 + "<div><p>Explore information relating to crime rates in Cork, fire brigade activities and injuries and fatalities on Cork roads.</p></div>";
-        headers[1] = "<div><br>"
+        headers[3] = "<div><br>"
                 + "<h2>Environmental Indicators</h2>"
                 + "</div>"
                 + "<div><p>Explore information relating to waste, recycling, water quality, Green Schools, Local Agenda 21 Projects and traffic volumes on Cork roads.</p></div>";
-        headers[2] = "<div><br>"
+        headers[4] = "<div><br>"
                 + "<h2>Health and Education Indicators</h2></div>"
                 + "<div><h3>Explore information relating to the number of people on trolleys in Cork’s hospitals, "
                 + "the health of Cork people, the level of education attainment of Cork citizens, "
                 + "the number of primary and secondary level pupils attending school in Cork and the number of schools in Cork.</h3></div>"
 
-        headers[3] = "<div><br>"
+        headers[2] = "<div><br>"
                 + "<h2>Housing Indicators</h2></div>"
                 + "<div><p>Explore information relating to planning applications, "
                 + "monthly house unit completions, available supply of land "
                 + "for housing, annual contributions to Cork councils from "
                 + "developers, average house prices, average monthly rent and "
                 + "number of inspections of rented accommodation.</p></div>";
-        headers[4] = "<div><br>"
+        headers[1] = "<div><br>"
                 + "<h2>Industry & Employment: Economic Indicators</h2></div>"
                 + "<div><p>Explore information relating to employment, unemployment,"
                 + "companies and household disposable income for the South West.  </p></div>";
-        headers[5] = "<div><br>"
+        headers[0] = "<div><br>"
                 + "<h2>Population & Demographic Information</h2></div>"
                 + "<div><p>Explore historical information relating to Cork’s population,"
                 + " people born outside the state now living in Cork, Cork’s "
                 + " age profile and the number of Cork households."
                 + "</p></div>";
         let unchecked = [];
-        unchecked[0] = "/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png";
-        unchecked[1] = "/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png";
-        unchecked[2] = "/img/Dashboard/Cork_Indicator_Icons/Health_Education.png";
-        unchecked[3] = "/img/Dashboard/Cork_Indicator_Icons/Housing.png";
-        unchecked[4] = "/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png";
-        unchecked[5] = "/img/Dashboard/Cork_Indicator_Icons/Population.png";
+        unchecked[5] = "/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServices.png";
+        unchecked[3] = "/img/Dashboard/Cork_Indicator_Icons/Environment_Transport.png";
+        unchecked[4] = "/img/Dashboard/Cork_Indicator_Icons/Health_Education.png";
+        unchecked[2] = "/img/Dashboard/Cork_Indicator_Icons/Housing.png";
+        unchecked[1] = "/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market.png";
+        unchecked[0] = "/img/Dashboard/Cork_Indicator_Icons/Population.png";
         let checked = [];
-        checked[0] = "/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServicesBlue.png";
-        checked[1] = "/img/Dashboard/Cork_Indicator_Icons/Environment_TransportBlue.png";
-        checked[2] = "/img/Dashboard/Cork_Indicator_Icons/Health_EducationBlue.png";
-        checked[3] = "/img/Dashboard/Cork_Indicator_Icons/HousingBlue.png";
-        checked[4] = "/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market_Blue.png";
-        checked[5] = "/img/Dashboard/Cork_Indicator_Icons/PopulationBlue.png";
+        checked[5] = "/img/Dashboard/Cork_Indicator_Icons/CrimeEmergencyServicesBlue.png";
+        checked[3] = "/img/Dashboard/Cork_Indicator_Icons/Environment_TransportBlue.png";
+        checked[4] = "/img/Dashboard/Cork_Indicator_Icons/Health_EducationBlue.png";
+        checked[2] = "/img/Dashboard/Cork_Indicator_Icons/HousingBlue.png";
+        checked[1] = "/img/Dashboard/Cork_Indicator_Icons/Industry_Employment_Labour_Market_Blue.png";
+        checked[0] = "/img/Dashboard/Cork_Indicator_Icons/PopulationBlue.png";
         //    
         let transportMapTextTop =
                 "<h2>Typical Traffic Volumes in Cork (View in <a href=\"/dublindashboard/ScatsMap.html\" target=\"_blank\">full screen)</a></h2><br>"
@@ -293,6 +305,10 @@ echo $this->Html->script('wCitySites.js');
                 + "as HGVs, buses and vehicles pulling trailers do not fall under "
                 + "this category.</p><br>"
                 + "<p> <strong>Coverage</strong> refers to the percentage period in a given year that data was collected from a particular site.</p><br>";
+
+
+
+
         function RadioClicked(radioid, radiosetname, formid, val) {
             console.log("clicked: " + radioid + " | " + radiosetname + " | " + formid + " | " + val);
             // - first, uncheck all radio buttons of the set
@@ -308,25 +324,36 @@ echo $this->Html->script('wCitySites.js');
             document.getElementById("Image" + radioid).src = checked[val];
             document.getElementById("graphContent").src = contentLinks[val];
             document.getElementById("indicatorHeader").innerHTML = headers[val];
-            if (val == 1) {
-                document.getElementById("indicatorMapTop").innerHTML = transportMapTextTop;
-                document.getElementById("indicatorMapBottom").innerHTML = transportMapTextBottom;
-//               document.getElementById("map").style.height = 600px;
-//                createMap();
-            }
-            else{
-                document.getElementById("indicatorMapTop").innerHTML = "";
-                document.getElementById("indicatorMapBottom").innerHTML = "";
-               document.getElementById("map").innerHTML = "";
-//                document.getElementById("map").style.height = 0px;
+            document.getElementById("graphContent").style.height = iFrameSizes[val];
+            if (val == 3) {
+                console.log("show");
+//                document.getElementById("indicatorMapTop").innerhtml = transportMapTextTop;
+//                document.getElementById("indicatorMapTop").style.display= "block";
+
+//                function show(which) {
+//                    if (!document.getElementById)
+//                        return
+//                    if (which.style.display == "block")
+//                        which.style.display = "none";
+//                    else
+//                        which.style.display = "block";
+//                }
+//               if(document.getElementById("indicatorMapTop")){
+//                          .innerHTML = transportMapTextTop;
+//               }
+//                document.getElementById("indicatorMapBottom").innerHTML = transportMapTextBottom;
+////                resizeIframe();
+//
+////                createMap();
+            } else {
+                console.log("hide");
+//                document.getElementById("indicatorMapTop").style.display="none";
+//                document.getElementById("indicatorMapTop").innerHTML = "";
+//                document.getElementById("indicatorMapBottom").innerHTML = "";
+//               document.getElementById("map").innerHTML = "";
+////                document.getElementById("map").style.height = 0px;
             }
             return false;
-        }
-
-
-        function resizeIframe(iframe) {
-            iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-            console.log("resize iframe to " + iframe.height);
         }
 
 
@@ -379,7 +406,8 @@ echo $this->Html->script('wCitySites.js');
         var group2 = new L.FeatureGroup();
 
         function myFunction() {
-            
+            document.getElementById("indicatorMapTop").innerhtml = transportMapTextTop;
+
 //            document.getElementById("map").height = 0px;
             document.getElementById("indicatorHeader").innerHTML = headers[0];
             var i = 0;
