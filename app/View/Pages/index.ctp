@@ -178,7 +178,9 @@
                 <div id="cam264"></div>
             </div>
         </a>
-        <p>Click an image for a larger view. See all Irish camera locations (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
+        <p>Click an image for a larger view. 
+            More cameras for Cork are <a href="/pages/CorkTravel">here</a>.
+            See all Irish camera locations (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
         </p>
     </div>
 
