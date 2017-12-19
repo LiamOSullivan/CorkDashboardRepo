@@ -54,6 +54,7 @@
 
     <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
+        <div id="weatherTime" style="padding-bottom: 1vh;"></div>
         <div>
             <!--            <div id="xmlDataLocal"> 
                             <a href="http://metwdb-prod.ichec.ie/metno-wdb2ts/locationforecast?lat=54.7210798611;long=-8.7237392806">Data Example</a>   
@@ -125,7 +126,7 @@
         <div>
             <!--TODO:Fix this hack!-->
             <!--            <br><br><br><br><br><br><br><br><br><br>-->
-            <p>Source (opens new): <a href="http://www.met.ie" target="_blank"> Met Eireann</a></p>
+            <p>Source (opens new): <a href="http://www.met.ie/forecasts/regional.asp?Prov=Munster " target="_blank"> Met Eireann</a></p>
         </div>
     </div>  
     <!--                        
@@ -178,7 +179,9 @@
                 <div id="cam264"></div>
             </div>
         </a>
-        <p>Click an image for a larger view. See all Irish camera locations (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
+        <p>Click an image for a larger view. 
+            More cameras for Cork are <a href="/pages/CorkTravel">here</a>.
+            See all Irish camera locations (opens new): <a href="https://www.tiitraffic.ie/cams/" target="blank">Transport Infrastructure Ireland</a>
         </p>
     </div>
 
@@ -232,10 +235,12 @@
     <div style="border-bottom:2px solid #e5e5e5;" >
         <h1>Data at a Glance</h1>
     </div>
-    <p> Hover over the charts for data, click to go to the detailed versions<p>
+    <p> Hover over the charts for data, click to see detailed versions. 
+        You can browse various statistical graphs <a href="/pages/corkIndicators" >here</a>.
+    </p>
     <div style="border-bottom:2px solid #e5e5e5; ">
         <h2>Average Residential Rent</h2>
-        <a href="/./Housings/stats#tab71">    
+        <a href="/./Housings/stats#tab71" target="_blank">    
             <div class="chartWrapper">
                 <canvas id="cork_residential_rents" width="100%" ></canvas>
             </div>
@@ -243,23 +248,23 @@
     </div>
     <div style="border-bottom:2px solid #e5e5e5;" >
         <h2>Average House Price</h2>
-        <a href="/./Housings/stats#tab11">    
+        <a href="/./Housings/stats#tab11" target="_blank">    
             <div class="chartWrapper">
                 <canvas id="cork_house_prices" width="100%" ></canvas>
             </div>
         </a>
     </div>    
-    <div style="border-bottom:2px solid #e5e5e5;">
+    <div style="border-bottom:2px solid #e5e5e5;" >
         <h2>Planning Applications</h2>
         <h3>City</h3>
-        <a href="/./Housings/stats#tab21"> 
+        <a href="/./Housings/stats#tab21" target="_blank"> 
             <div class="chartWrapper">
                 <canvas id="city_planning_applications" width="100%" ></canvas>
             </div>
         </a>
 
         <h3>County</h3>
-        <a href="/./Housings/stats#tab221"> 
+        <a href="/./Housings/stats#tab221" target="_blank"> 
             <div class="chartWrapper">
                 <canvas id="county_planning_applications" width="100%" ></canvas>
             </div>

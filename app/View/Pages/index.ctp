@@ -54,6 +54,7 @@
 
     <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
         <h2>Weather</h2>
+        <div id="weatherTime" style="padding-bottom: 1vh;"></div>
         <div>
             <!--            <div id="xmlDataLocal"> 
                             <a href="http://metwdb-prod.ichec.ie/metno-wdb2ts/locationforecast?lat=54.7210798611;long=-8.7237392806">Data Example</a>   

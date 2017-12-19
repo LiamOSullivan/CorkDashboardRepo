@@ -1,4 +1,4 @@
-console.log("****Weather Vis loaded****");
+//console.log("****Weather Vis loaded****");
 
 //
 //let map_APIToken = "pk.eyJ1IjoibGlhbW9zdWxsaXZhbiIsImEiOiJjajNkYjhyZnAwMDAyMzNsN2FyZnY3cWQzIn0.c1qL12vFZfc2weViolmnTw";
@@ -21,7 +21,7 @@ let sourceLink = "http://metwdb-prod.ichec.ie/metno-wdb2ts/locationforecast?lat=
 let divideBy = 1; //portion of file to use, given as divisor 
 let spots = [];
 //weather data
-let displayDate, displayTime, startTime, endTime;
+let displayDate, displayTime, startTime, endTime, currentDate;
 let xmlWeather;
 let symbolsWeather = [];
 let symbolsDay = []; //images for weather symbols
@@ -46,7 +46,7 @@ let precip, symbolNo, desc;
 //    symbolNo: -1,
 //    description: -1
 //};
-let forecasts = [];
+let forecastsHarmonie = [];
 
 function preload() {
 //Get Map
@@ -88,34 +88,57 @@ function  setup() {
 //
 ////    var children = xmlWeather.getChildren("time");
 ////    println("*** "+xmlWeather.getAttributeCount());
-////    println("*** "+xmlWeather.listChildren());
+    println("*** " + xmlWeather.listChildren());
 //
 //
 //    
+    currentDate = new Date();
+    console.log("current date:" + currentDate);
+
+    let harmonieStartDate = new Date(xmlWeather.getChild("meta").getChildren()[0].getString("termin"));
+    console.log("Model run start date:" + harmonieStartDate);
+
+    let harmonieEndDate = new Date(harmonieStartDate.setDate(harmonieStartDate.getDate() + 2)); //add 2 days
+    harmonieEndDate.setHours(5);
+    console.log("Model run end day:" + harmonieEndDate); //if after this it is the ec_test_l
+
+
     let prod = xmlWeather.getChild("product");
     let times = prod.getChildren();
 
-    let count = 0;
+    let count = 0; //index to read from xml
+    let id = 0; //id to wrtie to in forecastsHarmonie' array
 
-    for (let i = 0; i < 16; i += 2) {
+
+//first get harmonie, 1-hour readings:
+//These span from midnight to +2days 06;00
+//    let harmonieCount; //53 - (first start time+1)
+
+
+    for (let time in times) {
+        console.log("count: " + count);
+        console.log("id: " + id);
         //There are 2 types of forecast data;
-        //harmonie at a given time or ec_test_l  spanning an hour 
+        //temp etc at a given time or rainfall/ symbol spanning an hour 
 
         //aggregate every 2 forecats into 1 object
+        let startDate; //the start of time span for each forecast
         for (let j = 0; j < 2; j += 1) {
+            startDate = new Date(times[count + j].getString("from"));
+            let startHour = startDate.getHours();
+            startTime = startHour;
+//            console.log("Start Date:" +startDate);
+//            console.log("Start hour:" +parseInt(startHour));
 
-            let start = times[i + j].getString("from");
-            let splt = start.split('T');
-            startTime = splt[1].substring(0, 5);
-            if (i == 0) {
-                displayDate = splt[0]; //use first date 
-                displayTime = startTime;
-
+            if (count + j == 0) {
+                displayDate = startDate; //use first date 
+//                displayTime = startTime;
+//                harmonieCount = 54 - startHour;
+//                console.log("#harmonie forecastsHarmonie included:" + harmonieCount);
             }
 
-            let hour = parseInt(startTime.substring(0, 2));
-            println("forecast #" + (i + j) + " | startTime: " + startTime);
-            let loc = times[(i + j)].getChild("location");
+            println("forecast #" + (count + j) + " | startTime: " + startHour + ":00 ");
+            let loc = times[(count + j)].getChild("location");
 
             // harmonie has temperature
             if (loc.getChild("temperature") != null) {
@@ -157,19 +180,27 @@ function  setup() {
         println("precip: " + precip + " mm \t " + desc + " symbol #" + symbolNo);
 
 
-        forecasts.push(
-                {"id": count,
-                    "time": startTime,
+        forecastsHarmonie.push(
+                {"id": id,
+                    "date": startDate,
                     "temperature": t,
                     "symbol": symbolNo,
                     "tod": tod,
                     "desc": desc
                 });
 
-        console.log("Aggregate forecast #" + count + " : " + JSON.stringify(forecasts[count]));
-        count += 1;
+        console.log("Aggregate forecast #" + id + " : " + JSON.stringify(forecastsHarmonie[id]));
+
+//From 0600 onwards we're getting epc 6-hourly forecasts, so break out of loop
+        if (forecastsHarmonie[id].date >= harmonieEndDate) {
+            console.log("Breaking at #" + id + " date: " + forecastsHarmonie[id].date);
+            break;
+        }
+        count += 2;
+        id += 1;
 
     } //End loop through xml weather data
+
 //    document.getElementById("weatherText").innerHTML =
 //            "<h2>Weather for today : " + displayDate + " </h2>"
 //            + "<h3>Time : " + displayTime + " </h3>"
@@ -179,13 +210,36 @@ function  setup() {
 //            + "<strong>Wind Direction</strong> : " + windD + "<br>"
 //            + "<strong>Pressure</strong> : " + press + " hPa";
 
-    for (let i = 0; i < count; i += 1) {
-//        println("Get symbol: " + forecasts[i].symbol + forecasts[i].tod + ".png");
-        document.getElementById("weatherImage" + i).innerHTML =
-                "<img src=\"" + "/img/Met50v2/" + forecasts[i].symbol + forecasts[i].tod + ".png" + "\"></img>";
-        document.getElementById("weatherHead" + i).innerHTML = forecasts[i].time;
-        document.getElementById("tableTemp" + i).innerHTML = forecasts[i].temperature+" C";
-    
+    let noOfForecastsToShow = 8;
+    let startIndex = 0;
+    let check = true;
+    for (let fh in forecastsHarmonie) {
+//        console.log("check date: " + forecastsHarmonie[fh].date);
+        if (forecastsHarmonie[fh].date > currentDate && check) {
+            console.log("Display date start: " + forecastsHarmonie[fh].date +"at index: "+forecastsHarmonie[fh].id);
+            startIndex = forecastsHarmonie[fh].id; //find first occurance when forecast is later than current time/date
+            check = false;
+            
+        }
+        else if (check) {
+            //if the xml is out of date, display the last 8 forecasts
+            startIndex = forecastsHarmonie[forecastsHarmonie.length-9].id; 
+        }
+    }
+    document.getElementById("weatherTime").innerHTML = "<p> Latest forecast for "
+                + forecastsHarmonie[startIndex].date 
+                +"</p>";
+
+    let htmlIndex = 0;
+    for (let i = startIndex; i < (startIndex + noOfForecastsToShow); i += 1) {
+//        println("Get symbol: " + forecastsHarmonie[i].symbol + forecastsHarmonie[i].tod + ".png");
+        
+        document.getElementById("weatherImage" + htmlIndex).innerHTML =
+                "<img src=\"" + "/img/Met50v2/" + forecastsHarmonie[i].symbol + forecastsHarmonie[i].tod + ".png" + "\"></img>";
+        document.getElementById("weatherHead" + htmlIndex).innerHTML = forecastsHarmonie[i].date.getHours() + ":00";
+        document.getElementById("tableTemp" + htmlIndex).innerHTML = forecastsHarmonie[i].temperature + " C";
+        htmlIndex += 1;
+
     }
 
 //    if (sourceData != null) {

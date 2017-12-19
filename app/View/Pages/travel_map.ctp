@@ -5,12 +5,12 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="Provides access to real-time, live data about current traffic and travel conditions in Cork.  This includes travel time, car parks, and traffic cams." />
 <meta name="keywords" content="Corkdashboard, Cork, City Benchmarks, Interactive tools" />
-<script src="/dublindashboard/js/Dashboard/jquery.min.js"></script>
-        <!-- <script src="/dublindashboard/js/Dashboard/config.js"></script> 
-<script src="/dublindashboard/js/Dashboard/skel.min.js"></script>
-        <!-- <script src="/dublindashboard/js/Dashboard/skel-panels.min.js"></script> 
-                        <script src="/dublindashboard/js/Dashboard/skel-layers.min.js"></script> 
-        <script src="/dublindashboard/js/Dashboard/init.js"></script>-->
+<script src="/js/Dashboard/jquery.min.js"></script>
+        <!-- <script src="/js/Dashboard/config.js"></script> 
+<script src="/js/Dashboard/skel.min.js"></script>
+        <!-- <script src="/js/Dashboard/skel-panels.min.js"></script> 
+                        <script src="/js/Dashboard/skel-layers.min.js"></script> 
+        <script src="/js/Dashboard/init.js"></script>-->
 
 <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> 
 
@@ -86,21 +86,21 @@
         <!--<div id="dataSources" style="width: 100%; height: 750px" align="left"></div>-->
 
         <!--<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> -->
-  <!-- <script src="/dublindashboard/js/leaflet.js"></script> -->
+  <!-- <script src="/js/leaflet.js"></script> -->
         <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> 
-        <script src="/dublindashboard/js/carparks.js"></script>
-        <script src="/dublindashboard/js/soundsites.js"></script>
-        <script src="/dublindashboard/js/M50.js"></script>
-        <script src="/dublindashboard/js/R1D1.js"></script>
-       <!-- <script src="/dublindashboard/js/leaflet_numbered_markers.js"></script> -->
-        <script src="/dublindashboard/js/TileLayer.Grayscale.js"></script>
-       <!-- <script src="/dublindashboard/js/leaflet-list-markers.js"></script> -->
-        <script src="/dublindashboard/js/carParkCapacities.js"></script>
-        <script src="/dublindashboard/js/allRoutes.js"></script>
-        <script src="/dublindashboard/js/allRoutesSegments.js"></script>
-        <script src="/dublindashboard/js/Dashboard/leaflet.markercluster-src.js"></script>
-        <link rel="stylesheet" href="/dublindashboard/css/Dashboard/MarkerCluster.css" />
-        <link rel="stylesheet" href="/dublindashboard/css/Dashboard/MarkerCluster.Default.css" />
+        <script src="/js/carparks.js"></script>
+        <script src="/js/soundsites.js"></script>
+        <script src="/js/M50.js"></script>
+        <script src="/js/R1D1.js"></script>
+       <!-- <script src="/js/leaflet_numbered_markers.js"></script> -->
+        <script src="/js/TileLayer.Grayscale.js"></script>
+       <!-- <script src="/js/leaflet-list-markers.js"></script> -->
+        <script src="/js/carParkCapacities.js"></script>
+        <script src="/js/allRoutes.js"></script>
+        <script src="/js/allRoutesSegments.js"></script>
+        <script src="/js/leaflet.markercluster-src.js"></script>
+        <link rel="stylesheet" href="/css/Dashboard/MarkerCluster.css" />
+        <link rel="stylesheet" href="/css/Dashboard/MarkerCluster.Default.css" />
 
         <script>
 
