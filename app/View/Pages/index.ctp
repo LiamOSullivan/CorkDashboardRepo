@@ -1,5 +1,8 @@
 <?php $this->assign('title', 'Home'); ?>
 
+<meta property="og:image" 
+              content="/img/homeScreen.png">
+
 <script src="/libraries/p5.js" type="text/javascript"></script>
 <script src="/libraries/p5.dom.js" type="text/javascript"></script>
 <script src="/js/weatherVis.js" type="text/javascript"></script>
@@ -8,11 +11,6 @@
     <div style="border-bottom:2px solid #e5e5e5">
         <h1>Cork in Real Time </h1>
     </div>
-    <!--    <div id="timewrapper" style="border-bottom:2px solid #e5e5e5">
-                <p><span id="servertime"></span></p>
-            
-        </div>-->
-
     <div style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5" >
         <h2>Live Environment</h2>
 
@@ -200,13 +198,15 @@
     </div>  
 
     <div class="col-12" style="padding-bottom: 2vh; border-bottom:2px solid #e5e5e5">
-        <h2>MapAlerter for Cork City and County</h2>
+        <h2>MapAlerter for Cork City Environs and County</h2>
 
         <div style="padding:1vh 2vw 0vh 2vw;">
             <a href="https://www.mapalerter.com/councils/cork" target="_blank" class="bordered-feature-image">
                 <img src="/img/Dashboard/cork_map_alerter.png" alt="" /></a>
         </div>  
-        <p>MapAlerter is a free service that gives Irish local authorities the ability to issue alerts for specific topics. Click to go to the <a href="https://www.mapalerter.com/councils/cork" target="_blank">MapAlerter</a> site.</p>
+        <a href="index.ctp"></a>
+        <p>MapAlerter is a free service that gives Irish local authorities the ability to issue alerts for specific topics. Click to go to the 
+            <a href="https://www.mapalerter.com/councils/cork" target="_blank">MapAlerter</a> site for Cork County Council.</p>
     </div>
 
     <div class="col-12" style="border-bottom:2px solid #e5e5e5; padding:0px 0px 4vh 0px" >

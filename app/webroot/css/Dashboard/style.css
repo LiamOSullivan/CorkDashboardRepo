@@ -204,6 +204,7 @@ a.side_menu_text:hover {
     display: table-cell; 
     vertical-align: middle; 
     height: 6vh;
+    
 }
 
 /*for caption above live cam images*/
@@ -575,7 +576,8 @@ Desktop
 
     .icon-cell{
         padding: 1vw; 
-        height: 8vh;
+        height: 10vh;
+        min-height: 75px;
     }
 
     .chartWrapper{

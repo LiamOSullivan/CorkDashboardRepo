@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Provides access to statistics for Cork ." />
+        <meta name="description" content="Provides access to statistics for Cork" />
         <meta name="keywords" 
-              content="Corkdashboard, Cork, population, travel time, weather, parking, river levels, housing, labour, health, overview" />
+              content="Corkdashboard, Cork, dashboard, population, travel time, weather, parking, river levels, housing, labour, health, overview" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/skel-layers/2.2.1/skel.min.js"></script>
@@ -17,7 +17,7 @@
         <link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/> 
         <!--P5 libraries-->
 
-     
+
         <!--<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
         <!--<link href="../webroot/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
         <!--<link href="/css/Dashboard/style.css" rel="stylesheet" type="text/css"/>-->
